@@ -47,16 +47,18 @@ export const CustomNode = memo(({ data }: any) => {
                 )}
             </div>
 
-            <button
-                className="action-btn add-sibling-btn"
-                onClick={(e) => {
-                    e.stopPropagation();
-                    data.onAddSibling?.(data.id);
-                }}
-                title="Add sibling (manual)"
-            >
-                +👤
-            </button>
+            {data.hasSiblings && (
+                <button
+                    className={`action-btn sibling-toggle-btn ${data.siblingsExpanded ? 'active' : ''}`}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        data.onToggleSiblings?.(data.id);
+                    }}
+                    title={data.siblingsExpanded ? "Dölj syskon" : "Visa syskon"}
+                >
+                    {data.siblingsExpanded ? '👥−' : '👥+'}
+                </button>
+            )}
             <Handle type="source" position={Position.Bottom} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
         </div>
     );

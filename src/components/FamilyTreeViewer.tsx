@@ -30,10 +30,9 @@ interface Props {
     families: any[];
     focusNodeId?: string | null;
     onFocusClear?: () => void;
-    onAddManualSibling?: (targetId: string, name: string) => void;
 }
 
-export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId, onAddManualSibling }: Props) {
+export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId }: Props) {
     const { setCenter } = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
     const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
@@ -42,6 +41,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const [baseNodes, setBaseNodes] = useState<Node[]>([]);
     const [baseEdges, setBaseEdges] = useState<Edge[]>([]);
     const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(new Set());
+    const [siblingExpandedNodeIds, setSiblingExpandedNodeIds] = useState<Set<string>>(new Set());
 
     // Roots identification
     const joel = useMemo(() => individuals.find(i => i.name?.toLowerCase().includes('joel') && i.name?.toLowerCase().includes('berring')), [individuals]);
@@ -111,11 +111,60 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
 
     }, [focusNodeId, individuals.length, families.length, roots, nodes.length]);
 
+    // Build a lookup: for each family node, which children does it have?
+    const familyChildrenMap = useMemo(() => {
+        const map = new Map<string, string[]>();
+        families.forEach(f => map.set(f.id, f.children || []));
+        return map;
+    }, [families]);
+
+    // Build a lookup: for each individual, which family nodes are they a child of?
+    const childToFamilyMap = useMemo(() => {
+        const map = new Map<string, string[]>();
+        families.forEach(f => {
+            (f.children || []).forEach((cId: string) => {
+                if (!map.has(cId)) map.set(cId, []);
+                map.get(cId)!.push(f.id);
+            });
+        });
+        return map;
+    }, [families]);
+
+    const toggleSiblings = useCallback((nodeId: string) => {
+        setSiblingExpandedNodeIds(prev => {
+            const next = new Set(prev);
+            if (next.has(nodeId)) next.delete(nodeId);
+            else next.add(nodeId);
+            return next;
+        });
+    }, []);
+
+    // Check if a node has siblings that aren't yet visible
+    const hasSiblings = useCallback((nodeId: string) => {
+        const famIds = childToFamilyMap.get(nodeId) || [];
+        for (const famId of famIds) {
+            const children = familyChildrenMap.get(famId) || [];
+            if (children.length > 1) return true;
+        }
+        return false;
+    }, [childToFamilyMap, familyChildrenMap]);
+
     useEffect(() => {
         if (individuals.length > 0 && families.length > 0) {
             const { nodes: initialNodes, edges: initialEdges } = buildGraph(individuals, families);
 
+            // Build edge adjacency for quick lookup
+            const edgesByNode = new Map<string, Array<{ neighborId: string; edgeId: string; direction: 'up' | 'down' }>>();
+            initialEdges.forEach(edge => {
+                if (!edgesByNode.has(edge.source)) edgesByNode.set(edge.source, []);
+                if (!edgesByNode.has(edge.target)) edgesByNode.set(edge.target, []);
+                edgesByNode.get(edge.source)!.push({ neighborId: edge.target, edgeId: edge.id, direction: 'down' });
+                edgesByNode.get(edge.target)!.push({ neighborId: edge.source, edgeId: edge.id, direction: 'up' });
+            });
+
             // Visibility Logic: Recursive reachability based on expansion
+            // Key change: when traversing FROM a family node DOWN to children,
+            // only include the child that triggered the expansion, unless siblings are toggled
             const visibleNodeIds = new Set<string>(roots);
             const stack = [...roots];
             const visitedForVisibility = new Set<string>(roots);
@@ -123,21 +172,33 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             while (stack.length > 0) {
                 const currId = stack.shift()!;
 
-                // If this node is expanded, all its neighbors are visible
                 if (expandedNodeIds.has(currId)) {
-                    initialEdges.forEach(edge => {
-                        let neighborId: string | null = null;
-                        if (edge.source === currId) neighborId = edge.target;
-                        else if (edge.target === currId) neighborId = edge.source;
+                    const neighbors = edgesByNode.get(currId) || [];
+                    for (const { neighborId } of neighbors) {
+                        const isFamilyNode = familyChildrenMap.has(neighborId);
+                        const currIsFamilyNode = familyChildrenMap.has(currId);
 
-                        if (neighborId) {
-                            visibleNodeIds.add(neighborId);
-                            if (!visitedForVisibility.has(neighborId)) {
-                                visitedForVisibility.add(neighborId);
-                                stack.push(neighborId);
+                        // If current is a family node and neighbor is a child:
+                        // Only show the child if either:
+                        //   - The child is already in visibleNodeIds (it was the one that expanded up to this family)
+                        //   - OR some visible child of this family has siblings toggled on
+                        if (currIsFamilyNode && !isFamilyNode) {
+                            const familyChildren = familyChildrenMap.get(currId) || [];
+                            const isChildAlreadyVisible = visibleNodeIds.has(neighborId);
+                            // Check if any already-visible child of this family has siblings expanded
+                            const anySiblingToggled = familyChildren.some(cId => siblingExpandedNodeIds.has(cId) && visibleNodeIds.has(cId));
+
+                            if (!isChildAlreadyVisible && !anySiblingToggled) {
+                                continue; // Skip this sibling
                             }
                         }
-                    });
+
+                        visibleNodeIds.add(neighborId);
+                        if (!visitedForVisibility.has(neighborId)) {
+                            visitedForVisibility.add(neighborId);
+                            stack.push(neighborId);
+                        }
+                    }
                 }
             }
 
@@ -169,12 +230,9 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                             return next;
                         });
                     },
-                    onAddSibling: (id: string) => {
-                        const name = prompt("Ange namn för det nya syskonet:");
-                        if (name && onAddManualSibling) {
-                            onAddManualSibling(id, name);
-                        }
-                    },
+                    onToggleSiblings: toggleSiblings,
+                    hasSiblings: hasSiblings(node.id),
+                    siblingsExpanded: siblingExpandedNodeIds.has(node.id),
                     isExpanded: expandedNodeIds.has(node.id),
                     canCollapse: !roots.includes(node.id)
                 }
@@ -194,7 +252,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 console.error('Error computing layout:', err);
             }
         }
-    }, [individuals, families, expandedNodeIds, toggleNode, roots, setNodes, setEdges]);
+    }, [individuals, families, expandedNodeIds, siblingExpandedNodeIds, toggleNode, toggleSiblings, hasSiblings, familyChildrenMap, roots, setNodes, setEdges]);
 
     const handlePathFound = useCallback((pathNodes: string[], pathEdges: Set<string>) => {
         const pSet = new Set(pathNodes);
