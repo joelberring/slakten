@@ -5,6 +5,7 @@ import { tagIndividualsBySide, calculateGenerations, type FamilySide } from './u
 
 import { FamilyTreeViewer } from './components/FamilyTreeViewer';
 import { FamilyMap } from './components/FamilyMap';
+import { FamilyStats } from './components/FamilyStats';
 import { ReactFlowProvider } from '@xyflow/react';
 import { IntroModal } from './components/IntroModal';
 import './index.css';
@@ -14,7 +15,7 @@ function App() {
   const [families, setFamilies] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
-  const [viewMode, setViewMode] = useState<'tree' | 'map'>('tree');
+  const [viewMode, setViewMode] = useState<'tree' | 'map' | 'stats'>('tree');
   const [googleApiKey, setGoogleApiKey] = useState<string>(() => localStorage.getItem('slakten_google_api_key') || '');
   const [showSettings, setShowSettings] = useState(false);
   const [showIntro, setShowIntro] = useState(() => !localStorage.getItem('slakten_intro_seen'));
@@ -287,44 +288,49 @@ function App() {
             >
               Karta
             </button>
+            <button
+              onClick={() => setViewMode('stats')}
+              className={`view-toggle-btn ${viewMode === 'stats' ? 'active' : ''}`}
+            >
+              Statistik
+            </button>
           </div>
 
           {viewMode === 'tree' ? (
-            <ReactFlowProvider>
-              <FamilyTreeViewer
-                individuals={individuals}
-                families={families}
-                focusNodeId={focusNodeId}
-                onFocusClear={() => setFocusNodeId(null)}
-              />
             </ReactFlowProvider>
-          ) : (
-            <FamilyMap
-              individuals={individuals}
-              families={families}
-              sideMap={sideMap}
-              generationMap={generationMap}
-              locationsCache={locationsCache}
-              loadingCount={geocodingStatus}
-              onLocationUpdate={handleLocationUpdate}
-              readOnly={urlReadOnly}
-              onShowInTree={(id) => {
-                setFocusNodeId(id);
-                setViewMode('tree');
-              }}
-            />
+      ) : viewMode === 'map' ? (
+      <FamilyMap
+        individuals={individuals}
+        families={families}
+        sideMap={sideMap}
+        generationMap={generationMap}
+        locationsCache={locationsCache}
+        loadingCount={geocodingStatus}
+        onLocationUpdate={handleLocationUpdate}
+        readOnly={urlReadOnly}
+        onShowInTree={(id) => {
+          setFocusNodeId(id);
+          setViewMode('tree');
+        }}
+      />
+      ) : (
+      <FamilyStats
+        individuals={individuals}
+        generationMap={generationMap}
+      />
           )}
 
-          {showIntro && (
-            <IntroModal onClose={() => {
-              setShowIntro(false);
-              localStorage.setItem('slakten_intro_seen', 'true');
-            }} />
-          )}
-
-        </div>
+      {showIntro && (
+        <IntroModal onClose={() => {
+          setShowIntro(false);
+          localStorage.setItem('slakten_intro_seen', 'true');
+        }} />
       )}
+
     </div>
+  )
+}
+    </div >
   );
 }
 

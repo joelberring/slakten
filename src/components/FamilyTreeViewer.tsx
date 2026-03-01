@@ -16,7 +16,7 @@ import { FamilyNode } from './FamilyNode';
 import { buildGraph } from '../utils/buildGraph';
 import { getLayoutedElements } from '../utils/layout';
 import { RelationshipFinder } from './RelationshipFinder';
-import { findRelationshipPath, getPathEdges } from '../utils/relationship';
+import { findRelationshipPath } from '../utils/relationship';
 
 import type { Node, Edge } from '@xyflow/react';
 
@@ -33,7 +33,7 @@ interface Props {
 }
 
 export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId }: Props) {
-    const { fitView, setCenter } = useReactFlow();
+    const { setCenter } = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
     const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
 
