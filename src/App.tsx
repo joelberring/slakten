@@ -254,19 +254,7 @@ function App() {
         </div>
       ) : (
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
-          <div style={{
-            position: 'absolute',
-            top: '20px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            zIndex: 10,
-            background: 'var(--bg-secondary)',
-            padding: '5px',
-            borderRadius: '8px',
-            display: 'flex',
-            gap: '5px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-          }}>
+          <div className="view-switcher-container">
             <button
               onClick={() => setViewMode('tree')}
               className={`view-toggle-btn ${viewMode === 'tree' ? 'active' : ''}`}

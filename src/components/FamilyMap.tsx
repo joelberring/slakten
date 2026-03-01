@@ -64,7 +64,8 @@ export function FamilyMap({
     generationMap,
     locationsCache,
     loadingCount,
-    onLocationUpdate
+    onLocationUpdate,
+    readOnly
 }: Props) {
 
 
