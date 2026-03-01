@@ -177,7 +177,6 @@ body {
   top: auto !important;
   left: auto !important;
   transform: none !important;
-  margin: 10px auto 0 auto;
   width: 20px;
   height: 20px;
   font-size: 16px;
@@ -185,9 +184,48 @@ body {
   box-shadow: 0 0 10px rgba(167, 139, 250, 0.4);
 }
 
+.node-controls-top {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  z-index: 10;
+}
+
+.action-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-secondary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+  border: 1px solid var(--border-color);
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+  background: var(--accent-color);
+}
+
+.add-sibling-btn {
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .node-toggle.expanded {
   background: #4b5563;
-  /* Gray for minus */
   box-shadow: none;
 }
 

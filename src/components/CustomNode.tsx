@@ -9,6 +9,30 @@ export const CustomNode = memo(({ data }: any) => {
     return (
         <div className={`individual-node ${isMale ? 'male' : isFemale ? 'female' : ''} ${highlightClass} ${data.isExpanded ? 'expanded' : ''}`}>
             <Handle type="target" position={Position.Top} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
+
+            <div className="node-controls-top">
+                <button
+                    className={`expansion-toggle node-toggle ${data.isExpanded ? 'expanded' : ''}`}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        data.onToggle?.(data.id);
+                    }}
+                    title={data.isExpanded ? "Collapse" : "Expand parents"}
+                >
+                    {data.isExpanded ? '−' : '+'}
+                </button>
+                <button
+                    className="action-btn expand-all-btn"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        data.onExpandAll?.(data.id);
+                    }}
+                    title="Expand all ancestors"
+                >
+                    🚀
+                </button>
+            </div>
+
             <div className="node-content">
                 <div className="node-header">{data.name}</div>
                 <div className="node-dates">
@@ -21,29 +45,18 @@ export const CustomNode = memo(({ data }: any) => {
                         📍 {data.birthPlace || data.deathPlace}
                     </div>
                 )}
-                {!data.isExpanded && (
-                    <button
-                        className="expansion-toggle node-toggle"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            data.onToggle?.(data.id);
-                        }}
-                    >
-                        +
-                    </button>
-                )}
-                {data.isExpanded && data.canCollapse && (
-                    <button
-                        className="expansion-toggle node-toggle expanded"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            data.onToggle?.(data.id);
-                        }}
-                    >
-                        −
-                    </button>
-                )}
             </div>
+
+            <button
+                className="action-btn add-sibling-btn"
+                onClick={(e) => {
+                    e.stopPropagation();
+                    data.onAddSibling?.(data.id);
+                }}
+                title="Add sibling (manual)"
+            >
+                +👤
+            </button>
             <Handle type="source" position={Position.Bottom} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
         </div>
     );

@@ -161,6 +161,37 @@ function App() {
     reader.readAsText(file);
   };
 
+  const handleAddManualSibling = (targetId: string, name: string) => {
+    // 1. Find the family where targetId is a child
+    const family = families.find(f => f.children.includes(targetId));
+    if (!family) {
+      alert("Kunde inte hitta föräldrar för den här personen. Det går bara att lägga till syskon till personer som har registrerade föräldrar.");
+      return;
+    }
+
+    // 2. Create new individual
+    const newId = `manual-${Date.now()}`;
+    const newInd = {
+      id: newId,
+      name: name,
+      sex: 'U', // Unknown
+      birthDate: '',
+      deathDate: '',
+      birthPlace: '',
+      deathPlace: '',
+      events: []
+    };
+
+    // 3. Update families and individuals
+    setIndividuals(prev => [...prev, newInd]);
+    setFamilies(prev => prev.map(f => {
+      if (f.id === family.id) {
+        return { ...f, children: [...f.children, newId] };
+      }
+      return f;
+    }));
+  };
+
   const handleApiKeyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const key = e.target.value;
     setGoogleApiKey(key);
@@ -305,6 +336,7 @@ function App() {
                     families={families}
                     focusNodeId={focusNodeId}
                     onFocusClear={() => setFocusNodeId(null)}
+                    onAddManualSibling={handleAddManualSibling}
                   />
                 </div>
               </ReactFlowProvider>

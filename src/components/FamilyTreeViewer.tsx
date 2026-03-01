@@ -30,9 +30,10 @@ interface Props {
     families: any[];
     focusNodeId?: string | null;
     onFocusClear?: () => void;
+    onAddManualSibling?: (targetId: string, name: string) => void;
 }
 
-export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId }: Props) {
+export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId, onAddManualSibling }: Props) {
     const { setCenter } = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
     const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
@@ -151,8 +152,31 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                     ...node.data,
                     id: node.id,
                     onToggle: toggleNode,
+                    onExpandAll: (id: string) => {
+                        const toExpand = new Set<string>();
+                        const collectAncestors = (currentId: string) => {
+                            toExpand.add(currentId);
+                            const familiesWhereChild = families.filter(f => f.children.includes(currentId));
+                            familiesWhereChild.forEach(f => {
+                                if (f.husb) collectAncestors(f.husb);
+                                if (f.wife) collectAncestors(f.wife);
+                            });
+                        };
+                        collectAncestors(id);
+                        setExpandedNodeIds(prev => {
+                            const next = new Set(prev);
+                            toExpand.forEach(eid => next.add(eid));
+                            return next;
+                        });
+                    },
+                    onAddSibling: (id: string) => {
+                        const name = prompt("Ange namn för det nya syskonet:");
+                        if (name && onAddManualSibling) {
+                            onAddManualSibling(id, name);
+                        }
+                    },
                     isExpanded: expandedNodeIds.has(node.id),
-                    canCollapse: !roots.includes(node.id) // Roots can't be collapsed easily? Or let them.
+                    canCollapse: !roots.includes(node.id)
                 }
             }));
 
