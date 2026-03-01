@@ -16,6 +16,10 @@ function App() {
   const [googleApiKey, setGoogleApiKey] = useState<string>(() => localStorage.getItem('slakten_google_api_key') || '');
   const [showSettings, setShowSettings] = useState(false);
 
+  const urlReadOnly = useMemo(() => {
+    return !window.location.search.includes('edit=true');
+  }, []);
+
   // Detect root individuals and compute lineages/generations
   const { sideMap, generationMap } = useMemo(() => {
     if (individuals.length === 0) {
@@ -154,7 +158,7 @@ function App() {
         <button
           className="secondary-btn"
           onClick={() => setShowSettings(!showSettings)}
-          style={{ padding: '6px 12px', fontSize: '0.8rem' }}
+          style={{ padding: '6px 12px', fontSize: '0.8rem', display: urlReadOnly ? 'none' : 'block' }}
         >
           ⚙️ Settings
         </button>
@@ -290,6 +294,7 @@ function App() {
               locationsCache={locationsCache}
               loadingCount={geocodingStatus}
               onLocationUpdate={handleLocationUpdate}
+              readOnly={urlReadOnly}
             />
 
 

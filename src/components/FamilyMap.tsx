@@ -14,6 +14,7 @@ interface Props {
     locationsCache: Map<string, Coordinates | null>;
     loadingCount: { resolved: number, total: number };
     onLocationUpdate?: (place: string, coords: Coordinates) => void;
+    readOnly?: boolean;
 }
 
 
@@ -71,6 +72,7 @@ export function FamilyMap({
     const [showConnections, setShowConnections] = useState(false);
     const [selectedGenerations, setSelectedGenerations] = useState<Set<number | 'unconnected'>>(new Set());
     const [visibleSides, setVisibleSides] = useState<Set<FamilySide>>(new Set(['father', 'mother', 'both', 'none']));
+    const [isLegendOpen, setIsLegendOpen] = useState(window.innerWidth > 768);
 
     const toggleSide = (side: FamilySide) => {
         const next = new Set(visibleSides);
@@ -387,76 +389,97 @@ export function FamilyMap({
                 </div>
             )}
 
-            <div style={{
+            <div className={`map-legend ${isLegendOpen ? 'open' : ''}`} style={{
                 position: 'absolute', top: '20px', right: '20px', zIndex: 1000,
                 background: 'var(--bg-primary)', padding: '12px', borderRadius: '8px',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.15)', border: '1px solid var(--border-color)', width: '220px'
             }}>
-                <div style={{ fontSize: '0.85rem', fontWeight: 600, marginBottom: '10px' }}>Legend</div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '15px' }}>
-                    {[
-                        { side: 'father', label: "Father's Side", color: 'hsl(210, 100%, 50%)' },
-                        { side: 'mother', label: "Mother's Side", color: 'hsl(0, 100%, 50%)' },
-                        { side: 'both', label: "Common / Both", color: 'hsl(280, 100%, 50%)' },
-                        { side: 'none', label: "Other", color: 'hsl(50, 100%, 50%)' }
-                    ].map(item => (
-                        <div key={item.side}
-                            onClick={() => toggleSide(item.side as FamilySide)}
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '8px',
-                                fontSize: '0.75rem',
-                                cursor: 'pointer',
-                                opacity: visibleSides.has(item.side as FamilySide) ? 1 : 0.3,
-                                transition: 'opacity 0.2s',
-                                padding: '2px 0'
-                            }}>
-                            <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: item.color }}></div>
-                            {item.label}
+                <div
+                    onClick={() => window.innerWidth <= 768 && setIsLegendOpen(!isLegendOpen)}
+                    style={{
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        marginBottom: isLegendOpen ? '10px' : '0',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        cursor: 'pointer'
+                    }}
+                >
+                    <span>{isLegendOpen ? 'Legend & Filter' : '📁 Visa Filter'}</span>
+                    {window.innerWidth <= 768 && <span>{isLegendOpen ? '✕' : ''}</span>}
+                </div>
+
+                {isLegendOpen && (
+                    <>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '15px' }}>
+                            {[
+                                { side: 'father', label: "Father's Side", color: 'hsl(210, 100%, 50%)' },
+                                { side: 'mother', label: "Mother's Side", color: 'hsl(0, 100%, 50%)' },
+                                { side: 'both', label: "Common / Both", color: 'hsl(280, 100%, 50%)' },
+                                { side: 'none', label: "Other", color: 'hsl(50, 100%, 50%)' }
+                            ].map(item => (
+                                <div key={item.side}
+                                    onClick={() => toggleSide(item.side as FamilySide)}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '8px',
+                                        fontSize: '0.75rem',
+                                        cursor: 'pointer',
+                                        opacity: visibleSides.has(item.side as FamilySide) ? 1 : 0.3,
+                                        transition: 'opacity 0.2s',
+                                        padding: '2px 0'
+                                    }}>
+                                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: item.color }}></div>
+                                    {item.label}
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
 
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '12px' }}>
-                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '0.8rem' }}>
-                        <input type="checkbox" checked={showPaths} onChange={(e) => setShowPaths(e.target.checked)} />
-                        Visa flyttvägar (Individer)
-                    </label>
-                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '0.8rem' }}>
-                        <input type="checkbox" checked={showConnections} onChange={(e) => setShowConnections(e.target.checked)} />
-                        Visa förgreningar (Släktgrenar)
-                    </label>
-                </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '12px' }}>
+                            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '0.8rem' }}>
+                                <input type="checkbox" checked={showPaths} onChange={(e) => setShowPaths(e.target.checked)} />
+                                Visa flyttvägar (Individer)
+                            </label>
+                            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '0.8rem' }}>
+                                <input type="checkbox" checked={showConnections} onChange={(e) => setShowConnections(e.target.checked)} />
+                                Visa förgreningar (Släktgrenar)
+                            </label>
+                        </div>
 
-                <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '12px' }}>
-                    <div style={{ fontSize: '0.85rem', fontWeight: 600, marginBottom: '8px' }}>Generationer</div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', maxHeight: '200px', overflowY: 'auto', paddingRight: '5px' }}>
-                        {availableGenerations.map(gen => (
-                            <button key={gen} onClick={() => toggleGeneration(gen)}
-                                style={{
-                                    textAlign: 'left', fontSize: '0.7rem', padding: '6px 8px', borderRadius: '4px', border: '1px solid var(--border-color)',
-                                    background: selectedGenerations.has(gen) ? 'var(--accent-color)' : 'transparent',
-                                    color: selectedGenerations.has(gen) ? '#fff' : 'var(--text-primary)', cursor: 'pointer'
-                                }}>
-                                {getGenLabel(gen)}
-                            </button>
-                        ))}
-                    </div>
-                </div>
+                        <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '12px' }}>
+                            <div style={{ fontSize: '0.85rem', fontWeight: 600, marginBottom: '8px' }}>Generationer</div>
+                            <div className="gen-list-container" style={{ display: 'flex', flexDirection: 'column', gap: '4px', maxHeight: '200px', overflowY: 'auto', paddingRight: '5px' }}>
+                                {availableGenerations.map(gen => (
+                                    <button key={gen} onClick={() => toggleGeneration(gen)}
+                                        style={{
+                                            textAlign: 'left', fontSize: '0.7rem', padding: '6px 8px', borderRadius: '4px', border: '1px solid var(--border-color)',
+                                            background: selectedGenerations.has(gen) ? 'var(--accent-color)' : 'transparent',
+                                            color: selectedGenerations.has(gen) ? '#fff' : 'var(--text-primary)', cursor: 'pointer'
+                                        }}>
+                                        {getGenLabel(gen)}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
 
-                <div style={{
-                    marginTop: 'auto',
-                    fontSize: '0.75rem',
-                    color: 'var(--text-secondary)',
-                    fontStyle: 'italic',
-                    borderTop: '1px solid var(--border-color)',
-                    paddingTop: '12px',
-                    lineHeight: 1.4
-                }}>
-                    💡 Tips: Du kan dra i markörerna på kartan för att flytta dem manuellt om de hamnat fel.
-                </div>
+                        {!readOnly && (
+                            <div style={{
+                                marginTop: 'auto',
+                                fontSize: '0.75rem',
+                                color: 'var(--text-secondary)',
+                                fontStyle: 'italic',
+                                borderTop: '1px solid var(--border-color)',
+                                paddingTop: '12px',
+                                lineHeight: 1.4
+                            }}>
+                                💡 Tips: Du kan dra i markörerna på kartan för att flytta dem manuellt om de hamnat fel.
+                            </div>
+                        )}
+                    </>
+                )}
             </div>
 
             <MapContainer center={[59.3293, 18.0686]} zoom={5} style={{ height: '100%', width: '100%' }}>
@@ -467,9 +490,10 @@ export function FamilyMap({
                         key={idx}
                         position={[marker.coords.lat, marker.coords.lon]}
                         icon={getMarkerIcon(marker.people.length, marker.side)}
-                        draggable={true}
+                        draggable={!readOnly}
                         eventHandlers={{
                             dragend: (e) => {
+                                if (readOnly) return;
                                 const latlng = e.target.getLatLng();
                                 if (onLocationUpdate) {
                                     // Update all unique places that were clustered in this marker
