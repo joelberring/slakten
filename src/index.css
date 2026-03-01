@@ -483,7 +483,7 @@ body.loading .app-subtitle {
   display: flex;
   gap: 5px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: bottom 0.3s, top 0.3s;
+  transition: all 0.3s;
 }
 
 /* Mobile Responsiveness */
@@ -495,9 +495,7 @@ body.loading .app-subtitle {
   }
 
   .app-subtitle {
-    font-size: 0.75rem;
-    top: 45px;
-    left: 16px;
+    display: none;
   }
 
   .individual-node {
@@ -568,16 +566,23 @@ body.loading .app-subtitle {
   }
 
   .view-switcher-container {
-    top: auto !important;
-    bottom: 20px !important;
-    width: calc(100% - 40px);
-    box-sizing: border-box;
-    justify-content: center;
+    top: 10px !important;
+    left: 10px !important;
+    transform: none !important;
+    bottom: auto !important;
+    width: auto !important;
+    padding: 3px;
+    border: 1px solid var(--border-color);
   }
 
   .view-switcher-container .view-toggle-btn {
-    flex: 1;
-    text-align: center;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .app-title {
+    display: none;
+    /* Hide title on mobile to give space to menu */
   }
 
   .map-legend {
