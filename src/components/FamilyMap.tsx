@@ -386,7 +386,7 @@ export function FamilyMap({
         <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             {loadingCount.resolved < loadingCount.total && (
                 <div style={{
-                    position: 'absolute', top: '20px', left: '50%', transform: 'translateX(-50%)', zIndex: 1000,
+                    position: 'absolute', top: '75px', left: '50%', transform: 'translateX(-50%)', zIndex: 1000,
                     background: 'var(--bg-primary)', padding: '10px 20px', borderRadius: '8px',
                     boxShadow: '0 4px 12px rgba(0,0,0,0.15)', border: '1px solid var(--border-color)', textAlign: 'center'
                 }}>
