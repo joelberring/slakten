@@ -20,6 +20,9 @@ export function IntroModal({ onClose }: Props) {
                     <div className="intro-section">
                         <h3>📍 Kartan</h3>
                         <p>Se var släkten har bott genom tiderna. Du kan klicka på en person på kartan för att hitta dem direkt i trädet.</p>
+                        <p style={{ fontSize: '0.75rem', marginTop: '5px', fontStyle: 'italic', opacity: 0.8 }}>
+                            Obs: Första gången du öppnar kartan kan det ta upp till 30 minuter att läsa in alla orter då de behöver geokodas en och en.
+                        </p>
                     </div>
 
                     <div className="intro-section">
