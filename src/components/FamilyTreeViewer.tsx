@@ -34,27 +34,122 @@ export function FamilyTreeViewer({ individuals, families }: Props) {
     // Keep a clean copy of nodes/edges for resetting highlights easily without re-laying out
     const [baseNodes, setBaseNodes] = useState<Node[]>([]);
     const [baseEdges, setBaseEdges] = useState<Edge[]>([]);
+    const [collapsedFamilyIds, setCollapsedFamilyIds] = useState<Set<string>>(new Set());
+
+    const toggleFamily = useCallback((familyId: string) => {
+        setCollapsedFamilyIds(prev => {
+            const next = new Set(prev);
+            if (next.has(familyId)) next.delete(familyId);
+            else next.add(familyId);
+            return next;
+        });
+    }, []);
 
     useEffect(() => {
         if (individuals.length > 0 && families.length > 0) {
             const { nodes: initialNodes, edges: initialEdges } = buildGraph(individuals, families);
 
+            // Inject toggle handler and state into data
+            const enrichedNodes = initialNodes.map(node => {
+                if (node.type === 'familyNode') {
+                    return {
+                        ...node,
+                        data: {
+                            ...node.data,
+                            id: node.id,
+                            onToggle: toggleFamily,
+                            isCollapsed: collapsedFamilyIds.has(node.id)
+                        }
+                    };
+                }
+                return node;
+            });
+
+            // Filtering Logic: Hide descendants of collapsed families
+            const visibleNodeIds = new Set<string>();
+            const visibleEdgeIds = new Set<string>();
+
+            // Find roots (individuals without parents or the specific Joel/Annika roots)
+            const joel = individuals.find(i => i.name?.toLowerCase().includes('joel') && i.name?.toLowerCase().includes('berring'));
+            const annika = individuals.find(i => i.name?.toLowerCase().includes('annika') && i.name?.toLowerCase().includes('messing'));
+            const startNodes = [joel?.id, annika?.id].filter(Boolean) as string[];
+
+            const traverse = (nodeId: string) => {
+                if (visibleNodeIds.has(nodeId)) return;
+                visibleNodeIds.add(nodeId);
+
+                // Find outgoing edges
+                const outgoingEdges = initialEdges.filter(e => e.source === nodeId);
+
+                // If this is a collapsed family node, don't follow edges to children (descendants)
+                if (collapsedFamilyIds.has(nodeId)) {
+                    // We DO allow edges to parents if we were going upwards, 
+                    // but buildGraph is mostly children direction... wait.
+                    // In our graph: Parents -> Family Node -> Children.
+                    return;
+                }
+
+                outgoingEdges.forEach(edge => {
+                    visibleEdgeIds.add(edge.id);
+                    traverse(edge.target);
+                });
+
+                // Also follow incoming edges (to find ancestors) - ancestors should usually always be visible?
+                // Or maybe we only collapse "downwards" (ancestors). 
+                // In genealogy, "up" is ancestors. The graph is TB (Top to Bottom).
+                // So Top = Ancestors.
+                // If we collapse a family, we hide the CHILDREN (bottom).
+                // Let's stick to: Follow ALL edges except if source is a collapsed family.
+            };
+
+            // Also need to find ancestors. Let's do a simple recursive reachability from roots
+            // but in BOTH directions.
+            const queue = [...startNodes];
+            const visited = new Set<string>(startNodes);
+
+            while (queue.length > 0) {
+                const currId = queue.shift()!;
+                visibleNodeIds.add(currId);
+
+                // Upwards (parents)
+                initialEdges.filter(e => e.target === currId).forEach(edge => {
+                    visibleEdgeIds.add(edge.id);
+                    if (!visited.has(edge.source)) {
+                        visited.add(edge.source);
+                        queue.push(edge.source);
+                    }
+                });
+
+                // Downwards (children)
+                if (!collapsedFamilyIds.has(currId)) {
+                    initialEdges.filter(e => e.source === currId).forEach(edge => {
+                        visibleEdgeIds.add(edge.id);
+                        if (!visited.has(edge.target)) {
+                            visited.add(edge.target);
+                            queue.push(edge.target);
+                        }
+                    });
+                }
+            }
+
+            const filteredNodes = enrichedNodes.filter(n => visibleNodeIds.has(n.id));
+            const filteredEdges = initialEdges.filter(e => visibleEdgeIds.has(e.id));
+
             try {
                 const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-                    initialNodes,
-                    initialEdges,
+                    filteredNodes,
+                    filteredEdges,
                     'TB'
                 );
                 setBaseNodes(layoutedNodes);
                 setBaseEdges(layoutedEdges);
-                // Initially show them without highlight states
                 setNodes([...layoutedNodes]);
                 setEdges([...layoutedEdges]);
             } catch (err) {
                 console.error('Error computing layout:', err);
             }
         }
-    }, [individuals, families, setNodes, setEdges]);
+    }, [individuals, families, collapsedFamilyIds, toggleFamily, setNodes, setEdges]);
 
     const handlePathFound = useCallback((pathNodes: string[], pathEdges: Set<string>) => {
         const pSet = new Set(pathNodes);

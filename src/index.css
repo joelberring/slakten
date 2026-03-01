@@ -115,6 +115,41 @@ body {
   box-shadow: 0 0 25px rgba(167, 139, 250, 0.8);
 }
 
+.expansion-toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 5;
+  transition: transform 0.2s;
+}
+
+.expansion-toggle:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.family-node.collapsed {
+  border-color: #f59e0b;
+  /* Amber/Orange for collapsed state */
+}
+
+.family-node.collapsed .expansion-toggle {
+  background: #f59e0b;
+}
+
 /* Overriding React Flow defaults for aesthetic edges */
 .react-flow__edge-path {
   stroke: var(--border-color);
