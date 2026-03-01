@@ -119,6 +119,29 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
 
     }, [focusNodeId, individuals.length, families.length, roots, nodes.length]);
 
+    // Compute all direct ancestors of the roots to distinguish bloodline from "ingifta"
+    const ancestorIds = useMemo(() => {
+        const ancestors = new Set<string>();
+        const stack = [...roots];
+        const visited = new Set<string>();
+
+        while (stack.length > 0) {
+            const id = stack.pop()!;
+            if (visited.has(id)) continue;
+            visited.add(id);
+            ancestors.add(id);
+
+            // Find families where this person is a child to go up
+            families.forEach(f => {
+                if (f.children?.includes(id)) {
+                    if (f.husb) stack.push(f.husb);
+                    if (f.wife) stack.push(f.wife);
+                }
+            });
+        }
+        return ancestors;
+    }, [roots, families]);
+
     // Build a lookup: for each family node, which children does it have?
     const familyChildrenMap = useMemo(() => {
         const map = new Map<string, string[]>();
@@ -169,14 +192,19 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
         const famIds = childToFamilyMap.get(nodeId) || [];
         for (const famId of famIds) {
             const children = familyChildrenMap.get(famId) || [];
-            if (children.length > 1) return true;
+            const otherChildren = children.filter(cId => cId !== nodeId);
+            if (otherChildren.some(cId => individuals.some(i => i.id === cId))) return true;
         }
         return false;
-    }, [childToFamilyMap, familyChildrenMap]);
+    }, [childToFamilyMap, familyChildrenMap, individuals]);
 
     const hasSpouse = useCallback((nodeId: string) => {
-        return families.some(f => f.husb === nodeId || f.wife === nodeId);
-    }, [families]);
+        // Only show ring for "ingifta" (spouse that is NOT an ancestor)
+        return families.some(f => {
+            const spouseId = f.husb === nodeId ? f.wife : (f.wife === nodeId ? f.husb : null);
+            return spouseId && individuals.some(i => i.id === spouseId) && !ancestorIds.has(spouseId);
+        });
+    }, [families, individuals, ancestorIds]);
 
     useEffect(() => {
         if (individuals.length > 0 && families.length > 0) {

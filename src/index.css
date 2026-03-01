@@ -1104,3 +1104,30 @@ body.loading .app-subtitle {
     grid-template-columns: 1fr !important;
   }
 }
+@media (max-width: 600px) {
+  /* Mobiloptimering för trädet */
+  .individual-node {
+    width: 180px !important;
+    padding: 12px !important;
+  }
+  .node-header {
+    font-size: 0.9rem !important;
+  }
+  .node-dates, .node-locality {
+    font-size: 0.65rem !important;
+  }
+  .action-btn, .node-toggle {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 11px !important;
+  }
+  .sibling-toggle-btn {
+    right: -24px !important;
+  }
+  .spouse-toggle-btn {
+    left: -24px !important;
+  }
+  .node-controls-top {
+    top: -10px !important;
+  }
+}
