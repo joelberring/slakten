@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { parseGedcomData } from './utils/gedcomParser';
-import { geocodePlaces, updateLocationCache, type Coordinates } from './utils/geocoder';
+import { geocodePlaces, updateLocationCache, hydrateGeocoderCache, type Coordinates } from './utils/geocoder';
 import { tagIndividualsBySide, calculateGenerations, type FamilySide } from './utils/relationship';
 
 import { FamilyTreeViewer } from './components/FamilyTreeViewer';
@@ -86,6 +86,18 @@ function App() {
   useEffect(() => {
     const loadDefaultGedcom = async () => {
       try {
+        // 1. Try to load prebaked locations FIRST
+        const locResponse = await fetch('/locations.json');
+        if (locResponse.ok) {
+          const json = await locResponse.json();
+          // Hydrate the utility's internal cache
+          hydrateGeocoderCache(json);
+          // Update local state
+          const prebaked = new Map<string, Coordinates | null>(json);
+          setLocationsCache(prebaked);
+        }
+
+        // 2. Then load the GEDCOM
         const response = await fetch('/berring_messing.ged');
         if (response.ok) {
           const text = await response.text();
@@ -93,22 +105,8 @@ function App() {
           setIndividuals(inds);
           setFamilies(fams);
         }
-
-        // Also try to load prebaked locations
-        const locResponse = await fetch('/locations.json');
-        if (locResponse.ok) {
-          const json = await locResponse.json();
-          const prebaked = new Map<string, Coordinates | null>(json);
-          setLocationsCache(prev => {
-            const next = new Map(prev);
-            prebaked.forEach((coords, place) => {
-              if (!next.has(place)) next.set(place, coords);
-            });
-            return next;
-          });
-        }
       } catch (error) {
-        console.log("No default GEDCOM found or failed to load:", error);
+        console.log("Error during initial data load:", error);
       }
     };
 

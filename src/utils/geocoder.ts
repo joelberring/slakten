@@ -164,3 +164,13 @@ export function updateLocationCache(place: string, coords: Coordinates) {
     geocodeCache.set(place, coords);
     saveCache(geocodeCache);
 }
+/**
+ * Hydrates the internal geocode cache from an external source.
+ */
+export function hydrateGeocoderCache(entries: [string, Coordinates | null][]) {
+    entries.forEach(([place, coords]) => {
+        if (!geocodeCache.has(place)) {
+            geocodeCache.set(place, coords);
+        }
+    });
+}
