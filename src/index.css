@@ -483,6 +483,7 @@ body.loading .app-subtitle {
   display: flex;
   gap: 5px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: bottom 0.3s, top 0.3s;
 }
 
 /* Mobile Responsiveness */
@@ -509,12 +510,74 @@ body.loading .app-subtitle {
   }
 
   .relationship-panel {
-    width: calc(100vw - 40px);
-    bottom: 20px;
-    top: auto;
-    left: 20px;
-    max-height: 50vh;
+    top: auto !important;
+    bottom: 80px !important;
+    left: 16px !important;
+    right: 16px !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+    border-radius: 12px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    pointer-events: none;
+  }
+
+  .relationship-panel .panel-content {
+    background: var(--bg-secondary);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    display: none;
+    pointer-events: auto;
+    max-height: 60vh;
     overflow-y: auto;
+  }
+
+  .relationship-panel.open .panel-content {
+    display: block;
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .relationship-panel .legend-mobile-toggle {
+    display: block !important;
+    pointer-events: auto;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: auto;
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
+  }
+
+  .view-switcher-container {
+    top: auto !important;
+    bottom: 20px !important;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .view-switcher-container .view-toggle-btn {
+    flex: 1;
+    text-align: center;
   }
 
   .map-legend {

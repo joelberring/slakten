@@ -18,6 +18,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
     const [ancestorsOnly, setAncestorsOnly] = useState<boolean>(true);
     const [status, setStatus] = useState<string>('');
     const [globalResults, setGlobalResults] = useState<{ familyId: string, husb: string, wife: string, sharedAncestors: string[] }[] | null>(null);
+    const [isOpen, setIsOpen] = useState(false);
 
 
     const sortedIndividuals = useMemo(() => {
@@ -93,110 +94,122 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
 
 
     return (
-        <Panel position="top-right" className="relationship-panel">
-            <h3>Analysis Tools</h3>
+        <Panel position="top-right" className={`relationship-panel ${isOpen ? 'open' : ''}`}>
+            <button
+                className="legend-mobile-toggle"
+                onClick={() => setIsOpen(!isOpen)}
+                style={{
+                    display: 'none', // Shown only on mobile via CSS
+                }}
+            >
+                {isOpen ? 'Dölj Sök' : 'Sök Släktskap'}
+            </button>
 
-            <div className="tab-group">
-                <button
-                    className={`tab-btn ${mode === 'relationship' ? 'active' : ''}`}
-                    onClick={() => { setMode('relationship'); setStatus(''); setGlobalResults(null); }}
-                >
-                    Relationship
-                </button>
-                <button
-                    className={`tab-btn ${mode === 'global' ? 'active' : ''}`}
-                    onClick={() => { setMode('global'); setStatus(''); setGlobalResults(null); }}
-                >
-                    Global Scanner
-                </button>
-            </div>
+            <div className="panel-content">
+                <h3>Analysis Tools</h3>
+
+                <div className="tab-group">
+                    <button
+                        className={`tab-btn ${mode === 'relationship' ? 'active' : ''}`}
+                        onClick={() => { setMode('relationship'); setStatus(''); setGlobalResults(null); }}
+                    >
+                        Relationship
+                    </button>
+                    <button
+                        className={`tab-btn ${mode === 'global' ? 'active' : ''}`}
+                        onClick={() => { setMode('global'); setStatus(''); setGlobalResults(null); }}
+                    >
+                        Global Scanner
+                    </button>
+                </div>
 
 
-            {mode === 'relationship' && (
-                <>
-                    <div className="select-group">
-                        <label>Person A</label>
-                        <select value={personA} onChange={(e) => setPersonA(e.target.value)}>
-                            <option value="">-- Select Person --</option>
-                            {sortedIndividuals.map(ind => (
-                                <option key={ind.id} value={ind.id}>{ind.name} {ind.birthDate ? `(${ind.birthDate})` : ''}</option>
-                            ))}
-                        </select>
-                    </div>
-
-                    <div className="select-group">
-                        <label>Person B</label>
-                        <select value={personB} onChange={(e) => setPersonB(e.target.value)}>
-                            <option value="">-- Select Person --</option>
-                            {sortedIndividuals.map(ind => (
-                                <option key={ind.id} value={ind.id}>{ind.name} {ind.birthDate ? `(${ind.birthDate})` : ''}</option>
-                            ))}
-                        </select>
-                    </div>
-
-                    <div className="select-group checkbox-group">
-                        <label>
-                            <input
-                                type="checkbox"
-                                checked={ancestorsOnly}
-                                onChange={(e) => setAncestorsOnly(e.target.checked)}
-                            />
-                            Blood Relatives Only (Find Common Ancestors)
-                        </label>
-                    </div>
-
-                    <div className="button-group">
-                        <button className="primary-btn" onClick={handleCalculateRelationship}>Analyze</button>
-                        <button className="secondary-btn" onClick={handleClear}>Clear</button>
-                    </div>
-                </>
-            )}
-
-            {mode === 'global' && (
-                <>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>
-                        Scan the entire family tree to find all marriages where spouses share common ancestors (consanguineous marriages).
-                    </p>
-
-                    <div className="button-group" style={{ marginBottom: '15px' }}>
-                        <button className="primary-btn" onClick={handleGlobalScan}>Scan Tree</button>
-                        <button className="secondary-btn" onClick={handleClear}>Clear</button>
-                    </div>
-
-                    {globalResults && globalResults.length > 0 && (
-                        <div className="global-results" style={{ maxHeight: '250px', overflowY: 'auto', background: 'var(--bg-secondary)', borderRadius: '6px', padding: '10px' }}>
-                            <h4 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '5px' }}>Found Marriages:</h4>
-                            <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.85rem' }}>
-                                {globalResults.map((result, idx) => {
-                                    const husbName = individuals.find(i => i.id === result.husb)?.name || 'Unknown Husb';
-                                    const wifeName = individuals.find(i => i.id === result.wife)?.name || 'Unknown Wife';
-
-                                    return (
-                                        <li
-                                            key={idx}
-                                            style={{
-                                                padding: '8px',
-                                                borderBottom: '1px solid var(--border-color)',
-                                                cursor: 'pointer',
-                                                transition: 'background 0.2s'
-                                            }}
-                                            className="result-item"
-                                            onClick={() => handleSelectMarriage(result)}
-                                        >
-                                            <div style={{ fontWeight: '600', color: 'var(--accent-color)' }}>{husbName} & {wifeName}</div>
-                                            <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: '4px' }}>
-                                                Shared Ancestors: {result.sharedAncestors.length}
-                                            </div>
-                                        </li>
-                                    );
-                                })}
-                            </ul>
+                {mode === 'relationship' && (
+                    <>
+                        <div className="select-group">
+                            <label>Person A</label>
+                            <select value={personA} onChange={(e) => setPersonA(e.target.value)}>
+                                <option value="">-- Select Person --</option>
+                                {sortedIndividuals.map(ind => (
+                                    <option key={ind.id} value={ind.id}>{ind.name} {ind.birthDate ? `(${ind.birthDate})` : ''}</option>
+                                ))}
+                            </select>
                         </div>
-                    )}
-                </>
-            )}
 
-            {status && <div className="status-message">{status}</div>}
+                        <div className="select-group">
+                            <label>Person B</label>
+                            <select value={personB} onChange={(e) => setPersonB(e.target.value)}>
+                                <option value="">-- Select Person --</option>
+                                {sortedIndividuals.map(ind => (
+                                    <option key={ind.id} value={ind.id}>{ind.name} {ind.birthDate ? `(${ind.birthDate})` : ''}</option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <div className="select-group checkbox-group">
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    checked={ancestorsOnly}
+                                    onChange={(e) => setAncestorsOnly(e.target.checked)}
+                                />
+                                Blood Relatives Only (Find Common Ancestors)
+                            </label>
+                        </div>
+
+                        <div className="button-group">
+                            <button className="primary-btn" onClick={handleCalculateRelationship}>Analyze</button>
+                            <button className="secondary-btn" onClick={handleClear}>Clear</button>
+                        </div>
+                    </>
+                )}
+
+                {mode === 'global' && (
+                    <>
+                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>
+                            Scan the entire family tree to find all marriages where spouses share common ancestors (consanguineous marriages).
+                        </p>
+
+                        <div className="button-group" style={{ marginBottom: '15px' }}>
+                            <button className="primary-btn" onClick={handleGlobalScan}>Scan Tree</button>
+                            <button className="secondary-btn" onClick={handleClear}>Clear</button>
+                        </div>
+
+                        {globalResults && globalResults.length > 0 && (
+                            <div className="global-results" style={{ maxHeight: '250px', overflowY: 'auto', background: 'var(--bg-secondary)', borderRadius: '6px', padding: '10px' }}>
+                                <h4 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '5px' }}>Found Marriages:</h4>
+                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.85rem' }}>
+                                    {globalResults.map((result, idx) => {
+                                        const husbName = individuals.find(i => i.id === result.husb)?.name || 'Unknown Husb';
+                                        const wifeName = individuals.find(i => i.id === result.wife)?.name || 'Unknown Wife';
+
+                                        return (
+                                            <li
+                                                key={idx}
+                                                style={{
+                                                    padding: '8px',
+                                                    borderBottom: '1px solid var(--border-color)',
+                                                    cursor: 'pointer',
+                                                    transition: 'background 0.2s'
+                                                }}
+                                                className="result-item"
+                                                onClick={() => handleSelectMarriage(result)}
+                                            >
+                                                <div style={{ fontWeight: '600', color: 'var(--accent-color)' }}>{husbName} & {wifeName}</div>
+                                                <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: '4px' }}>
+                                                    Shared Ancestors: {result.sharedAncestors.length}
+                                                </div>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
+                        )}
+                    </>
+                )}
+
+                {status && <div className="status-message">{status}</div>}
+            </div>
         </Panel>
     );
 }
