@@ -6,6 +6,7 @@ import {
     Background,
     Controls,
     MiniMap,
+    Panel,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
@@ -182,6 +183,24 @@ export function FamilyTreeViewer({ individuals, families }: Props) {
         setEdges(baseEdges.map(e => ({ ...e, className: '', animated: false })));
     }, [baseNodes, baseEdges, setNodes, setEdges]);
 
+    const expandAll = useCallback(() => {
+        setCollapsedFamilyIds(new Set());
+    }, []);
+
+    const collapseAll = useCallback(() => {
+        const allFamilyIds = families.map(f => f.id);
+        setCollapsedFamilyIds(new Set(allFamilyIds));
+    }, [families]);
+
+    // Initial collapse - only on first load with data
+    const [hasInitializedCollapse, setHasInitializedCollapse] = useState(false);
+    useEffect(() => {
+        if (families.length > 0 && !hasInitializedCollapse) {
+            collapseAll();
+            setHasInitializedCollapse(true);
+        }
+    }, [families, hasInitializedCollapse, collapseAll]);
+
     return (
         <ReactFlow
             nodes={nodes}
@@ -190,11 +209,21 @@ export function FamilyTreeViewer({ individuals, families }: Props) {
             onEdgesChange={onEdgesChange}
             nodeTypes={nodeTypes}
             fitView
-            minZoom={0.1}
+            minZoom={0.05}
+            maxZoom={1.5}
             attributionPosition="bottom-right"
         >
             <Background color="#ffffff" gap={16} size={1} />
             <Controls style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', fill: 'var(--text-primary)' }} />
+
+            <Panel position="bottom-right" className="tree-controls-panel" style={{
+                marginBottom: '80px', // Avoid overlap with bottom nav if it was there (but it's gone now?)
+                display: 'flex', gap: '8px'
+            }}>
+                <button className="secondary-btn" onClick={expandAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Visa Allt</button>
+                <button className="secondary-btn" onClick={collapseAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Dölj Allt</button>
+            </Panel>
+
             <MiniMap
                 nodeColor={(node) => {
                     if (node.type === 'familyNode') return 'var(--accent-color)';

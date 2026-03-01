@@ -632,4 +632,18 @@ body.loading .app-subtitle {
     opacity: 1;
     transform: scale(1.05);
   }
+
+  .tree-controls-panel {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+}
+
+.tree-controls-panel {
+  background: var(--bg-secondary);
+  backdrop-filter: blur(10px);
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
