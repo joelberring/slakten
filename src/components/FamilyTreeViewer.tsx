@@ -117,7 +117,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
         // Start checking for layouted nodes
         setTimeout(tryCenter, 300);
 
-    }, [focusNodeId, individuals.length, families.length, roots, nodes.length]);
+    }, [focusNodeId, individuals.length, families.length, roots, nodes.length, expandedNodeIds, siblingExpandedNodeIds, spouseExpandedNodeIds]);
 
     // Compute all direct ancestors of the roots to distinguish bloodline from "ingifta"
     const ancestorIds = useMemo(() => {
@@ -219,14 +219,18 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 edgesByNode.get(edge.target)!.push({ neighborId: edge.source, edgeId: edge.id, direction: 'up' });
             });
 
-            // Visibility Logic: Recursive reachability based on expansion
-            // 1. Identify families that should show ALL members (downward/lateral expansion)
-            // This includes families of roots and families where spouse expansion is toggled.
+            // 1. Identify families that should show ALL members (downward/lateral/sibling expansion)
+            // This includes:
+            // - Families of roots
+            // - Families where a parent has spouse expansion toggled
+            // - Families where a child has sibling expansion toggled
             const fullVisibilityFamilies = new Set<string>();
             families.forEach(f => {
                 const husbMatch = f.husb && (roots.includes(f.husb) || spouseExpandedNodeIds.has(f.husb));
                 const wifeMatch = f.wife && (roots.includes(f.wife) || spouseExpandedNodeIds.has(f.wife));
-                if (husbMatch || wifeMatch) {
+                const childMatch = f.children.some((cId: string) => siblingExpandedNodeIds.has(cId));
+
+                if (husbMatch || wifeMatch || childMatch) {
                     fullVisibilityFamilies.add(f.id);
                 }
             });
