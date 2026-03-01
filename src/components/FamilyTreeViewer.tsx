@@ -56,61 +56,59 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
         });
     }, []);
 
-    // Effect to handle focusNodeId (e.g. from map view)
+    // Unified effect to handle focusNodeId (e.g. from map view)
     useEffect(() => {
-        if (focusNodeId && individuals.length > 0) {
-            // 1. Find the path from roots to this node
-            let foundPath: string[] | null = null;
-            for (const rootId of roots) {
-                const p = findRelationshipPath(families, rootId, focusNodeId, false);
-                if (p && (!foundPath || p.length < foundPath.length)) {
-                    foundPath = p;
-                }
-            }
+        if (!focusNodeId || individuals.length === 0 || families.length === 0) return;
 
-            if (foundPath) {
-                // 2. Expand all nodes in the path to ensure visibility
-                setExpandedNodeIds(prev => {
-                    const next = new Set(prev);
-                    foundPath!.forEach(id => next.add(id));
-                    return next;
-                });
+        console.log(`Processing focusNodeId: ${focusNodeId}`);
+
+        // 1. Find the path from roots to this node
+        let foundPath: string[] | null = null;
+        for (const rootId of roots) {
+            const p = findRelationshipPath(families, rootId, focusNodeId, false);
+            if (p && (!foundPath || p.length < foundPath.length)) {
+                foundPath = p;
             }
         }
-    }, [focusNodeId, individuals, families, roots]);
 
-    // Separate effect to handle highlighting and centering once nodes are layouted
-    useEffect(() => {
-        if (focusNodeId && nodes.length > 0) {
+        // 2. Expand all nodes in the path OR just the target if no path found
+        const nodesToExpand = foundPath ? foundPath : [focusNodeId];
+
+        setExpandedNodeIds(prev => {
+            const next = new Set(prev);
+            nodesToExpand.forEach(id => next.add(id));
+            return next;
+        });
+
+        // 3. Wait for layout to complete (nodes will have positions)
+        // We'll use a local variable to keep track of retries for centering
+        let retries = 0;
+        const tryCenter = () => {
             const targetNode = nodes.find(n => n.id === focusNodeId);
-            if (targetNode && targetNode.position.x !== 0) {
-                // Find path again to highlight
-                let foundPath: string[] | null = null;
-                for (const rootId of roots) {
-                    const p = findRelationshipPath(families, rootId, focusNodeId, false);
-                    if (p && (!foundPath || p.length < foundPath.length)) {
-                        foundPath = p;
-                    }
-                }
+            // If node exists and is not at (0,0) or has been layouted
+            if (targetNode && (targetNode.position.x !== 0 || targetNode.position.y !== 0)) {
+                console.log(`Centering on node: ${focusNodeId} at ${targetNode.position.x}, ${targetNode.position.y}`);
 
+                // Highlight the path if we found one
                 if (foundPath) {
                     const edges = getPathEdges(foundPath);
                     handlePathFound(foundPath, edges);
-
-                    // 3. Center/Fit view on the path
-                    setTimeout(() => {
-                        // Use fitView with the nodes in the path
-                        const pathNodes = nodes.filter(n => foundPath!.includes(n.id));
-                        if (pathNodes.length > 0) {
-                            // For now, center on target node with a nice zoom
-                            setCenter(targetNode.position.x, targetNode.position.y, { zoom: 0.7, duration: 1000 });
-                        }
-                        onFocusClear?.();
-                    }, 100);
                 }
+
+                setCenter(targetNode.position.x, targetNode.position.y, { zoom: 0.7, duration: 1000 });
+
+                // Clear the focus after a successful centering
+                setTimeout(() => onFocusClear?.(), 1000);
+            } else if (retries < 10) {
+                retries++;
+                setTimeout(tryCenter, 200);
             }
-        }
-    }, [focusNodeId, nodes.length, roots, families]);
+        };
+
+        // Start checking for layouted nodes
+        setTimeout(tryCenter, 300);
+
+    }, [focusNodeId, individuals.length, families.length, roots, nodes.length]);
 
     useEffect(() => {
         if (individuals.length > 0 && families.length > 0) {
