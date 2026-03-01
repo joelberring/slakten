@@ -88,21 +88,65 @@ export function FamilyStats({ individuals, families, generationMap }: Props) {
 
                 {/* Parental Age at Birth */}
                 <div className="stats-card full-width">
-                    <h3>Genomsnittlig ålder vid barns födelse</h3>
-                    <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '15px' }}>
+                    <h3>Genomsnittlig ålder vid barns födelse (Totalt)</h3>
+                    <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '15px', marginBottom: '30px' }}>
                         <div style={{ textAlign: 'center' }}>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--male-color)' }}>{stats.avgParentalAge.father.avg}</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--male-color)' }}>{stats.avgParentalAge.total.father}</div>
                             <div style={{ fontSize: '0.8rem', opacity: 0.8 }}>Pappor (medelålder)</div>
-                            <div style={{ fontSize: '0.7rem', opacity: 0.5 }}>Baserat på {stats.avgParentalAge.father.count} födslar</div>
+                            <div style={{ fontSize: '0.7rem', opacity: 0.5 }}>Baserat på {stats.avgParentalAge.total.fatherCount} födslar</div>
                         </div>
                         <div style={{ textAlign: 'center' }}>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--female-color)' }}>{stats.avgParentalAge.mother.avg}</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--female-color)' }}>{stats.avgParentalAge.total.mother}</div>
                             <div style={{ fontSize: '0.8rem', opacity: 0.8 }}>Mammor (medelålder)</div>
-                            <div style={{ fontSize: '0.7rem', opacity: 0.5 }}>Baserat på {stats.avgParentalAge.mother.count} födslar</div>
+                            <div style={{ fontSize: '0.7rem', opacity: 0.5 }}>Baserat på {stats.avgParentalAge.total.motherCount} födslar</div>
+                        </div>
+                    </div>
+
+                    <div className="parental-age-breakdown" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '20px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>
+                        <div>
+                            <h4 style={{ fontSize: '0.9rem', marginBottom: '10px', opacity: 0.9 }}>Per Generation</h4>
+                            <div className="chart-container">
+                                {stats.avgParentalAge.byGeneration.map(item => (
+                                    <div key={item.generation} className="chart-row duo-bar">
+                                        <div className="chart-label">Gen {item.generation}</div>
+                                        <div className="chart-bar-bg dual">
+                                            <div className="bar-set">
+                                                <div className="chart-bar" style={{ width: `${(item.fatherAvg / 60) * 100}%`, background: 'var(--male-color)' }}>
+                                                    <span className="bar-value">{item.fatherAvg}</span>
+                                                </div>
+                                                <div className="chart-bar" style={{ width: `${(item.motherAvg / 60) * 100}%`, background: 'var(--female-color)' }}>
+                                                    <span className="bar-value">{item.motherAvg}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style={{ fontSize: '0.9rem', marginBottom: '10px', opacity: 0.9 }}>Per Århundrade</h4>
+                            <div className="chart-container">
+                                {stats.avgParentalAge.byCentury.map(item => (
+                                    <div key={item.century} className="chart-row duo-bar">
+                                        <div className="chart-label" style={{ fontSize: '0.6rem' }}>{item.century}</div>
+                                        <div className="chart-bar-bg dual">
+                                            <div className="bar-set">
+                                                <div className="chart-bar" style={{ width: `${(item.fatherAvg / 60) * 100}%`, background: 'var(--male-color)' }}>
+                                                    <span className="bar-value">{item.fatherAvg}</span>
+                                                </div>
+                                                <div className="chart-bar" style={{ width: `${(item.motherAvg / 60) * 100}%`, background: 'var(--female-color)' }}>
+                                                    <span className="bar-value">{item.motherAvg}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div className="stats-footer-spacer" style={{ height: '100px' }}></div>
         </div>
     );
 }

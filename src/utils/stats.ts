@@ -8,8 +8,9 @@ export interface StatsData {
     totalPeople: number;
     peopleWithKnownAge: number;
     avgParentalAge: {
-        father: { avg: number; count: number };
-        mother: { avg: number; count: number };
+        total: { father: number; mother: number; fatherCount: number; motherCount: number };
+        byGeneration: { generation: number; fatherAvg: number; motherAvg: number }[];
+        byCentury: { century: string; fatherAvg: number; motherAvg: number }[];
     };
 }
 
@@ -19,8 +20,9 @@ export function calculateFamilyStats(individuals: any[], families: any[], genera
     const maleNames = new Map<string, number>();
     const femaleNames = new Map<string, number>();
 
-    const fatherAges: number[] = [];
-    const motherAges: number[] = [];
+    const parentalAgeByGen = new Map<number, { fSum: number; fCount: number; mSum: number; mCount: number }>();
+    const parentalAgeByCentury = new Map<string, { fSum: number; fCount: number; mSum: number; mCount: number }>();
+    const totalParentalAge = { fSum: 0, fCount: 0, mSum: 0, mCount: 0 };
 
     let peopleWithAge = 0;
 
@@ -69,18 +71,47 @@ export function calculateFamilyStats(individuals: any[], families: any[], genera
         fam.children.forEach((childId: string) => {
             const child = individuals.find(i => i.id === childId);
             const childBirth = child ? extractYear(child.birthDate) : null;
+            const gen = child ? generationMap.get(childId) : null;
 
             if (childBirth) {
+                const century = `${Math.floor(childBirth / 100)}00-talet`;
+
+                if (!parentalAgeByCentury.has(century)) {
+                    parentalAgeByCentury.set(century, { fSum: 0, fCount: 0, mSum: 0, mCount: 0 });
+                }
+                const cData = parentalAgeByCentury.get(century)!;
+
+                if (gen !== null && gen !== undefined) {
+                    if (!parentalAgeByGen.has(gen)) {
+                        parentalAgeByGen.set(gen, { fSum: 0, fCount: 0, mSum: 0, mCount: 0 });
+                    }
+                }
+                const gData = gen !== null && gen !== undefined ? parentalAgeByGen.get(gen)! : null;
+
                 if (fatherBirth) {
                     const age = childBirth - fatherBirth;
                     if (age > 12 && age < 80) {
-                        fatherAges.push(age);
+                        totalParentalAge.fSum += age;
+                        totalParentalAge.fCount++;
+                        cData.fSum += age;
+                        cData.fCount++;
+                        if (gData) {
+                            gData.fSum += age;
+                            gData.fCount++;
+                        }
                     }
                 }
                 if (motherBirth) {
                     const age = childBirth - motherBirth;
                     if (age > 12 && age < 60) {
-                        motherAges.push(age);
+                        totalParentalAge.mSum += age;
+                        totalParentalAge.mCount++;
+                        cData.mSum += age;
+                        cData.mCount++;
+                        if (gData) {
+                            gData.mSum += age;
+                            gData.mCount++;
+                        }
                     }
                 }
             }
@@ -105,14 +136,28 @@ export function calculateFamilyStats(individuals: any[], families: any[], genera
             .map(([century, data]) => ({ century, avgAge: Math.round(data.sum / data.count), count: data.count }))
             .sort((a, b) => a.century.localeCompare(b.century)),
         avgParentalAge: {
-            father: {
-                avg: fatherAges.length > 0 ? Math.round(fatherAges.reduce((a, b) => a + b) / fatherAges.length) : 0,
-                count: fatherAges.length
+            total: {
+                father: totalParentalAge.fCount > 0 ? Math.round(totalParentalAge.fSum / totalParentalAge.fCount) : 0,
+                mother: totalParentalAge.mCount > 0 ? Math.round(totalParentalAge.mSum / totalParentalAge.mCount) : 0,
+                fatherCount: totalParentalAge.fCount,
+                motherCount: totalParentalAge.mCount
             },
-            mother: {
-                avg: motherAges.length > 0 ? Math.round(motherAges.reduce((a, b) => a + b) / motherAges.length) : 0,
-                count: motherAges.length
-            }
+            byGeneration: Array.from(parentalAgeByGen.entries())
+                .map(([generation, data]) => ({
+                    generation,
+                    fatherAvg: data.fCount > 0 ? Math.round(data.fSum / data.fCount) : 0,
+                    motherAvg: data.mCount > 0 ? Math.round(data.mSum / data.mCount) : 0
+                }))
+                .filter(i => i.fatherAvg > 0 || i.motherAvg > 0)
+                .sort((a, b) => a.generation - b.generation),
+            byCentury: Array.from(parentalAgeByCentury.entries())
+                .map(([century, data]) => ({
+                    century,
+                    fatherAvg: data.fCount > 0 ? Math.round(data.fSum / data.fCount) : 0,
+                    motherAvg: data.mCount > 0 ? Math.round(data.mSum / data.mCount) : 0
+                }))
+                .filter(i => i.fatherAvg > 0 || i.motherAvg > 0)
+                .sort((a, b) => a.century.localeCompare(b.century))
         }
     };
 }

@@ -937,3 +937,42 @@ body.loading .app-subtitle {
     grid-column: span 1;
   }
 }
+
+/* Stats Dual Charts */
+.chart-bar-bg.dual {
+    height: 16px;
+    background: rgba(255,255,255,0.05);
+}
+
+.bar-set {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 100%;
+}
+
+.chart-row.duo-bar {
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+.chart-row.duo-bar .chart-label {
+    width: 60px;
+    font-size: 0.65rem;
+}
+
+.chart-row.duo-bar .chart-bar {
+    height: 6px;
+    min-width: 20px;
+}
+
+.chart-row.duo-bar .bar-value {
+    font-size: 0.5rem;
+    right: -15px;
+}
+
+@media (max-width: 600px) {
+    .parental-age-breakdown {
+        grid-template-columns: 1fr !important;
+    }
+}
