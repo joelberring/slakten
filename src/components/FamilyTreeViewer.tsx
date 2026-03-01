@@ -163,7 +163,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             });
 
             // Visibility Logic: Recursive reachability based on expansion
-            // Family nodes are always pass-through (they're just visual connectors).
+            // Individual nodes and Family nodes must be in expandedNodeIds to reveal neighbors.
             // Sibling filter: when a family node leads down to children, only show
             // the child that expanded upward OR children explicitly toggled via siblings.
             const visibleNodeIds = new Set<string>(roots);
@@ -177,9 +177,9 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 const currId = stack.shift()!;
                 const currIsFamilyNode = familyChildrenMap.has(currId);
 
-                // Family nodes are always "expanded" (pass-through).
-                // Individual nodes need to be in expandedNodeIds.
-                const shouldTraverse = currIsFamilyNode || expandedNodeIds.has(currId);
+                // Both Individual nodes and Family nodes MUST be in expandedNodeIds to be traversed.
+                // Exceptions: Roots are always starting points.
+                const shouldTraverse = roots.includes(currId) || expandedNodeIds.has(currId);
 
                 if (shouldTraverse) {
                     const neighbors = edgesByNode.get(currId) || [];
@@ -187,11 +187,10 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                         const neighborIsFamilyNode = familyChildrenMap.has(neighborId);
 
                         // CASE: Individual expanding UP to a family node (where they're a child)
-                        // This reveals the family node and we mark that this child expanded through it
+                        // This reveals the family node & we mark that this child expanded through it
                         if (!currIsFamilyNode && neighborIsFamilyNode) {
                             const familyChildren = familyChildrenMap.get(neighborId) || [];
                             if (familyChildren.includes(currId)) {
-                                // currId is a child of this family — mark it
                                 expandedUpwardThrough.add(`${neighborId}:${currId}`);
                             }
                         }
@@ -210,6 +209,8 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                                 );
 
                                 // Skip this child unless it's the original expander, already visible, or siblings toggled
+                                // NOTE: roots are already in visibleNodeIds, so their family-downward traversal
+                                // won't block them unless we want to hide ancestors of non-roots?
                                 if (!isOriginalExpander && !isAlreadyVisible && !anySiblingToggled) {
                                     continue;
                                 }
