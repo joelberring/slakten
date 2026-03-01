@@ -998,26 +998,36 @@ body.loading .app-subtitle {
   }
 
   .intro-modal-content {
-    padding: 20px;
-    max-height: 90vh;
+    padding: 16px;
+    max-height: 80vh;
     overflow-y: auto;
+    width: 90%;
   }
 
   .intro-modal-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
   }
 
   .intro-sections {
-    margin: 15px 0;
-    gap: 12px;
+    margin: 10px 0;
+    gap: 10px;
   }
 
   .intro-section h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
   }
 
   .intro-section p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .intro-modal-content .upload-btn {
+    margin-top: 10px !important;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
