@@ -383,7 +383,7 @@ export function FamilyMap({
 
 
     return (
-        <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+        <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             {loadingCount.resolved < loadingCount.total && (
                 <div style={{
                     position: 'absolute', top: '20px', left: '50%', transform: 'translateX(-50%)', zIndex: 1000,
