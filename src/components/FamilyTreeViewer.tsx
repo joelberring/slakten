@@ -59,7 +59,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     // Effect to handle focusNodeId (e.g. from map view)
     useEffect(() => {
         if (focusNodeId && individuals.length > 0) {
-            // Find path from any root to the target node
+            // 1. Find the path from roots to this node
             let foundPath: string[] | null = null;
             for (const rootId of roots) {
                 const p = findRelationshipPath(families, rootId, focusNodeId, false);
@@ -69,23 +69,49 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             }
 
             if (foundPath) {
+                // 2. Expand all nodes in the path to ensure visibility
                 setExpandedNodeIds(prev => {
                     const next = new Set(prev);
                     foundPath!.forEach(id => next.add(id));
                     return next;
                 });
-
-                // Jump to the node after a short delay for layout
-                setTimeout(() => {
-                    const node = nodes.find(n => n.id === focusNodeId);
-                    if (node) {
-                        setCenter(node.position.x, node.position.y, { zoom: 0.8, duration: 800 });
-                    }
-                    onFocusClear?.();
-                }, 500);
             }
         }
-    }, [focusNodeId, individuals, families, roots, nodes, setCenter, onFocusClear]);
+    }, [focusNodeId, individuals, families, roots]);
+
+    // Separate effect to handle highlighting and centering once nodes are layouted
+    useEffect(() => {
+        if (focusNodeId && nodes.length > 0) {
+            const targetNode = nodes.find(n => n.id === focusNodeId);
+            if (targetNode && targetNode.position.x !== 0) {
+                // Find path again to highlight
+                let foundPath: string[] | null = null;
+                for (const rootId of roots) {
+                    const p = findRelationshipPath(families, rootId, focusNodeId, false);
+                    if (p && (!foundPath || p.length < foundPath.length)) {
+                        foundPath = p;
+                    }
+                }
+
+                if (foundPath) {
+                    const edges = getPathEdges(foundPath);
+                    handlePathFound(foundPath, edges);
+
+                    // 3. Center/Fit view on the path
+                    setTimeout(() => {
+                        // Use fitView with the nodes in the path
+                        const pathNodes = nodes.filter(n => foundPath!.includes(n.id));
+                        if (pathNodes.length > 0) {
+                            const padding = 0.2;
+                            // For now, center on target node with a nice zoom
+                            setCenter(targetNode.position.x, targetNode.position.y, { zoom: 0.7, duration: 1000 });
+                        }
+                        onFocusClear?.();
+                    }, 100);
+                }
+            }
+        }
+    }, [focusNodeId, nodes.length, roots, families]);
 
     useEffect(() => {
         if (individuals.length > 0 && families.length > 0) {
