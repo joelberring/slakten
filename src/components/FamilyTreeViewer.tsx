@@ -220,21 +220,27 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             });
 
             // Visibility Logic: Recursive reachability based on expansion
+            // 1. Identify families that should show ALL members (downward/lateral expansion)
+            // This includes families of roots and families where spouse expansion is toggled.
+            const fullVisibilityFamilies = new Set<string>();
+            families.forEach(f => {
+                const husbMatch = f.husb && (roots.includes(f.husb) || spouseExpandedNodeIds.has(f.husb));
+                const wifeMatch = f.wife && (roots.includes(f.wife) || spouseExpandedNodeIds.has(f.wife));
+                if (husbMatch || wifeMatch) {
+                    fullVisibilityFamilies.add(f.id);
+                }
+            });
+
+            // 2. BFS for visibility
             const visibleNodeIds = new Set<string>(roots);
             const stack = [...roots];
-            const visitedForVisibility = new Set<string>(roots);
-
-            // Track how family nodes were reached
-            // familyId -> Set of individualIds that reached it as children (upward expansion)
-            const reachedFromChild = new Map<string, Set<string>>();
-            // familyId -> boolean (true if reached from a parent, downward expansion)
-            const reachedFromParent = new Set<string>();
+            const visited = new Set<string>(roots);
 
             while (stack.length > 0) {
                 const currId = stack.shift()!;
                 const currIsFamilyNode = familyChildrenMap.has(currId);
-                // Family nodes are always "expanded" (pass-through).
-                // Individual nodes need to be in expandedNodeIds or spouseExpandedNodeIds.
+
+                // Individual nodes are traversed if root, expanded upwards, or expanded for spouses
                 const shouldTraverse = currIsFamilyNode ||
                     roots.includes(currId) ||
                     expandedNodeIds.has(currId) ||
@@ -245,63 +251,37 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                     for (const { neighborId } of neighbors) {
                         const neighborIsFamilyNode = familyChildrenMap.has(neighborId);
 
-                        // If going from Individual -> Family Node
-                        if (!currIsFamilyNode && neighborIsFamilyNode) {
-                            const family = families.find(f => f.id === neighborId);
-                            if (family) {
-                                if (family.children.includes(currId)) {
-                                    // Upward expansion
-                                    if (!reachedFromChild.has(neighborId)) reachedFromChild.set(neighborId, new Set());
-                                    reachedFromChild.get(neighborId)!.add(currId);
-                                } else if (family.husb === currId || family.wife === currId) {
-                                    // Downward expansion
-                                    reachedFromParent.add(neighborId);
-                                }
-                            }
-                        }
-
                         // If going from Family Node -> Individual (Child side)
                         if (currIsFamilyNode && !neighborIsFamilyNode) {
                             const familyChildren = familyChildrenMap.get(currId) || [];
                             const isChild = familyChildren.includes(neighborId);
 
                             if (isChild) {
-                                // Apply sibling filter ONLY if reached from a child
-                                // If reached from a parent, we show all children (normal downward expansion)
-                                const parentsReached = reachedFromParent.has(currId);
-                                const childrenWhoReached = reachedFromChild.get(currId);
+                                // If family has full visibility, show all children
+                                // Otherwise, only show if child is an "expander" or sibling toggled
+                                const isFullVis = fullVisibilityFamilies.has(currId);
+                                const isExpander = roots.includes(neighborId) || expandedNodeIds.has(neighborId);
+                                const isSiblingToggled = siblingExpandedNodeIds.has(neighborId);
 
-                                const isExpander = childrenWhoReached?.has(neighborId);
-                                const isAlreadyVisible = visibleNodeIds.has(neighborId);
-                                const anySiblingToggled = familyChildren.some(cId =>
-                                    siblingExpandedNodeIds.has(cId) && visibleNodeIds.has(cId)
-                                );
-
-                                // Show child if: reached from parent OR is expansion child OR siblings toggled
-                                if (!parentsReached && !isExpander && !isAlreadyVisible && !anySiblingToggled) {
+                                if (!isFullVis && !isExpander && !isSiblingToggled) {
                                     continue;
                                 }
                             }
                         }
 
-                        // NEW: Manual Spouse Visibility
-                        // If going from Individual -> Family Node (where they are Husb/Wife)
+                        // If going from Individual -> Family Node (lateral/spouse expansion)
                         if (!currIsFamilyNode && neighborIsFamilyNode) {
                             const family = families.find(f => f.id === neighborId);
                             if (family && (family.husb === currId || family.wife === currId)) {
-                                const isRoot = roots.includes(currId);
-                                const isExpanded = spouseExpandedNodeIds.has(currId);
-
-                                // Only reveal the "downward/lateral" family node if toggled or root
-                                if (!isRoot && !isExpanded) {
+                                if (!fullVisibilityFamilies.has(neighborId)) {
                                     continue;
                                 }
                             }
                         }
 
                         visibleNodeIds.add(neighborId);
-                        if (!visitedForVisibility.has(neighborId)) {
-                            visitedForVisibility.add(neighborId);
+                        if (!visited.has(neighborId)) {
+                            visited.add(neighborId);
                             stack.push(neighborId);
                         }
                     }
