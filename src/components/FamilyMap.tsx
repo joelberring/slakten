@@ -175,6 +175,10 @@ export function FamilyMap({
 
                         group.people.push({
                             ...ind,
+                            id: ind.id,
+                            name: ind.name,
+                            birthDate: ind.birthDate,
+                            deathDate: ind.deathDate,
                             eventType: event.type,
                             eventDate: event.date,
                             side: personSide,
@@ -513,11 +517,24 @@ export function FamilyMap({
                                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                     {marker.people.map((p, i) => {
                                         const personColor = p.side === 'father' ? '#3498db' : p.side === 'mother' ? '#e74c3c' : p.side === 'both' ? '#9b59b6' : '#f39c12';
+
+                                        const bYear = extractYear(p.birthDate);
+                                        const dYear = extractYear(p.deathDate);
+                                        const lifeSpan = bYear || dYear ? `(${bYear || ''}–${dYear || ''})` : '';
+
+                                        const typeLabels: Record<string, string> = {
+                                            'BIRT': 'Föddes här',
+                                            'DEAT': 'Dog här',
+                                            'MARR': 'Giftes här'
+                                        };
+                                        const eventLabel = typeLabels[p.eventType] || p.eventType;
+
                                         return (
-                                            <li key={i} style={{ marginBottom: '8px', fontSize: '0.85rem', lineHeight: '1.4' }}>
-                                                <strong style={{ color: personColor }}>{p.name}</strong>
-                                                {p.year && <span style={{ color: 'var(--text-secondary)', marginLeft: '4px' }}>({p.year})</span>}
-                                                <div style={{ fontSize: '0.75rem', opacity: 0.8, display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                            <li key={i} style={{ marginBottom: '12px', fontSize: '0.85rem', lineHeight: '1.4' }}>
+                                                <div style={{ fontWeight: 700, color: personColor }}>
+                                                    {p.name} {lifeSpan}
+                                                </div>
+                                                <div style={{ fontSize: '0.75rem', opacity: 0.8, display: 'flex', alignItems: 'center', gap: '4px', marginTop: '2px' }}>
                                                     <span style={{
                                                         display: 'inline-block',
                                                         width: '6px',
@@ -525,12 +542,12 @@ export function FamilyMap({
                                                         borderRadius: '50%',
                                                         background: personColor
                                                     }}></span>
-                                                    {p.eventType}
+                                                    {eventLabel} {p.year ? `(${p.year})` : ''}
                                                 </div>
                                                 <button
                                                     className="secondary-btn"
                                                     onClick={() => onShowInTree?.(p.id)}
-                                                    style={{ fontSize: '0.65rem', padding: '2px 6px', marginTop: '4px', width: 'auto' }}
+                                                    style={{ fontSize: '0.65rem', padding: '4px 8px', marginTop: '6px', width: 'auto' }}
                                                 >
                                                     👁️ Se i släktträdet
                                                 </button>

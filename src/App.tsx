@@ -297,34 +297,40 @@ function App() {
           </div>
 
           {viewMode === 'tree' ? (
-            <ReactFlowProvider>
-              <FamilyTreeViewer
+            <div style={{ flex: 1, position: 'relative' }}>
+              <ReactFlowProvider>
+                <FamilyTreeViewer
+                  individuals={individuals}
+                  families={families}
+                  focusNodeId={focusNodeId}
+                  onFocusClear={() => setFocusNodeId(null)}
+                />
+              </ReactFlowProvider>
+            </div>
+          ) : viewMode === 'map' ? (
+            <div style={{ flex: 1, position: 'relative' }}>
+              <FamilyMap
                 individuals={individuals}
                 families={families}
-                focusNodeId={focusNodeId}
-                onFocusClear={() => setFocusNodeId(null)}
+                sideMap={sideMap}
+                generationMap={generationMap}
+                locationsCache={locationsCache}
+                loadingCount={geocodingStatus}
+                onLocationUpdate={handleLocationUpdate}
+                readOnly={urlReadOnly}
+                onShowInTree={(id) => {
+                  setFocusNodeId(id);
+                  setViewMode('tree');
+                }}
               />
-            </ReactFlowProvider>
-          ) : viewMode === 'map' ? (
-            <FamilyMap
-              individuals={individuals}
-              families={families}
-              sideMap={sideMap}
-              generationMap={generationMap}
-              locationsCache={locationsCache}
-              loadingCount={geocodingStatus}
-              onLocationUpdate={handleLocationUpdate}
-              readOnly={urlReadOnly}
-              onShowInTree={(id) => {
-                setFocusNodeId(id);
-                setViewMode('tree');
-              }}
-            />
+            </div>
           ) : (
-            <FamilyStats
-              individuals={individuals}
-              generationMap={generationMap}
-            />
+            <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+              <FamilyStats
+                individuals={individuals}
+                generationMap={generationMap}
+              />
+            </div>
           )}
 
           {showIntro && (
