@@ -3,11 +3,12 @@ import { calculateFamilyStats } from '../utils/stats';
 
 interface Props {
     individuals: any[];
+    families: any[];
     generationMap: Map<string, number>;
 }
 
-export function FamilyStats({ individuals, generationMap }: Props) {
-    const stats = useMemo(() => calculateFamilyStats(individuals, generationMap), [individuals, generationMap]);
+export function FamilyStats({ individuals, families, generationMap }: Props) {
+    const stats = useMemo(() => calculateFamilyStats(individuals, families, generationMap), [individuals, families, generationMap]);
 
     return (
         <div className="stats-container">
@@ -82,6 +83,23 @@ export function FamilyStats({ individuals, generationMap }: Props) {
                                 <span className="name-count">{item.count} st</span>
                             </div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Parental Age at Birth */}
+                <div className="stats-card full-width">
+                    <h3>Genomsnittlig ålder vid barns födelse</h3>
+                    <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '15px' }}>
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--male-color)' }}>{stats.avgParentalAge.father.avg}</div>
+                            <div style={{ fontSize: '0.8rem', opacity: 0.8 }}>Pappor (medelålder)</div>
+                            <div style={{ fontSize: '0.7rem', opacity: 0.5 }}>Baserat på {stats.avgParentalAge.father.count} födslar</div>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--female-color)' }}>{stats.avgParentalAge.mother.avg}</div>
+                            <div style={{ fontSize: '0.8rem', opacity: 0.8 }}>Mammor (medelålder)</div>
+                            <div style={{ fontSize: '0.7rem', opacity: 0.5 }}>Baserat på {stats.avgParentalAge.mother.count} födslar</div>
+                        </div>
                     </div>
                 </div>
             </div>

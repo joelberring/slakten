@@ -926,3 +926,14 @@ body.loading .app-subtitle {
 .leaflet-popup-content div::-webkit-scrollbar-thumb:hover {
   background: var(--accent-color);
 }
+
+.stats-card.full-width {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(20, 20, 28, 0.7) 100%);
+}
+
+@media (max-width: 768px) {
+  .stats-card.full-width {
+    grid-column: span 1;
+  }
+}

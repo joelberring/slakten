@@ -328,6 +328,7 @@ function App() {
             <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
               <FamilyStats
                 individuals={individuals}
+                families={families}
                 generationMap={generationMap}
               />
             </div>

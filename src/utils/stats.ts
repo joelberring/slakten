@@ -7,13 +7,20 @@ export interface StatsData {
     commonFemaleNames: { name: string; count: number }[];
     totalPeople: number;
     peopleWithKnownAge: number;
+    avgParentalAge: {
+        father: { avg: number; count: number };
+        mother: { avg: number; count: number };
+    };
 }
 
-export function calculateFamilyStats(individuals: any[], generationMap: Map<string, number>): StatsData {
+export function calculateFamilyStats(individuals: any[], families: any[], generationMap: Map<string, number>): StatsData {
     const ageByGen = new Map<number, { sum: number; count: number }>();
     const ageByCentury = new Map<string, { sum: number; count: number }>();
     const maleNames = new Map<string, number>();
     const femaleNames = new Map<string, number>();
+
+    const fatherAges: number[] = [];
+    const motherAges: number[] = [];
 
     let peopleWithAge = 0;
 
@@ -52,6 +59,34 @@ export function calculateFamilyStats(individuals: any[], generationMap: Map<stri
         }
     });
 
+    // Parental Age Processing
+    families.forEach(fam => {
+        const husb = individuals.find(i => i.id === fam.husb);
+        const wife = individuals.find(i => i.id === fam.wife);
+        const fatherBirth = husb ? extractYear(husb.birthDate) : null;
+        const motherBirth = wife ? extractYear(wife.birthDate) : null;
+
+        fam.children.forEach((childId: string) => {
+            const child = individuals.find(i => i.id === childId);
+            const childBirth = child ? extractYear(child.birthDate) : null;
+
+            if (childBirth) {
+                if (fatherBirth) {
+                    const age = childBirth - fatherBirth;
+                    if (age > 12 && age < 80) {
+                        fatherAges.push(age);
+                    }
+                }
+                if (motherBirth) {
+                    const age = childBirth - motherBirth;
+                    if (age > 12 && age < 60) {
+                        motherAges.push(age);
+                    }
+                }
+            }
+        });
+    });
+
     const sortMapByCount = (map: Map<string, number>) =>
         Array.from(map.entries())
             .map(([name, count]) => ({ name, count }))
@@ -68,6 +103,16 @@ export function calculateFamilyStats(individuals: any[], generationMap: Map<stri
             .sort((a, b) => a.generation - b.generation),
         avgAgeByCentury: Array.from(ageByCentury.entries())
             .map(([century, data]) => ({ century, avgAge: Math.round(data.sum / data.count), count: data.count }))
-            .sort((a, b) => a.century.localeCompare(b.century))
+            .sort((a, b) => a.century.localeCompare(b.century)),
+        avgParentalAge: {
+            father: {
+                avg: fatherAges.length > 0 ? Math.round(fatherAges.reduce((a, b) => a + b) / fatherAges.length) : 0,
+                count: fatherAges.length
+            },
+            mother: {
+                avg: motherAges.length > 0 ? Math.round(motherAges.reduce((a, b) => a + b) / motherAges.length) : 0,
+                count: motherAges.length
+            }
+        }
     };
 }
