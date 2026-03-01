@@ -297,39 +297,46 @@ function App() {
           </div>
 
           {viewMode === 'tree' ? (
+            <ReactFlowProvider>
+              <FamilyTreeViewer
+                individuals={individuals}
+                families={families}
+                focusNodeId={focusNodeId}
+                onFocusClear={() => setFocusNodeId(null)}
+              />
             </ReactFlowProvider>
-      ) : viewMode === 'map' ? (
-      <FamilyMap
-        individuals={individuals}
-        families={families}
-        sideMap={sideMap}
-        generationMap={generationMap}
-        locationsCache={locationsCache}
-        loadingCount={geocodingStatus}
-        onLocationUpdate={handleLocationUpdate}
-        readOnly={urlReadOnly}
-        onShowInTree={(id) => {
-          setFocusNodeId(id);
-          setViewMode('tree');
-        }}
-      />
-      ) : (
-      <FamilyStats
-        individuals={individuals}
-        generationMap={generationMap}
-      />
+          ) : viewMode === 'map' ? (
+            <FamilyMap
+              individuals={individuals}
+              families={families}
+              sideMap={sideMap}
+              generationMap={generationMap}
+              locationsCache={locationsCache}
+              loadingCount={geocodingStatus}
+              onLocationUpdate={handleLocationUpdate}
+              readOnly={urlReadOnly}
+              onShowInTree={(id) => {
+                setFocusNodeId(id);
+                setViewMode('tree');
+              }}
+            />
+          ) : (
+            <FamilyStats
+              individuals={individuals}
+              generationMap={generationMap}
+            />
           )}
 
-      {showIntro && (
-        <IntroModal onClose={() => {
-          setShowIntro(false);
-          localStorage.setItem('slakten_intro_seen', 'true');
-        }} />
-      )}
+          {showIntro && (
+            <IntroModal onClose={() => {
+              setShowIntro(false);
+              localStorage.setItem('slakten_intro_seen', 'true');
+            }} />
+          )}
 
-    </div>
-  )
-}
+        </div>
+      )
+      }
     </div >
   );
 }
