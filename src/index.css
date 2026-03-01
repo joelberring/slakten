@@ -894,3 +894,35 @@ body.loading .app-subtitle {
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+/* Leaflet Popup Styling */
+.leaflet-popup-content-wrapper {
+  background: var(--bg-secondary) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary) !important;
+  border-radius: 12px !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color);
+}
+
+/* Custom Scrollbar for popups */
+.leaflet-popup-content div::-webkit-scrollbar {
+  width: 6px;
+}
+
+.leaflet-popup-content div::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.leaflet-popup-content div::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+.leaflet-popup-content div::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}

@@ -512,8 +512,8 @@ export function FamilyMap({
                         }}
                     >
                         <Popup>
-                            <div style={{ maxHeight: '250px', overflowY: 'auto', minWidth: '220px' }}>
-                                <h3 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', borderBottom: '1px solid #eee', color: 'var(--accent-color)' }}>{marker.placeName}</h3>
+                            <div style={{ maxHeight: '450px', overflowY: 'auto', minWidth: '240px', paddingRight: '10px' }}>
+                                <h3 style={{ margin: '0 0 10px 0', fontSize: '0.95rem', borderBottom: '1px solid var(--border-color)', color: 'var(--accent-color)', paddingBottom: '5px' }}>{marker.placeName}</h3>
                                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                     {marker.people.map((p, i) => {
                                         const personColor = p.side === 'father' ? '#3498db' : p.side === 'mother' ? '#e74c3c' : p.side === 'both' ? '#9b59b6' : '#f39c12';
