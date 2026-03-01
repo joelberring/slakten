@@ -240,14 +240,14 @@ function App() {
         <div className="upload-overlay">
           <div style={{ textAlign: 'center' }}>
             <div className="loading-spinner"></div>
-            <h2 style={{ fontFamily: 'Outfit', fontWeight: 600, marginTop: '20px' }}>Berring Släktträd</h2>
+            <h2 style={{ fontFamily: 'Outfit', fontWeight: 600, marginTop: '20px' }}>Berrings och Messings släktträd</h2>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Färdigställer din upplevelse...</p>
           </div>
         </div>
       ) : individuals.length === 0 ? (
         <div className="upload-overlay">
           <div className="upload-box">
-            <h2>Welcome to Släktträd Visualizer</h2>
+            <h2>Berrings och Messings släktträd</h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
               Upload your GEDCOM (.ged) file to view a stunning interactive Directed Acyclic Graph of your family history.
             </p>

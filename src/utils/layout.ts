@@ -4,12 +4,12 @@ import type { Node, Edge } from '@xyflow/react';
 const dagreGraph = new dagre.graphlib.Graph();
 dagreGraph.setDefaultEdgeLabel(() => ({}));
 
-const nodeWidth = 250;
-const nodeHeight = 100;
+const nodeWidth = 200;
+const nodeHeight = 80;
 const famNodeSize = 20;
 
 export const getLayoutedElements = (nodes: Node[], edges: Edge[], direction = 'TB') => {
-    dagreGraph.setGraph({ rankdir: direction, nodesep: 50, ranksep: 100 });
+    dagreGraph.setGraph({ rankdir: direction, nodesep: 30, ranksep: 60 });
 
     nodes.forEach((node) => {
         const isFam = node.type === 'familyNode';

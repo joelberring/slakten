@@ -476,7 +476,7 @@ body.loading .app-subtitle {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 5000;
   background: var(--bg-secondary);
   padding: 5px;
   border-radius: 8px;
@@ -499,12 +499,19 @@ body.loading .app-subtitle {
   }
 
   .individual-node {
-    width: 200px;
-    padding: 12px;
+    width: 140px;
+    padding: 8px;
+    border-radius: 8px;
   }
 
   .node-header {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .node-dates {
+    font-size: 0.8rem;
   }
 
   .relationship-panel {
@@ -566,6 +573,7 @@ body.loading .app-subtitle {
   }
 
   .view-switcher-container {
+    z-index: 5000 !important;
     top: 10px !important;
     left: 10px !important;
     transform: none !important;
