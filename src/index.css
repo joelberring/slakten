@@ -997,11 +997,17 @@ body.loading .app-subtitle {
     grid-template-columns: 1fr !important;
   }
 
+  .intro-modal-overlay {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
   .intro-modal-content {
-    padding: 16px;
-    max-height: 80vh;
+    padding: 20px 20px 40px 20px;
+    /* Extra bottom padding */
+    max-height: 85vh;
     overflow-y: auto;
-    width: 90%;
+    width: 92%;
   }
 
   .intro-modal-content h2 {

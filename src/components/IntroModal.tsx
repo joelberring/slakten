@@ -31,6 +31,7 @@ export function IntroModal({ onClose }: Props) {
                 <button className="upload-btn" onClick={onClose} style={{ marginTop: '20px' }}>
                     Börja utforska
                 </button>
+                <div style={{ height: '30px' }}></div>
             </div>
         </div>
     );
