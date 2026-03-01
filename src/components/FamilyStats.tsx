@@ -145,8 +145,46 @@ export function FamilyStats({ individuals, families, generationMap }: Props) {
                         </div>
                     </div>
                 </div>
+
+                {/* Common Places by Generation */}
+                <div className="stats-card full-width">
+                    <h3>Vanligaste bostadsorterna per generation</h3>
+                    <div className="places-grid" style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                        gap: '15px',
+                        marginTop: '15px'
+                    }}>
+                        {stats.commonPlacesByGeneration.map(genItem => (
+                            <div key={genItem.generation} className="gen-places-card" style={{
+                                background: 'rgba(255,255,255,0.03)',
+                                padding: '15px',
+                                borderRadius: '12px',
+                                border: '1px solid var(--border-color)',
+                                display: 'flex',
+                                flexDirection: 'column'
+                            }}>
+                                <h4 style={{ fontSize: '0.9rem', marginBottom: '10px', color: 'var(--accent-color)', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '5px' }}>
+                                    Generation {genItem.generation === 1 ? '1 (Joel/Annika)' : genItem.generation}
+                                </h4>
+                                <div className="gen-places-list">
+                                    {genItem.places.length > 0 ? genItem.places.map((place, pIdx) => (
+                                        <div key={place.name} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', marginBottom: '6px' }}>
+                                            <span style={{ opacity: 0.9, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '150px' }}>
+                                                {pIdx + 1}. {place.name}
+                                            </span>
+                                            <span style={{ fontWeight: 600, opacity: 0.7 }}>{place.count} st</span>
+                                        </div>
+                                    )) : (
+                                        <div style={{ fontSize: '0.75rem', opacity: 0.4, fontStyle: 'italic' }}>Ingen platsdata tillgänglig</div>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
             <div className="stats-footer-spacer" style={{ height: '100px' }}></div>
-        </div>
+        </div >
     );
 }

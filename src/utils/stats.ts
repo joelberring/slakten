@@ -12,6 +12,7 @@ export interface StatsData {
         byGeneration: { generation: number; fatherAvg: number; motherAvg: number }[];
         byCentury: { century: string; fatherAvg: number; motherAvg: number }[];
     };
+    commonPlacesByGeneration: { generation: number; places: { name: string; count: number }[] }[];
 }
 
 export function calculateFamilyStats(individuals: any[], families: any[], generationMap: Map<string, number>): StatsData {
@@ -19,6 +20,7 @@ export function calculateFamilyStats(individuals: any[], families: any[], genera
     const ageByCentury = new Map<string, { sum: number; count: number }>();
     const maleNames = new Map<string, number>();
     const femaleNames = new Map<string, number>();
+    const placesByGen = new Map<number, Map<string, number>>();
 
     const parentalAgeByGen = new Map<number, { fSum: number; fCount: number; mSum: number; mCount: number }>();
     const parentalAgeByCentury = new Map<string, { fSum: number; fCount: number; mSum: number; mCount: number }>();
@@ -58,6 +60,32 @@ export function calculateFamilyStats(individuals: any[], families: any[], genera
                 const currentC = ageByCentury.get(century) || { sum: 0, count: 0 };
                 ageByCentury.set(century, { sum: currentC.sum + age, count: currentC.count + 1 });
             }
+        }
+
+        // Places by Generation
+        const gen = generationMap.get(ind.id);
+        if (gen !== undefined) {
+            if (!placesByGen.has(gen)) {
+                placesByGen.set(gen, new Map());
+            }
+            const gPlaces = placesByGen.get(gen)!;
+
+            // Extract place names from birth, death and other events
+            const places = new Set<string>();
+            if (ind.birthPlace) places.add(ind.birthPlace);
+            if (ind.deathPlace) places.add(ind.deathPlace);
+            if (ind.events) {
+                ind.events.forEach((e: any) => {
+                    if (e.place) places.add(e.place);
+                });
+            }
+
+            places.forEach(p => {
+                const cleaned = p.split(',')[0].trim(); // Take first part of address
+                if (cleaned && cleaned.length > 1) {
+                    gPlaces.set(cleaned, (gPlaces.get(cleaned) || 0) + 1);
+                }
+            });
         }
     });
 
@@ -118,11 +146,11 @@ export function calculateFamilyStats(individuals: any[], families: any[], genera
         });
     });
 
-    const sortMapByCount = (map: Map<string, number>) =>
+    const sortMapByCount = (map: Map<string, number>, limit = 20) =>
         Array.from(map.entries())
             .map(([name, count]) => ({ name, count }))
             .sort((a, b) => b.count - a.count)
-            .slice(0, 10);
+            .slice(0, limit);
 
     return {
         totalPeople: individuals.length,
@@ -158,6 +186,12 @@ export function calculateFamilyStats(individuals: any[], families: any[], genera
                 }))
                 .filter(i => i.fatherAvg > 0 || i.motherAvg > 0)
                 .sort((a, b) => a.century.localeCompare(b.century))
-        }
+        },
+        commonPlacesByGeneration: Array.from(placesByGen.entries())
+            .map(([generation, placesMap]) => ({
+                generation,
+                places: sortMapByCount(placesMap, 5)
+            }))
+            .sort((a, b) => a.generation - b.generation)
     };
 }
