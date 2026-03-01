@@ -168,7 +168,7 @@ function App() {
   };
 
   return (
-    <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+    <div id="app-root" style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
       <div className="settings-container" style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 1000 }}>
         <button
           className="secondary-btn"
@@ -297,18 +297,20 @@ function App() {
           </div>
 
           {viewMode === 'tree' ? (
-            <div style={{ flex: 1, position: 'relative' }}>
+            <div className="view-container">
               <ReactFlowProvider>
-                <FamilyTreeViewer
-                  individuals={individuals}
-                  families={families}
-                  focusNodeId={focusNodeId}
-                  onFocusClear={() => setFocusNodeId(null)}
-                />
+                <div className="react-flow-wrapper">
+                  <FamilyTreeViewer
+                    individuals={individuals}
+                    families={families}
+                    focusNodeId={focusNodeId}
+                    onFocusClear={() => setFocusNodeId(null)}
+                  />
+                </div>
               </ReactFlowProvider>
             </div>
           ) : viewMode === 'map' ? (
-            <div style={{ flex: 1, position: 'relative' }}>
+            <div className="view-container">
               <FamilyMap
                 individuals={individuals}
                 families={families}
@@ -325,7 +327,7 @@ function App() {
               />
             </div>
           ) : (
-            <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+            <div className="view-container" style={{ overflowY: 'auto' }}>
               <FamilyStats
                 individuals={individuals}
                 families={families}
