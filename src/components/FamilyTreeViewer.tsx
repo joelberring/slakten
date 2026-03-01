@@ -163,33 +163,56 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             });
 
             // Visibility Logic: Recursive reachability based on expansion
-            // Key change: when traversing FROM a family node DOWN to children,
-            // only include the child that triggered the expansion, unless siblings are toggled
+            // Family nodes are always pass-through (they're just visual connectors).
+            // Sibling filter: when a family node leads down to children, only show
+            // the child that expanded upward OR children explicitly toggled via siblings.
             const visibleNodeIds = new Set<string>(roots);
             const stack = [...roots];
             const visitedForVisibility = new Set<string>(roots);
 
+            // Track which individuals triggered upward expansion through which family nodes
+            const expandedUpwardThrough = new Set<string>(); // Set of "familyId:childId" pairs
+
             while (stack.length > 0) {
                 const currId = stack.shift()!;
+                const currIsFamilyNode = familyChildrenMap.has(currId);
 
-                if (expandedNodeIds.has(currId)) {
+                // Family nodes are always "expanded" (pass-through).
+                // Individual nodes need to be in expandedNodeIds.
+                const shouldTraverse = currIsFamilyNode || expandedNodeIds.has(currId);
+
+                if (shouldTraverse) {
                     const neighbors = edgesByNode.get(currId) || [];
                     for (const { neighborId } of neighbors) {
-                        const isFamilyNode = familyChildrenMap.has(neighborId);
-                        const currIsFamilyNode = familyChildrenMap.has(currId);
+                        const neighborIsFamilyNode = familyChildrenMap.has(neighborId);
 
-                        // If current is a family node and neighbor is a child:
-                        // Only show the child if either:
-                        //   - The child is already in visibleNodeIds (it was the one that expanded up to this family)
-                        //   - OR some visible child of this family has siblings toggled on
-                        if (currIsFamilyNode && !isFamilyNode) {
+                        // CASE: Individual expanding UP to a family node (where they're a child)
+                        // This reveals the family node and we mark that this child expanded through it
+                        if (!currIsFamilyNode && neighborIsFamilyNode) {
+                            const familyChildren = familyChildrenMap.get(neighborId) || [];
+                            if (familyChildren.includes(currId)) {
+                                // currId is a child of this family — mark it
+                                expandedUpwardThrough.add(`${neighborId}:${currId}`);
+                            }
+                        }
+
+                        // CASE: Family node going DOWN to a child
+                        // Apply sibling filter: only show the child that expanded up, OR if siblings toggled
+                        if (currIsFamilyNode && !neighborIsFamilyNode) {
                             const familyChildren = familyChildrenMap.get(currId) || [];
-                            const isChildAlreadyVisible = visibleNodeIds.has(neighborId);
-                            // Check if any already-visible child of this family has siblings expanded
-                            const anySiblingToggled = familyChildren.some(cId => siblingExpandedNodeIds.has(cId) && visibleNodeIds.has(cId));
+                            const isChild = familyChildren.includes(neighborId);
 
-                            if (!isChildAlreadyVisible && !anySiblingToggled) {
-                                continue; // Skip this sibling
+                            if (isChild) {
+                                const isOriginalExpander = expandedUpwardThrough.has(`${currId}:${neighborId}`);
+                                const isAlreadyVisible = visibleNodeIds.has(neighborId);
+                                const anySiblingToggled = familyChildren.some(cId =>
+                                    siblingExpandedNodeIds.has(cId) && visibleNodeIds.has(cId)
+                                );
+
+                                // Skip this child unless it's the original expander, already visible, or siblings toggled
+                                if (!isOriginalExpander && !isAlreadyVisible && !anySiblingToggled) {
+                                    continue;
+                                }
                             }
                         }
 
