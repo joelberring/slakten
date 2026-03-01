@@ -12,6 +12,7 @@ function App() {
   const [individuals, setIndividuals] = useState<any[]>([]);
   const [families, setFamilies] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const [isInitialLoading, setIsInitialLoading] = useState(true);
   const [viewMode, setViewMode] = useState<'tree' | 'map'>('tree');
   const [googleApiKey, setGoogleApiKey] = useState<string>(() => localStorage.getItem('slakten_google_api_key') || '');
   const [showSettings, setShowSettings] = useState(false);
@@ -19,6 +20,14 @@ function App() {
   const urlReadOnly = useMemo(() => {
     return !window.location.search.includes('edit=true');
   }, []);
+
+  useEffect(() => {
+    if (isInitialLoading) {
+      document.body.classList.add('loading');
+    } else {
+      document.body.classList.remove('loading');
+    }
+  }, [isInitialLoading]);
 
   // Detect root individuals and compute lineages/generations
   const { sideMap, generationMap } = useMemo(() => {
@@ -115,7 +124,9 @@ function App() {
     };
 
     if (individuals.length === 0) {
-      loadDefaultGedcom();
+      loadDefaultGedcom().finally(() => setIsInitialLoading(false));
+    } else {
+      setIsInitialLoading(false);
     }
   }, []);
 
@@ -223,11 +234,17 @@ function App() {
         )}
       </div>
 
-      <h1 className="app-title">Berring Släktträd</h1>
-
       <p className="app-subtitle">Visualizing Family Connections & Intersections</p>
 
-      {individuals.length === 0 ? (
+      {isInitialLoading ? (
+        <div className="upload-overlay">
+          <div style={{ textAlign: 'center' }}>
+            <div className="loading-spinner"></div>
+            <h2 style={{ fontFamily: 'Outfit', fontWeight: 600, marginTop: '20px' }}>Berring Släktträd</h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Färdigställer din upplevelse...</p>
+          </div>
+        </div>
+      ) : individuals.length === 0 ? (
         <div className="upload-overlay">
           <div className="upload-box">
             <h2>Welcome to Släktträd Visualizer</h2>

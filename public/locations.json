@@ -1137,5 +1137,145 @@
             "lat": 56.5808151,
             "lon": 15.4455893
         }
+    ],
+    [
+        "Grangärde, Dalarna, Sverige",
+        {
+            "lat": 60.2647,
+            "lon": 14.9806
+        }
+    ],
+    [
+        "Ljusnarsberg, Örebro, Sweden",
+        {
+            "lat": 59.897,
+            "lon": 14.992
+        }
+    ],
+    [
+        "Ljusnarsberg, Orebro, Sweden",
+        {
+            "lat": 59.897,
+            "lon": 14.992
+        }
+    ],
+    [
+        "Grangärde, Dalarnas, Sweden",
+        {
+            "lat": 60.2647,
+            "lon": 14.9806
+        }
+    ],
+    [
+        "Skogsryd, Linneryd, Tingsryd, Kronoberg, Suède",
+        {
+            "lat": 56.6608,
+            "lon": 15.1246
+        }
+    ],
+    [
+        "Edebo, Stockholm, Sverige",
+        {
+            "lat": 59.988,
+            "lon": 18.577
+        }
+    ],
+    [
+        "Långasjö, Emmaboda, Kalmar, Suède",
+        {
+            "lat": 56.579,
+            "lon": 15.452
+        }
+    ],
+    [
+        "Traryd, Kronoberg, Sverige",
+        {
+            "lat": 56.575,
+            "lon": 13.738
+        }
+    ],
+    [
+        "Hinneryd, Kronoberg, Sweden",
+        {
+            "lat": 56.621,
+            "lon": 13.593
+        }
+    ],
+    [
+        "Stimmerbo Norrbärke, Dalarna, Sverige",
+        {
+            "lat": 60.134,
+            "lon": 15.42
+        }
+    ],
+    [
+        "Wägarås, Traryd Kronobergs län",
+        {
+            "lat": 56.575,
+            "lon": 13.738
+        }
+    ],
+    [
+        "Finland",
+        {
+            "lat": 61.924,
+            "lon": 25.748
+        }
+    ],
+    [
+        "Grangärde, Dalarna, Sweden",
+        {
+            "lat": 60.2647,
+            "lon": 14.9806
+        }
+    ],
+    [
+        "Ljusnarsberg, Örebro, Sverige",
+        {
+            "lat": 59.897,
+            "lon": 14.992
+        }
+    ],
+    [
+        "Osby, Skåne, Sverige",
+        {
+            "lat": 56.38,
+            "lon": 13.993
+        }
+    ],
+    [
+        "Säfsnäs, Dalarna, Sverige",
+        {
+            "lat": 60.146,
+            "lon": 14.423
+        }
+    ],
+    [
+        "Hjulsjö, Örebro, Sverige",
+        {
+            "lat": 59.784,
+            "lon": 14.778
+        }
+    ],
+    [
+        "Ljusnarsberg, Örebro län, Västmanland, Sverige",
+        {
+            "lat": 59.897,
+            "lon": 14.992
+        }
+    ],
+    [
+        "Kylhult, Strömsnäsbruk, Markaryd, Kronoberg, Sverige",
+        {
+            "lat": 56.541,
+            "lon": 13.671
+        }
+    ],
+    [
+        "Kylhult, Traryd Kronobergs län",
+        {
+            "lat": 56.541,
+            "lon": 13.671
+        }
     ]
 ]
