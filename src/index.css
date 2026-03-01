@@ -996,4 +996,33 @@ body.loading .app-subtitle {
   .parental-age-breakdown {
     grid-template-columns: 1fr !important;
   }
+
+  .intro-modal-content {
+    padding: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .intro-modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-sections {
+    margin: 15px 0;
+    gap: 12px;
+  }
+
+  .intro-section h3 {
+    font-size: 1rem;
+  }
+
+  .intro-section p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .parental-age-breakdown {
+    grid-template-columns: 1fr !important;
+  }
 }
