@@ -236,7 +236,18 @@ body {
   height: 26px;
 }
 
-.sibling-toggle-btn.active {
+.spouse-toggle-btn {
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  width: 26px;
+  height: 26px;
+}
+
+.sibling-toggle-btn.active,
+.spouse-toggle-btn.active {
   background: var(--accent-color);
   border-color: var(--accent-color);
 }

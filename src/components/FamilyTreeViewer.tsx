@@ -42,6 +42,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const [baseEdges, setBaseEdges] = useState<Edge[]>([]);
     const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(new Set());
     const [siblingExpandedNodeIds, setSiblingExpandedNodeIds] = useState<Set<string>>(new Set());
+    const [spouseExpandedNodeIds, setSpouseExpandedNodeIds] = useState<Set<string>>(new Set());
 
     // Roots identification
     const joel = useMemo(() => individuals.find(i => i.name?.toLowerCase().includes('joel') && i.name?.toLowerCase().includes('berring')), [individuals]);
@@ -139,6 +140,15 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
         });
     }, []);
 
+    const toggleSpouses = useCallback((nodeId: string) => {
+        setSpouseExpandedNodeIds(prev => {
+            const next = new Set(prev);
+            if (next.has(nodeId)) next.delete(nodeId);
+            else next.add(nodeId);
+            return next;
+        });
+    }, []);
+
     // Check if a node has siblings that aren't yet visible
     const hasSiblings = useCallback((nodeId: string) => {
         const famIds = childToFamilyMap.get(nodeId) || [];
@@ -148,6 +158,10 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
         }
         return false;
     }, [childToFamilyMap, familyChildrenMap]);
+
+    const hasSpouse = useCallback((nodeId: string) => {
+        return families.some(f => f.husb === nodeId || f.wife === nodeId);
+    }, [families]);
 
     useEffect(() => {
         if (individuals.length > 0 && families.length > 0) {
@@ -224,6 +238,21 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                             }
                         }
 
+                        // NEW: Manual Spouse Visibility
+                        // If going from Individual -> Family Node (where they are Husb/Wife)
+                        if (!currIsFamilyNode && neighborIsFamilyNode) {
+                            const family = families.find(f => f.id === neighborId);
+                            if (family && (family.husb === currId || family.wife === currId)) {
+                                const isRoot = roots.includes(currId);
+                                const isExpanded = spouseExpandedNodeIds.has(currId);
+
+                                // Only reveal the "downward/lateral" family node if toggled or root
+                                if (!isRoot && !isExpanded) {
+                                    continue;
+                                }
+                            }
+                        }
+
                         visibleNodeIds.add(neighborId);
                         if (!visitedForVisibility.has(neighborId)) {
                             visitedForVisibility.add(neighborId);
@@ -247,6 +276,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                     onExpandAll: (id: string) => {
                         const toExpand = new Set<string>();
                         const collectAncestors = (currentId: string) => {
+                            if (toExpand.has(currentId)) return;
                             toExpand.add(currentId);
                             const familiesWhereChild = families.filter(f => f.children.includes(currentId));
                             familiesWhereChild.forEach(f => {
@@ -262,8 +292,11 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                         });
                     },
                     onToggleSiblings: toggleSiblings,
+                    onToggleSpouses: toggleSpouses,
                     hasSiblings: hasSiblings(node.id),
+                    hasSpouse: hasSpouse(node.id),
                     siblingsExpanded: siblingExpandedNodeIds.has(node.id),
+                    spousesExpanded: spouseExpandedNodeIds.has(node.id),
                     isExpanded: expandedNodeIds.has(node.id),
                     canCollapse: !roots.includes(node.id)
                 }

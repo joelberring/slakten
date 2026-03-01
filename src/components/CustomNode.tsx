@@ -59,6 +59,19 @@ export const CustomNode = memo(({ data }: any) => {
                     {data.siblingsExpanded ? '👥−' : '👥+'}
                 </button>
             )}
+
+            {data.hasSpouse && (
+                <button
+                    className={`action-btn spouse-toggle-btn ${data.spousesExpanded ? 'active' : ''}`}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        data.onToggleSpouses?.(data.id);
+                    }}
+                    title={data.spousesExpanded ? "Dölj partner" : "Visa partner"}
+                >
+                    {data.spousesExpanded ? '💍−' : '💍+'}
+                </button>
+            )}
             <Handle type="source" position={Position.Bottom} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
         </div>
     );
