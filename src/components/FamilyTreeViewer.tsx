@@ -16,7 +16,7 @@ import { FamilyNode } from './FamilyNode';
 import { buildGraph } from '../utils/buildGraph';
 import { getLayoutedElements } from '../utils/layout';
 import { RelationshipFinder } from './RelationshipFinder';
-import { findRelationshipPath } from '../utils/relationship';
+import { findRelationshipPath, getPathEdges } from '../utils/relationship';
 
 import type { Node, Edge } from '@xyflow/react';
 
@@ -102,7 +102,6 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                         // Use fitView with the nodes in the path
                         const pathNodes = nodes.filter(n => foundPath!.includes(n.id));
                         if (pathNodes.length > 0) {
-                            const padding = 0.2;
                             // For now, center on target node with a nice zoom
                             setCenter(targetNode.position.x, targetNode.position.y, { zoom: 0.7, duration: 1000 });
                         }
