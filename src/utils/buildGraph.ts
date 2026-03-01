@@ -13,6 +13,8 @@ export function buildGraph(individuals: any[], families: any[]) {
                 name: ind.name,
                 birthDate: ind.birthDate,
                 deathDate: ind.deathDate,
+                birthPlace: ind.birthPlace,
+                deathPlace: ind.deathPlace,
                 sex: ind.sex,
                 type: 'individual',
             },

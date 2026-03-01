@@ -27,32 +27,32 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
 
     const handleCalculateRelationship = () => {
         if (!personA || !personB) {
-            setStatus('Please select two people.');
+            setStatus('Vänligen välj två personer.');
             return;
         }
 
         const path = findRelationshipPath(families, personA, personB, ancestorsOnly);
 
         if (!path) {
-            setStatus('No relationship path found.');
+            setStatus('Ingen släktskapskoppling hittades.');
             onClear();
         } else {
-            setStatus(`Relationship found! Path length: ${path.length} steps.`);
+            setStatus(`Koppling hittad!`);
             const edges = getPathEdges(path);
             onPathFound(path, edges);
         }
     };
 
     const handleGlobalScan = () => {
-        setStatus('Scanning entire family tree...');
+        setStatus('Söker igenom hela släktträdet...');
         // Run in timeout to allow UI to update status
         setTimeout(() => {
             const results = findAllCousinMarriages(families);
             setGlobalResults(results);
             if (results.length === 0) {
-                setStatus('No cousin marriages or pedigree collapse found globally.');
+                setStatus('Inga kusingiften eller anförlust hittades.');
             } else {
-                setStatus(`Found ${results.length} consanguineous marriages.`);
+                setStatus(`Hittade ${results.length} äktenskap med gemensamma anor.`);
             }
         }, 50);
     };
@@ -106,20 +106,20 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
             </button>
 
             <div className="panel-content">
-                <h3>Analysis Tools</h3>
+                <h3>Analysverktyg</h3>
 
                 <div className="tab-group">
                     <button
                         className={`tab-btn ${mode === 'relationship' ? 'active' : ''}`}
                         onClick={() => { setMode('relationship'); setStatus(''); setGlobalResults(null); }}
                     >
-                        Relationship
+                        Släktskap
                     </button>
                     <button
                         className={`tab-btn ${mode === 'global' ? 'active' : ''}`}
                         onClick={() => { setMode('global'); setStatus(''); setGlobalResults(null); }}
                     >
-                        Global Scanner
+                        Kusingiften
                     </button>
                 </div>
 
@@ -129,7 +129,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
                         <div className="select-group">
                             <label>Person A</label>
                             <select value={personA} onChange={(e) => setPersonA(e.target.value)}>
-                                <option value="">-- Select Person --</option>
+                                <option value="">-- Välj person --</option>
                                 {sortedIndividuals.map(ind => (
                                     <option key={ind.id} value={ind.id}>{ind.name} {ind.birthDate ? `(${ind.birthDate})` : ''}</option>
                                 ))}
@@ -139,7 +139,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
                         <div className="select-group">
                             <label>Person B</label>
                             <select value={personB} onChange={(e) => setPersonB(e.target.value)}>
-                                <option value="">-- Select Person --</option>
+                                <option value="">-- Välj person --</option>
                                 {sortedIndividuals.map(ind => (
                                     <option key={ind.id} value={ind.id}>{ind.name} {ind.birthDate ? `(${ind.birthDate})` : ''}</option>
                                 ))}
@@ -153,13 +153,13 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
                                     checked={ancestorsOnly}
                                     onChange={(e) => setAncestorsOnly(e.target.checked)}
                                 />
-                                Blood Relatives Only (Find Common Ancestors)
+                                Endast blodsband (Gemensamma anor)
                             </label>
                         </div>
 
                         <div className="button-group">
-                            <button className="primary-btn" onClick={handleCalculateRelationship}>Analyze</button>
-                            <button className="secondary-btn" onClick={handleClear}>Clear</button>
+                            <button className="primary-btn" onClick={handleCalculateRelationship}>Analysera</button>
+                            <button className="secondary-btn" onClick={handleClear}>Rensa</button>
                         </div>
                     </>
                 )}
@@ -167,21 +167,21 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
                 {mode === 'global' && (
                     <>
                         <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>
-                            Scan the entire family tree to find all marriages where spouses share common ancestors (consanguineous marriages).
+                            Sök efter äktenskap där makarna delar gemensamma anor (kusingiften/anförlust).
                         </p>
 
                         <div className="button-group" style={{ marginBottom: '15px' }}>
-                            <button className="primary-btn" onClick={handleGlobalScan}>Scan Tree</button>
-                            <button className="secondary-btn" onClick={handleClear}>Clear</button>
+                            <button className="primary-btn" onClick={handleGlobalScan}>Sök i trädet</button>
+                            <button className="secondary-btn" onClick={handleClear}>Rensa</button>
                         </div>
 
                         {globalResults && globalResults.length > 0 && (
                             <div className="global-results" style={{ maxHeight: '250px', overflowY: 'auto', background: 'var(--bg-secondary)', borderRadius: '6px', padding: '10px' }}>
-                                <h4 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '5px' }}>Found Marriages:</h4>
+                                <h4 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '5px' }}>Hittade äktenskap:</h4>
                                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.85rem' }}>
                                     {globalResults.map((result, idx) => {
-                                        const husbName = individuals.find(i => i.id === result.husb)?.name || 'Unknown Husb';
-                                        const wifeName = individuals.find(i => i.id === result.wife)?.name || 'Unknown Wife';
+                                        const husbName = individuals.find(i => i.id === result.husb)?.name || 'Okänd make';
+                                        const wifeName = individuals.find(i => i.id === result.wife)?.name || 'Okänd maka';
 
                                         return (
                                             <li
@@ -197,7 +197,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
                                             >
                                                 <div style={{ fontWeight: '600', color: 'var(--accent-color)' }}>{husbName} & {wifeName}</div>
                                                 <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: '4px' }}>
-                                                    Shared Ancestors: {result.sharedAncestors.length}
+                                                    Gemensamma anor: {result.sharedAncestors.length}
                                                 </div>
                                             </li>
                                         );

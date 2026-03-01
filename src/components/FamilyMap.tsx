@@ -14,6 +14,7 @@ interface Props {
     locationsCache: Map<string, Coordinates | null>;
     loadingCount: { resolved: number, total: number };
     onLocationUpdate?: (place: string, coords: Coordinates) => void;
+    onShowInTree?: (id: string) => void;
     readOnly?: boolean;
 }
 
@@ -65,6 +66,7 @@ export function FamilyMap({
     locationsCache,
     loadingCount,
     onLocationUpdate,
+    onShowInTree,
     readOnly
 }: Props) {
 
@@ -385,7 +387,7 @@ export function FamilyMap({
                     boxShadow: '0 4px 12px rgba(0,0,0,0.15)', border: '1px solid var(--border-color)', textAlign: 'center'
                 }}>
                     <div style={{ fontWeight: 600, marginBottom: '4px' }}>
-                        Geocoding places: {loadingCount.resolved} / {loadingCount.total}...
+                        Geokodar platser: {loadingCount.resolved} / {loadingCount.total}...
                     </div>
                 </div>
             )}
@@ -415,10 +417,10 @@ export function FamilyMap({
                     <>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '15px' }}>
                             {[
-                                { side: 'father', label: "Father's Side", color: 'hsl(210, 100%, 50%)' },
-                                { side: 'mother', label: "Mother's Side", color: 'hsl(0, 100%, 50%)' },
-                                { side: 'both', label: "Common / Both", color: 'hsl(280, 100%, 50%)' },
-                                { side: 'none', label: "Other", color: 'hsl(50, 100%, 50%)' }
+                                { side: 'father', label: "Fars sida", color: 'hsl(210, 100%, 50%)' },
+                                { side: 'mother', label: "Mors sida", color: 'hsl(0, 100%, 50%)' },
+                                { side: 'both', label: "Gemensam / Båda", color: 'hsl(280, 100%, 50%)' },
+                                { side: 'none', label: "Övriga", color: 'hsl(50, 100%, 50%)' }
                             ].map(item => (
                                 <div key={item.side}
                                     onClick={() => toggleSide(item.side as FamilySide)}
@@ -525,6 +527,13 @@ export function FamilyMap({
                                                     }}></span>
                                                     {p.eventType}
                                                 </div>
+                                                <button
+                                                    className="secondary-btn"
+                                                    onClick={() => onShowInTree?.(p.id)}
+                                                    style={{ fontSize: '0.65rem', padding: '2px 6px', marginTop: '4px', width: 'auto' }}
+                                                >
+                                                    👁️ Se i släktträdet
+                                                </button>
                                             </li>
                                         );
                                     })}

@@ -229,14 +229,18 @@ export function findAllCousinMarriages(families: any[]) {
             const husbAncestors = getAncestors(adj, fam.husb);
             const wifeAncestors = getAncestors(adj, fam.wife);
 
+            // Important: We also check if one is a direct descendant of the other
+            const husbIsAncestor = wifeAncestors.has(fam.husb);
+            const wifeIsAncestor = husbAncestors.has(fam.wife);
+
             const sharedAncestors = Array.from(husbAncestors).filter(id => wifeAncestors.has(id)) as string[];
 
-            if (sharedAncestors.length > 0) {
+            if (sharedAncestors.length > 0 || husbIsAncestor || wifeIsAncestor) {
                 cousinMarriages.push({
                     familyId: fam.id,
                     husb: fam.husb,
                     wife: fam.wife,
-                    sharedAncestors,
+                    sharedAncestors: Array.from(new Set([...sharedAncestors, husbIsAncestor ? fam.husb : '', wifeIsAncestor ? fam.wife : ''].filter(Boolean))),
                 });
             }
         }

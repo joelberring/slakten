@@ -16,6 +16,11 @@ export const CustomNode = memo(({ data }: any) => {
                     {data.birthDate && data.deathDate ? ' — ' : ''}
                     {data.deathDate ? `✝ ${data.deathDate}` : ''}
                 </div>
+                {(data.birthPlace || data.deathPlace) && (
+                    <div className="node-locality" title={data.birthPlace || data.deathPlace}>
+                        📍 {data.birthPlace || data.deathPlace}
+                    </div>
+                )}
                 {!data.isExpanded && (
                     <button
                         className="expansion-toggle node-toggle"

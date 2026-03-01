@@ -6,6 +6,7 @@ import { tagIndividualsBySide, calculateGenerations, type FamilySide } from './u
 import { FamilyTreeViewer } from './components/FamilyTreeViewer';
 import { FamilyMap } from './components/FamilyMap';
 import { ReactFlowProvider } from '@xyflow/react';
+import { IntroModal } from './components/IntroModal';
 import './index.css';
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
   const [viewMode, setViewMode] = useState<'tree' | 'map'>('tree');
   const [googleApiKey, setGoogleApiKey] = useState<string>(() => localStorage.getItem('slakten_google_api_key') || '');
   const [showSettings, setShowSettings] = useState(false);
+  const [showIntro, setShowIntro] = useState(() => !localStorage.getItem('slakten_intro_seen'));
+  const [focusNodeId, setFocusNodeId] = useState<string | null>(null);
 
   const urlReadOnly = useMemo(() => {
     return !window.location.search.includes('edit=true');
@@ -171,7 +174,7 @@ function App() {
           onClick={() => setShowSettings(!showSettings)}
           style={{ padding: '6px 12px', fontSize: '0.8rem', display: urlReadOnly ? 'none' : 'block' }}
         >
-          ⚙️ Settings
+          ⚙️ Inställningar
         </button>
         {showSettings && (
           <div style={{
@@ -180,7 +183,7 @@ function App() {
             borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
             border: '1px solid var(--border-color)', width: '250px'
           }}>
-            <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '8px', fontWeight: 600 }}>Google Maps API Key (Optional)</label>
+            <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '8px', fontWeight: 600 }}>Google Maps API-nyckel (Valfritt)</label>
             <input
               type="text"
               value={googleApiKey}
@@ -193,23 +196,23 @@ function App() {
               }}
             />
             <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '8px', lineHeight: 1.4 }}>
-              If provided, map pins will load 50x faster. Otherwise, it defaults to the free 1 request/sec OpenStreetMap limits.
+              Om du anger en nyckel laddas kartnålar 50x snabbare. Annars används gratisgränsen för OpenStreetMap (1 anrop/sek).
             </p>
             <button
               className="secondary-btn"
               onClick={() => {
-                if (confirm('Are you sure you want to clear the geocode cache? This will force all places to be re-fetched.')) {
+                if (confirm('Är du säker på att du vill rensa plats-cachen? Detta tvingar appen att hämta alla koordinater på nytt.')) {
                   localStorage.removeItem('slakten_geocode_cache');
                   window.location.reload();
                 }
               }}
               style={{ width: '100%', marginTop: '10px', fontSize: '0.75rem', color: '#e74c3c' }}
             >
-              🗑️ Clear Cache
+              🗑️ Rensa Cache
             </button>
 
             <div style={{ borderTop: '1px solid var(--border-color)', marginTop: '15px', paddingTop: '15px' }}>
-              <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '8px', fontWeight: 600 }}>Update Family Tree</label>
+              <label style={{ display: 'block', fontSize: '0.85rem', marginBottom: '8px', fontWeight: 600 }}>Uppdatera Släktträd</label>
               <input
                 type="file"
                 id="gedcom-reupload"
@@ -227,14 +230,14 @@ function App() {
                 color: 'white',
                 border: 'none'
               }}>
-                📁 Select New .ged File
+                📁 Välj ny .ged-fil
               </label>
             </div>
           </div>
         )}
       </div>
 
-      <p className="app-subtitle">Visualizing Family Connections & Intersections</p>
+      <p className="app-subtitle">Visualisera Släktens Kopplingar & Platser</p>
 
       {isInitialLoading ? (
         <div className="upload-overlay">
@@ -249,7 +252,7 @@ function App() {
           <div className="upload-box">
             <h2>Berrings och Messings släktträd</h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '20px' }}>
-              Upload your GEDCOM (.ged) file to view a stunning interactive Directed Acyclic Graph of your family history.
+              Ladda upp din GEDCOM-fil (.ged) för att se en interaktiv graf över din släkthistoria.
             </p>
             {loading ? (
               <div className="loading-spinner"></div>
@@ -263,7 +266,7 @@ function App() {
                   style={{ display: 'none' }}
                 />
                 <label htmlFor="gedcom-upload" className="upload-btn">
-                  Select GEDCOM File
+                  Välj GEDCOM-fil
                 </label>
               </div>
             )}
@@ -276,19 +279,24 @@ function App() {
               onClick={() => setViewMode('tree')}
               className={`view-toggle-btn ${viewMode === 'tree' ? 'active' : ''}`}
             >
-              Tree View
+              Trädvy
             </button>
             <button
               onClick={() => setViewMode('map')}
               className={`view-toggle-btn ${viewMode === 'map' ? 'active' : ''}`}
             >
-              Map View
+              Karta
             </button>
           </div>
 
           {viewMode === 'tree' ? (
             <ReactFlowProvider>
-              <FamilyTreeViewer individuals={individuals} families={families} />
+              <FamilyTreeViewer
+                individuals={individuals}
+                families={families}
+                focusNodeId={focusNodeId}
+                onFocusClear={() => setFocusNodeId(null)}
+              />
             </ReactFlowProvider>
           ) : (
             <FamilyMap
@@ -300,9 +308,18 @@ function App() {
               loadingCount={geocodingStatus}
               onLocationUpdate={handleLocationUpdate}
               readOnly={urlReadOnly}
+              onShowInTree={(id) => {
+                setFocusNodeId(id);
+                setViewMode('tree');
+              }}
             />
+          )}
 
-
+          {showIntro && (
+            <IntroModal onClose={() => {
+              setShowIntro(false);
+              localStorage.setItem('slakten_intro_seen', 'true');
+            }} />
           )}
 
         </div>

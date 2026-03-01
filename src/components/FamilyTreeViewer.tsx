@@ -7,6 +7,7 @@ import {
     Controls,
     MiniMap,
     Panel,
+    useReactFlow,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
@@ -15,6 +16,7 @@ import { FamilyNode } from './FamilyNode';
 import { buildGraph } from '../utils/buildGraph';
 import { getLayoutedElements } from '../utils/layout';
 import { RelationshipFinder } from './RelationshipFinder';
+import { findRelationshipPath, getPathEdges } from '../utils/relationship';
 
 import type { Node, Edge } from '@xyflow/react';
 
@@ -26,9 +28,12 @@ const nodeTypes = {
 interface Props {
     individuals: any[];
     families: any[];
+    focusNodeId?: string | null;
+    onFocusClear?: () => void;
 }
 
-export function FamilyTreeViewer({ individuals, families }: Props) {
+export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId }: Props) {
+    const { fitView, setCenter } = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
     const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
 
@@ -50,6 +55,37 @@ export function FamilyTreeViewer({ individuals, families }: Props) {
             return next;
         });
     }, []);
+
+    // Effect to handle focusNodeId (e.g. from map view)
+    useEffect(() => {
+        if (focusNodeId && individuals.length > 0) {
+            // Find path from any root to the target node
+            let foundPath: string[] | null = null;
+            for (const rootId of roots) {
+                const p = findRelationshipPath(families, rootId, focusNodeId, false);
+                if (p && (!foundPath || p.length < foundPath.length)) {
+                    foundPath = p;
+                }
+            }
+
+            if (foundPath) {
+                setExpandedNodeIds(prev => {
+                    const next = new Set(prev);
+                    foundPath!.forEach(id => next.add(id));
+                    return next;
+                });
+
+                // Jump to the node after a short delay for layout
+                setTimeout(() => {
+                    const node = nodes.find(n => n.id === focusNodeId);
+                    if (node) {
+                        setCenter(node.position.x, node.position.y, { zoom: 0.8, duration: 800 });
+                    }
+                    onFocusClear?.();
+                }, 500);
+            }
+        }
+    }, [focusNodeId, individuals, families, roots, nodes, setCenter, onFocusClear]);
 
     useEffect(() => {
         if (individuals.length > 0 && families.length > 0) {
