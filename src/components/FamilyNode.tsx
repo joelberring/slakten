@@ -8,17 +8,8 @@ export const FamilyNode = memo(({ data }: any) => {
         <div className={`family-node ${highlightClass} ${data?.isExpanded ? 'expanded' : 'collapsed'}`} title="Family Union">
             <Handle type="target" position={Position.Top} style={{ background: 'transparent', border: 'none' }} />
 
-            <button
-                className="expansion-toggle"
-                onClick={(e) => {
-                    e.stopPropagation();
-                    data.onToggle?.(data.id);
-                }}
-            >
-                {data?.isExpanded ? '−' : '+'}
-            </button>
 
             <Handle type="source" position={Position.Bottom} style={{ background: 'transparent', border: 'none' }} />
-        </div>
+        </div >
     );
 });

@@ -17,7 +17,7 @@ export const CustomNode = memo(({ data }: any) => {
                         e.stopPropagation();
                         data.onToggle?.(data.id);
                     }}
-                    title={data.isExpanded ? "Collapse" : "Expand parents"}
+                    title={data.isExpanded ? "Dölj" : "Expandera föräldrar"}
                 >
                     {data.isExpanded ? '−' : '+'}
                 </button>
@@ -27,7 +27,7 @@ export const CustomNode = memo(({ data }: any) => {
                         e.stopPropagation();
                         data.onExpandAll?.(data.id);
                     }}
-                    title="Expand all ancestors"
+                    title="Expandera alla förfäder"
                 >
                     🚀
                 </button>

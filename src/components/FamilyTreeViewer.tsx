@@ -163,55 +163,62 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             });
 
             // Visibility Logic: Recursive reachability based on expansion
-            // Individual nodes and Family nodes must be in expandedNodeIds to reveal neighbors.
-            // Sibling filter: when a family node leads down to children, only show
-            // the child that expanded upward OR children explicitly toggled via siblings.
             const visibleNodeIds = new Set<string>(roots);
             const stack = [...roots];
             const visitedForVisibility = new Set<string>(roots);
 
-            // Track which individuals triggered upward expansion through which family nodes
-            const expandedUpwardThrough = new Set<string>(); // Set of "familyId:childId" pairs
+            // Track how family nodes were reached
+            // familyId -> Set of individualIds that reached it as children (upward expansion)
+            const reachedFromChild = new Map<string, Set<string>>();
+            // familyId -> boolean (true if reached from a parent, downward expansion)
+            const reachedFromParent = new Set<string>();
 
             while (stack.length > 0) {
                 const currId = stack.shift()!;
                 const currIsFamilyNode = familyChildrenMap.has(currId);
-
-                // Both Individual nodes and Family nodes MUST be in expandedNodeIds to be traversed.
-                // Exceptions: Roots are always starting points.
-                const shouldTraverse = roots.includes(currId) || expandedNodeIds.has(currId);
+                // Family nodes are always "expanded" (pass-through).
+                // Individual nodes need to be in expandedNodeIds.
+                const shouldTraverse = currIsFamilyNode || roots.includes(currId) || expandedNodeIds.has(currId);
 
                 if (shouldTraverse) {
                     const neighbors = edgesByNode.get(currId) || [];
                     for (const { neighborId } of neighbors) {
                         const neighborIsFamilyNode = familyChildrenMap.has(neighborId);
 
-                        // CASE: Individual expanding UP to a family node (where they're a child)
-                        // This reveals the family node & we mark that this child expanded through it
+                        // If going from Individual -> Family Node
                         if (!currIsFamilyNode && neighborIsFamilyNode) {
-                            const familyChildren = familyChildrenMap.get(neighborId) || [];
-                            if (familyChildren.includes(currId)) {
-                                expandedUpwardThrough.add(`${neighborId}:${currId}`);
+                            const family = families.find(f => f.id === neighborId);
+                            if (family) {
+                                if (family.children.includes(currId)) {
+                                    // Upward expansion
+                                    if (!reachedFromChild.has(neighborId)) reachedFromChild.set(neighborId, new Set());
+                                    reachedFromChild.get(neighborId)!.add(currId);
+                                } else if (family.husb === currId || family.wife === currId) {
+                                    // Downward expansion
+                                    reachedFromParent.add(neighborId);
+                                }
                             }
                         }
 
-                        // CASE: Family node going DOWN to a child
-                        // Apply sibling filter: only show the child that expanded up, OR if siblings toggled
+                        // If going from Family Node -> Individual (Child side)
                         if (currIsFamilyNode && !neighborIsFamilyNode) {
                             const familyChildren = familyChildrenMap.get(currId) || [];
                             const isChild = familyChildren.includes(neighborId);
 
                             if (isChild) {
-                                const isOriginalExpander = expandedUpwardThrough.has(`${currId}:${neighborId}`);
+                                // Apply sibling filter ONLY if reached from a child
+                                // If reached from a parent, we show all children (normal downward expansion)
+                                const parentsReached = reachedFromParent.has(currId);
+                                const childrenWhoReached = reachedFromChild.get(currId);
+
+                                const isExpander = childrenWhoReached?.has(neighborId);
                                 const isAlreadyVisible = visibleNodeIds.has(neighborId);
                                 const anySiblingToggled = familyChildren.some(cId =>
                                     siblingExpandedNodeIds.has(cId) && visibleNodeIds.has(cId)
                                 );
 
-                                // Skip this child unless it's the original expander, already visible, or siblings toggled
-                                // NOTE: roots are already in visibleNodeIds, so their family-downward traversal
-                                // won't block them unless we want to hide ancestors of non-roots?
-                                if (!isOriginalExpander && !isAlreadyVisible && !anySiblingToggled) {
+                                // Show child if: reached from parent OR is expansion child OR siblings toggled
+                                if (!parentsReached && !isExpander && !isAlreadyVisible && !anySiblingToggled) {
                                     continue;
                                 }
                             }
