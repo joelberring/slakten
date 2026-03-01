@@ -8,8 +8,8 @@ const nodeWidth = 240; // Increased to account for sibling button
 const nodeHeight = 110; // Increased to account for top buttons
 const famNodeSize = 30; // Matches CSS
 
-export const getLayoutedElements = (nodes: Node[], edges: Edge[], direction = 'TB') => {
-    dagreGraph.setGraph({ rankdir: direction, nodesep: 60, ranksep: 80 });
+export const getLayoutedElements = (nodes: Node[], edges: Edge[], direction = 'TB', options = { nodesep: 60, ranksep: 80 }) => {
+    dagreGraph.setGraph({ rankdir: direction, nodesep: options.nodesep, ranksep: options.ranksep });
 
     nodes.forEach((node) => {
         const isFam = node.type === 'familyNode';

@@ -43,6 +43,9 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(new Set());
     const [siblingExpandedNodeIds, setSiblingExpandedNodeIds] = useState<Set<string>>(new Set());
     const [spouseExpandedNodeIds, setSpouseExpandedNodeIds] = useState<Set<string>>(new Set());
+    const [lastExpandedId, setLastExpandedId] = useState<string | null>(null);
+
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
     // Roots identification
     const joel = useMemo(() => individuals.find(i => i.name?.toLowerCase().includes('joel') && i.name?.toLowerCase().includes('berring')), [individuals]);
@@ -52,8 +55,12 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const toggleNode = useCallback((nodeId: string) => {
         setExpandedNodeIds(prev => {
             const next = new Set(prev);
-            if (next.has(nodeId)) next.delete(nodeId);
-            else next.add(nodeId);
+            if (next.has(nodeId)) {
+                next.delete(nodeId);
+            } else {
+                next.add(nodeId);
+                setLastExpandedId(nodeId);
+            }
             return next;
         });
     }, []);
@@ -134,8 +141,12 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const toggleSiblings = useCallback((nodeId: string) => {
         setSiblingExpandedNodeIds(prev => {
             const next = new Set(prev);
-            if (next.has(nodeId)) next.delete(nodeId);
-            else next.add(nodeId);
+            if (next.has(nodeId)) {
+                next.delete(nodeId);
+            } else {
+                next.add(nodeId);
+                setLastExpandedId(nodeId);
+            }
             return next;
         });
     }, []);
@@ -143,8 +154,12 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const toggleSpouses = useCallback((nodeId: string) => {
         setSpouseExpandedNodeIds(prev => {
             const next = new Set(prev);
-            if (next.has(nodeId)) next.delete(nodeId);
-            else next.add(nodeId);
+            if (next.has(nodeId)) {
+                next.delete(nodeId);
+            } else {
+                next.add(nodeId);
+                setLastExpandedId(nodeId);
+            }
             return next;
         });
     }, []);
@@ -303,15 +318,26 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             }));
 
             try {
+                const spacing = isMobile ? { nodesep: 30, ranksep: 50 } : { nodesep: 60, ranksep: 80 };
                 const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
                     enrichedNodes,
                     visibleEdges,
-                    'TB'
+                    'TB',
+                    spacing
                 );
                 setBaseNodes(layoutedNodes);
                 setBaseEdges(layoutedEdges);
                 setNodes([...layoutedNodes]);
                 setEdges([...layoutedEdges]);
+
+                // Auto-center on expansion
+                if (lastExpandedId) {
+                    const node = layoutedNodes.find(n => n.id === lastExpandedId);
+                    if (node) {
+                        setCenter(node.position.x + 120, node.position.y + 150, { zoom: isMobile ? 0.6 : 0.8, duration: 800 });
+                    }
+                    setLastExpandedId(null);
+                }
             } catch (err) {
                 console.error('Error computing layout:', err);
             }
