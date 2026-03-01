@@ -234,8 +234,11 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 const currId = stack.shift()!;
                 const currIsFamilyNode = familyChildrenMap.has(currId);
                 // Family nodes are always "expanded" (pass-through).
-                // Individual nodes need to be in expandedNodeIds.
-                const shouldTraverse = currIsFamilyNode || roots.includes(currId) || expandedNodeIds.has(currId);
+                // Individual nodes need to be in expandedNodeIds or spouseExpandedNodeIds.
+                const shouldTraverse = currIsFamilyNode ||
+                    roots.includes(currId) ||
+                    expandedNodeIds.has(currId) ||
+                    spouseExpandedNodeIds.has(currId);
 
                 if (shouldTraverse) {
                     const neighbors = edgesByNode.get(currId) || [];
