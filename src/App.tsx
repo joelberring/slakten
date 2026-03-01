@@ -364,6 +364,7 @@ function App() {
                 individuals={individuals}
                 families={families}
                 generationMap={generationMap}
+                sideMap={sideMap}
               />
             </div>
           )}

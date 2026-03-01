@@ -1,20 +1,102 @@
-import { useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { calculateFamilyStats } from '../utils/stats';
+import type { FamilySide } from '../utils/relationship';
 
 interface Props {
     individuals: any[];
     families: any[];
     generationMap: Map<string, number>;
+    sideMap: Map<string, FamilySide>;
 }
 
-export function FamilyStats({ individuals, families, generationMap }: Props) {
-    const stats = useMemo(() => calculateFamilyStats(individuals, families, generationMap), [individuals, families, generationMap]);
+export function FamilyStats({ individuals, families, generationMap, sideMap }: Props) {
+    const [sideFilter, setSideFilter] = useState<'both' | 'father' | 'mother'>('both');
+
+    const filteredData = useMemo(() => {
+        if (sideFilter === 'both') return { individuals, families };
+
+        const filteredInds = individuals.filter(ind => {
+            const side = sideMap.get(ind.id);
+            return side === sideFilter || side === 'both';
+        });
+
+        const filteredIndIds = new Set(filteredInds.map(i => i.id));
+        const filteredFams = families.filter(fam => {
+            // A family is included if either parent or any child is in the filtered list
+            return filteredIndIds.has(fam.husb) || filteredIndIds.has(fam.wife) || fam.children.some((cId: string) => filteredIndIds.has(cId));
+        });
+
+        return { individuals: filteredInds, families: filteredFams };
+    }, [individuals, families, sideMap, sideFilter]);
+
+    const stats = useMemo(() => calculateFamilyStats(filteredData.individuals, filteredData.families, generationMap), [filteredData, generationMap]);
 
     return (
         <div className="stats-container">
             <div className="stats-header">
-                <h2>Släktstatistik</h2>
-                <p>Insikter från {stats.totalPeople} personer i trädet ({stats.peopleWithKnownAge} med känd ålder).</p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
+                    <div>
+                        <h2>Släktstatistik</h2>
+                        <p>Insikter från {stats.totalPeople} personer i trädet ({stats.peopleWithKnownAge} med känd ålder).</p>
+                    </div>
+
+                    <div className="side-filter-container" style={{
+                        display: 'flex',
+                        background: 'var(--bg-secondary)',
+                        padding: '4px',
+                        borderRadius: '10px',
+                        border: '1px solid var(--border-color)'
+                    }}>
+                        <button
+                            onClick={() => setSideFilter('both')}
+                            style={{
+                                padding: '8px 16px',
+                                border: 'none',
+                                borderRadius: '8px',
+                                background: sideFilter === 'both' ? 'var(--accent-color)' : 'transparent',
+                                color: sideFilter === 'both' ? 'white' : 'var(--text-secondary)',
+                                cursor: 'pointer',
+                                fontSize: '0.85rem',
+                                fontWeight: 600,
+                                transition: 'all 0.2s'
+                            }}
+                        >
+                            Båda sidor
+                        </button>
+                        <button
+                            onClick={() => setSideFilter('father')}
+                            style={{
+                                padding: '8px 16px',
+                                border: 'none',
+                                borderRadius: '8px',
+                                background: sideFilter === 'father' ? 'var(--male-color)' : 'transparent',
+                                color: sideFilter === 'father' ? 'white' : 'var(--text-secondary)',
+                                cursor: 'pointer',
+                                fontSize: '0.85rem',
+                                fontWeight: 600,
+                                transition: 'all 0.2s'
+                            }}
+                        >
+                            Pappas sida
+                        </button>
+                        <button
+                            onClick={() => setSideFilter('mother')}
+                            style={{
+                                padding: '8px 16px',
+                                border: 'none',
+                                borderRadius: '8px',
+                                background: sideFilter === 'mother' ? 'var(--female-color)' : 'transparent',
+                                color: sideFilter === 'mother' ? 'white' : 'var(--text-secondary)',
+                                cursor: 'pointer',
+                                fontSize: '0.85rem',
+                                fontWeight: 600,
+                                transition: 'all 0.2s'
+                            }}
+                        >
+                            Mammas sida
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div className="stats-grid">
