@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import {
     ReactFlow,
     useNodesState,
@@ -35,13 +35,18 @@ export function FamilyTreeViewer({ individuals, families }: Props) {
     // Keep a clean copy of nodes/edges for resetting highlights easily without re-laying out
     const [baseNodes, setBaseNodes] = useState<Node[]>([]);
     const [baseEdges, setBaseEdges] = useState<Edge[]>([]);
-    const [collapsedFamilyIds, setCollapsedFamilyIds] = useState<Set<string>>(new Set());
+    const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(new Set());
 
-    const toggleFamily = useCallback((familyId: string) => {
-        setCollapsedFamilyIds(prev => {
+    // Roots identification
+    const joel = useMemo(() => individuals.find(i => i.name?.toLowerCase().includes('joel') && i.name?.toLowerCase().includes('berring')), [individuals]);
+    const annika = useMemo(() => individuals.find(i => i.name?.toLowerCase().includes('annika') && i.name?.toLowerCase().includes('messing')), [individuals]);
+    const roots = useMemo(() => [joel?.id, annika?.id].filter(Boolean) as string[], [joel, annika]);
+
+    const toggleNode = useCallback((nodeId: string) => {
+        setExpandedNodeIds(prev => {
             const next = new Set(prev);
-            if (next.has(familyId)) next.delete(familyId);
-            else next.add(familyId);
+            if (next.has(nodeId)) next.delete(nodeId);
+            else next.add(nodeId);
             return next;
         });
     }, []);
@@ -50,96 +55,52 @@ export function FamilyTreeViewer({ individuals, families }: Props) {
         if (individuals.length > 0 && families.length > 0) {
             const { nodes: initialNodes, edges: initialEdges } = buildGraph(individuals, families);
 
-            // Inject toggle handler and state into data
-            const enrichedNodes = initialNodes.map(node => {
-                if (node.type === 'familyNode') {
-                    return {
-                        ...node,
-                        data: {
-                            ...node.data,
-                            id: node.id,
-                            onToggle: toggleFamily,
-                            isCollapsed: collapsedFamilyIds.has(node.id)
-                        }
-                    };
-                }
-                return node;
-            });
+            // Visibility Logic: Recursive reachability based on expansion
+            const visibleNodeIds = new Set<string>(roots);
+            const stack = [...roots];
+            const visitedForVisibility = new Set<string>(roots);
 
-            // Filtering Logic: Hide descendants of collapsed families
-            const visibleNodeIds = new Set<string>();
-            const visibleEdgeIds = new Set<string>();
+            while (stack.length > 0) {
+                const currId = stack.shift()!;
 
-            // Find roots (individuals without parents or the specific Joel/Annika roots)
-            const joel = individuals.find(i => i.name?.toLowerCase().includes('joel') && i.name?.toLowerCase().includes('berring'));
-            const annika = individuals.find(i => i.name?.toLowerCase().includes('annika') && i.name?.toLowerCase().includes('messing'));
-            const startNodes = [joel?.id, annika?.id].filter(Boolean) as string[];
+                // If this node is expanded, all its neighbors are visible
+                if (expandedNodeIds.has(currId)) {
+                    initialEdges.forEach(edge => {
+                        let neighborId: string | null = null;
+                        if (edge.source === currId) neighborId = edge.target;
+                        else if (edge.target === currId) neighborId = edge.source;
 
-            const traverse = (nodeId: string) => {
-                if (visibleNodeIds.has(nodeId)) return;
-                visibleNodeIds.add(nodeId);
-
-                // Find outgoing edges
-                const outgoingEdges = initialEdges.filter(e => e.source === nodeId);
-
-                // If this is a collapsed family node, don't follow edges to children (descendants)
-                if (collapsedFamilyIds.has(nodeId)) {
-                    // We DO allow edges to parents if we were going upwards, 
-                    // but buildGraph is mostly children direction... wait.
-                    // In our graph: Parents -> Family Node -> Children.
-                    return;
-                }
-
-                outgoingEdges.forEach(edge => {
-                    visibleEdgeIds.add(edge.id);
-                    traverse(edge.target);
-                });
-
-                // Also follow incoming edges (to find ancestors) - ancestors should usually always be visible?
-                // Or maybe we only collapse "downwards" (ancestors). 
-                // In genealogy, "up" is ancestors. The graph is TB (Top to Bottom).
-                // So Top = Ancestors.
-                // If we collapse a family, we hide the CHILDREN (bottom).
-                // Let's stick to: Follow ALL edges except if source is a collapsed family.
-            };
-
-            // Also need to find ancestors. Let's do a simple recursive reachability from roots
-            // but in BOTH directions.
-            const queue = [...startNodes];
-            const visited = new Set<string>(startNodes);
-
-            while (queue.length > 0) {
-                const currId = queue.shift()!;
-                visibleNodeIds.add(currId);
-
-                // Upwards (parents)
-                initialEdges.filter(e => e.target === currId).forEach(edge => {
-                    visibleEdgeIds.add(edge.id);
-                    if (!visited.has(edge.source)) {
-                        visited.add(edge.source);
-                        queue.push(edge.source);
-                    }
-                });
-
-                // Downwards (children)
-                if (!collapsedFamilyIds.has(currId)) {
-                    initialEdges.filter(e => e.source === currId).forEach(edge => {
-                        visibleEdgeIds.add(edge.id);
-                        if (!visited.has(edge.target)) {
-                            visited.add(edge.target);
-                            queue.push(edge.target);
+                        if (neighborId) {
+                            visibleNodeIds.add(neighborId);
+                            if (!visitedForVisibility.has(neighborId)) {
+                                visitedForVisibility.add(neighborId);
+                                stack.push(neighborId);
+                            }
                         }
                     });
                 }
             }
 
-            const filteredNodes = enrichedNodes.filter(n => visibleNodeIds.has(n.id));
-            const filteredEdges = initialEdges.filter(e => visibleEdgeIds.has(e.id));
+            // Visible edges are those where both source and target are visible
+            const visibleEdges = initialEdges.filter(e => visibleNodeIds.has(e.source) && visibleNodeIds.has(e.target));
+            const visibleNodes = initialNodes.filter(n => visibleNodeIds.has(n.id));
+
+            // Enrich nodes with state and handlers
+            const enrichedNodes = visibleNodes.map(node => ({
+                ...node,
+                data: {
+                    ...node.data,
+                    id: node.id,
+                    onToggle: toggleNode,
+                    isExpanded: expandedNodeIds.has(node.id),
+                    canCollapse: !roots.includes(node.id) // Roots can't be collapsed easily? Or let them.
+                }
+            }));
 
             try {
                 const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-                    filteredNodes,
-                    filteredEdges,
+                    enrichedNodes,
+                    visibleEdges,
                     'TB'
                 );
                 setBaseNodes(layoutedNodes);
@@ -150,7 +111,7 @@ export function FamilyTreeViewer({ individuals, families }: Props) {
                 console.error('Error computing layout:', err);
             }
         }
-    }, [individuals, families, collapsedFamilyIds, toggleFamily, setNodes, setEdges]);
+    }, [individuals, families, expandedNodeIds, toggleNode, roots, setNodes, setEdges]);
 
     const handlePathFound = useCallback((pathNodes: string[], pathEdges: Set<string>) => {
         const pSet = new Set(pathNodes);
@@ -184,22 +145,26 @@ export function FamilyTreeViewer({ individuals, families }: Props) {
     }, [baseNodes, baseEdges, setNodes, setEdges]);
 
     const expandAll = useCallback(() => {
-        setCollapsedFamilyIds(new Set());
-    }, []);
+        const allIds = [
+            ...individuals.map(i => i.id),
+            ...families.map(f => f.id)
+        ];
+        setExpandedNodeIds(new Set(allIds));
+    }, [individuals, families]);
 
     const collapseAll = useCallback(() => {
-        const allFamilyIds = families.map(f => f.id);
-        setCollapsedFamilyIds(new Set(allFamilyIds));
-    }, [families]);
+        setExpandedNodeIds(new Set(roots));
+    }, [roots]);
 
-    // Initial collapse - only on first load with data
-    const [hasInitializedCollapse, setHasInitializedCollapse] = useState(false);
+    // Initial expansion
+    const [hasInitialized, setHasInitialized] = useState(false);
     useEffect(() => {
-        if (families.length > 0 && !hasInitializedCollapse) {
-            collapseAll();
-            setHasInitializedCollapse(true);
+        if (roots.length > 0 && !hasInitialized) {
+            setExpandedNodeIds(new Set(roots));
+            setHasInitialized(true);
         }
-    }, [families, hasInitializedCollapse, collapseAll]);
+    }, [roots, hasInitialized]);
+
 
     return (
         <ReactFlow

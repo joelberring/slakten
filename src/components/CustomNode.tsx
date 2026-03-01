@@ -7,7 +7,7 @@ export const CustomNode = memo(({ data }: any) => {
     const highlightClass = data.isHighlighted ? 'highlighted' : data.isDimmed ? 'dimmed' : '';
 
     return (
-        <div className={`individual-node ${isMale ? 'male' : isFemale ? 'female' : ''} ${highlightClass}`}>
+        <div className={`individual-node ${isMale ? 'male' : isFemale ? 'female' : ''} ${highlightClass} ${data.isExpanded ? 'expanded' : ''}`}>
             <Handle type="target" position={Position.Top} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
             <div className="node-content">
                 <div className="node-header">{data.name}</div>
@@ -16,6 +16,28 @@ export const CustomNode = memo(({ data }: any) => {
                     {data.birthDate && data.deathDate ? ' — ' : ''}
                     {data.deathDate ? `✝ ${data.deathDate}` : ''}
                 </div>
+                {!data.isExpanded && (
+                    <button
+                        className="expansion-toggle node-toggle"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            data.onToggle?.(data.id);
+                        }}
+                    >
+                        +
+                    </button>
+                )}
+                {data.isExpanded && data.canCollapse && (
+                    <button
+                        className="expansion-toggle node-toggle expanded"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            data.onToggle?.(data.id);
+                        }}
+                    >
+                        −
+                    </button>
+                )}
             </div>
             <Handle type="source" position={Position.Bottom} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
         </div>

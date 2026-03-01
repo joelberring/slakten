@@ -141,6 +141,25 @@ body {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
+.node-toggle {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  margin: 10px auto 0 auto;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  background: var(--accent-color);
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.4);
+}
+
+.node-toggle.expanded {
+  background: #4b5563;
+  /* Gray for minus */
+  box-shadow: none;
+}
+
 .family-node.collapsed {
   border-color: #f59e0b;
   /* Amber/Orange for collapsed state */
