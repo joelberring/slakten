@@ -94,6 +94,22 @@ body {
   gap: 4px;
 }
 
+.node-locality {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.locality-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.85;
+}
+
 .individual-node.print-mode {
   background: white;
   color: #333;

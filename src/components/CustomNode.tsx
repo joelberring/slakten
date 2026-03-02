@@ -43,8 +43,9 @@ export const CustomNode = memo(({ data }: any) => {
                     {data.deathDate ? `${data.isPrintMode ? 'd.' : '✝'} ${data.deathDate}` : ''}
                 </div>
                 {!data.isPrintMode && (data.birthPlace || data.deathPlace) && (
-                    <div className="node-locality" title={data.birthPlace || data.deathPlace}>
-                        📍 {data.birthPlace || data.deathPlace}
+                    <div className="node-locality">
+                        {data.birthPlace && <div className="locality-item" title={`Född: ${data.birthPlace}`}>📍 {data.birthPlace}</div>}
+                        {data.deathPlace && <div className="locality-item" title={`Död: ${data.deathPlace}`}>✝ {data.deathPlace}</div>}
                     </div>
                 )}
             </div>
