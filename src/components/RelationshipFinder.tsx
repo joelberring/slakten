@@ -180,7 +180,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
 
                 {mode === 'global' && (
                     <>
-                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>
                             Sök efter äktenskap där makarna delar gemensamma anor (kusingiften/anförlust).
                         </p>
 
@@ -191,8 +191,8 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
 
                         {globalResults && globalResults.length > 0 && (
                             <div className="global-results" style={{ maxHeight: '250px', overflowY: 'auto', background: 'var(--bg-secondary)', borderRadius: '6px', padding: '10px' }}>
-                                <h4 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '5px' }}>Hittade äktenskap:</h4>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.85rem' }}>
+                                <h4 style={{ margin: '0 0 10px 0', fontSize: '0.95rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '5px' }}>Hittade äktenskap:</h4>
+                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.9rem' }}>
                                     {globalResults.map((result, idx) => {
                                         const husbName = individuals.find(i => i.id === result.husb)?.name || 'Okänd make';
                                         const wifeName = individuals.find(i => i.id === result.wife)?.name || 'Okänd maka';
@@ -209,8 +209,8 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
                                                 className="result-item"
                                                 onClick={() => handleSelectMarriage(result)}
                                             >
-                                                <div style={{ fontWeight: '600', color: 'var(--accent-color)' }}>{husbName} & {wifeName}</div>
-                                                <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: '4px', display: 'flex', justifyContent: 'space-between' }}>
+                                                <div style={{ fontWeight: '600', color: 'var(--accent-color)', fontSize: '0.95rem' }}>{husbName} & {wifeName}</div>
+                                                <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '6px', display: 'flex', justifyContent: 'space-between' }}>
                                                     <span>{result.relationType}</span>
                                                     <span>({result.sharedAncestors.length} gemensamma anor)</span>
                                                 </div>

@@ -35,11 +35,9 @@ interface Props {
 export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId }: Props) {
     const { setCenter } = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
-    const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
+    const [pathNodes, setPathNodes] = useState<Set<string>>(new Set());
+    const [pathEdges, setPathEdges] = useState<Set<string>>(new Set());
 
-    // Keep a clean copy of nodes/edges for resetting highlights easily without re-laying out
-    const [baseNodes, setBaseNodes] = useState<Node[]>([]);
-    const [baseEdges, setBaseEdges] = useState<Edge[]>([]);
     const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(new Set());
     const [siblingExpandedNodeIds, setSiblingExpandedNodeIds] = useState<Set<string>>(new Set());
     const [spouseExpandedNodeIds, setSpouseExpandedNodeIds] = useState<Set<string>>(new Set());
@@ -345,12 +343,32 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                     layoutDirection,
                     spacing
                 );
-                setBaseNodes(layoutedNodes);
-                setBaseEdges(layoutedEdges);
-                setNodes([...layoutedNodes]);
-                setEdges([...layoutedEdges]);
+                const finalNodes = layoutedNodes.map(node => {
+                    const isPath = pathNodes.has(node.id);
+                    return {
+                        ...node,
+                        data: {
+                            ...node.data,
+                            isHighlighted: isPath,
+                            isDimmed: pathNodes.size > 0 && !isPath
+                        }
+                    };
+                });
 
-                // Auto-center on expansion
+                const finalEdges = layoutedEdges.map(edge => {
+                    const isPath = pathEdges.has(edge.id);
+                    return {
+                        ...edge,
+                        className: isPath ? 'highlighted-edge' : (pathEdges.size > 0 ? 'dimmed-edge' : ''),
+                        animated: isPath,
+                    };
+                });
+
+                setNodes(finalNodes);
+                setEdges(finalEdges);
+
+                // If no user pan interaction occurred, attempt to center
+                // Wait a brief moment for React Flow to render the new nodes
                 if (lastExpandedId) {
                     const node = layoutedNodes.find(n => n.id === lastExpandedId);
                     if (node) {
@@ -362,38 +380,31 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 console.error('Error computing layout:', err);
             }
         }
-    }, [individuals, families, expandedNodeIds, siblingExpandedNodeIds, toggleNode, toggleSiblings, hasSiblings, familyChildrenMap, roots, setNodes, setEdges]);
+    }, [individuals, families, expandedNodeIds, siblingExpandedNodeIds, spouseExpandedNodeIds, pathNodes, pathEdges, toggleNode, toggleSiblings, hasSiblings, familyChildrenMap, roots, setNodes, setEdges, isPrintMode]);
 
-    const handlePathFound = useCallback((pathNodes: string[], pathEdges: Set<string>) => {
-        const pSet = new Set(pathNodes);
+    const handlePathFound = useCallback((pNodes: string[], pEdges: Set<string>) => {
+        const pSet = new Set(pNodes);
 
-        setNodes(baseNodes.map(node => {
-            const isPath = pSet.has(node.id);
-            return {
-                ...node,
-                data: {
-                    ...node.data,
-                    isHighlighted: isPath,
-                    isDimmed: !isPath
-                }
-            };
-        }));
+        setPathNodes(pSet);
+        setPathEdges(pEdges);
 
-        setEdges(baseEdges.map(edge => {
-            const isPath = pathEdges.has(edge.id);
-            return {
-                ...edge,
-                className: isPath ? 'highlighted-edge' : 'dimmed-edge',
-                animated: isPath,
-            };
-        }));
-    }, [baseNodes, baseEdges, setNodes, setEdges]);
+        // Ensure path nodes are visible in the layout tree
+        setExpandedNodeIds(prev => {
+            const next = new Set(prev);
+            pNodes.forEach(n => next.add(n));
+            return next;
+        });
+
+        // Try to center on the husband/wife of the marriage
+        if (pNodes.length > 0) {
+            setLastExpandedId(pNodes[0]);
+        }
+    }, []);
 
     const handleClear = useCallback(() => {
-        // Reset to base state
-        setNodes(baseNodes.map(n => ({ ...n, data: { ...n.data, isHighlighted: false, isDimmed: false } })));
-        setEdges(baseEdges.map(e => ({ ...e, className: '', animated: false })));
-    }, [baseNodes, baseEdges, setNodes, setEdges]);
+        setPathNodes(new Set());
+        setPathEdges(new Set());
+    }, []);
 
     const expandAll = useCallback(() => {
         const allIds = [
