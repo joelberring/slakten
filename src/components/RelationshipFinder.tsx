@@ -57,7 +57,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
         }, 50);
     };
 
-    const handleSelectMarriage = (marriage: { husb: string, wife: string, sharedAncestors: string[] }) => {
+    const handleSelectMarriage = (marriage: { familyId: string, husb: string, wife: string, sharedAncestors: string[] }) => {
         onClear(); // Reset first
 
         const allNodes = new Set<string>();
