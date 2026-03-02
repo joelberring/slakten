@@ -35,6 +35,7 @@ interface Props {
 export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId }: Props) {
     const { setCenter } = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
+    const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
     const [pathNodes, setPathNodes] = useState<Set<string>>(new Set());
     const [pathEdges, setPathEdges] = useState<Set<string>>(new Set());
 
