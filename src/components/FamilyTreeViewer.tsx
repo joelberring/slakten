@@ -336,8 +336,8 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             try {
                 const layoutDirection = isPrintMode ? 'LR' : 'TB';
                 const spacing = isPrintMode
-                    ? { nodesep: 20, ranksep: 40, nodeWidth: 200, nodeHeight: 70 }
-                    : (isMobile ? { nodesep: 30, ranksep: 50, nodeWidth: 240, nodeHeight: 110 } : { nodesep: 60, ranksep: 80, nodeWidth: 240, nodeHeight: 110 });
+                    ? { nodesep: 15, ranksep: 30, nodeWidth: 180, nodeHeight: 60 }
+                    : (isMobile ? { nodesep: 25, ranksep: 40, nodeWidth: 200, nodeHeight: 90 } : { nodesep: 30, ranksep: 60, nodeWidth: 240, nodeHeight: 100 });
 
                 const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
                     enrichedNodes.map(n => ({ ...n, data: { ...n.data, isPrintMode } })),
