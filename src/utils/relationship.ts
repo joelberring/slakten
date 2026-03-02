@@ -272,23 +272,6 @@ function getAncestorsWithDistance(upwardAdj: Map<string, string[]>, startId: str
     return ancestors;
 }
 
-function getAncestors(upwardAdj: Map<string, string[]>, startId: string): Set<string> {
-    const ancestors = new Set<string>();
-    const queue = [startId];
-
-    while (queue.length > 0) {
-        const curr = queue.shift()!;
-        const parents = upwardAdj.get(curr) || [];
-        for (const p of parents) {
-            if (!ancestors.has(p)) {
-                ancestors.add(p);
-                queue.push(p);
-            }
-        }
-    }
-
-    return ancestors;
-}
 
 
 export type FamilySide = 'father' | 'mother' | 'both' | 'none';
