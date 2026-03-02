@@ -44,6 +44,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const [siblingExpandedNodeIds, setSiblingExpandedNodeIds] = useState<Set<string>>(new Set());
     const [spouseExpandedNodeIds, setSpouseExpandedNodeIds] = useState<Set<string>>(new Set());
     const [lastExpandedId, setLastExpandedId] = useState<string | null>(null);
+    const [isPrintMode, setIsPrintMode] = useState(false);
 
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
@@ -333,11 +334,15 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             }));
 
             try {
-                const spacing = isMobile ? { nodesep: 30, ranksep: 50 } : { nodesep: 60, ranksep: 80 };
+                const layoutDirection = isPrintMode ? 'LR' : 'TB';
+                const spacing = isPrintMode
+                    ? { nodesep: 20, ranksep: 40, nodeWidth: 200, nodeHeight: 70 }
+                    : (isMobile ? { nodesep: 30, ranksep: 50, nodeWidth: 240, nodeHeight: 110 } : { nodesep: 60, ranksep: 80, nodeWidth: 240, nodeHeight: 110 });
+
                 const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-                    enrichedNodes,
+                    enrichedNodes.map(n => ({ ...n, data: { ...n.data, isPrintMode } })),
                     visibleEdges,
-                    'TB',
+                    layoutDirection,
                     spacing
                 );
                 setBaseNodes(layoutedNodes);
@@ -431,6 +436,9 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 marginBottom: '80px', // Avoid overlap with bottom nav if it was there (but it's gone now?)
                 display: 'flex', gap: '8px'
             }}>
+                <button className={`secondary-btn ${isPrintMode ? 'active' : ''}`} onClick={() => setIsPrintMode(!isPrintMode)} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>
+                    {isPrintMode ? 'Standardvy' : 'Utskriftsläge'}
+                </button>
                 <button className="secondary-btn" onClick={expandAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Visa Allt</button>
                 <button className="secondary-btn" onClick={collapseAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Dölj Allt</button>
             </Panel>

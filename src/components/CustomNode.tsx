@@ -7,47 +7,49 @@ export const CustomNode = memo(({ data }: any) => {
     const highlightClass = data.isHighlighted ? 'highlighted' : data.isDimmed ? 'dimmed' : '';
 
     return (
-        <div className={`individual-node ${isMale ? 'male' : isFemale ? 'female' : ''} ${highlightClass} ${data.isExpanded ? 'expanded' : ''}`}>
-            <Handle type="target" position={Position.Top} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
+        <div className={`individual-node ${isMale ? 'male' : isFemale ? 'female' : ''} ${highlightClass} ${data.isExpanded ? 'expanded' : ''} ${data.isPrintMode ? 'print-mode' : ''}`}>
+            <Handle type="target" position={data.isPrintMode ? Position.Left : Position.Top} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
 
-            <div className="node-controls-top">
-                <button
-                    className={`expansion-toggle node-toggle ${data.isExpanded ? 'expanded' : ''}`}
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        data.onToggle?.(data.id);
-                    }}
-                    title={data.isExpanded ? "Dölj" : "Expandera föräldrar"}
-                >
-                    {data.isExpanded ? '−' : '+'}
-                </button>
-                <button
-                    className="action-btn expand-all-btn"
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        data.onExpandAll?.(data.id);
-                    }}
-                    title="Expandera alla förfäder"
-                >
-                    🚀
-                </button>
-            </div>
+            {!data.isPrintMode && (
+                <div className="node-controls-top">
+                    <button
+                        className={`expansion-toggle node-toggle ${data.isExpanded ? 'expanded' : ''}`}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            data.onToggle?.(data.id);
+                        }}
+                        title={data.isExpanded ? "Dölj" : "Expandera föräldrar"}
+                    >
+                        {data.isExpanded ? '−' : '+'}
+                    </button>
+                    <button
+                        className="action-btn expand-all-btn"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            data.onExpandAll?.(data.id);
+                        }}
+                        title="Expandera alla förfäder"
+                    >
+                        🚀
+                    </button>
+                </div>
+            )}
 
             <div className="node-content">
                 <div className="node-header">{data.name}</div>
                 <div className="node-dates">
-                    {data.birthDate ? `✶ ${data.birthDate}` : ''}
-                    {data.birthDate && data.deathDate ? ' — ' : ''}
-                    {data.deathDate ? `✝ ${data.deathDate}` : ''}
+                    {data.birthDate ? `${data.isPrintMode ? 'f.' : '✶'} ${data.birthDate}` : ''}
+                    {data.birthDate && data.deathDate ? (data.isPrintMode ? ' - ' : ' — ') : ''}
+                    {data.deathDate ? `${data.isPrintMode ? 'd.' : '✝'} ${data.deathDate}` : ''}
                 </div>
-                {(data.birthPlace || data.deathPlace) && (
+                {!data.isPrintMode && (data.birthPlace || data.deathPlace) && (
                     <div className="node-locality" title={data.birthPlace || data.deathPlace}>
                         📍 {data.birthPlace || data.deathPlace}
                     </div>
                 )}
             </div>
 
-            {data.hasSiblings && (
+            {!data.isPrintMode && data.hasSiblings && (
                 <button
                     className={`action-btn sibling-toggle-btn ${data.siblingsExpanded ? 'active' : ''}`}
                     onClick={(e) => {
@@ -60,7 +62,7 @@ export const CustomNode = memo(({ data }: any) => {
                 </button>
             )}
 
-            {data.hasSpouse && (
+            {!data.isPrintMode && data.hasSpouse && (
                 <button
                     className={`action-btn spouse-toggle-btn ${data.spousesExpanded ? 'active' : ''}`}
                     onClick={(e) => {
@@ -72,7 +74,7 @@ export const CustomNode = memo(({ data }: any) => {
                     {data.spousesExpanded ? '💍−' : '💍+'}
                 </button>
             )}
-            <Handle type="source" position={Position.Bottom} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
+            <Handle type="source" position={data.isPrintMode ? Position.Right : Position.Bottom} style={{ background: '#555', border: 'none', width: 8, height: 8 }} />
         </div>
     );
 });
