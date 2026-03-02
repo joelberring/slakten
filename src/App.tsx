@@ -104,7 +104,7 @@ function App() {
     const loadDefaultGedcom = async () => {
       try {
         // 1. Try to load prebaked locations FIRST
-        const locResponse = await fetch('/locations.json');
+        const locResponse = await fetch('locations.json');
         if (locResponse.ok) {
           const json = await locResponse.json();
           // Hydrate the utility's internal cache
@@ -115,7 +115,7 @@ function App() {
         }
 
         // 2. Then load the GEDCOM
-        const response = await fetch('/berring_messing-cleaned.ged');
+        const response = await fetch('berring_messing-cleaned.ged');
         if (response.ok) {
           const text = await response.text();
           const { individuals: inds, families: fams } = parseGedcomData(text);
