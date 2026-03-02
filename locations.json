@@ -1,0 +1,1281 @@
+[
+    [
+        "Stockholm, Sweden",
+        {
+            "lat": 59.3251172,
+            "lon": 18.0710935
+        }
+    ],
+    [
+        "Göteborg, Västra Götaland, Sweden",
+        {
+            "lat": 57.7072326,
+            "lon": 11.9670171
+        }
+    ],
+    [
+        "Huddinge, Stockholm, Sverige",
+        {
+            "lat": 59.216667,
+            "lon": 18
+        }
+    ],
+    [
+        "Skärholmen, Stockholm, Sverige",
+        {
+            "lat": 59.2769204,
+            "lon": 17.9067517
+        }
+    ],
+    [
+        "Botkyrka, Stockholm, Sweden",
+        {
+            "lat": 59.2034494,
+            "lon": 17.8545982
+        }
+    ],
+    [
+        "Gammalsvenskby, Ukraina",
+        {
+            "lat": 46.8586525,
+            "lon": 33.5646464
+        }
+    ],
+    [
+        "Tumba, Botkyrka, Stockholm, Sverige",
+        {
+            "lat": 59.2005555,
+            "lon": 17.8343123
+        }
+    ],
+    [
+        "Linneryd, Skogsrydstorp",
+        {
+            "lat": 56.6908608,
+            "lon": 15.2072798
+        }
+    ],
+    [
+        "Göteborgs domkyrko (O)",
+        null
+    ],
+    [
+        "Botkyrka, Stockholm, Sverige",
+        {
+            "lat": 59.2034494,
+            "lon": 17.8545982
+        }
+    ],
+    [
+        "(A) Stockholm, Botkyrka",
+        {
+            "lat": 59.2034494,
+            "lon": 17.8545982
+        }
+    ],
+    [
+        "Tumba (AB)",
+        {
+            "lat": 59.2005555,
+            "lon": 17.8343123
+        }
+    ],
+    [
+        "Jönköpings Sofia (F)",
+        {
+            "lat": 57.2986503,
+            "lon": 13.5391543
+        }
+    ],
+    [
+        "USA, IL, Cook, Chicago",
+        {
+            "lat": 41.8755616,
+            "lon": -87.6244212
+        }
+    ],
+    [
+        "Kristinehamn (S)",
+        {
+            "lat": 59.3113619,
+            "lon": 14.11176
+        }
+    ],
+    [
+        "Haurida (F)",
+        {
+            "lat": 57.8897581,
+            "lon": 14.5221626
+        }
+    ],
+    [
+        "Linneryd, Skogsryd Östergård",
+        null
+    ],
+    [
+        "Linneryd",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Kristinehamn, Värmland, Sverige",
+        {
+            "lat": 59.3113619,
+            "lon": 14.11176
+        }
+    ],
+    [
+        "Göteborg och Bohus, Sverige",
+        {
+            "lat": 59.6749712,
+            "lon": 14.5208584
+        }
+    ],
+    [
+        "Linneryd, Kronobergs län",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Kristinehamn, Värmlands län",
+        {
+            "lat": 59.3113619,
+            "lon": 14.11176
+        }
+    ],
+    [
+        "Örebro, Örebro, Sverige",
+        {
+            "lat": 59.2747287,
+            "lon": 15.2151181
+        }
+    ],
+    [
+        "Sånnaböke, Sånna, Traryd, Kronoberg, Sweden",
+        null
+    ],
+    [
+        "Kristinehamn, Värmland, Sweden",
+        {
+            "lat": 59.3113619,
+            "lon": 14.11176
+        }
+    ],
+    [
+        "Åsa, Traryd",
+        {
+            "lat": 56.5785889,
+            "lon": 13.7485228
+        }
+    ],
+    [
+        "Sånna, Traryd",
+        {
+            "lat": 56.5785889,
+            "lon": 13.7485228
+        }
+    ],
+    [
+        "Bråna, Traryd",
+        {
+            "lat": 56.5785889,
+            "lon": 13.7485228
+        }
+    ],
+    [
+        "Sånna, Sånnaböke, Traryd",
+        null
+    ],
+    [
+        "Åsa Sg, Traryd",
+        {
+            "lat": 56.5785889,
+            "lon": 13.7485228
+        }
+    ],
+    [
+        "Uddevalla, Göteborg och Bohus län",
+        null
+    ],
+    [
+        "Gräsholma Backagården, Traryd",
+        {
+            "lat": 56.5785889,
+            "lon": 13.7485228
+        }
+    ],
+    [
+        "Lugnet, Jönköping",
+        {
+            "lat": 57.6946236,
+            "lon": 14.2934186
+        }
+    ],
+    [
+        "Öije, Hamneda",
+        {
+            "lat": 56.6950692,
+            "lon": 13.8686286
+        }
+    ],
+    [
+        "Åsa Ng, Traryd",
+        {
+            "lat": 56.5785889,
+            "lon": 13.7485228
+        }
+    ],
+    [
+        "Markaryd",
+        {
+            "lat": 56.4596131,
+            "lon": 13.5919834
+        }
+    ],
+    [
+        "Skararp, Hinneryd",
+        {
+            "lat": 56.6179389,
+            "lon": 13.6096269
+        }
+    ],
+    [
+        "Alandsköp, Traryd",
+        {
+            "lat": 56.5785889,
+            "lon": 13.7485228
+        }
+    ],
+    [
+        "Karlstad, Värmlands län",
+        {
+            "lat": 59.3809146,
+            "lon": 13.5027631
+        }
+    ],
+    [
+        "Lysekil, Göteborg och Bohus län",
+        null
+    ],
+    [
+        "Kristinehamn, Örebro, Sverige",
+        {
+            "lat": 59.2747287,
+            "lon": 15.2151181
+        }
+    ],
+    [
+        "Gammalsvenskby, Ukraine",
+        {
+            "lat": 46.8586525,
+            "lon": 33.5646464
+        }
+    ],
+    [
+        "Grödinge, Stockholm, Sverige",
+        {
+            "lat": 59.2751052,
+            "lon": 18.0726401
+        }
+    ],
+    [
+        "Sofia, Jönköping, Sverige",
+        {
+            "lat": 57.772678,
+            "lon": 14.1541812
+        }
+    ],
+    [
+        "Habo, Jönköping, Sverige",
+        {
+            "lat": 57.9160149,
+            "lon": 14.0527108
+        }
+    ],
+    [
+        "Norrlanda, Gotland, Sweden",
+        {
+            "lat": 57.5012707,
+            "lon": 18.6604178
+        }
+    ],
+    [
+        "Gammal-Svenskby, Ukraina, Ryssland",
+        {
+            "lat": 46.84328581149688,
+            "lon": 33.50830078125001
+        }
+    ],
+    [
+        "Lidingö, Stockholm, Sverige",
+        {
+            "lat": 59.3669445,
+            "lon": 18.1820897
+        }
+    ],
+    [
+        "Linneryd, Kronoberg, Sverige",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Kalmar, Sweden",
+        {
+            "lat": 56.6628826,
+            "lon": 16.3662382
+        }
+    ],
+    [
+        "Linneryd (Smalland), Sweden",
+        {
+            "lat": 59.6749712,
+            "lon": 14.5208584
+        }
+    ],
+    [
+        "Linneryd, Örtagård, Kronobergs Län",
+        null
+    ],
+    [
+        "Linneryd, Örtagård, Kronoberg, Sverige",
+        null
+    ],
+    [
+        "Linneryd,Örtagård, Kronobergs län, Sverige",
+        null
+    ],
+    [
+        "Linneryd, Östergård, Kronobergs län, Sverige",
+        {
+            "lat": 56.9472915,
+            "lon": 13.7481987
+        }
+    ],
+    [
+        "Linneryds by, Kronobergs län, Sverige",
+        {
+            "lat": 56.8007878,
+            "lon": 14.410897
+        }
+    ],
+    [
+        "Linneryd, Öfergård, Kronobergs län, Sverige",
+        null
+    ],
+    [
+        "Linneryd, Göljahult, Westergård, Kronobergs län, Sverige",
+        null
+    ],
+    [
+        "Säljeryd, Lättagård, Östra Thorsås, Kronoberg, Småland, Sverige",
+        null
+    ],
+    [
+        "Ryd Norregård",
+        null
+    ],
+    [
+        "Grötsjö",
+        {
+            "lat": 56.5850606,
+            "lon": 15.8142743
+        }
+    ],
+    [
+        "Skogsrydstorp, Linneryd, Kronoberg, Sverige",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Linneryd, Kronoberg, Sweden",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Hayward, Sawyer, Wisconsin",
+        {
+            "lat": 46.0129676,
+            "lon": -91.4848728
+        }
+    ],
+    [
+        "Hayward, Sawyer County, Wisconsin, United States of America",
+        {
+            "lat": 46.0129676,
+            "lon": -91.4848728
+        }
+    ],
+    [
+        "Linneryd, Tingsryd, Kronoberg, Suède",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Skogsryd Östergård, Linneryd, Kronoberg, Sverige",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Hovmantorp, Linnehult Södergård",
+        null
+    ],
+    [
+        "Linneryd, Tingsryds kommun, Kronobergs län, Sweden",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Sånna, Sånnaböke, Traryd, Markaryd, Kronoberg, Suède",
+        null
+    ],
+    [
+        "Kristinehamn, Kristinehamn, Värmland, Suède",
+        {
+            "lat": 59.3113619,
+            "lon": 14.11176
+        }
+    ],
+    [
+        "Nora stadsförs, Nora, Örebro, Suède",
+        {
+            "lat": 59.533333,
+            "lon": 15.016667
+        }
+    ],
+    [
+        "Hässelby, Stockholm, Stockholm, Suède",
+        {
+            "lat": 59.3613588,
+            "lon": 17.8323627
+        }
+    ],
+    [
+        "Katarina, Stockholm, Stockholm, Suède",
+        {
+            "lat": 59.3170646,
+            "lon": 18.0781301
+        }
+    ],
+    [
+        "Dammen, Norra Hunna, Södra Torpa, Snavlunda (T)",
+        null
+    ],
+    [
+        "Lima, Huddinge (AB)",
+        {
+            "lat": 59.216667,
+            "lon": 18
+        }
+    ],
+    [
+        "Brännkyrka, Stockholm, Sverige",
+        {
+            "lat": 59.2822037,
+            "lon": 18.0234325
+        }
+    ],
+    [
+        "(A) Stockholm Södertälje",
+        {
+            "lat": 59.1964289,
+            "lon": 17.6271663
+        }
+    ],
+    [
+        "(S) Värmland, Väse",
+        {
+            "lat": 59.3844824,
+            "lon": 13.8528775
+        }
+    ],
+    [
+        "(S) Värmeland,Nyed",
+        null
+    ],
+    [
+        "(A) Stockholm, Barnhusförsamlingen",
+        null
+    ],
+    [
+        "(A) Stockholm, Brännkyrka",
+        {
+            "lat": 59.2822037,
+            "lon": 18.0234325
+        }
+    ],
+    [
+        "(H) Kalmar, Gärdesrum",
+        null
+    ],
+    [
+        "(A) Stockholm, Huddinge, Hästvreten",
+        null
+    ],
+    [
+        "(A) Stockholm, Matteus",
+        {
+            "lat": 59.3464222,
+            "lon": 18.0432465
+        }
+    ],
+    [
+        "(A) Stockholm, Huddinge",
+        {
+            "lat": 59.216667,
+            "lon": 18
+        }
+    ],
+    [
+        "Kärvingeborns hammare, Grythyttan, Örebro, Sverige",
+        {
+            "lat": 59.7057491,
+            "lon": 14.5372274
+        }
+    ],
+    [
+        "Nora stadsförsamling, Örebro, Sverige",
+        {
+            "lat": 59.2747287,
+            "lon": 15.2151181
+        }
+    ],
+    [
+        "Karlshamn, Blekinge, Sverige",
+        {
+            "lat": 56.1701723,
+            "lon": 14.8631279
+        }
+    ],
+    [
+        "Gravendal, Safsnas, Dalarnas, Sweden",
+        {
+            "lat": 60.1462975,
+            "lon": 14.4229736
+        }
+    ],
+    [
+        "Karvingeborn, Grythyttan, Orebro, Sweden",
+        {
+            "lat": 59.7057491,
+            "lon": 14.5372274
+        }
+    ],
+    [
+        "Gallinge, Säfsnäs, Kopparberg (Dalarna)",
+        null
+    ],
+    [
+        "Karvingeborns hammare, Grythyttan, Örebro, Sverige",
+        {
+            "lat": 59.7057491,
+            "lon": 14.5372274
+        }
+    ],
+    [
+        "Amiralitetsfors, Karlskrona, Blekinge, Sverige",
+        {
+            "lat": 56.1621073,
+            "lon": 15.5866422
+        }
+    ],
+    [
+        "Ronneby, Blekinge, Sverige",
+        {
+            "lat": 56.2100417,
+            "lon": 15.2760355
+        }
+    ],
+    [
+        "Sweden",
+        {
+            "lat": 59.6749712,
+            "lon": 14.5208584
+        }
+    ],
+    [
+        "Ronneby, Blekinge, Sweden",
+        {
+            "lat": 56.2100417,
+            "lon": 15.2760355
+        }
+    ],
+    [
+        "Annefors, Säfsnäs, Dalarna, Sweden",
+        {
+            "lat": 60.1464346,
+            "lon": 14.4232195
+        }
+    ],
+    [
+        "Fredriksberg, Säfsnäs, Dalarnas, Sweden",
+        {
+            "lat": 60.1462975,
+            "lon": 14.4229736
+        }
+    ],
+    [
+        "Gåsborn Filipstad, Filipstad, Värmland, Suède",
+        {
+            "lat": 59.8769734,
+            "lon": 14.3233025
+        }
+    ],
+    [
+        "Gravendal, Säfsnäs, Ludvika, Dalarna/Kopparberg, Suède",
+        null
+    ],
+    [
+        "Säfnäs, Kopparberg, Sweden",
+        {
+            "lat": 59.8745061,
+            "lon": 14.9903848
+        }
+    ],
+    [
+        "Sandsjön, Hällefors(T)",
+        {
+            "lat": 59.8754536,
+            "lon": 14.5997453
+        }
+    ],
+    [
+        "Säfsnäs, Gällinge",
+        {
+            "lat": 57.3955398,
+            "lon": 12.2488171
+        }
+    ],
+    [
+        "Stora Tomsjön Hällefors Sverige",
+        {
+            "lat": 59.9980076,
+            "lon": 14.4848858
+        }
+    ],
+    [
+        "Gällinge  Säfsnäs Dalarna Sweden",
+        null
+    ],
+    [
+        "Gällinge, Säfsnäs, Dalarna, Sverige",
+        {
+            "lat": 60.1462975,
+            "lon": 14.4229736
+        }
+    ],
+    [
+        "Gällinge vilbäck, Nås, Dalarna, Sverige",
+        {
+            "lat": 60.4557881,
+            "lon": 14.4975126
+        }
+    ],
+    [
+        "Hjulsjö, Orebro, Sweden",
+        {
+            "lat": 59.7842978,
+            "lon": 14.7782175
+        }
+    ],
+    [
+        "Gällinge, Säfsnäs, W",
+        {
+            "lat": 60.1462975,
+            "lon": 14.4229736
+        }
+    ],
+    [
+        "Nitten, Grangärde, Dalarna, Sweden",
+        {
+            "lat": 60.2630817,
+            "lon": 14.9820576
+        }
+    ],
+    [
+        "Gällinge, Säfsnäs, Sweden",
+        {
+            "lat": 60.1464346,
+            "lon": 14.4232195
+        }
+    ],
+    [
+        "Hjulsjö, Hällefors, Örebro, Sverige/Sweden",
+        null
+    ],
+    [
+        "Riboda, Kvistbro, Lekeberg, Örebro, Sverige",
+        {
+            "lat": 59.1542798,
+            "lon": 14.8080376
+        }
+    ],
+    [
+        "Lernbo, Norrbärke, Kopparberg, Sweden",
+        null
+    ],
+    [
+        "Sverige",
+        {
+            "lat": 59.6749712,
+            "lon": 14.5208584
+        }
+    ],
+    [
+        "Gloppsjön, Västmanland, Hällefors, Örebro, Suède",
+        null
+    ],
+    [
+        "Stora havsjön, Hjulsjö, Västmanland, Hällefors, Örebro, Suède",
+        null
+    ],
+    [
+        "Gränsjön, Hällefors, Örebro, Sverige",
+        {
+            "lat": 59.8979432,
+            "lon": 14.6890919
+        }
+    ],
+    [
+        "Hjulsjö, Hällefors, Örebro, Sverige",
+        {
+            "lat": 59.7842978,
+            "lon": 14.7782175
+        }
+    ],
+    [
+        "Hällestad, Finspång, Östergötland, Sverige",
+        {
+            "lat": 58.7416543,
+            "lon": 15.5722273
+        }
+    ],
+    [
+        "Gloppsjön, Hällefors, Örebro, Sverige",
+        {
+            "lat": 59.8143607,
+            "lon": 14.6273839
+        }
+    ],
+    [
+        "Näset, Strömsund, Jämtlands län, Sverige",
+        {
+            "lat": 63.9137746,
+            "lon": 16.2974679
+        }
+    ],
+    [
+        "Gloppsjön, Hällefors, Västmanland, Sverige",
+        null
+    ],
+    [
+        "Hinseberg, Näsby, Fellingsbro härad, Västmanland, Suède",
+        null
+    ],
+    [
+        "Ölanda, Istrum, Valle härad, Västergötland, Skara, Skaraborg, Suède",
+        null
+    ],
+    [
+        "und Ort nicht angegeben.",
+        null
+    ],
+    [
+        "valle, härad, Ölanda, Västra Götaland, Sverige",
+        null
+    ],
+    [
+        "Dunderberget, Dalarna, Sverige",
+        {
+            "lat": 60.1106173,
+            "lon": 14.5317382
+        }
+    ],
+    [
+        "Dunderberget, Säfsnäs, Dalarna, Sverige",
+        {
+            "lat": 60.1462975,
+            "lon": 14.4229736
+        }
+    ],
+    [
+        "Håen, Nås, Dalarna, Sverige",
+        {
+            "lat": 60.4557881,
+            "lon": 14.4975126
+        }
+    ],
+    [
+        "Dunderberget,Nås,Kopparbergs län",
+        null
+    ],
+    [
+        "Sikala, Södra Röjdåsen, Värmland, Sverige",
+        null
+    ],
+    [
+        "Gällinge, Nås, Dalarna, Sweden",
+        {
+            "lat": 60.4557881,
+            "lon": 14.4975126
+        }
+    ],
+    [
+        "Säfsnäs, Gällinge, Kopparbergs län, Kungsbacka, Halland, Suède",
+        null
+    ],
+    [
+        "Säfsnäs, Dunderberget, Kopparbergs län, Ludvika, Dalarna/Kopparberg, Suède",
+        null
+    ],
+    [
+        "Ekshärad, Hagfors, Värmland, Suède",
+        {
+            "lat": 60.1696444,
+            "lon": 13.5058575
+        }
+    ],
+    [
+        "Säfsnäs, Ludvika, Dalarna/Kopparberg, Suède",
+        null
+    ],
+    [
+        "Ludvika, Dalarna, Sverige",
+        {
+            "lat": 60.2,
+            "lon": 14.833333
+        }
+    ],
+    [
+        "stockholm, Vantör, Stockholm, Sverige",
+        {
+            "lat": 59.2949776,
+            "lon": 18.0260014
+        }
+    ],
+    [
+        "Sundbyberg, Stockholm, Sverige",
+        {
+            "lat": 59.3628802,
+            "lon": 17.9681359
+        }
+    ],
+    [
+        "Nyhammar, Dalarna, Sverige",
+        {
+            "lat": 60.292565,
+            "lon": 14.9693325
+        }
+    ],
+    [
+        "Gammalsvenskby, Hersoni, Ukraine",
+        {
+            "lat": 46.8586525,
+            "lon": 33.5646464
+        }
+    ],
+    [
+        "Gammalsvenskby",
+        {
+            "lat": 46.8586525,
+            "lon": 33.5646464
+        }
+    ],
+    [
+        "Alt-Schwedendorf, Kherson, Kherson, Russia",
+        null
+    ],
+    [
+        "Dagö, Estland",
+        {
+            "lat": 58.8901657,
+            "lon": 22.7096019
+        }
+    ],
+    [
+        "Hiiumaa, Estonia",
+        {
+            "lat": 58.8901657,
+            "lon": 22.7096019
+        }
+    ],
+    [
+        "Gammalsvenskby, Hiiumaa, Ukraine",
+        null
+    ],
+    [
+        "Dagö",
+        {
+            "lat": 58.8901657,
+            "lon": 22.7096019
+        }
+    ],
+    [
+        "Reigi khk, Reigi kula, Estonia",
+        {
+            "lat": 59.0056903,
+            "lon": 22.5164301
+        }
+    ],
+    [
+        "Gotland, Sweden",
+        {
+            "lat": 57.4174802,
+            "lon": 18.5369579
+        }
+    ],
+    [
+        "Koidma kula, Estonia",
+        {
+            "lat": 58.9638355,
+            "lon": 22.6237241
+        }
+    ],
+    [
+        "Kula, Reigi, Dagö, Hiiumaa, Estland",
+        null
+    ],
+    [
+        "Dagö, Wiek, Estland, Russie",
+        null
+    ],
+    [
+        "Reigi, Hiiumaa vald, Hiiumaa, Estonia",
+        {
+            "lat": 59.0056903,
+            "lon": 22.5164301
+        }
+    ],
+    [
+        "Reigi, Hiiumaa, Estland",
+        {
+            "lat": 59.0056903,
+            "lon": 22.5164301
+        }
+    ],
+    [
+        "Dagö, Hiiumaa, Estland",
+        {
+            "lat": 58.9730305,
+            "lon": 22.913169
+        }
+    ],
+    [
+        "Tången, Hovmantorp, Lessebo, Kronoberg, Suède",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Skogsryd, Linneryd Kronoberg, Sverige",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Skogsryd backagård Linneryd, Kronoberg, Sverige",
+        {
+            "lat": 56.8007878,
+            "lon": 14.410897
+        }
+    ],
+    [
+        "Teskogen Skogsnäs, Linneryd, Kronoberg, Sverige",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Skogsryd Backagård, Linneryd, Kronoberg, Sverige",
+        {
+            "lat": 56.6608453,
+            "lon": 15.1245726
+        }
+    ],
+    [
+        "Tången, Ugnanäs, Storegård, Hovmantorp, Kronoberg, Sverige",
+        null
+    ],
+    [
+        "Tången, Ugnanäs, Hovmantorp Kronoberg, Sverige",
+        null
+    ],
+    [
+        "Skogsryd, Buskagden, Linneryd, Kronoberg, Sverige",
+        null
+    ],
+    [
+        "Hofmanlorps, Kronoberg, Sverige",
+        {
+            "lat": 56.8007878,
+            "lon": 14.410897
+        }
+    ],
+    [
+        "Enkoneryd, Långasjö, Kalmar, Sverige",
+        {
+            "lat": 56.5808151,
+            "lon": 15.4455893
+        }
+    ],
+    [
+        "Ugnanäs Storgård, Hovmantorp, Kronoberg, Sverige",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Tången, Hovmantorp, Kronoberg, Sweden",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Simahult, Vissefjärda, Kalmar, Sweden",
+        {
+            "lat": 56.5355233,
+            "lon": 15.5861469
+        }
+    ],
+    [
+        "Uganäs Storgård,Hovmantorp, Kronoberg, Sverige",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Uganäs Storgård, Hovmantorp, Kronoberg, Sverige",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Skye mellangård, Uråsa, Kronoberg, Sverige",
+        {
+            "lat": 56.6957409,
+            "lon": 14.9172594
+        }
+    ],
+    [
+        "Bredahult, Väckelsång, Kronoberg, Sweden",
+        {
+            "lat": 56.6402683,
+            "lon": 14.9175054
+        }
+    ],
+    [
+        "Ugnanäs Storegård, Hovmantorp, Kronoberg, Sweden",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Hovmantorp, Kronoberg, Sverige",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Hovmantorp, Kronoberg, Sweden",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Tången, Hovmantorp, Kronoberg, Sverige",
+        {
+            "lat": 56.787754,
+            "lon": 15.1365001
+        }
+    ],
+    [
+        "Simahult, Vissefjärda",
+        {
+            "lat": 56.5355233,
+            "lon": 15.5861469
+        }
+    ],
+    [
+        "Tången Hovmantorp Kronoberg Sverige",
+        null
+    ],
+    [
+        "Enkonaryd, Långasjö, Kalmar, Sverige",
+        {
+            "lat": 56.5808151,
+            "lon": 15.4455893
+        }
+    ],
+    [
+        "Runnamåla Norregård, Långasjö, Kalmar, Sverige",
+        {
+            "lat": 56.5808151,
+            "lon": 15.4455893
+        }
+    ],
+    [
+        "Grangärde, Dalarna, Sverige",
+        {
+            "lat": 60.2647,
+            "lon": 14.9806
+        }
+    ],
+    [
+        "Ljusnarsberg, Örebro, Sweden",
+        {
+            "lat": 59.897,
+            "lon": 14.992
+        }
+    ],
+    [
+        "Ljusnarsberg, Orebro, Sweden",
+        {
+            "lat": 59.897,
+            "lon": 14.992
+        }
+    ],
+    [
+        "Grangärde, Dalarnas, Sweden",
+        {
+            "lat": 60.2647,
+            "lon": 14.9806
+        }
+    ],
+    [
+        "Skogsryd, Linneryd, Tingsryd, Kronoberg, Suède",
+        {
+            "lat": 56.6608,
+            "lon": 15.1246
+        }
+    ],
+    [
+        "Edebo, Stockholm, Sverige",
+        {
+            "lat": 59.988,
+            "lon": 18.577
+        }
+    ],
+    [
+        "Långasjö, Emmaboda, Kalmar, Suède",
+        {
+            "lat": 56.579,
+            "lon": 15.452
+        }
+    ],
+    [
+        "Traryd, Kronoberg, Sverige",
+        {
+            "lat": 56.575,
+            "lon": 13.738
+        }
+    ],
+    [
+        "Hinneryd, Kronoberg, Sweden",
+        {
+            "lat": 56.621,
+            "lon": 13.593
+        }
+    ],
+    [
+        "Stimmerbo Norrbärke, Dalarna, Sverige",
+        {
+            "lat": 60.134,
+            "lon": 15.42
+        }
+    ],
+    [
+        "Wägarås, Traryd Kronobergs län",
+        {
+            "lat": 56.575,
+            "lon": 13.738
+        }
+    ],
+    [
+        "Finland",
+        {
+            "lat": 61.924,
+            "lon": 25.748
+        }
+    ],
+    [
+        "Grangärde, Dalarna, Sweden",
+        {
+            "lat": 60.2647,
+            "lon": 14.9806
+        }
+    ],
+    [
+        "Ljusnarsberg, Örebro, Sverige",
+        {
+            "lat": 59.897,
+            "lon": 14.992
+        }
+    ],
+    [
+        "Osby, Skåne, Sverige",
+        {
+            "lat": 56.38,
+            "lon": 13.993
+        }
+    ],
+    [
+        "Säfsnäs, Dalarna, Sverige",
+        {
+            "lat": 60.146,
+            "lon": 14.423
+        }
+    ],
+    [
+        "Hjulsjö, Örebro, Sverige",
+        {
+            "lat": 59.784,
+            "lon": 14.778
+        }
+    ],
+    [
+        "Ljusnarsberg, Örebro län, Västmanland, Sverige",
+        {
+            "lat": 59.897,
+            "lon": 14.992
+        }
+    ],
+    [
+        "Kylhult, Strömsnäsbruk, Markaryd, Kronoberg, Sverige",
+        {
+            "lat": 56.541,
+            "lon": 13.671
+        }
+    ],
+    [
+        "Kylhult, Traryd Kronobergs län",
+        {
+            "lat": 56.541,
+            "lon": 13.671
+        }
+    ]
+]
