@@ -17,7 +17,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
     const [personB, setPersonB] = useState<string>('');
     const [ancestorsOnly, setAncestorsOnly] = useState<boolean>(true);
     const [status, setStatus] = useState<string>('');
-    const [globalResults, setGlobalResults] = useState<{ familyId: string, husb: string, wife: string, sharedAncestors: string[] }[] | null>(null);
+    const [globalResults, setGlobalResults] = useState<{ familyId: string, husb: string, wife: string, sharedAncestors: string[], relationType: string }[] | null>(null);
     const [isOpen, setIsOpen] = useState(false);
 
 
@@ -57,7 +57,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
         }, 50);
     };
 
-    const handleSelectMarriage = (marriage: { familyId: string, husb: string, wife: string, sharedAncestors: string[] }) => {
+    const handleSelectMarriage = (marriage: { familyId: string, husb: string, wife: string, sharedAncestors: string[], relationType: string }) => {
         onClear(); // Reset first
 
         const allNodes = new Set<string>();
@@ -95,7 +95,7 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
 
         const husbName = individuals.find(i => i.id === marriage.husb)?.name || 'Okänd';
         const wifeName = individuals.find(i => i.id === marriage.wife)?.name || 'Okänd';
-        setStatus(`Visar släktskap för kusiner: ${husbName} & ${wifeName}`);
+        setStatus(`Visar släktskap (${marriage.relationType}): ${husbName} & ${wifeName}`);
     };
 
     const handleClear = () => {
@@ -210,8 +210,9 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
                                                 onClick={() => handleSelectMarriage(result)}
                                             >
                                                 <div style={{ fontWeight: '600', color: 'var(--accent-color)' }}>{husbName} & {wifeName}</div>
-                                                <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: '4px' }}>
-                                                    Gemensamma anor: {result.sharedAncestors.length}
+                                                <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: '4px', display: 'flex', justifyContent: 'space-between' }}>
+                                                    <span>{result.relationType}</span>
+                                                    <span>({result.sharedAncestors.length} gemensamma anor)</span>
                                                 </div>
                                             </li>
                                         );

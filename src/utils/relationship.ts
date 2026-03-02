@@ -221,33 +221,67 @@ export function findAllCousinMarriages(families: any[]) {
         if (fam.wife) addEdge(fam.id, fam.wife);
     });
 
-    const cousinMarriages: { familyId: string, husb: string, wife: string, sharedAncestors: string[] }[] = [];
+    const cousinMarriages: { familyId: string, husb: string, wife: string, sharedAncestors: string[], relationType: string }[] = [];
 
     families.forEach(fam => {
         if (fam.husb && fam.wife) {
             const husbAnc = getAncestorsWithDistance(adj, fam.husb);
             const wifeAnc = getAncestorsWithDistance(adj, fam.wife);
 
-            // First cousins share a grandparent (distance 2)
-            // They should not share a parent (distance 1) -> siblings
-            // And one should not be an ancestor of the other (distance 0 is self, but we check shared ancestors > 0)
+            // Find minimum distance to any shared ancestor
+            const sharedAncestors = Array.from(husbAnc.keys()).filter(id => wifeAnc.has(id));
 
-            const sharedGrandparents = Array.from(husbAnc.keys()).filter(id =>
-                husbAnc.get(id) === 2 && wifeAnc.get(id) === 2
-            );
+            if (sharedAncestors.length > 0 && fam.husb !== fam.wife) {
+                // To categorize, find the closest shared ancestor
+                let minHusbDist = Infinity;
+                let minWifeDist = Infinity;
 
-            const sharedParents = Array.from(husbAnc.keys()).filter(id =>
-                husbAnc.get(id) === 1 && wifeAnc.get(id) === 1
-            );
+                sharedAncestors.forEach(id => {
+                    const hDist = husbAnc.get(id)!;
+                    const wDist = wifeAnc.get(id)!;
 
-            // Not the same person, not siblings, share at least one grandparent
-            if (fam.husb !== fam.wife && sharedParents.length === 0 && sharedGrandparents.length > 0) {
-                cousinMarriages.push({
-                    familyId: fam.id,
-                    husb: fam.husb,
-                    wife: fam.wife,
-                    sharedAncestors: sharedGrandparents,
+                    // We want the most recent common ancestor
+                    if (hDist + wDist < minHusbDist + minWifeDist) {
+                        minHusbDist = hDist;
+                        minWifeDist = wDist;
+                    }
                 });
+
+                // Determine relationship type
+                let relationType = '';
+                if (minHusbDist === 1 && minWifeDist === 1) {
+                    relationType = 'Syskon'; // Should be filtered out usually, but just in case
+                } else if (minHusbDist === 2 && minWifeDist === 2) {
+                    relationType = 'Kusiner';
+                } else if (minHusbDist === 3 && minWifeDist === 3) {
+                    relationType = 'Sysslingar';
+                } else if (minHusbDist === 4 && minWifeDist === 4) {
+                    relationType = 'Bryllingar';
+                } else if ((minHusbDist === 2 && minWifeDist === 3) || (minHusbDist === 3 && minWifeDist === 2)) {
+                    relationType = 'Kusinbarn / Förälders kusin';
+                } else if ((minHusbDist === 3 && minWifeDist === 4) || (minHusbDist === 4 && minWifeDist === 3)) {
+                    relationType = 'Sysslingbarn / Förälders syssling';
+                } else {
+                    relationType = 'Avlägsen relation';
+                }
+
+                // Only include specific close relations
+                const allowedTypes = ['Kusiner', 'Sysslingar', 'Bryllingar', 'Kusinbarn / Förälders kusin', 'Sysslingbarn / Förälders syssling'];
+
+                if (allowedTypes.includes(relationType)) {
+                    // Only pass the ancestors that match this closest relationship to avoid messy paths
+                    const closestAncestors = sharedAncestors.filter(id =>
+                        husbAnc.get(id) === minHusbDist && wifeAnc.get(id) === minWifeDist
+                    );
+
+                    cousinMarriages.push({
+                        familyId: fam.id,
+                        husb: fam.husb,
+                        wife: fam.wife,
+                        sharedAncestors: closestAncestors,
+                        relationType
+                    });
+                }
             }
         }
     });
