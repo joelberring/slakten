@@ -115,7 +115,7 @@ function App() {
         }
 
         // 2. Then load the GEDCOM
-        const response = await fetch('/berring_messing.ged');
+        const response = await fetch('/berring_messing-cleaned.ged');
         if (response.ok) {
           const text = await response.text();
           const { individuals: inds, families: fams } = parseGedcomData(text);
