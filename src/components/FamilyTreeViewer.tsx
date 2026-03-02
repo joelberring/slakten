@@ -418,48 +418,50 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
 
 
     return (
-        <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            nodeTypes={nodeTypes}
-            fitView
-            minZoom={0.05}
-            maxZoom={1.5}
-            attributionPosition="bottom-right"
-        >
-            <Background color="#ffffff" gap={16} size={1} />
-            <Controls style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', fill: 'var(--text-primary)' }} />
+        <div className={`react-flow-wrapper ${isPrintMode ? 'print-mode-enabled' : ''}`}>
+            <ReactFlow
+                nodes={nodes}
+                edges={edges}
+                onNodesChange={onNodesChange}
+                onEdgesChange={onEdgesChange}
+                nodeTypes={nodeTypes}
+                fitView
+                minZoom={0.05}
+                maxZoom={1.5}
+                attributionPosition="bottom-right"
+            >
+                <Background color="#ffffff" gap={16} size={1} />
+                <Controls style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', fill: 'var(--text-primary)' }} />
 
-            <Panel position="bottom-right" className="tree-controls-panel" style={{
-                marginBottom: '80px', // Avoid overlap with bottom nav if it was there (but it's gone now?)
-                display: 'flex', gap: '8px'
-            }}>
-                <button className={`secondary-btn ${isPrintMode ? 'active' : ''}`} onClick={() => setIsPrintMode(!isPrintMode)} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>
-                    {isPrintMode ? 'Standardvy' : 'Utskriftsläge'}
-                </button>
-                <button className="secondary-btn" onClick={expandAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Visa Allt</button>
-                <button className="secondary-btn" onClick={collapseAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Dölj Allt</button>
-            </Panel>
+                <Panel position="bottom-right" className="tree-controls-panel" style={{
+                    marginBottom: '80px', // Avoid overlap with bottom nav if it was there (but it's gone now?)
+                    display: 'flex', gap: '8px'
+                }}>
+                    <button className={`secondary-btn ${isPrintMode ? 'active' : ''}`} onClick={() => setIsPrintMode(!isPrintMode)} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>
+                        {isPrintMode ? 'Standardvy' : 'Utskriftsläge'}
+                    </button>
+                    <button className="secondary-btn" onClick={expandAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Visa Allt</button>
+                    <button className="secondary-btn" onClick={collapseAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Dölj Allt</button>
+                </Panel>
 
-            <MiniMap
-                nodeColor={(node) => {
-                    if (node.type === 'familyNode') return 'var(--accent-color)';
-                    if (node.data?.sex === 'M') return 'var(--male-color)';
-                    if (node.data?.sex === 'F') return 'var(--female-color)';
-                    return '#eee';
-                }}
-                maskColor="rgba(0,0,0,0.5)"
-                style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}
-            />
+                <MiniMap
+                    nodeColor={(node) => {
+                        if (node.type === 'familyNode') return 'var(--accent-color)';
+                        if (node.data?.sex === 'M') return 'var(--male-color)';
+                        if (node.data?.sex === 'F') return 'var(--female-color)';
+                        return '#eee';
+                    }}
+                    maskColor="rgba(0,0,0,0.5)"
+                    style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}
+                />
 
-            <RelationshipFinder
-                individuals={individuals}
-                families={families}
-                onPathFound={handlePathFound}
-                onClear={handleClear}
-            />
-        </ReactFlow>
+                <RelationshipFinder
+                    individuals={individuals}
+                    families={families}
+                    onPathFound={handlePathFound}
+                    onClear={handleClear}
+                />
+            </ReactFlow>
+        </div>
     );
 }

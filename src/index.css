@@ -11,6 +11,9 @@
   --male-glow: rgba(96, 165, 250, 0.2);
   --female-glow: rgba(244, 114, 182, 0.2);
   --accent-color: #a78bfa;
+  --print-bg: #ffffff;
+  --print-text: #111111;
+  --print-edge: #cccccc;
 }
 
 body {
@@ -138,6 +141,32 @@ body {
 .individual-node.print-mode.female {
   border-left: 3px solid #ec4899;
   box-shadow: none;
+}
+
+/* Print Mode Enabled Container Overrides */
+.print-mode-enabled {
+  background-color: var(--print-bg) !important;
+}
+
+.print-mode-enabled .react-flow__edge-path {
+  stroke: var(--print-edge) !important;
+  stroke-width: 1.5 !important;
+}
+
+.print-mode-enabled .react-flow__controls {
+  background: white !important;
+  border-color: #ddd !important;
+  fill: #333 !important;
+}
+
+.print-mode-enabled .react-flow__minimap {
+  background: white !important;
+  border-color: #ddd !important;
+}
+
+.print-mode-enabled .tree-controls-panel .secondary-btn.active {
+  background: var(--accent-color) !important;
+  color: white !important;
 }
 
 /* Family Union node */
@@ -1125,29 +1154,39 @@ body.loading .app-subtitle {
     grid-template-columns: 1fr !important;
   }
 }
+
 @media (max-width: 600px) {
+
   /* Mobiloptimering för trädet */
   .individual-node {
     width: 180px !important;
     padding: 12px !important;
   }
+
   .node-header {
     font-size: 0.9rem !important;
   }
-  .node-dates, .node-locality {
+
+  .node-dates,
+  .node-locality {
     font-size: 0.65rem !important;
   }
-  .action-btn, .node-toggle {
+
+  .action-btn,
+  .node-toggle {
     width: 20px !important;
     height: 20px !important;
     font-size: 11px !important;
   }
+
   .sibling-toggle-btn {
     right: -24px !important;
   }
+
   .spouse-toggle-btn {
     left: -24px !important;
   }
+
   .node-controls-top {
     top: -10px !important;
   }
