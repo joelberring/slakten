@@ -58,7 +58,8 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
     };
 
     const handleSelectMarriage = (marriage: { husb: string, wife: string, sharedAncestors: string[] }) => {
-        // Find paths from husb to all shared ancestors and wife to all shared ancestors
+        onClear(); // Reset first
+
         const allNodes = new Set<string>();
         const allPaths: string[][] = [];
 
@@ -76,12 +77,25 @@ export function RelationshipFinder({ individuals, families, onPathFound, onClear
             }
         });
 
-        // Also add the spouses themselves since they are the root of this interaction
         allNodes.add(marriage.husb);
         allNodes.add(marriage.wife);
 
+        // Also capture the family node that connects them directly as spouses
+        allNodes.add(marriage.familyId);
+
         const edges = getMultiplePathEdges(allPaths);
+
+        // Add marriage edges
+        edges.add(`e-${marriage.familyId}-${marriage.husb}`);
+        edges.add(`e-${marriage.husb}-${marriage.familyId}`);
+        edges.add(`e-${marriage.familyId}-${marriage.wife}`);
+        edges.add(`e-${marriage.wife}-${marriage.familyId}`);
+
         onPathFound(Array.from(allNodes), edges);
+
+        const husbName = individuals.find(i => i.id === marriage.husb)?.name || 'Okänd';
+        const wifeName = individuals.find(i => i.id === marriage.wife)?.name || 'Okänd';
+        setStatus(`Visar släktskap för kusiner: ${husbName} & ${wifeName}`);
     };
 
     const handleClear = () => {

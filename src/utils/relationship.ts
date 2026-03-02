@@ -214,7 +214,6 @@ export function findAllCousinMarriages(families: any[]) {
     };
 
     families.forEach(fam => {
-        // Upwards only
         fam.children.forEach((childId: string) => {
             addEdge(childId, fam.id);
         });
@@ -226,27 +225,51 @@ export function findAllCousinMarriages(families: any[]) {
 
     families.forEach(fam => {
         if (fam.husb && fam.wife) {
-            const husbAncestors = getAncestors(adj, fam.husb);
-            const wifeAncestors = getAncestors(adj, fam.wife);
+            const husbAnc = getAncestorsWithDistance(adj, fam.husb);
+            const wifeAnc = getAncestorsWithDistance(adj, fam.wife);
 
-            // Important: We also check if one is a direct descendant of the other
-            const husbIsAncestor = wifeAncestors.has(fam.husb);
-            const wifeIsAncestor = husbAncestors.has(fam.wife);
+            // First cousins share a grandparent (distance 2)
+            // They should not share a parent (distance 1) -> siblings
+            // And one should not be an ancestor of the other (distance 0 is self, but we check shared ancestors > 0)
 
-            const sharedAncestors = Array.from(husbAncestors).filter(id => wifeAncestors.has(id)) as string[];
+            const sharedGrandparents = Array.from(husbAnc.keys()).filter(id =>
+                husbAnc.get(id) === 2 && wifeAnc.get(id) === 2
+            );
 
-            if (sharedAncestors.length > 0 || husbIsAncestor || wifeIsAncestor) {
+            const sharedParents = Array.from(husbAnc.keys()).filter(id =>
+                husbAnc.get(id) === 1 && wifeAnc.get(id) === 1
+            );
+
+            // Not the same person, not siblings, share at least one grandparent
+            if (fam.husb !== fam.wife && sharedParents.length === 0 && sharedGrandparents.length > 0) {
                 cousinMarriages.push({
                     familyId: fam.id,
                     husb: fam.husb,
                     wife: fam.wife,
-                    sharedAncestors: Array.from(new Set([...sharedAncestors, husbIsAncestor ? fam.husb : '', wifeIsAncestor ? fam.wife : ''].filter(Boolean))),
+                    sharedAncestors: sharedGrandparents,
                 });
             }
         }
     });
 
     return cousinMarriages;
+}
+
+function getAncestorsWithDistance(upwardAdj: Map<string, string[]>, startId: string): Map<string, number> {
+    const ancestors = new Map<string, number>();
+    const queue = [{ id: startId, dist: 0 }];
+
+    while (queue.length > 0) {
+        const { id, dist } = queue.shift()!;
+        const parents = upwardAdj.get(id) || [];
+        for (const p of parents) {
+            if (!ancestors.has(p)) {
+                ancestors.set(p, dist + 1);
+                queue.push({ id: p, dist: dist + 1 });
+            }
+        }
+    }
+    return ancestors;
 }
 
 function getAncestors(upwardAdj: Map<string, string[]>, startId: string): Set<string> {
