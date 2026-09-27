@@ -8,33 +8,35 @@ export function IntroModal({ onClose }: Props) {
     return (
         <div className="intro-modal-overlay">
             <div className="intro-modal-content">
-                <h2>Välkommen till släktträdet! 📖🌳</h2>
-                <p>Den här appen hjälper dig att utforska din släkthistoria på ett interaktivt sätt.</p>
+                <span className="intro-eyebrow">VÄLKOMMEN TILL SLÄKTARKIVET</span>
+                <h2>Utforska släkten</h2>
+                <p>Fyra sätt att följa personer, platser och generationer.</p>
 
                 <div className="intro-sections">
                     <div className="intro-section">
-                        <h3>🌳 Trädvyn</h3>
-                        <p>Trädet börjar förenklat. Klicka på lila cirklar med <strong>+</strong> för att fälla ut grenar och se fler släktingar.</p>
+                        <h3>Trädvy</h3>
+                        <p>Fäll ut grenar med <strong>+</strong> och se hur personerna hör ihop.</p>
                     </div>
 
                     <div className="intro-section">
-                        <h3>📍 Kartan</h3>
-                        <p>Se var släkten har bott genom tiderna. Du kan klicka på en person på kartan för att hitta dem direkt i trädet.</p>
-                        <p style={{ fontSize: '0.75rem', marginTop: '5px', fontStyle: 'italic', opacity: 0.8 }}>
-                            Obs: Första gången du öppnar kartan kan det ta upp till 30 minuter att läsa in alla orter då de behöver geokodas en och en.
-                        </p>
+                        <h3>Karta</h3>
+                        <p>Se kända orter direkt på kartan och välj en person för att hitta den i trädet.</p>
                     </div>
 
                     <div className="intro-section">
-                        <h3>🔍 Analysverktyg</h3>
-                        <p>Använd panelen uppe till höger i trädvyn för att hitta närmaste vägen mellan två personer eller leta efter kusingiften.</p>
+                        <h3>Statistik</h3>
+                        <p>Jämför levnadsår, namn och platser genom generationerna.</p>
+                    </div>
+
+                    <div className="intro-section">
+                        <h3>Årsringar</h3>
+                        <p>Zooma in bland generationerna och färglägg efter tid, plats eller livslängd.</p>
                     </div>
                 </div>
 
-                <button className="upload-btn" onClick={onClose} style={{ marginTop: '20px' }}>
+                <button className="upload-btn" onClick={onClose}>
                     Börja utforska
                 </button>
-                <div style={{ height: '30px' }}></div>
             </div>
         </div>
     );

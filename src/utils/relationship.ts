@@ -1,7 +1,149 @@
-import { extractYear } from './dateUtils';
+import { extractYear } from './dateUtils.ts';
 
-export function findRelationshipPath(families: any[], startId: string, endId: string, searchAncestorsOnly = false) {
-    if (startId === endId) return [];
+export interface RelationshipFamily {
+    id: string;
+    husb?: string;
+    wife?: string;
+    children: string[];
+}
+
+interface ParentLink { parentId: string; familyId: string }
+
+export interface BloodRelationship {
+    path: string[];
+    commonAncestorId: string;
+    generationsFromA: number;
+    generationsFromB: number;
+    label: string;
+}
+
+export interface SharedAncestryPair {
+    familyId: string;
+    familyIds: string[];
+    husb: string;
+    wife: string;
+    sharedAncestors: string[];
+    relationType: string;
+    generationsFromHusb: number;
+    generationsFromWife: number;
+}
+
+function parentLinks(families: readonly RelationshipFamily[]): Map<string, ParentLink[]> {
+    const links = new Map<string, ParentLink[]>();
+    for (const family of families) {
+        for (const childId of family.children ?? []) {
+            const parents = [family.husb, family.wife].filter((id): id is string => !!id && id !== childId);
+            const current = links.get(childId) ?? [];
+            for (const parentId of parents) {
+                if (!current.some(link => link.parentId === parentId && link.familyId === family.id)) {
+                    current.push({ parentId, familyId: family.id });
+                }
+            }
+            links.set(childId, current);
+        }
+    }
+    return links;
+}
+
+function ancestorRoutes(
+    links: ReadonlyMap<string, ParentLink[]>,
+    startId: string,
+): Map<string, { generations: number; path: string[] }> {
+    const routes = new Map<string, { generations: number; path: string[] }>([
+        [startId, { generations: 0, path: [startId] }],
+    ]);
+    const queue = [startId];
+    for (let index = 0; index < queue.length; index++) {
+        const childId = queue[index];
+        const route = routes.get(childId)!;
+        for (const { parentId, familyId } of links.get(childId) ?? []) {
+            if (routes.has(parentId)) continue;
+            routes.set(parentId, {
+                generations: route.generations + 1,
+                path: [...route.path, familyId, parentId],
+            });
+            queue.push(parentId);
+        }
+    }
+    return routes;
+}
+
+function closestSharedAncestors(
+    first: ReadonlyMap<string, { generations: number }>,
+    second: ReadonlyMap<string, { generations: number }>,
+) {
+    let bestSum = Infinity;
+    let bestMax = Infinity;
+    let match: { ancestors: string[]; firstGenerations: number; secondGenerations: number } | null = null;
+    for (const [ancestorId, firstRoute] of first) {
+        const secondRoute = second.get(ancestorId);
+        if (!secondRoute) continue;
+        const sum = firstRoute.generations + secondRoute.generations;
+        const max = Math.max(firstRoute.generations, secondRoute.generations);
+        if (sum < bestSum || (sum === bestSum && max < bestMax)) {
+            bestSum = sum;
+            bestMax = max;
+            match = { ancestors: [ancestorId], firstGenerations: firstRoute.generations, secondGenerations: secondRoute.generations };
+        } else if (sum === bestSum && max === bestMax && match &&
+            firstRoute.generations === match.firstGenerations && secondRoute.generations === match.secondGenerations) {
+            match.ancestors.push(ancestorId);
+        }
+    }
+    return match;
+}
+
+export function describeBloodRelation(firstGenerations: number, secondGenerations: number): string {
+    if (firstGenerations === 0 && secondGenerations === 0) return 'Samma person';
+    if (firstGenerations === 0 || secondGenerations === 0) {
+        const gap = Math.max(firstGenerations, secondGenerations);
+        if (gap === 1) return 'Förälder och barn';
+        if (gap === 2) return 'Mor-/farförälder och barnbarn';
+        return `Ana och ättling, ${gap} generationer`;
+    }
+    if (firstGenerations === 1 && secondGenerations === 1) return 'Syskon';
+    if (Math.min(firstGenerations, secondGenerations) === 1) {
+        const gap = Math.max(firstGenerations, secondGenerations);
+        return gap === 2 ? 'Förälders syskon och syskonbarn' : `Släkt via gemensam ana, ${firstGenerations} och ${secondGenerations} generationer`;
+    }
+    if (firstGenerations === secondGenerations) {
+        if (firstGenerations === 2) return 'Kusiner';
+        if (firstGenerations === 3) return 'Sysslingar';
+        if (firstGenerations === 4) return 'Bryllingar';
+    }
+    if (Math.min(firstGenerations, secondGenerations) === 2 && Math.max(firstGenerations, secondGenerations) === 3) {
+        return 'Kusin och kusinbarn';
+    }
+    return `Gemensamma anor, ${firstGenerations} och ${secondGenerations} generationer`;
+}
+
+/** Only recorded parent-child links count as blood ancestry; family nodes remain in the visual path. */
+export function analyzeBloodRelationship(
+    families: readonly RelationshipFamily[], startId: string, endId: string,
+): BloodRelationship | null {
+    if (!startId || !endId) return null;
+    const links = parentLinks(families);
+    const first = ancestorRoutes(links, startId);
+    const second = ancestorRoutes(links, endId);
+    const shared = closestSharedAncestors(first, second);
+    if (!shared) return null;
+    const commonAncestorId = shared.ancestors[0];
+    const firstPath = first.get(commonAncestorId)!.path;
+    const secondPath = second.get(commonAncestorId)!.path;
+    return {
+        path: [...firstPath, ...secondPath.slice(0, -1).reverse()],
+        commonAncestorId,
+        generationsFromA: shared.firstGenerations,
+        generationsFromB: shared.secondGenerations,
+        label: describeBloodRelation(shared.firstGenerations, shared.secondGenerations),
+    };
+}
+
+export function findRelationshipPath(families: RelationshipFamily[], startId: string, endId: string, searchAncestorsOnly = false) {
+    if (startId === endId) return [startId];
+
+    if (searchAncestorsOnly) {
+        return analyzeBloodRelationship(families, startId, endId)?.path ?? null;
+    }
 
     const adj = new Map<string, string[]>();
 
@@ -32,11 +174,7 @@ export function findRelationshipPath(families: any[], startId: string, endId: st
         }
     });
 
-    if (searchAncestorsOnly) {
-        return findCommonAncestorPath(adj, startId, endId);
-    } else {
-        return bfsShortestPath(adj, startId, endId);
-    }
+    return bfsShortestPath(adj, startId, endId);
 }
 
 export function findDuplicateAncestors(families: any[], startId: string) {
@@ -123,54 +261,6 @@ function bfsShortestPath(adj: Map<string, string[]>, startId: string, endId: str
     return null;
 }
 
-function findCommonAncestorPath(upwardAdj: Map<string, string[]>, startId: string, endId: string): string[] | null {
-    const startAncestors = new Map<string, string[]>();
-
-    const queue1: { id: string, path: string[] }[] = [{ id: startId, path: [startId] }];
-    while (queue1.length > 0) {
-        const { id, path } = queue1.shift()!;
-        if (!startAncestors.has(id)) {
-            startAncestors.set(id, path);
-            const parents = upwardAdj.get(id) || [];
-            for (const p of parents) {
-                queue1.push({ id: p, path: [...path, p] });
-            }
-        }
-    }
-
-    let shortestPath: string[] | null = null;
-    let shortestLength = Infinity;
-
-    const queue2: { id: string, path: string[] }[] = [{ id: endId, path: [endId] }];
-    const visited2 = new Set<string>();
-
-    while (queue2.length > 0) {
-        const { id, path } = queue2.shift()!;
-
-        if (!visited2.has(id)) {
-            visited2.add(id);
-
-            if (startAncestors.has(id)) {
-                const pathToStart = startAncestors.get(id)!;
-                const endPathReversed = [...path].reverse().slice(1);
-
-                const fullPath = [...pathToStart, ...endPathReversed];
-                if (fullPath.length < shortestLength) {
-                    shortestLength = fullPath.length;
-                    shortestPath = fullPath;
-                }
-            }
-
-            const parents = upwardAdj.get(id) || [];
-            for (const p of parents) {
-                queue2.push({ id: p, path: [...path, p] });
-            }
-        }
-    }
-
-    return shortestPath;
-}
-
 function reconstructPath(parent: Map<string, string>, curr: string) {
     const path: string[] = [];
     let step: string | undefined = curr;
@@ -205,105 +295,48 @@ export function getMultiplePathEdges(paths: string[][]) {
     return edges;
 }
 
-export function findAllCousinMarriages(families: any[]) {
-    const adj = new Map<string, string[]>();
-
-    const addEdge = (u: string, v: string) => {
-        if (!adj.has(u)) adj.set(u, []);
-        adj.get(u)!.push(v);
+export function findAllCousinMarriages(families: readonly RelationshipFamily[]): SharedAncestryPair[] {
+    const links = parentLinks(families);
+    const routesByPerson = new Map<string, ReturnType<typeof ancestorRoutes>>();
+    const routesFor = (personId: string) => {
+        let routes = routesByPerson.get(personId);
+        if (!routes) {
+            routes = ancestorRoutes(links, personId);
+            routesByPerson.set(personId, routes);
+        }
+        return routes;
     };
 
-    families.forEach(fam => {
-        fam.children.forEach((childId: string) => {
-            addEdge(childId, fam.id);
+    // A GEDCOM can contain several FAM records for the same pair. The blood
+    // relationship is between people, so present that pair once and retain
+    // every family record for highlighting.
+    const pairs = new Map<string, SharedAncestryPair>();
+    for (const family of families) {
+        if (!family.husb || !family.wife || family.husb === family.wife) continue;
+        const [firstId, secondId] = [family.husb, family.wife].sort();
+        const pairKey = `${firstId}\u0000${secondId}`;
+        const existing = pairs.get(pairKey);
+        if (existing) {
+            existing.familyIds.push(family.id);
+            continue;
+        }
+        const shared = closestSharedAncestors(routesFor(family.husb), routesFor(family.wife));
+        if (!shared) continue;
+        pairs.set(pairKey, {
+            familyId: family.id,
+            familyIds: [family.id],
+            husb: family.husb,
+            wife: family.wife,
+            sharedAncestors: shared.ancestors,
+            relationType: describeBloodRelation(shared.firstGenerations, shared.secondGenerations),
+            generationsFromHusb: shared.firstGenerations,
+            generationsFromWife: shared.secondGenerations,
         });
-        if (fam.husb) addEdge(fam.id, fam.husb);
-        if (fam.wife) addEdge(fam.id, fam.wife);
-    });
-
-    const cousinMarriages: { familyId: string, husb: string, wife: string, sharedAncestors: string[], relationType: string }[] = [];
-
-    families.forEach(fam => {
-        if (fam.husb && fam.wife) {
-            const husbAnc = getAncestorsWithDistance(adj, fam.husb);
-            const wifeAnc = getAncestorsWithDistance(adj, fam.wife);
-
-            // Find minimum distance to any shared ancestor
-            const sharedAncestors = Array.from(husbAnc.keys()).filter(id => wifeAnc.has(id));
-
-            if (sharedAncestors.length > 0 && fam.husb !== fam.wife) {
-                // To categorize, find the closest shared ancestor
-                let minHusbDist = Infinity;
-                let minWifeDist = Infinity;
-
-                sharedAncestors.forEach(id => {
-                    const hDist = husbAnc.get(id)!;
-                    const wDist = wifeAnc.get(id)!;
-
-                    // We want the most recent common ancestor
-                    if (hDist + wDist < minHusbDist + minWifeDist) {
-                        minHusbDist = hDist;
-                        minWifeDist = wDist;
-                    }
-                });
-
-                // Determine relationship type
-                let relationType = '';
-                if (minHusbDist === 1 && minWifeDist === 1) {
-                    relationType = 'Syskon'; // Should be filtered out usually, but just in case
-                } else if (minHusbDist === 2 && minWifeDist === 2) {
-                    relationType = 'Kusiner';
-                } else if (minHusbDist === 3 && minWifeDist === 3) {
-                    relationType = 'Sysslingar';
-                } else if (minHusbDist === 4 && minWifeDist === 4) {
-                    relationType = 'Bryllingar';
-                } else if ((minHusbDist === 2 && minWifeDist === 3) || (minHusbDist === 3 && minWifeDist === 2)) {
-                    relationType = 'Kusinbarn / Förälders kusin';
-                } else if ((minHusbDist === 3 && minWifeDist === 4) || (minHusbDist === 4 && minWifeDist === 3)) {
-                    relationType = 'Sysslingbarn / Förälders syssling';
-                } else {
-                    relationType = 'Avlägsen relation';
-                }
-
-                // Only include specific close relations
-                const allowedTypes = ['Kusiner', 'Sysslingar', 'Bryllingar', 'Kusinbarn / Förälders kusin', 'Sysslingbarn / Förälders syssling'];
-
-                if (allowedTypes.includes(relationType)) {
-                    // Only pass the ancestors that match this closest relationship to avoid messy paths
-                    const closestAncestors = sharedAncestors.filter(id =>
-                        husbAnc.get(id) === minHusbDist && wifeAnc.get(id) === minWifeDist
-                    );
-
-                    cousinMarriages.push({
-                        familyId: fam.id,
-                        husb: fam.husb,
-                        wife: fam.wife,
-                        sharedAncestors: closestAncestors,
-                        relationType
-                    });
-                }
-            }
-        }
-    });
-
-    return cousinMarriages;
-}
-
-function getAncestorsWithDistance(upwardAdj: Map<string, string[]>, startId: string): Map<string, number> {
-    const ancestors = new Map<string, number>();
-    const queue = [{ id: startId, dist: 0 }];
-
-    while (queue.length > 0) {
-        const { id, dist } = queue.shift()!;
-        const parents = upwardAdj.get(id) || [];
-        for (const p of parents) {
-            if (!ancestors.has(p)) {
-                ancestors.set(p, dist + 1);
-                queue.push({ id: p, dist: dist + 1 });
-            }
-        }
     }
-    return ancestors;
+    return [...pairs.values()].sort((a, b) =>
+        a.generationsFromHusb + a.generationsFromWife - b.generationsFromHusb - b.generationsFromWife ||
+        a.familyId.localeCompare(b.familyId)
+    );
 }
 
 

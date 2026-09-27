@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import {
     ReactFlow,
     useNodesState,
@@ -10,6 +10,7 @@ import {
     useReactFlow,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
+import '../tree-stats.css';
 
 import { CustomNode } from './CustomNode';
 import { FamilyNode } from './FamilyNode';
@@ -30,10 +31,14 @@ interface Props {
     families: any[];
     focusNodeId?: string | null;
     onFocusClear?: () => void;
+    onViewRings?: (id: string) => void;
+    selectedPersonId?: string | null;
+    visiblePersonIds?: Set<string> | null;
+    onSelectPerson?: (id: string) => void;
 }
 
-export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId }: Props) {
-    const { setCenter } = useReactFlow();
+export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNodeId, onViewRings, selectedPersonId, visiblePersonIds, onSelectPerson }: Props) {
+    const { setCenter, getNode, fitView } = useReactFlow();
     const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
     const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
     const [pathNodes, setPathNodes] = useState<Set<string>>(new Set());
@@ -44,6 +49,8 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const [spouseExpandedNodeIds, setSpouseExpandedNodeIds] = useState<Set<string>>(new Set());
     const [lastExpandedId, setLastExpandedId] = useState<string | null>(null);
     const [isPrintMode, setIsPrintMode] = useState(false);
+    const centeredFocusRef = useRef<string | null>(null);
+    const analysisFocusRef = useRef<string | null>(null);
 
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
@@ -51,6 +58,13 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
     const joel = useMemo(() => individuals.find(i => i.name?.toLowerCase().includes('joel') && i.name?.toLowerCase().includes('berring')), [individuals]);
     const annika = useMemo(() => individuals.find(i => i.name?.toLowerCase().includes('annika') && i.name?.toLowerCase().includes('messing')), [individuals]);
     const roots = useMemo(() => [joel?.id, annika?.id].filter(Boolean) as string[], [joel, annika]);
+    // Analysis paths can lie outside the two default branches. Keep every
+    // highlighted node visible even when neither default root reaches it.
+    const displayRoots = useMemo(() => [...new Set([
+        ...roots,
+        ...(selectedPersonId ? [selectedPersonId] : []),
+        ...pathNodes,
+    ])], [roots, selectedPersonId, pathNodes]);
 
     const toggleNode = useCallback((nodeId: string) => {
         setExpandedNodeIds(prev => {
@@ -65,11 +79,10 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
         });
     }, []);
 
-    // Unified effect to handle focusNodeId (e.g. from map view)
+    // Expand the route once for each focus request. React Flow updates the
+    // node list during layout; that update must not start another expansion.
     useEffect(() => {
         if (!focusNodeId || individuals.length === 0 || families.length === 0) return;
-
-        console.log(`Processing focusNodeId: ${focusNodeId}`);
 
         // 1. Find the path from roots to this node
         let foundPath: string[] | null = null;
@@ -86,38 +99,36 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
         setExpandedNodeIds(prev => {
             const next = new Set(prev);
             nodesToExpand.forEach(id => next.add(id));
-            return next;
+            return next.size === prev.size ? prev : next;
         });
+        if (foundPath) {
+            setPathNodes(new Set(foundPath));
+            setPathEdges(getPathEdges(foundPath));
+        }
+    }, [focusNodeId, individuals.length, families, roots]);
 
-        // 3. Wait for layout to complete (nodes will have positions)
-        // We'll use a local variable to keep track of retries for centering
-        let retries = 0;
-        const tryCenter = () => {
-            const targetNode = nodes.find(n => n.id === focusNodeId);
-            // If node exists and is not at (0,0) or has been layouted
-            if (targetNode && (targetNode.position.x !== 0 || targetNode.position.y !== 0)) {
-                console.log(`Centering on node: ${focusNodeId} at ${targetNode.position.x}, ${targetNode.position.y}`);
-
-                // Highlight the path if we found one
-                if (foundPath) {
-                    const edges = getPathEdges(foundPath);
-                    handlePathFound(foundPath, edges);
-                }
-
-                setCenter(targetNode.position.x, targetNode.position.y, { zoom: 0.7, duration: 1000 });
-
-                // Clear the focus after a successful centering
-                setTimeout(() => onFocusClear?.(), 1000);
-            } else if (retries < 10) {
-                retries++;
-                setTimeout(tryCenter, 200);
-            }
+    useEffect(() => {
+        if (!focusNodeId) {
+            centeredFocusRef.current = null;
+            return;
+        }
+        if (centeredFocusRef.current === focusNodeId) return;
+        if (!nodes.some(node => node.id === focusNodeId)) return;
+        let clearTimer: number | undefined;
+        const centerTimer = window.setTimeout(() => {
+            const targetNode = getNode(focusNodeId);
+            if (!targetNode) return;
+            centeredFocusRef.current = focusNodeId;
+            setCenter(targetNode.position.x + (targetNode.measured?.width ?? 0) / 2,
+                targetNode.position.y + (targetNode.measured?.height ?? 0) / 2,
+                { zoom: 0.7, duration: 550 });
+            clearTimer = window.setTimeout(() => onFocusClear?.(), 600);
+        }, 250);
+        return () => {
+            window.clearTimeout(centerTimer);
+            if (clearTimer !== undefined) window.clearTimeout(clearTimer);
         };
-
-        // Start checking for layouted nodes
-        setTimeout(tryCenter, 300);
-
-    }, [focusNodeId, individuals.length, families.length, roots, nodes.length, expandedNodeIds, siblingExpandedNodeIds, spouseExpandedNodeIds]);
+    }, [focusNodeId, nodes, getNode, setCenter, onFocusClear]);
 
     // Compute all direct ancestors of the roots to distinguish bloodline from "ingifta"
     const ancestorIds = useMemo(() => {
@@ -236,9 +247,9 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             });
 
             // 2. BFS for visibility
-            const visibleNodeIds = new Set<string>(roots);
-            const stack = [...roots];
-            const visited = new Set<string>(roots);
+            const visibleNodeIds = new Set<string>(displayRoots);
+            const stack = [...displayRoots];
+            const visited = new Set<string>(displayRoots);
 
             while (stack.length > 0) {
                 const currId = stack.shift()!;
@@ -246,7 +257,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
 
                 // Individual nodes are traversed if root, expanded upwards, or expanded for spouses
                 const shouldTraverse = currIsFamilyNode ||
-                    roots.includes(currId) ||
+                    displayRoots.includes(currId) ||
                     expandedNodeIds.has(currId) ||
                     spouseExpandedNodeIds.has(currId);
 
@@ -264,7 +275,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                                 // If family has full visibility, show all children
                                 // Otherwise, only show if child is an "expander" or sibling toggled
                                 const isFullVis = fullVisibilityFamilies.has(currId);
-                                const isExpander = roots.includes(neighborId) || expandedNodeIds.has(neighborId);
+                                const isExpander = displayRoots.includes(neighborId) || expandedNodeIds.has(neighborId);
                                 const isSiblingToggled = siblingExpandedNodeIds.has(neighborId);
 
                                 if (!isFullVis && !isExpander && !isSiblingToggled) {
@@ -303,6 +314,8 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                     ...node.data,
                     id: node.id,
                     onToggle: toggleNode,
+                    onViewRings,
+                    onSelectPerson,
                     onExpandAll: (id: string) => {
                         const toExpand = new Set<string>();
                         const collectAncestors = (currentId: string) => {
@@ -336,7 +349,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 const layoutDirection = isPrintMode ? 'LR' : 'TB';
                 const spacing = isPrintMode
                     ? { nodesep: 25, ranksep: 15, nodeWidth: 180, nodeHeight: 50 }
-                    : (isMobile ? { nodesep: 30, ranksep: 20, nodeWidth: 180, nodeHeight: 80 } : { nodesep: 40, ranksep: 25, nodeWidth: 250, nodeHeight: 85 });
+                    : (isMobile ? { nodesep: 32, ranksep: 28, nodeWidth: 180, nodeHeight: 112 } : { nodesep: 46, ranksep: 34, nodeWidth: 250, nodeHeight: 116 });
 
                 const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
                     enrichedNodes.map(n => ({ ...n, data: { ...n.data, isPrintMode } })),
@@ -351,7 +364,9 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                         data: {
                             ...node.data,
                             isHighlighted: isPath,
-                            isDimmed: pathNodes.size > 0 && !isPath
+                            isDimmed: pathNodes.size > 0 && !isPath,
+                            isSelected: node.type === 'customNode' && node.id === selectedPersonId,
+                            isOutsideScope: node.type === 'customNode' && !!visiblePersonIds && !visiblePersonIds.has(node.id),
                         }
                     };
                 });
@@ -360,7 +375,8 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                     const isPath = pathEdges.has(edge.id);
                     return {
                         ...edge,
-                        className: isPath ? 'highlighted-edge' : (pathEdges.size > 0 ? 'dimmed-edge' : ''),
+                        className: isPath ? 'highlighted-edge' : (pathEdges.size > 0 ? 'dimmed-edge' :
+                            visiblePersonIds && !visiblePersonIds.has(edge.source) && !visiblePersonIds.has(edge.target) ? 'scope-muted-edge' : ''),
                         animated: isPath,
                     };
                 });
@@ -381,7 +397,20 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 console.error('Error computing layout:', err);
             }
         }
-    }, [individuals, families, expandedNodeIds, siblingExpandedNodeIds, spouseExpandedNodeIds, pathNodes, pathEdges, toggleNode, toggleSiblings, hasSiblings, familyChildrenMap, roots, setNodes, setEdges, isPrintMode]);
+    }, [individuals, families, expandedNodeIds, siblingExpandedNodeIds, spouseExpandedNodeIds, pathNodes, pathEdges, toggleNode, toggleSiblings, hasSiblings, familyChildrenMap, roots, displayRoots, setNodes, setEdges, isPrintMode, onViewRings, onSelectPerson, selectedPersonId, visiblePersonIds]);
+
+    useEffect(() => {
+        const focusId = analysisFocusRef.current;
+        if (!focusId || !nodes.some(node => node.id === focusId)) return;
+        const timer = window.setTimeout(() => {
+            if (analysisFocusRef.current !== focusId || !getNode(focusId)) return;
+            analysisFocusRef.current = null;
+            // Fit the selected person only. Fitting an entire long ancestry
+            // path makes the result imperceptibly small on a phone.
+            void fitView({ nodes: [{ id: focusId }], maxZoom: isMobile ? 0.95 : 0.85, duration: 350, padding: 0.35 });
+        }, 140);
+        return () => window.clearTimeout(timer);
+    }, [nodes, getNode, fitView, isMobile]);
 
     const handlePathFound = useCallback((pNodes: string[], pEdges: Set<string>) => {
         const pSet = new Set(pNodes);
@@ -396,13 +425,12 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
             return next;
         });
 
-        // Try to center on the husband/wife of the marriage
-        if (pNodes.length > 0) {
-            setLastExpandedId(pNodes[0]);
-        }
+        // Recenter only after React Flow has mounted the new analysis nodes.
+        analysisFocusRef.current = pNodes[0] ?? null;
     }, []);
 
     const handleClear = useCallback(() => {
+        analysisFocusRef.current = null;
         setPathNodes(new Set());
         setPathEdges(new Set());
     }, []);
@@ -430,7 +458,7 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
 
 
     return (
-        <div className={`react-flow-wrapper ${isPrintMode ? 'print-mode-enabled' : ''}`}>
+        <div className={`react-flow-wrapper family-tree-surface ${isPrintMode ? 'print-mode-enabled' : ''}`}>
             <ReactFlow
                 nodes={nodes}
                 edges={edges}
@@ -442,34 +470,31 @@ export function FamilyTreeViewer({ individuals, families, onFocusClear, focusNod
                 maxZoom={1.5}
                 attributionPosition="bottom-right"
             >
-                <Background color="#ffffff" gap={16} size={1} />
-                <Controls style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', fill: 'var(--text-primary)' }} />
+                <Background color="#cbbfa9" gap={24} size={1} />
+                <Controls />
 
-                <Panel position="bottom-right" className="tree-controls-panel" style={{
-                    marginBottom: '80px', // Avoid overlap with bottom nav if it was there (but it's gone now?)
-                    display: 'flex', gap: '8px'
-                }}>
-                    <button className={`secondary-btn ${isPrintMode ? 'active' : ''}`} onClick={() => setIsPrintMode(!isPrintMode)} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>
-                        {isPrintMode ? 'Standardvy' : 'Utskriftsläge'}
+                <Panel position="bottom-right" className="tree-controls-panel">
+                    <button className={`secondary-btn ${isPrintMode ? 'active' : ''}`} onClick={() => setIsPrintMode(!isPrintMode)} aria-pressed={isPrintMode}>
+                        {isPrintMode ? 'Standardvy' : 'Kompaktvy'}
                     </button>
-                    <button className="secondary-btn" onClick={expandAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Visa Allt</button>
-                    <button className="secondary-btn" onClick={collapseAll} style={{ fontSize: '0.75rem', padding: '6px 12px' }}>Dölj Allt</button>
+                    <button className="secondary-btn" onClick={expandAll}>Visa allt</button>
+                    <button className="secondary-btn" onClick={collapseAll}>Dölj allt</button>
                 </Panel>
 
                 <MiniMap
                     nodeColor={(node) => {
-                        if (node.type === 'familyNode') return 'var(--accent-color)';
-                        if (node.data?.sex === 'M') return 'var(--male-color)';
-                        if (node.data?.sex === 'F') return 'var(--female-color)';
-                        return '#eee';
+                        if (node.type === 'familyNode') return '#9d6e4e';
+                        if (node.data?.sex === 'M') return '#496b5e';
+                        if (node.data?.sex === 'F') return '#a87356';
+                        return '#b6aa94';
                     }}
-                    maskColor="rgba(0,0,0,0.5)"
-                    style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)' }}
+                    maskColor="rgba(51, 63, 49, 0.22)"
                 />
 
                 <RelationshipFinder
                     individuals={individuals}
                     families={families}
+                    selectedPersonId={selectedPersonId}
                     onPathFound={handlePathFound}
                     onClear={handleClear}
                 />

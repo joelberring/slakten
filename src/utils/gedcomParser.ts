@@ -39,17 +39,19 @@ export function parseGedcomData(fileContent: string) {
                 }
             });
 
-            // Primary places for compatibility
-            const birth = events.find(e => e.type === 'BIRT');
-            const death = events.find(e => e.type === 'DEAT');
+            // Dates can exist without a place; geocoding events only contain places.
+            const birth = children.find(n => n.type === 'BIRT');
+            const death = children.find(n => n.type === 'DEAT');
+            const eventValue = (event: GedcomNode | undefined, type: string) =>
+                event?.children?.find(n => n.type === type)?.value || '';
 
             individuals.set(id, {
                 id: id,
                 name: nameNode ? (nameNode.value || '').replace(/\//g, '') : 'Unknown',
-                birthDate: birth?.date || '',
-                birthPlace: birth?.place || '',
-                deathDate: death?.date || '',
-                deathPlace: death?.place || '',
+                birthDate: eventValue(birth, 'DATE'),
+                birthPlace: eventValue(birth, 'PLAC'),
+                deathDate: eventValue(death, 'DATE'),
+                deathPlace: eventValue(death, 'PLAC'),
                 sex: sexNode?.value || 'U',
                 events: events // New field with all geocodable events
             });

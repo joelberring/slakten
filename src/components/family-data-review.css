@@ -1,0 +1,167 @@
+.data-review {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: clamp(18px, 2.4vw, 38px);
+    background: #f7f3e9;
+    color: #233a36;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.data-review-intro { margin: 0 0 22px; }
+.data-review-kicker {
+    display: block;
+    color: #95573e;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+.data-review-intro p { margin: 8px 0 0; color: #53655d; line-height: 1.55; }
+.data-review-scope {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 10px;
+    border: 1px solid #d8c9ae;
+    border-radius: 99px;
+    color: #315347;
+    font-size: .76rem;
+    font-weight: 700;
+}
+
+.data-review-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.data-review-summary button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 116px;
+    padding: 15px 18px;
+    text-align: left;
+    color: #233a36;
+    background: #fffdf8;
+    border: 1px solid #ddd0bc;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(63, 52, 36, .055);
+    cursor: pointer;
+    font: inherit;
+}
+.data-review-summary button:hover,
+.data-review-summary button:focus-visible { border-color: #8eaa92; outline: none; }
+.data-review-summary button[aria-pressed="true"] { border-color: #315347; box-shadow: inset 0 0 0 1px #315347, 0 8px 24px rgba(49, 83, 71, .09); }
+.data-review-summary span { font-weight: 700; font-size: .82rem; }
+.data-review-summary strong { font: 500 2.1rem/1.15 Iowan Old Style, Palatino, Georgia, serif; margin: 8px 0 3px; }
+.data-review-summary small { color: #647168; font-size: .69rem; line-height: 1.35; }
+
+.data-review-panel {
+    background: #fffdf8;
+    border: 1px solid #d8cbb7;
+    border-radius: 16px;
+    box-shadow: 0 12px 34px rgba(63, 52, 36, .075);
+    overflow: hidden;
+}
+.data-review-panel-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 22px 24px 0;
+}
+.data-review-panel h2 { font: 500 clamp(1.45rem, 2.4vw, 2rem)/1.15 Iowan Old Style, Palatino, Georgia, serif; margin: 6px 0 0; }
+.data-review-map-button,
+.data-review-more {
+    min-height: 38px;
+    padding: 8px 13px;
+    border: 1px solid #315347;
+    border-radius: 9px;
+    background: #315347;
+    color: #fffdf8;
+    cursor: pointer;
+    font: inherit;
+    font-size: .77rem;
+    font-weight: 700;
+}
+.data-review-map-button:hover, .data-review-more:hover { background: #244238; }
+.data-review-note { color: #5b685f; line-height: 1.55; font-size: .79rem; margin: 12px 24px 16px; max-width: 790px; }
+.data-review-search-label { display: flex; flex-direction: column; gap: 6px; margin: 0 24px 18px; color: #40594f; font-size: .72rem; font-weight: 700; }
+.data-review-search-label input {
+    box-sizing: border-box;
+    width: min(100%, 420px);
+    min-height: 40px;
+    padding: 9px 12px;
+    background: #fffefa;
+    border: 1px solid #cdbfa9;
+    border-radius: 8px;
+    color: #233a36;
+    font: inherit;
+    font-size: .86rem;
+    font-weight: 400;
+}
+.data-review-search-label input:focus-visible { outline: 2px solid #9eb8a4; outline-offset: 1px; }
+.data-review-list { border-top: 1px solid #e8ddcb; }
+.data-review-person-row,
+.data-review-place {
+    padding: 13px 24px;
+    border-bottom: 1px solid #eee5d7;
+}
+.data-review-person-row:last-child, .data-review-place:last-child { border-bottom: 0; }
+.data-review-person-link {
+    display: inline;
+    padding: 0;
+    color: #315347;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+    font-size: .86rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #adc4b0;
+    text-underline-offset: 3px;
+}
+.data-review-person-link:hover { text-decoration-color: #315347; }
+.data-review-person-link:focus-visible { outline: 2px solid #315347; outline-offset: 3px; }
+.data-review-years { display: block; margin-top: 3px; color: #68766c; font-size: .73rem; }
+.data-review-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.data-review-badges span {
+    padding: 3px 7px;
+    border-radius: 5px;
+    background: #f5e9d9;
+    color: #754b32;
+    font-size: .65rem;
+    font-weight: 700;
+}
+.data-review-detail { display: block; margin-top: 5px; color: #596b60; font-size: .7rem; overflow-wrap: anywhere; }
+.data-review-duplicate { border-bottom: 1px solid #e8ddcb; }
+.data-review-duplicate h3 { margin: 0; padding: 14px 24px 9px; font: 600 .9rem/1.35 Inter, Arial, sans-serif; background: #f8f4eb; }
+.data-review-duplicate h3 span { font-weight: 400; color: #69756e; }
+.data-review-duplicate .data-review-person-row { padding-left: 36px; }
+.data-review-source-list { list-style: none; margin: 8px 0 0; padding: 0; color: #53675a; font-size: .74rem; line-height: 1.5; overflow-wrap: anywhere; }
+.data-review-source-list li + li { margin-top: 4px; }
+.data-review-source-list strong { color: #856044; }
+.data-review-place > div { display: flex; justify-content: space-between; gap: 12px; }
+.data-review-place strong { font-size: .83rem; overflow-wrap: anywhere; }
+.data-review-place span { color: #728076; font-size: .7rem; white-space: nowrap; }
+.data-review-place small { display: block; margin-top: 5px; color: #7f6049; font-size: .7rem; line-height: 1.4; }
+.data-review-empty { margin: 0; padding: 22px 24px; color: #728076; font-size: .8rem; }
+.data-review-more { margin: 16px 24px; }
+
+@media (max-width: 800px) {
+    .data-review-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+    .data-review { padding: 13px; }
+    .data-review-summary { gap: 8px; }
+    .data-review-summary button { min-height: 104px; padding: 11px; }
+    .data-review-summary strong { font-size: 1.65rem; }
+    .data-review-panel-header { display: block; padding: 18px 17px 0; }
+    .data-review-map-button { margin-top: 12px; width: 100%; }
+    .data-review-note { margin: 12px 17px 16px; }
+    .data-review-search-label { margin: 0 17px 14px; }
+    .data-review-person-row, .data-review-place { padding: 12px 17px; }
+    .data-review-duplicate h3 { padding: 12px 17px 7px; }
+    .data-review-duplicate .data-review-person-row { padding-left: 27px; }
+}

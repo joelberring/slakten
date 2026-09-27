@@ -1,112 +1,68 @@
 import { useState, useMemo } from 'react';
 import { calculateFamilyStats } from '../utils/stats';
 import type { FamilySide } from '../utils/relationship';
+import '../tree-stats.css';
 
 interface Props {
     individuals: any[];
     families: any[];
     generationMap: Map<string, number>;
     sideMap: Map<string, FamilySide>;
+    visiblePersonIds?: Set<string> | null;
 }
 
-export function FamilyStats({ individuals, families, generationMap, sideMap }: Props) {
+export function FamilyStats({ individuals, families, generationMap, sideMap, visiblePersonIds }: Props) {
     const [sideFilter, setSideFilter] = useState<'both' | 'father' | 'mother'>('both');
 
     const filteredData = useMemo(() => {
-        if (sideFilter === 'both') return { individuals, families };
+        if (!visiblePersonIds && sideFilter === 'both') return { individuals, families };
 
-        const filteredInds = individuals.filter(ind => {
-            const side = sideMap.get(ind.id);
-            return side === sideFilter || side === 'both';
-        });
+        const filteredInds = individuals.filter(ind => visiblePersonIds
+            ? visiblePersonIds.has(ind.id)
+            : sideMap.get(ind.id) === sideFilter || sideMap.get(ind.id) === 'both');
 
         const filteredIndIds = new Set(filteredInds.map(i => i.id));
-        const filteredFams = families.filter(fam => {
-            // A family is included if either parent or any child is in the filtered list
-            return filteredIndIds.has(fam.husb) || filteredIndIds.has(fam.wife) || fam.children.some((cId: string) => filteredIndIds.has(cId));
+        const filteredFams = families.flatMap(fam => {
+            const husb = filteredIndIds.has(fam.husb) ? fam.husb : undefined;
+            const wife = filteredIndIds.has(fam.wife) ? fam.wife : undefined;
+            const children = (fam.children ?? []).filter((id: string) => filteredIndIds.has(id));
+            return husb || wife || children.length ? [{ ...fam, husb, wife, children }] : [];
         });
 
         return { individuals: filteredInds, families: filteredFams };
-    }, [individuals, families, sideMap, sideFilter]);
+    }, [individuals, families, sideMap, sideFilter, visiblePersonIds]);
 
     const stats = useMemo(() => calculateFamilyStats(filteredData.individuals, filteredData.families, generationMap), [filteredData, generationMap]);
 
     return (
-        <div className="stats-container">
+        <div className="stats-container family-stats-surface">
             <div className="stats-header">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-                    <div>
-                        <h2>Släktstatistik</h2>
-                        <p>Insikter från {stats.totalPeople} personer i trädet ({stats.peopleWithKnownAge} med känd ålder).</p>
-                    </div>
-
-                    <div className="side-filter-container" style={{
-                        display: 'flex',
-                        background: 'var(--bg-secondary)',
-                        padding: '4px',
-                        borderRadius: '10px',
-                        border: '1px solid var(--border-color)'
-                    }}>
-                        <button
-                            onClick={() => setSideFilter('both')}
-                            style={{
-                                padding: '8px 16px',
-                                border: 'none',
-                                borderRadius: '8px',
-                                background: sideFilter === 'both' ? 'var(--accent-color)' : 'transparent',
-                                color: sideFilter === 'both' ? 'white' : 'var(--text-secondary)',
-                                cursor: 'pointer',
-                                fontSize: '0.85rem',
-                                fontWeight: 600,
-                                transition: 'all 0.2s'
-                            }}
-                        >
-                            Båda sidor
-                        </button>
-                        <button
-                            onClick={() => setSideFilter('father')}
-                            style={{
-                                padding: '8px 16px',
-                                border: 'none',
-                                borderRadius: '8px',
-                                background: sideFilter === 'father' ? 'var(--male-color)' : 'transparent',
-                                color: sideFilter === 'father' ? 'white' : 'var(--text-secondary)',
-                                cursor: 'pointer',
-                                fontSize: '0.85rem',
-                                fontWeight: 600,
-                                transition: 'all 0.2s'
-                            }}
-                        >
-                            Pappas sida
-                        </button>
-                        <button
-                            onClick={() => setSideFilter('mother')}
-                            style={{
-                                padding: '8px 16px',
-                                border: 'none',
-                                borderRadius: '8px',
-                                background: sideFilter === 'mother' ? 'var(--female-color)' : 'transparent',
-                                color: sideFilter === 'mother' ? 'white' : 'var(--text-secondary)',
-                                cursor: 'pointer',
-                                fontSize: '0.85rem',
-                                fontWeight: 600,
-                                transition: 'all 0.2s'
-                            }}
-                        >
-                            Mammas sida
-                        </button>
-                    </div>
+                <div className="stats-header-copy">
+                    <span className="stats-kicker">UR SLÄKTMATERIALET</span>
+                    <p>{visiblePersonIds ? 'Statistik för den valda personens släktgren.' : 'Välj en släktgren och utforska ålder, namn och platser genom generationerna.'}</p>
                 </div>
+                {!visiblePersonIds && <div className="side-filter-container" role="group" aria-label="Välj släktgren">
+                    <button type="button" onClick={() => setSideFilter('both')} aria-pressed={sideFilter === 'both'}>Båda sidor</button>
+                    <button type="button" onClick={() => setSideFilter('father')} aria-pressed={sideFilter === 'father'}>Pappas sida</button>
+                    <button type="button" onClick={() => setSideFilter('mother')} aria-pressed={sideFilter === 'mother'}>Mammas sida</button>
+                </div>}
+            </div>
+
+            <div className="stats-summary" aria-label="Sammanfattning">
+                <div className="stats-summary-item"><span>Personer i urvalet</span><strong>{stats.totalPeople.toLocaleString('sv-SE')}</strong></div>
+                <div className="stats-summary-item"><span>Med känd livslängd</span><strong>{stats.peopleWithKnownAge.toLocaleString('sv-SE')}</strong></div>
+                <div className="stats-summary-item"><span>Århundraden med data</span><strong>{stats.avgAgeByCentury.length}</strong></div>
             </div>
 
             <div className="stats-grid">
                 {/* Average Age by Generation */}
                 <div className="stats-card">
+                    <span className="stats-card-kicker">01 / LIVSLÄNGD</span>
                     <h3>Medelålder per generation</h3>
                     <div className="chart-container">
                         {stats.avgAgeByGeneration.map(item => (
                             <div key={item.generation} className="chart-row">
-                                <div className="chart-label">Generation {item.generation}</div>
+                                <div className="chart-label">Gen. {item.generation}</div>
                                 <div className="chart-bar-bg">
                                     <div
                                         className="chart-bar"
@@ -122,6 +78,7 @@ export function FamilyStats({ individuals, families, generationMap, sideMap }: P
 
                 {/* Average Age by Century */}
                 <div className="stats-card">
+                    <span className="stats-card-kicker">02 / TID</span>
                     <h3>Medelålder per århundrade</h3>
                     <div className="chart-container">
                         {stats.avgAgeByCentury.map(item => (
@@ -142,7 +99,8 @@ export function FamilyStats({ individuals, families, generationMap, sideMap }: P
 
                 {/* Common Male Names */}
                 <div className="stats-card">
-                    <h3>Vanligaste Mansnamnen</h3>
+                    <span className="stats-card-kicker">03 / NAMN</span>
+                    <h3>Vanligaste mansnamnen</h3>
                     <div className="name-list">
                         {stats.commonMaleNames.map((item, idx) => (
                             <div key={item.name} className="name-item">
@@ -156,7 +114,8 @@ export function FamilyStats({ individuals, families, generationMap, sideMap }: P
 
                 {/* Common Female Names */}
                 <div className="stats-card">
-                    <h3>Vanligaste Kvinnonamnen</h3>
+                    <span className="stats-card-kicker">04 / NAMN</span>
+                    <h3>Vanligaste kvinnonamnen</h3>
                     <div className="name-list">
                         {stats.commonFemaleNames.map((item, idx) => (
                             <div key={item.name} className="name-item">
@@ -168,35 +127,35 @@ export function FamilyStats({ individuals, families, generationMap, sideMap }: P
                     </div>
                 </div>
 
-                {/* Parental Age at Birth */}
                 <div className="stats-card full-width">
-                    <h3>Genomsnittlig ålder vid barns födelse (Totalt)</h3>
-                    <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '15px', marginBottom: '30px' }}>
-                        <div style={{ textAlign: 'center' }}>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--male-color)' }}>{stats.avgParentalAge.total.father}</div>
-                            <div style={{ fontSize: '0.8rem', opacity: 0.8 }}>Pappor (medelålder)</div>
-                            <div style={{ fontSize: '0.7rem', opacity: 0.5 }}>Baserat på {stats.avgParentalAge.total.fatherCount} födslar</div>
+                    <span className="stats-card-kicker">05 / FAMILJ</span>
+                    <h3>Ålder när barnen föddes</h3>
+                    <div className="parental-age-summary">
+                        <div className="parental-age-metric father">
+                            <span>Pappor · medelålder</span>
+                            <strong>{stats.avgParentalAge.total.fatherCount ? `${stats.avgParentalAge.total.father} år` : '—'}</strong>
+                            <small>Baserat på {stats.avgParentalAge.total.fatherCount} födslar</small>
                         </div>
-                        <div style={{ textAlign: 'center' }}>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--female-color)' }}>{stats.avgParentalAge.total.mother}</div>
-                            <div style={{ fontSize: '0.8rem', opacity: 0.8 }}>Mammor (medelålder)</div>
-                            <div style={{ fontSize: '0.7rem', opacity: 0.5 }}>Baserat på {stats.avgParentalAge.total.motherCount} födslar</div>
+                        <div className="parental-age-metric mother">
+                            <span>Mammor · medelålder</span>
+                            <strong>{stats.avgParentalAge.total.motherCount ? `${stats.avgParentalAge.total.mother} år` : '—'}</strong>
+                            <small>Baserat på {stats.avgParentalAge.total.motherCount} födslar</small>
                         </div>
                     </div>
 
-                    <div className="parental-age-breakdown" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '20px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>
+                    <div className="parental-age-breakdown">
                         <div>
-                            <h4 style={{ fontSize: '0.9rem', marginBottom: '10px', opacity: 0.9 }}>Per Generation</h4>
+                            <h4>Per generation</h4>
                             <div className="chart-container">
                                 {stats.avgParentalAge.byGeneration.map(item => (
                                     <div key={item.generation} className="chart-row duo-bar">
-                                        <div className="chart-label">Gen {item.generation}</div>
+                                        <div className="chart-label">Gen. {item.generation}</div>
                                         <div className="chart-bar-bg dual">
                                             <div className="bar-set">
-                                                <div className="chart-bar" style={{ width: `${(item.fatherAvg / 60) * 100}%`, background: 'var(--male-color)' }}>
+                                                <div className="chart-bar" style={{ width: `${(item.fatherAvg / 60) * 100}%` }}>
                                                     <span className="bar-value">{item.fatherAvg}</span>
                                                 </div>
-                                                <div className="chart-bar" style={{ width: `${(item.motherAvg / 60) * 100}%`, background: 'var(--female-color)' }}>
+                                                <div className="chart-bar" style={{ width: `${(item.motherAvg / 60) * 100}%` }}>
                                                     <span className="bar-value">{item.motherAvg}</span>
                                                 </div>
                                             </div>
@@ -206,17 +165,17 @@ export function FamilyStats({ individuals, families, generationMap, sideMap }: P
                             </div>
                         </div>
                         <div>
-                            <h4 style={{ fontSize: '0.9rem', marginBottom: '10px', opacity: 0.9 }}>Per Århundrade</h4>
+                            <h4>Per århundrade</h4>
                             <div className="chart-container">
                                 {stats.avgParentalAge.byCentury.map(item => (
                                     <div key={item.century} className="chart-row duo-bar">
-                                        <div className="chart-label" style={{ fontSize: '0.6rem' }}>{item.century}</div>
+                                        <div className="chart-label">{item.century}</div>
                                         <div className="chart-bar-bg dual">
                                             <div className="bar-set">
-                                                <div className="chart-bar" style={{ width: `${(item.fatherAvg / 60) * 100}%`, background: 'var(--male-color)' }}>
+                                                <div className="chart-bar" style={{ width: `${(item.fatherAvg / 60) * 100}%` }}>
                                                     <span className="bar-value">{item.fatherAvg}</span>
                                                 </div>
-                                                <div className="chart-bar" style={{ width: `${(item.motherAvg / 60) * 100}%`, background: 'var(--female-color)' }}>
+                                                <div className="chart-bar" style={{ width: `${(item.motherAvg / 60) * 100}%` }}>
                                                     <span className="bar-value">{item.motherAvg}</span>
                                                 </div>
                                             </div>
@@ -226,39 +185,29 @@ export function FamilyStats({ individuals, families, generationMap, sideMap }: P
                             </div>
                         </div>
                     </div>
+                    <p className="parental-age-legend"><span className="parental-age-dot father" /> Pappor <span className="parental-age-dot mother" /> Mammor · år</p>
                 </div>
 
                 {/* Common Places by Generation */}
                 <div className="stats-card full-width">
-                    <h3>Vanligaste bostadsorterna per generation</h3>
-                    <div className="places-grid" style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-                        gap: '15px',
-                        marginTop: '15px'
-                    }}>
+                    <span className="stats-card-kicker">06 / PLATSER</span>
+                    <h3>Vanligaste platserna per generation</h3>
+                    <div className="places-grid">
                         {stats.commonPlacesByGeneration.map(genItem => (
-                            <div key={genItem.generation} className="gen-places-card" style={{
-                                background: 'rgba(255,255,255,0.03)',
-                                padding: '15px',
-                                borderRadius: '12px',
-                                border: '1px solid var(--border-color)',
-                                display: 'flex',
-                                flexDirection: 'column'
-                            }}>
-                                <h4 style={{ fontSize: '0.9rem', marginBottom: '10px', color: 'var(--accent-color)', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '5px' }}>
-                                    Generation {genItem.generation === 1 ? '1 (Joel/Annika)' : genItem.generation}
+                            <div key={genItem.generation} className="gen-places-card">
+                                <h4>
+                                    Generation {genItem.generation}
                                 </h4>
                                 <div className="gen-places-list">
                                     {genItem.places.length > 0 ? genItem.places.map((place, pIdx) => (
-                                        <div key={place.name} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', marginBottom: '6px' }}>
-                                            <span style={{ opacity: 0.9, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '150px' }}>
+                                        <div key={place.name} className="gen-place-item">
+                                            <span title={place.name}>
                                                 {pIdx + 1}. {place.name}
                                             </span>
-                                            <span style={{ fontWeight: 600, opacity: 0.7 }}>{place.count} st</span>
+                                            <strong>{place.count} st</strong>
                                         </div>
                                     )) : (
-                                        <div style={{ fontSize: '0.75rem', opacity: 0.4, fontStyle: 'italic' }}>Ingen platsdata tillgänglig</div>
+                                        <p className="stats-empty">Ingen platsdata tillgänglig</p>
                                     )}
                                 </div>
                             </div>
@@ -266,7 +215,6 @@ export function FamilyStats({ individuals, families, generationMap, sideMap }: P
                     </div>
                 </div>
             </div>
-            <div className="stats-footer-spacer" style={{ height: '100px' }}></div>
         </div >
     );
 }

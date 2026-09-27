@@ -1,0 +1,50 @@
+.app-person-panel,
+.app-person-panel * { box-sizing: border-box; }
+
+.app-person-panel {
+  position: absolute;
+  z-index: 3000;
+  top: 16px;
+  right: 18px;
+  bottom: 16px;
+  width: min(370px, calc(100% - 36px));
+  overflow-y: auto;
+  padding: 20px;
+  border: 1px solid #d7cab5;
+  border-radius: 16px;
+  background: rgba(255, 253, 248, 0.98);
+  box-shadow: 0 20px 55px rgba(35, 49, 41, 0.22);
+  color: #233a36;
+}
+
+.app-person-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.app-person-panel-heading > span { color: #95573e; font-size: .63rem; font-weight: 800; letter-spacing: .16em; }
+.app-person-panel-heading button { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid #d7cab5; border-radius: 7px; background: #fffdf8; color: #233a36; cursor: pointer; font-size: 1.4rem; line-height: 1; }
+.app-person-panel h2 { margin: 9px 0 3px; font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 600; line-height: 1.1; }
+.app-person-years { margin: 0 0 17px; color: #64716b; font-size: .78rem; }
+.app-person-view-links { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.app-person-view-links button { padding: 8px 10px; border: 1px solid #cdbfa9; border-radius: 8px; background: #f4ecdd; color: #27483e; cursor: pointer; font: inherit; font-size: .73rem; font-weight: 700; }
+.app-person-view-links button:hover { background: #e9dcc6; }
+.app-person-section { padding: 16px 0; border-top: 1px solid #e7ddcd; }
+.app-person-section h3 { display: flex; justify-content: space-between; margin: 0 0 11px; font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.1rem; font-weight: 600; }
+.app-person-section h3 span { color: #95573e; font-family: Inter, sans-serif; font-size: .71rem; }
+.app-person-events { margin: 0; padding: 0; list-style: none; }
+.app-person-events li { position: relative; display: flex; gap: 11px; padding: 0 0 13px; }
+.app-person-events li:not(:last-child)::before { position: absolute; top: 13px; bottom: 0; left: 4px; width: 1px; background: #d7cab5; content: ''; }
+.app-person-event-dot { position: relative; z-index: 1; flex: none; width: 9px; height: 9px; margin-top: 4px; border: 2px solid #95573e; border-radius: 50%; background: #fffdf8; }
+.app-person-events li div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.app-person-events strong { font-size: .77rem; }
+.app-person-events span:not(.app-person-event-dot) { color: #526258; font-size: .73rem; }
+.app-person-events small { color: #64716b; font-size: .71rem; line-height: 1.4; overflow-wrap: anywhere; }
+.app-person-empty { margin: 0; color: #7b857b; font-size: .75rem; line-height: 1.45; }
+.app-person-relatives { display: grid; gap: 6px; }
+.app-person-relatives button { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 9px 10px; border: 1px solid #e5dcca; border-radius: 8px; background: #faf6ed; color: #233a36; cursor: pointer; text-align: left; }
+.app-person-relatives button:hover { background: #f1e8d8; }
+.app-person-relatives strong { font-size: .75rem; }
+.app-person-relatives span { flex: none; color: #64716b; font-size: .65rem; }
+.app-person-sources { display: grid; gap: 6px; margin: 0; padding-left: 18px; color: #526258; font-size: .72rem; line-height: 1.45; overflow-wrap: anywhere; }
+.app-person-panel :is(button, a):focus-visible { outline: 3px solid #a15d3d; outline-offset: 2px; }
+
+@media (max-width: 600px) {
+  .app-person-panel { top: auto; right: 0; bottom: 0; left: 0; width: 100%; max-height: min(72%, 620px); padding: 17px; border-radius: 16px 16px 0 0; }
+}

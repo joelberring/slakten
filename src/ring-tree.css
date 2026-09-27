@@ -1,0 +1,1158 @@
+.ring-tree-shell {
+  --ring-ink: #233a36;
+  --ring-muted: #64716b;
+  --ring-copper: #95573e;
+  --ring-line: #d7cab5;
+  --ring-paper: #fbf8f1;
+  --ring-panel: #fffdf8;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  padding: 22px clamp(18px, 3.2vw, 52px) 28px;
+  overflow: auto;
+  background:
+    radial-gradient(circle at 48% 14%, rgba(226, 203, 162, 0.19), transparent 42%),
+    linear-gradient(145deg, #f9f6ed, #f3eddf 77%);
+  color: var(--ring-ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ring-tree-shell *,
+.ring-tree-shell *::before,
+.ring-tree-shell *::after {
+  box-sizing: border-box;
+}
+
+.ring-tree-header {
+  display: flex;
+  flex: none;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(100%, 1600px);
+  margin: 0 auto 18px;
+}
+
+.ring-tree-eyebrow {
+  margin: 0 0 7px;
+  color: var(--ring-copper);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.ring-tree-heading {
+  min-width: 0;
+}
+
+.ring-tree-heading h1 {
+  margin: 0;
+  color: #233b35;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: clamp(1.8rem, 2.7vw, 2.8rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.ring-tree-header p:not(.ring-tree-eyebrow) {
+  max-width: 58ch;
+  margin: 9px 0 0;
+  color: var(--ring-muted);
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.ring-tree-controls {
+  display: flex;
+  flex: none;
+  align-items: end;
+  gap: 12px;
+  min-width: 0;
+}
+
+.ring-tree-search {
+  position: relative;
+  width: clamp(240px, 23vw, 365px);
+  max-width: 100%;
+}
+
+.ring-tree-search label,
+.ring-tree-depth label,
+.ring-tree-color-control label {
+  display: block;
+  margin: 0 0 6px;
+  color: #40534d;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.ring-tree-search input,
+.ring-tree-depth select,
+.ring-tree-depth input,
+.ring-tree-color-control select {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #cbbfa9;
+  border-radius: 9px;
+  outline: none;
+  background: rgba(255, 254, 251, 0.94);
+  box-shadow: 0 1px 2px rgba(75, 60, 42, 0.04);
+  color: var(--ring-ink);
+  font: inherit;
+  font-size: 0.84rem;
+}
+
+.ring-tree-search input::placeholder {
+  color: #7b857b;
+}
+
+.ring-tree-depth {
+  width: 124px;
+  flex: none;
+}
+
+.ring-tree-color-control {
+  width: clamp(170px, 15vw, 215px);
+  flex: none;
+  min-width: 0;
+}
+
+.ring-tree-search-results {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 5px);
+  right: 0;
+  left: 0;
+  max-height: min(320px, 44vh);
+  overflow: auto;
+  border: 1px solid #cdbfa8;
+  border-radius: 10px;
+  background: #fffdf9;
+  box-shadow: 0 16px 36px rgba(46, 43, 32, 0.16);
+}
+
+.ring-tree-search-results p {
+  margin: 0;
+  padding: 10px 12px;
+  color: var(--ring-muted);
+  font-size: 0.76rem;
+}
+
+.ring-tree-search-results button {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 0;
+  border-bottom: 1px solid #efe8db;
+  background: transparent;
+  color: var(--ring-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.ring-tree-search-results button:last-child {
+  border-bottom: 0;
+}
+
+.ring-tree-search-results button:hover {
+  background: #f1e9da;
+}
+
+.ring-tree-search-results button span {
+  color: var(--ring-muted);
+  font-size: 0.69rem;
+  white-space: nowrap;
+}
+
+.ring-tree-search-results button strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.ring-tree-workspace {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(0, 1fr) minmax(275px, 320px);
+  gap: 17px;
+  width: min(100%, 1600px);
+  min-height: 540px;
+  margin: 0 auto;
+}
+
+.ring-tree-visual,
+.ring-tree-sidebar {
+  min-width: 0;
+  border: 1px solid #d7cbb8;
+  border-radius: 16px;
+  background: var(--ring-panel);
+  box-shadow:
+    0 1px 2px rgba(65, 50, 34, 0.04),
+    0 13px 36px rgba(65, 50, 34, 0.075);
+}
+
+.ring-tree-visual {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ring-tree-visual-toolbar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 53px;
+  padding: 9px 17px;
+  border-bottom: 1px solid #e4d9c7;
+  background: #fffdf9;
+  color: #42554d;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.ring-tree-visual-toolbar strong {
+  color: var(--ring-ink);
+  font-weight: 800;
+}
+
+.ring-tree-zoom-controls {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 5px;
+}
+
+.ring-tree-zoom-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 4px 9px;
+  border: 1px solid #cdbfa8;
+  border-radius: 7px;
+  background: #fffefa;
+  color: #30473f;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ring-tree-zoom-controls button:hover {
+  background: #f2e9d9;
+}
+
+.ring-tree-zoom-controls button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.ring-tree-zoom-controls span {
+  min-width: 42px;
+  color: #53645c;
+  font-size: 0.69rem;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ring-tree-stage {
+  position: relative;
+  display: grid;
+  flex: 1;
+  min-height: 460px;
+  overflow: hidden;
+  place-items: center;
+  background:
+    radial-gradient(circle at center, #fffdf9 0 16%, #f8f4ea 62%, #f4ecde 100%);
+}
+
+.ring-tree-person-popover {
+  position: absolute;
+  z-index: 5;
+  top: 14px;
+  right: 14px;
+  width: min(350px, calc(100% - 28px));
+  max-height: calc(100% - 28px);
+  padding: 18px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #c5b597;
+  border-radius: 13px;
+  background: rgba(255, 253, 248, 0.98);
+  box-shadow: 0 14px 38px rgba(39, 50, 40, 0.24), 0 2px 7px rgba(39, 50, 40, 0.1);
+  color: var(--ring-ink);
+  scrollbar-color: #b9aa8d transparent;
+  scrollbar-width: thin;
+}
+
+.ring-tree-popover-header {
+  position: sticky;
+  z-index: 1;
+  top: -18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin: -18px -18px 12px;
+  padding: 17px 18px 12px;
+  border-bottom: 1px solid #e5daca;
+  background: #fffdf8;
+}
+
+.ring-tree-popover-kicker {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ring-copper);
+  font-size: 0.63rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.ring-tree-popover-header h3 {
+  margin: 0;
+  color: #263e37;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.ring-tree-popover-close {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin: -5px -4px 0 0;
+  padding: 0;
+  border: 1px solid #d5c7af;
+  border-radius: 8px;
+  background: #f8f3e9;
+  color: #30473f;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.ring-tree-popover-close:hover {
+  background: #efe5d3;
+}
+
+.ring-tree-popover-summary {
+  margin: 0 0 11px;
+  color: #53665c;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.ring-tree-popover-section {
+  padding: 11px 0;
+  border-top: 1px solid #e8dfd0;
+}
+
+.ring-tree-popover-section h4 {
+  margin: 0 0 7px;
+  color: #44584d;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ring-tree-popover-section p,
+.ring-tree-popover-section li {
+  margin: 0;
+  color: #354b40;
+  font-size: 0.77rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.ring-tree-popover-section ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.ring-tree-popover-section li + li {
+  margin-top: 4px;
+}
+
+.ring-tree-popover-section .ring-tree-detail-row + .ring-tree-detail-row {
+  margin-top: 5px;
+}
+
+.ring-tree-popover-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding-top: 11px;
+  border-top: 1px solid #e8dfd0;
+}
+
+.ring-tree-popover-actions button {
+  min-height: 38px;
+  padding: 8px 11px;
+  border: 1px solid #315347;
+  border-radius: 7px;
+  background: #315347;
+  color: #fffdf8;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ring-tree-popover-actions button:hover {
+  background: #436858;
+}
+
+.ring-tree-svg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.ring-tree-generation-guide {
+  fill: none;
+  stroke: #b9a98e;
+  stroke-opacity: 0.34;
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.ring-tree-grain-ring {
+  fill: none;
+  stroke: #876d4e;
+  stroke-opacity: 0.28;
+  stroke-width: 1;
+  stroke-dasharray: 1.5 5;
+  pointer-events: none;
+}
+
+.ring-tree-segment {
+  cursor: pointer;
+  outline: none;
+}
+
+.ring-tree-segment path,
+path.ring-tree-segment {
+  stroke: #fbf8f1;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+}
+
+.ring-tree-segment:hover path,
+.ring-tree-segment:hover:is(path, polygon),
+.ring-tree-segment:focus-visible path,
+.ring-tree-segment:focus-visible:is(path, polygon) {
+  filter: brightness(1.06) saturate(1.14) drop-shadow(0 2px 3px rgba(46, 57, 45, 0.28));
+  stroke: #304a42;
+  stroke-width: 2.2;
+}
+
+.ring-tree-segment[aria-selected="true"] path,
+.ring-tree-segment[data-selected="true"] path,
+.ring-tree-segment.is-selected path,
+.ring-tree-segment[aria-pressed="true"]:is(path, polygon, circle),
+.ring-tree-segment[aria-selected="true"]:is(path, polygon),
+.ring-tree-segment[data-selected="true"]:is(path, polygon),
+.ring-tree-segment.is-selected:is(path, polygon) {
+  filter: saturate(1.17) drop-shadow(0 2px 4px rgba(41, 52, 41, 0.25));
+  stroke: #233e38;
+  stroke-width: 3;
+}
+
+.ring-tree-segment.is-related {
+  stroke: #467767;
+  stroke-width: 2.4;
+}
+
+.ring-tree-segment.is-dimmed {
+  opacity: 0.24;
+}
+
+.ring-tree-segment.is-repeated {
+  stroke-dasharray: 5 2;
+}
+
+.ring-tree-segment.is-cycle {
+  stroke: #a3554f;
+  stroke-dasharray: 3 2;
+}
+
+.ring-tree-segment.has-parent-choices:not(.is-selected):not(.is-related):not(.is-cycle) {
+  stroke: #9f704c;
+  stroke-width: 2.2;
+}
+
+.ring-tree-overlap-links {
+  pointer-events: none;
+}
+
+.ring-tree-overlap-link {
+  fill: none;
+  stroke: #36594e;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 8 6;
+  opacity: 0.92;
+  filter: drop-shadow(0 1px 1px rgba(255, 252, 244, 0.9));
+  vector-effect: non-scaling-stroke;
+}
+
+.ring-tree-segment-label {
+  fill: #1d3a32;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 650;
+  letter-spacing: 0;
+  paint-order: stroke fill;
+  pointer-events: none;
+  stroke: rgba(255, 253, 248, 0.84);
+  stroke-linejoin: round;
+  stroke-width: 0.12em;
+  text-anchor: middle;
+}
+
+.ring-tree-segment-name {
+  fill: #19382f;
+  font-weight: 750;
+  letter-spacing: -0.015em;
+}
+
+.ring-tree-segment-detail {
+  fill: #456055;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  stroke-width: 0.08em;
+}
+
+.ring-tree-zoom-hint {
+  color: #64736a;
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.ring-tree-core {
+  stroke: #ead8b7;
+  stroke-width: 4;
+  cursor: pointer;
+}
+
+.ring-tree-core-name {
+  fill: #183e37;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+.ring-tree-core-caption {
+  fill: #31594e;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  pointer-events: none;
+  text-anchor: middle;
+  text-transform: uppercase;
+}
+
+.ring-tree-legend {
+  display: grid;
+  flex: none;
+  grid-template-columns: minmax(180px, auto) minmax(0, 1fr);
+  align-items: center;
+  gap: 8px 22px;
+  min-height: 44px;
+  padding: 9px 17px;
+  border-top: 1px solid #e4d9c7;
+  background: #fffdf9;
+}
+
+.ring-tree-legend-title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.ring-tree-legend-title strong {
+  color: var(--ring-ink);
+  font-size: 0.72rem;
+}
+
+.ring-tree-legend-title span {
+  color: var(--ring-muted);
+  font-size: 0.64rem;
+  line-height: 1.35;
+}
+
+.ring-tree-legend-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-width: 0;
+  max-height: 82px;
+  padding-right: 2px;
+  overflow: auto;
+  scrollbar-color: #b9aa8d transparent;
+  scrollbar-width: thin;
+}
+
+.ring-tree-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 27px;
+  padding: 3px 6px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #4b5d53;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.66rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.ring-tree-legend-item:hover,
+.ring-tree-legend-item[aria-pressed="true"] {
+  border-color: #c4ad8b;
+  background: #f4ebdd;
+  color: var(--ring-ink);
+}
+
+.ring-tree-legend-item[aria-pressed="true"] {
+  font-weight: 800;
+}
+
+.ring-tree-legend-item small {
+  min-width: 17px;
+  padding: 1px 4px;
+  border-radius: 5px;
+  background: #ece2d1;
+  color: #4d5c52;
+  font-size: 0.59rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.ring-tree-legend-item[aria-pressed="true"] small {
+  background: #d8c8ad;
+  color: #243c33;
+}
+
+.ring-tree-legend-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  flex: none;
+  border: 1px solid rgba(50, 50, 42, 0.22);
+  border-radius: 50%;
+}
+
+.ring-tree-legend-unknown {
+  background: repeating-linear-gradient(135deg, #dce0dc 0 3px, #aebbb2 3px 4px);
+}
+
+.ring-tree-sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 21px;
+  overflow: auto;
+  background:
+    linear-gradient(180deg, rgba(255, 254, 250, 0.98), rgba(249, 245, 235, 0.97));
+}
+
+.ring-tree-sidebar-heading {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e4d8c4;
+}
+
+.ring-tree-sidebar-heading h2 {
+  margin: 0 0 5px;
+  color: var(--ring-ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ring-tree-sidebar-heading p:last-child {
+  margin: 0;
+  color: var(--ring-muted);
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+
+.ring-tree-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 13px 0 17px;
+  border: 0;
+  border-bottom: 1px solid #e4d8c4;
+}
+
+.ring-tree-options legend {
+  padding: 0;
+  color: #44584d;
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ring-tree-options label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 30px;
+  padding: 5px 8px;
+  border-radius: 7px;
+  color: #31493f;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.ring-tree-options label:hover {
+  background: #f3eadc;
+}
+
+.ring-tree-options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  margin: 0;
+  accent-color: #315249;
+}
+
+.ring-tree-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  padding-top: 17px;
+}
+
+.ring-tree-person-heading {
+  padding-bottom: 15px;
+}
+
+.ring-tree-person-heading > span {
+  color: var(--ring-copper);
+  font-size: 0.63rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.ring-tree-person-heading h3 {
+  margin: 4px 0 5px;
+  color: #263e37;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.16;
+  overflow-wrap: anywhere;
+}
+
+.ring-tree-color-note {
+  padding: 7px 9px;
+  border-left: 3px solid #9a6c49;
+  border-radius: 0 6px 6px 0;
+  background: #f2e8d8;
+  color: #345047 !important;
+  font-size: 0.73rem !important;
+  font-weight: 700;
+}
+
+.ring-tree-details p {
+  margin: 0 0 9px;
+  color: #52625a;
+  font-size: 0.78rem;
+  line-height: 1.48;
+}
+
+.ring-tree-detail-group {
+  padding: 12px 0;
+  border-top: 1px solid #e7dece;
+}
+
+.ring-tree-detail-group:first-child {
+  border-top: 0;
+}
+
+.ring-tree-detail-group h4 {
+  margin: 0 0 8px;
+  color: #44584d;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ring-tree-detail-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+.ring-tree-detail-row span {
+  flex: none;
+  color: #6b776c;
+}
+
+.ring-tree-detail-row strong {
+  min-width: 0;
+  color: #293f35;
+  font-weight: 700;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.ring-tree-detail-group ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #354b40;
+  font-size: 0.77rem;
+  line-height: 1.55;
+}
+
+.ring-tree-detail-group li + li {
+  margin-top: 4px;
+}
+
+.ring-tree-occurrences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 134px;
+  margin-top: 8px;
+  padding: 1px 1px 4px;
+  overflow: auto;
+  scrollbar-color: #b9aa8d transparent;
+  scrollbar-width: thin;
+}
+
+.ring-tree-occurrences button {
+  min-height: 30px;
+  padding: 5px 8px;
+  border: 1px solid #c6b89f;
+  border-radius: 6px;
+  background: #fffdf8;
+  color: #345248;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.ring-tree-occurrences button:hover {
+  background: #f2e9da;
+}
+
+.ring-tree-occurrences button[aria-pressed="true"] {
+  border-color: #34564a;
+  background: #34564a;
+  color: #fffdf7;
+}
+
+.ring-tree-parent-choices {
+  display: grid;
+  gap: 7px;
+  width: 100%;
+  max-height: 230px;
+  margin-top: 9px;
+  padding: 1px 2px 3px 1px;
+  overflow: auto;
+  scrollbar-color: #b9aa8d transparent;
+  scrollbar-width: thin;
+}
+
+.ring-tree-parent-choice {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  min-height: 51px;
+  padding: 9px 10px;
+  border: 1px solid #c9bba4;
+  border-left: 3px solid #b8a58a;
+  border-radius: 7px;
+  background: #fffdf8;
+  color: #2b4439;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.ring-tree-parent-choice:hover {
+  border-color: #9d8565;
+  background: #f6efe2;
+}
+
+.ring-tree-parent-choice > span {
+  display: block;
+  max-width: 100%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.ring-tree-parent-choice small {
+  color: #6c7669;
+  font-size: 0.66rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.ring-tree-parent-choice[aria-pressed="true"] {
+  border-color: #426957;
+  border-left-color: #315d4b;
+  border-left-width: 4px;
+  background: #e8f0e7;
+  color: #1e3d31;
+}
+
+.ring-tree-parent-choice[aria-pressed="true"] small {
+  color: #28513f;
+  font-weight: 800;
+}
+
+.ring-tree-recenter {
+  width: 100%;
+  min-height: 40px;
+  margin: 0 0 17px;
+  padding: 9px 12px;
+  border: 1px solid #29483e;
+  border-radius: 8px;
+  background: #29483e;
+  color: #fffdf8;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ring-tree-recenter:hover {
+  background: #3a6153;
+}
+
+.ring-tree-data-note {
+  padding: 9px 10px;
+  border-left: 3px solid #ad7657;
+  border-radius: 0 5px 5px 0;
+  background: #f4ecdf;
+}
+
+.ring-tree-empty {
+  display: grid;
+  min-height: 200px;
+  padding: 24px;
+  place-items: center;
+  color: var(--ring-muted);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.ring-tree-shell :is(button, input, select, [tabindex]):focus-visible {
+  outline: 3px solid #a15d3d;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1180px) {
+  .ring-tree-shell {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .ring-tree-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ring-tree-controls {
+    align-items: end;
+  }
+
+  .ring-tree-search {
+    width: min(420px, 100%);
+  }
+}
+
+@media (max-width: 900px) {
+  .ring-tree-shell {
+    height: 100%;
+    min-height: 0;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .ring-tree-workspace {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .ring-tree-visual {
+    flex: none;
+    min-height: auto;
+  }
+
+  .ring-tree-controls {
+    flex-wrap: wrap;
+  }
+
+  .ring-tree-search {
+    width: auto;
+    flex: 1 1 270px;
+  }
+
+  .ring-tree-stage {
+    flex: none;
+    height: clamp(420px, 75vw, 640px);
+    min-height: 0;
+  }
+
+  .ring-tree-sidebar {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 600px) {
+  .ring-tree-shell {
+    padding: 14px 12px 18px;
+  }
+
+  .ring-tree-heading h1 {
+    font-size: 1.75rem;
+  }
+
+  .ring-tree-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ring-tree-search,
+  .ring-tree-depth,
+  .ring-tree-color-control {
+    width: 100%;
+  }
+
+  .ring-tree-search {
+    flex: none;
+  }
+
+  .ring-tree-visual-toolbar {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 12px;
+  }
+
+  .ring-tree-stage {
+    height: max(350px, 85vw);
+  }
+
+  .ring-tree-person-popover {
+    top: auto;
+    right: 9px;
+    bottom: 9px;
+    left: 9px;
+    width: auto;
+    max-height: 72%;
+    padding: 14px;
+  }
+
+  .ring-tree-popover-header {
+    top: -14px;
+    margin: -14px -14px 10px;
+    padding: 13px 14px 10px;
+  }
+
+  .ring-tree-popover-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .ring-tree-popover-close {
+    width: 42px;
+    height: 42px;
+  }
+
+  .ring-tree-legend {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .ring-tree-legend-items {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 3px;
+  }
+
+  .ring-tree-legend-item {
+    flex: none;
+  }
+
+  .ring-tree-sidebar {
+    padding: 17px;
+  }
+}

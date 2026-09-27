@@ -4,10 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "node node_modules/typescript/lib/tsc.js -b && node node_modules/vite/bin/vite.js build",
+    "lint": "node node_modules/eslint/bin/eslint.js .",
+    "test:rings": "node --experimental-strip-types --test tests/ringTree.test.mjs tests/ringColor.test.mjs tests/ringLabels.test.mjs tests/ringZoom.test.mjs",
+    "test:locations": "node --experimental-strip-types --test tests/geocoder.test.mjs tests/locationCache.test.mjs tests/locationReview.test.mjs tests/geonamesReview.test.mjs",
+    "locations:check": "node --experimental-strip-types scripts/build-location-cache.mjs",
+    "locations:build": "node --experimental-strip-types scripts/build-location-cache.mjs --output public/locations.json",
+    "locations:candidates": "node --experimental-strip-types scripts/build-geonames-review.mjs",
+    "preview": "node node_modules/vite/bin/vite.js preview"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.21",
