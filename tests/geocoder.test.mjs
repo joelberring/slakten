@@ -115,6 +115,7 @@ test('damaged storage and malformed shared rows cannot break resolution', async 
       ['Invalid latitude', 'missing'], ['Bad longitude', 'missing'], ['No coordinates', 'missing'],
       ['Valid shared', 'shared'], ['Valid override', 'manual'],
     ]),
+    precision: new Map(),
     total: 5,
     resolved: 2,
     unresolved: 3,
@@ -134,6 +135,7 @@ test('lookup makes no network request, including for places absent from all cach
     assert.deepEqual(geocoder.resolvePlaces(['Unknown']), {
       cache: new Map([['Unknown', null]]),
       sources: new Map([['Unknown', 'missing']]),
+      precision: new Map(),
       total: 1,
       resolved: 0,
       unresolved: 1,
@@ -144,6 +146,41 @@ test('lookup makes no network request, including for places absent from all cach
   } finally {
     globalThis.fetch = previousFetch;
   }
+});
+
+test('optional shared precision marks approximate points without changing old catalog rows', async () => {
+  const { geocoder } = await withStorage({ legacy: [['Legacy place', { lat: 2, lon: 3 }]] });
+  geocoder.hydrateGeocoderCache([
+    ['Approximate shared', { lat: 4, lon: 5 }],
+    ['Manual correction', { lat: 6, lon: 7 }],
+    ['Unresolved', null],
+  ]);
+  const places = ['Approximate shared', 'Manual correction', 'Legacy place', 'Unresolved'];
+  assert.equal(geocoder.resolvePlaces(places).precision.size, 0);
+
+  geocoder.hydrateLocationPrecision([
+    ['Approximate shared', 'approximate'],
+    ['Manual correction', 'approximate'],
+    ['Legacy place', 'approximate'],
+    ['Unresolved', 'approximate'],
+    ['Bad precision', 'exact'],
+    ['Bad row'],
+  ]);
+  geocoder.updateLocationCache('Manual correction', { lat: 8, lon: 9 });
+  const resolved = geocoder.resolvePlaces(places);
+  assert.deepEqual([...resolved.precision], [['Approximate shared', 'approximate']]);
+  assert.deepEqual(resolved.cache.get('Approximate shared'), { lat: 4, lon: 5 });
+  assert.deepEqual(resolved.cache.get('Manual correction'), { lat: 8, lon: 9 });
+  assert.deepEqual([...resolved.sources], [
+    ['Approximate shared', 'shared'], ['Manual correction', 'manual'],
+    ['Legacy place', 'legacy'], ['Unresolved', 'missing'],
+  ]);
+
+  geocoder.setLocationReviewStatus('Legacy place', 'uncertain');
+  assert.equal(geocoder.resolvePlaces(places).precision.get('Legacy place'), 'approximate');
+  geocoder.hydrateLocationPrecision(undefined); // Optional companion absent or unavailable.
+  assert.equal(geocoder.resolvePlaces(places).precision.has('Approximate shared'), false);
+  assert.equal(geocoder.resolvePlaces(places).precision.get('Legacy place'), 'approximate');
 });
 
 test('marking a wrong point hides only that exact place and undo restores the shared value', async () => {
@@ -199,4 +236,38 @@ test('known country-centre mismatches do not reappear from old browser caches', 
   assert.equal(resolved.cache.get('Göteborg och Bohus, Sverige'), null);
   assert.deepEqual(resolved.cache.get('Sweden'), wrong);
   assert.deepEqual(geocoder.getLocalLocationCandidates(), [['Sweden', wrong]]);
+});
+
+test('retired wrong locality points stay hidden while reviewed replacements and manual edits remain usable', async () => {
+  const oldTown = { lat: 59.2747287, lon: 15.2151181 };
+  const oldSofia = { lat: 57.2986503, lon: 13.5391543 };
+  const manualPoint = { lat: 60.27, lon: 14.61 };
+  const reviewedSofia = { lat: 57.77992, lon: 14.13696 };
+  const { geocoder } = await withStorage({
+    legacy: [
+      ['Kristinehamn, Örebro, Sverige', oldTown],
+      ['Nora stadsförsamling, Örebro, Sverige', oldTown],
+      ['Säfsnäs, Gällinge', { lat: 57.3955398, lon: 12.2488171 }],
+      ['Jönköpings Sofia (F)', oldSofia],
+      ['Unrelated source at same point', oldTown],
+    ],
+    manual: [['Säfsnäs, Gällinge', manualPoint]],
+  });
+  geocoder.hydrateGeocoderCache([
+    ['Kristinehamn, Örebro, Sverige', null],
+    ['Nora stadsförsamling, Örebro, Sverige', null],
+    ['Säfsnäs, Gällinge', null],
+    ['Jönköpings Sofia (F)', reviewedSofia],
+  ]);
+  const places = ['Kristinehamn, Örebro, Sverige', 'Nora stadsförsamling, Örebro, Sverige',
+    'Säfsnäs, Gällinge', 'Jönköpings Sofia (F)', 'Unrelated source at same point'];
+  const result = geocoder.resolvePlaces(places);
+  assert.equal(result.cache.get(places[0]), null);
+  assert.equal(result.cache.get(places[1]), null);
+  assert.deepEqual(result.cache.get(places[2]), manualPoint);
+  assert.deepEqual(result.cache.get(places[3]), reviewedSofia);
+  assert.deepEqual(result.cache.get(places[4]), oldTown);
+  assert.deepEqual(geocoder.getLocalLocationCandidates(), [
+    ['Säfsnäs, Gällinge', manualPoint], ['Unrelated source at same point', oldTown],
+  ]);
 });

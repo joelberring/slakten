@@ -1,0 +1,2909 @@
+{
+  "kind": "reviewed-sweden-bare-place-points",
+  "date": "2026-09-28",
+  "input": {
+    "file": "/private/tmp/slakten-unresolved-sweden-bare.json",
+    "sha256": "86e4b5b3b4bff4021e5cb896aaa0718b366e08a9ebc2daa3049232f39ec43bd7"
+  },
+  "source": {
+    "name": "GeoNames SE country extract",
+    "url": "https://download.geonames.org/export/dump/SE.zip",
+    "license": "CC BY 4.0",
+    "sha256": "0fa7a47700d36818fa4e2f22c83069b5016507e62418ab3d166ce6f85fdd0107"
+  },
+  "policy": "Ingen automatisk geokodning. Endast namngivna socknar/byar med geografiskt stöd väljs. Ungefärlig punkt märks approximate. Alla råa ortsträngar och osäkerhetsmarkörer bevaras. Ingen ort väljs enbart utifrån efternamn eller län när en oidentifierad gård anges.",
+  "reviewedNames": 197,
+  "reviewedEventUses": 263,
+  "selectedNames": 165,
+  "selectedEventUses": 222,
+  "precisionCounts": {
+    "approximate": 130,
+    "exact": 35
+  },
+  "rejectedNames": 20,
+  "delegatedNames": 12,
+  "selected": [
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "(W) Grangärde Lillheden",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "place": "(W) Grangärde Saxhyttan",
+      "uses": 5,
+      "precision": "exact",
+      "sourceId": "geonames:2679616",
+      "sourceUrl": "https://www.geonames.org/2679616/",
+      "sourceName": "Saxhyttan",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.3,
+        "lon": 15
+      },
+      "reason": "County letter W and Grangärde identify the Saxhyttan settlement in Ludvika, Dalarna, rather than its namesake in Örebro.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8127063",
+      "sourceUrl": "https://www.geonames.org/8127063/",
+      "sourceName": "Alfta socken",
+      "featureCode": "ADM4",
+      "countyCode": "03",
+      "municipalityCode": "2121",
+      "coordinates": {
+        "lat": 61.29399,
+        "lon": 15.93494
+      },
+      "place": "Alfta förs.  Gävleborgs län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127051",
+      "sourceUrl": "https://www.geonames.org/8127051/",
+      "sourceName": "Amnehärad socken",
+      "featureCode": "ADM4",
+      "countyCode": "28",
+      "municipalityCode": "1447",
+      "coordinates": {
+        "lat": 58.97606,
+        "lon": 13.97907
+      },
+      "place": "Amnehärad Skaraborg",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127257",
+      "sourceUrl": "https://www.geonames.org/8127257/",
+      "sourceName": "Askersund socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.84934,
+        "lon": 14.79798
+      },
+      "place": "Askersund (T)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:606692",
+      "sourceUrl": "https://www.geonames.org/606692/",
+      "sourceName": "Baggböle",
+      "featureCode": "PPL",
+      "countyCode": "23",
+      "municipalityCode": "2480",
+      "coordinates": {
+        "lat": 63.85,
+        "lon": 20.13333
+      },
+      "place": "Baggböle Umeå Västerbotten Sverige",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8128249",
+      "sourceUrl": "https://www.geonames.org/8128249/",
+      "sourceName": "Berga socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0781",
+      "coordinates": {
+        "lat": 56.92589,
+        "lon": 14.00542
+      },
+      "place": "Berga (G)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Berga preciseras med historiska länsbokstaven G (Kronoberg), vilket skiljer den från andra Berga. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8128485",
+      "sourceUrl": "https://www.geonames.org/8128485/",
+      "sourceName": "Botkyrka socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0127",
+      "coordinates": {
+        "lat": 59.20928,
+        "lon": 17.86131
+      },
+      "place": "Botkyrka (AB)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Bredsjöbäcken",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Samma personpost har samma födelsedatum med den fullständiga strängen Bredsjöbäcken, Ljusnarsberg, Örebro. Länsstyrelsen och ett samtida länsverk placerar Bredsjöbäcken i Ljusnarsberg. Ungefärlig sockenpunkt, inte ett naturreservats- eller vattendragspunkt.",
+      "evidencePersonIds": [
+        "@I262744723321@"
+      ],
+      "evidenceUrls": [
+        "https://www.lansstyrelsen.se/orebro/besoksmal/naturreservat/rallsalven-och-bredsjobacken.html",
+        "https://runeberg.org/thamoreb/ljusnars.html"
+      ]
+    },
+    {
+      "sourceId": "geonames:8127257",
+      "sourceUrl": "https://www.geonames.org/8127257/",
+      "sourceName": "Askersund socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.84934,
+        "lon": 14.79798
+      },
+      "place": "Brona Askersund (T)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8132062",
+      "sourceUrl": "https://www.geonames.org/8132062/",
+      "sourceName": "Brännkyrka",
+      "featureCode": "ADM3",
+      "countyCode": "26",
+      "municipalityCode": "0180",
+      "coordinates": {
+        "lat": 59.28333,
+        "lon": 18.01667
+      },
+      "place": "Brännkyrka (AB)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Brännkyrka preciseras med AB. Svenska kyrkan bekräftar Brännkyrkas historiska socken i Stockholm. Ungefärlig församlingspunkt.",
+      "evidenceUrls": [
+        "https://www.svenskakyrkan.se/brannkyrka/brannkyrka-kyrka"
+      ]
+    },
+    {
+      "sourceId": "geonames:2719947",
+      "sourceUrl": "https://www.geonames.org/2719947/",
+      "sourceName": "Bråna",
+      "featureCode": "PPL",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.53333,
+        "lon": 13.71667
+      },
+      "place": "Bråna Traryd (G)",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8128038",
+      "sourceUrl": "https://www.geonames.org/8128038/",
+      "sourceName": "Norrbärke socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2061",
+      "coordinates": {
+        "lat": 60.14263,
+        "lon": 15.35459
+      },
+      "place": "By Norrbärke Kopparberg Dalarna Sverige Sweden",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Norrbärke och Kopparberg/Dalarna anges uttryckligen. Ordet By behandlas som ort/gård, inte som den andra Dalasocknen By. Ungefärlig Norrbärke-punkt."
+    },
+    {
+      "sourceId": "geonames:2718473",
+      "sourceUrl": "https://www.geonames.org/2718473/",
+      "sourceName": "Bysala",
+      "featureCode": "PPL",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.71667,
+        "lon": 15.78333
+      },
+      "place": "Bysala Hed Västmanland",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:2718473",
+      "sourceUrl": "https://www.geonames.org/2718473/",
+      "sourceName": "Bysala",
+      "featureCode": "PPL",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.71667,
+        "lon": 15.78333
+      },
+      "place": "Bysala gård Hed (U)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Bysala by är identifierad inom Hed/Skinnskatteberg. Bysala gård är inte verifierad som en enskild byggnad; ungefärlig bypunkt."
+    },
+    {
+      "sourceId": "geonames:2717870",
+      "sourceUrl": "https://www.geonames.org/2717870/",
+      "sourceName": "Degernäs",
+      "featureCode": "FRM",
+      "countyCode": "15",
+      "municipalityCode": "1862",
+      "coordinates": {
+        "lat": 59.25,
+        "lon": 14.45
+      },
+      "place": "Degernäs",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Båda personposter som använder bara Degernäs har i samma post födelseorten Degernäs, Karlskoga, Örebro. GeoNames gård i nuvarande Degerfors inom Örebro län används som ungefärlig gårds/bygdpunkt. Detta är samma-post-kontext, inte en gissning från efternamn.",
+      "evidencePersonIds": [
+        "@I262744700669@",
+        "@I262744700683@"
+      ]
+    },
+    {
+      "sourceId": "geonames:8126095",
+      "sourceUrl": "https://www.geonames.org/8126095/",
+      "sourceName": "Edebo socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 60.05064,
+        "lon": 18.52384
+      },
+      "place": "Edebo",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Edebo är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:2715889",
+      "sourceUrl": "https://www.geonames.org/2715889/",
+      "sourceName": "Evertsberg",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2039",
+      "coordinates": {
+        "lat": 61.13333,
+        "lon": 13.95
+      },
+      "place": "Evertsberg 9",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Evertsberg är ett entydigt ortnamn i GeoNames. Byns punkt används ungefärligt; gårds-/adressnumret 9 är inte lokaliserat."
+    },
+    {
+      "sourceId": "geonames:2715526",
+      "sourceUrl": "https://www.geonames.org/2715526/",
+      "sourceName": "Fallerås",
+      "featureCode": "FRM",
+      "countyCode": "16",
+      "municipalityCode": "0512",
+      "coordinates": {
+        "lat": 57.9,
+        "lon": 15.31667
+      },
+      "place": "Fallerås Norra Vi",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8127258",
+      "sourceUrl": "https://www.geonames.org/8127258/",
+      "sourceName": "Finnerödja socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1860",
+      "coordinates": {
+        "lat": 58.90896,
+        "lon": 14.44139
+      },
+      "place": "Finnerödja (T) Högelid",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127258",
+      "sourceUrl": "https://www.geonames.org/8127258/",
+      "sourceName": "Finnerödja socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1860",
+      "coordinates": {
+        "lat": 58.90896,
+        "lon": 14.44139
+      },
+      "place": "Finnerödja (T) Korterud",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Fläckmossen",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Länsstyrelsens officiella reservatskarta för Djupdalshöjden namnger Fläckmossen inom Ljusnarsbergs kommun. Även samma personposts dödsort Älvhöjden ligger i bygden. Ungefärlig Ljusnarsbergs sockenpunkt, inte en påstådd exakt Fläckmossen-gård.",
+      "evidencePersonIds": [
+        "@I262745192963@"
+      ],
+      "evidenceUrls": [
+        "https://www.lansstyrelsen.se/download/18.840e7ca163033c061f187ff/1526069106217/SE0240166_Djupdalshojden.pdf"
+      ]
+    },
+    {
+      "sourceId": "geonames:8126749",
+      "sourceUrl": "https://www.geonames.org/8126749/",
+      "sourceName": "Fränninge socken",
+      "featureCode": "ADM4",
+      "countyCode": "27",
+      "municipalityCode": "1265",
+      "coordinates": {
+        "lat": 55.73669,
+        "lon": 13.82864
+      },
+      "place": "Fränninge nr.28",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Fränninge är ett entydigt sockennamn. Nr.28 lokaliseras inte. Eventuellt frågetecken i källtexten behålls; punkten är endast ungefärlig socken/bygd."
+    },
+    {
+      "sourceId": "geonames:8126749",
+      "sourceUrl": "https://www.geonames.org/8126749/",
+      "sourceName": "Fränninge socken",
+      "featureCode": "ADM4",
+      "countyCode": "27",
+      "municipalityCode": "1265",
+      "coordinates": {
+        "lat": 55.73669,
+        "lon": 13.82864
+      },
+      "place": "Fränninge nr.28?",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Fränninge är ett entydigt sockennamn. Nr.28 lokaliseras inte. Eventuellt frågetecken i källtexten behålls; punkten är endast ungefärlig socken/bygd."
+    },
+    {
+      "sourceId": "geonames:8126749",
+      "sourceUrl": "https://www.geonames.org/8126749/",
+      "sourceName": "Fränninge socken",
+      "featureCode": "ADM4",
+      "countyCode": "27",
+      "municipalityCode": "1265",
+      "coordinates": {
+        "lat": 55.73669,
+        "lon": 13.82864
+      },
+      "place": "Fränninge?",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Fränninge är ett entydigt sockennamn. Nr.28 lokaliseras inte. Eventuellt frågetecken i källtexten behålls; punkten är endast ungefärlig socken/bygd."
+    },
+    {
+      "sourceId": "geonames:8126576",
+      "sourceUrl": "https://www.geonames.org/8126576/",
+      "sourceName": "Furuby socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0780",
+      "coordinates": {
+        "lat": 56.86255,
+        "lon": 15.08009
+      },
+      "place": "Furuby (G)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2715312",
+      "sourceUrl": "https://www.geonames.org/2715312/",
+      "sourceName": "Färmansbo",
+      "featureCode": "PPL",
+      "countyCode": "25",
+      "municipalityCode": "1907",
+      "coordinates": {
+        "lat": 59.81667,
+        "lon": 16.16667
+      },
+      "place": "Färmansbo Ramnäs (Västmanland)",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8127251",
+      "sourceUrl": "https://www.geonames.org/8127251/",
+      "sourceName": "Glanshammar socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1880",
+      "coordinates": {
+        "lat": 59.34236,
+        "lon": 15.41657
+      },
+      "place": "Glanshammar förs. Örebro län.",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2711940",
+      "sourceUrl": "https://www.geonames.org/2711940/",
+      "sourceName": "Gläfse",
+      "featureCode": "FRM",
+      "countyCode": "10",
+      "municipalityCode": "2061",
+      "coordinates": {
+        "lat": 60.16667,
+        "lon": 15.68333
+      },
+      "place": "Gläfse Söderbärke",
+      "uses": 2,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Grangärde",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Grangärde är ett entydigt svenskt sockennamn. Märkt ungefärlig sockenpunkt, inte en särskild bostad."
+    },
+    {
+      "sourceId": "geonames:2711266",
+      "sourceUrl": "https://www.geonames.org/2711266/",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "place": "Grangärde Kyrkbyn",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Grangärde Kyrkbyn / Kyrkbyn Grangärde avser den namngivna kyrkbyn. Ungefärlig bygdpunkt vid Grangärde; ingen särskild gård lokaliseras."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Grangärde/W",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127057",
+      "sourceUrl": "https://www.geonames.org/8127057/",
+      "sourceName": "Säfsnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.13929,
+        "lon": 14.43955
+      },
+      "place": "Gravnedal      Säfsnäs",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2710779",
+      "sourceUrl": "https://www.geonames.org/2710779/",
+      "sourceName": "Grelsgård",
+      "featureCode": "FRM",
+      "countyCode": "07",
+      "municipalityCode": "2313",
+      "coordinates": {
+        "lat": 63.86667,
+        "lon": 15.61667
+      },
+      "place": "Grelsgård Ström Jämtland",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "place": "Grängesberg",
+      "uses": 4,
+      "precision": "exact",
+      "sourceId": "geonames:2711256",
+      "sourceUrl": "https://www.geonames.org/2711256/",
+      "sourceName": "Grängesberg",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.07465,
+        "lon": 15.00784
+      },
+      "reason": "Unique named Grängesberg settlement in the Swedish extract; not a farm address.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8128068",
+      "sourceUrl": "https://www.geonames.org/8128068/",
+      "sourceName": "Grödinge socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0127",
+      "coordinates": {
+        "lat": 59.1242,
+        "lon": 17.79166
+      },
+      "place": "Grödinge",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Grödinge är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Guldsmedsboda Snavlunda Örebro län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128498",
+      "sourceUrl": "https://www.geonames.org/8128498/",
+      "sourceName": "Gunnilbo socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.77154,
+        "lon": 15.88693
+      },
+      "place": "Gunnilbo Västmanland",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127057",
+      "sourceUrl": "https://www.geonames.org/8127057/",
+      "sourceName": "Säfsnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.13929,
+        "lon": 14.43955
+      },
+      "place": "Gällinge  Säfsnäs Dalarna Sweden",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Gärdet Grangärde Kopparberg Sverige Sweden",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Gärdet Grangärde Kopparbergs län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8131746",
+      "sourceUrl": "https://www.geonames.org/8131746/",
+      "sourceName": "Gärdserum",
+      "featureCode": "ADM3",
+      "countyCode": "16",
+      "municipalityCode": "0561",
+      "coordinates": {
+        "lat": 58.15673,
+        "lon": 16.1512
+      },
+      "place": "Gärdsram",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Samma personpost anger samma födelsedatum (25 feb1823) både för Gärdsram, Gärdesrum och fullständiga Gärdserum, Östergötland. ISOF bekräftar äldre Gärdsrum-form inom Gärdserums socken. Ungefärlig församlingspunkt; ingen byggnad.",
+      "evidencePersonIds": [
+        "@I262744690685@"
+      ],
+      "evidenceUrls": [
+        "https://www4.isof.se/NAU/bilder/_s1hx001/230219c1.htm"
+      ]
+    },
+    {
+      "sourceId": "geonames:2711537",
+      "sourceUrl": "https://www.geonames.org/2711537/",
+      "sourceName": "Gothenburg",
+      "featureCode": "PPLA",
+      "countyCode": "28",
+      "municipalityCode": "1480",
+      "coordinates": {
+        "lat": 57.70716,
+        "lon": 11.96679
+      },
+      "place": "Göteborg",
+      "uses": 2,
+      "precision": "exact",
+      "reason": "Göteborg är identifierat som stad (GeoNames PPLA); ingen särskild adress anges."
+    },
+    {
+      "sourceId": "geonames:8132079",
+      "sourceUrl": "https://www.geonames.org/8132079/",
+      "sourceName": "Domkyrkoförs. i Göteborg",
+      "featureCode": "ADM3",
+      "countyCode": "28",
+      "municipalityCode": "1480",
+      "coordinates": {
+        "lat": 57.70451,
+        "lon": 11.96501
+      },
+      "place": "Göteborgs domkyrko (O)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Göteborgs domkyrko med länsbokstaven O identifierar domkyrkoförsamlingen i Göteborg. GeoNames församlingspunkt och Svenska kyrkans egen domkyrkosida stämmer. Ungefärlig församlingspunkt.",
+      "evidenceUrls": [
+        "https://www.svenskakyrkan.se/gbgdomkyrko/domkyrkan"
+      ]
+    },
+    {
+      "sourceId": "geonames:8127268",
+      "sourceUrl": "https://www.geonames.org/8127268/",
+      "sourceName": "Hammar socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.76462,
+        "lon": 14.92437
+      },
+      "place": "Hammars förs",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Hammars förs. är genitivformen av Hammar församling/socken. GeoNames har en entydig svensk Hammar socken; ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8126357",
+      "sourceUrl": "https://www.geonames.org/8126357/",
+      "sourceName": "Harg socken",
+      "featureCode": "ADM4",
+      "countyCode": "21",
+      "municipalityCode": "0382",
+      "coordinates": {
+        "lat": 60.15784,
+        "lon": 18.42432
+      },
+      "place": "Harg (Uppl)",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127294",
+      "sourceUrl": "https://www.geonames.org/8127294/",
+      "sourceName": "Hed socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.7147,
+        "lon": 15.72382
+      },
+      "place": "Hed (U)",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128508",
+      "sourceUrl": "https://www.geonames.org/8128508/",
+      "sourceName": "Hedemora socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2083",
+      "coordinates": {
+        "lat": 60.26244,
+        "lon": 15.92085
+      },
+      "place": "Hedemora (W) Kopparberg",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Hjerpberget Grangärde (Dalarna)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "place": "Hjulsjö",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8127264",
+      "sourceUrl": "https://www.geonames.org/8127264/",
+      "sourceName": "Hjulsjö socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1863",
+      "coordinates": {
+        "lat": 59.8022,
+        "lon": 14.78258
+      },
+      "reason": "Unique Hjulsjö socken; representative parish point avoids assuming village versus parish usage.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8127264",
+      "sourceUrl": "https://www.geonames.org/8127264/",
+      "sourceName": "Hjulsjö socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1863",
+      "coordinates": {
+        "lat": 59.8022,
+        "lon": 14.78258
+      },
+      "place": "Hjulsjö (T)",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127264",
+      "sourceUrl": "https://www.geonames.org/8127264/",
+      "sourceName": "Hjulsjö socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1863",
+      "coordinates": {
+        "lat": 59.8022,
+        "lon": 14.78258
+      },
+      "place": "Hjulsjö Grängshyttan",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127418",
+      "sourceUrl": "https://www.geonames.org/8127418/",
+      "sourceName": "Huddinge socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0126",
+      "coordinates": {
+        "lat": 59.21353,
+        "lon": 18.01889
+      },
+      "place": "Huddge.",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Huddge. är en förkortning. Samma personposts bostadsuppgift Huddinge, Stockholm, 1824–1829 omfattar födelsedatumet (8 okt1828). Ungefärlig Huddinge sockenpunkt.",
+      "evidencePersonIds": [
+        "@I262745313042@"
+      ]
+    },
+    {
+      "sourceId": "geonames:8127418",
+      "sourceUrl": "https://www.geonames.org/8127418/",
+      "sourceName": "Huddinge socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0126",
+      "coordinates": {
+        "lat": 59.21353,
+        "lon": 18.01889
+      },
+      "place": "Huddinge (AB)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127418",
+      "sourceUrl": "https://www.geonames.org/8127418/",
+      "sourceName": "Huddinge socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0126",
+      "coordinates": {
+        "lat": 59.21353,
+        "lon": 18.01889
+      },
+      "place": "Huddinge Stockholmslän",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127886",
+      "sourceUrl": "https://www.geonames.org/8127886/",
+      "sourceName": "Osby socken",
+      "featureCode": "ADM4",
+      "countyCode": "27",
+      "municipalityCode": "1273",
+      "coordinates": {
+        "lat": 56.39289,
+        "lon": 14.02881
+      },
+      "place": "Hullingarydstorp Osby Kristianstad",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "place": "Hällefors (T)",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127269",
+      "sourceUrl": "https://www.geonames.org/8127269/",
+      "sourceName": "Hällefors socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1863",
+      "coordinates": {
+        "lat": 59.89679,
+        "lon": 14.55804
+      },
+      "reason": "Hällefors socken in Örebro county, identified by T.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8126097",
+      "sourceUrl": "https://www.geonames.org/8126097/",
+      "sourceName": "Häverö socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 60.07435,
+        "lon": 18.66724
+      },
+      "place": "Häverö (AB)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127057",
+      "sourceUrl": "https://www.geonames.org/8127057/",
+      "sourceName": "Säfsnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.13929,
+        "lon": 14.43955
+      },
+      "place": "Håvberget Säfsnäs Dalarna Sverige",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128153",
+      "sourceUrl": "https://www.geonames.org/8128153/",
+      "sourceName": "Hölö socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0181",
+      "coordinates": {
+        "lat": 59.0097,
+        "lon": 17.55104
+      },
+      "place": "Hölö",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Hölö är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8127886",
+      "sourceUrl": "https://www.geonames.org/8127886/",
+      "sourceName": "Osby socken",
+      "featureCode": "ADM4",
+      "countyCode": "27",
+      "municipalityCode": "1273",
+      "coordinates": {
+        "lat": 56.39289,
+        "lon": 14.02881
+      },
+      "place": "Hönjarum Osby - Skåne",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2705021",
+      "sourceUrl": "https://www.geonames.org/2705021/",
+      "sourceName": "Hörksälv",
+      "featureCode": "PPL",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 60.0,
+        "lon": 14.93333
+      },
+      "place": "Hörksälv Ljusnarsberg Örebro",
+      "uses": 2,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8127357",
+      "sourceUrl": "https://www.geonames.org/8127357/",
+      "sourceName": "Indal socken",
+      "featureCode": "ADM4",
+      "countyCode": "24",
+      "municipalityCode": "2281",
+      "coordinates": {
+        "lat": 62.59253,
+        "lon": 17.02515
+      },
+      "place": "Indal (Y)",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2703331",
+      "sourceUrl": "https://www.geonames.org/2703331/",
+      "sourceName": "Jämtland",
+      "featureCode": "RGN",
+      "countyCode": "07",
+      "municipalityCode": "",
+      "coordinates": {
+        "lat": 63.43333,
+        "lon": 14.06667
+      },
+      "place": "Jämtland Sweden",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Strängen anger uttryckligen landskapet Jämtland, inte en gård. GeoNames landskapspunkt används och märks ungefärlig region."
+    },
+    {
+      "sourceId": "geonames:8127729",
+      "sourceUrl": "https://www.geonames.org/8127729/",
+      "sourceName": "Järsnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "08",
+      "municipalityCode": "0680",
+      "coordinates": {
+        "lat": 57.80091,
+        "lon": 14.56631
+      },
+      "place": "Järsnäs  (F)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2701727",
+      "sourceUrl": "https://www.geonames.org/2701727/",
+      "sourceName": "Karlshamn",
+      "featureCode": "PPLA2",
+      "countyCode": "02",
+      "municipalityCode": "1082",
+      "coordinates": {
+        "lat": 56.1706,
+        "lon": 14.86188
+      },
+      "place": "Karlshamn",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Karlshamn är identifierat som staden/socknen i Blekinge. Inget mindre område anges; GeoNames stadspunkt används."
+    },
+    {
+      "place": "Karlskoga",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2701715",
+      "sourceUrl": "https://www.geonames.org/2701715/",
+      "sourceName": "Karlskoga",
+      "featureCode": "PPLA2",
+      "countyCode": "15",
+      "municipalityCode": "1883",
+      "coordinates": {
+        "lat": 59.32667,
+        "lon": 14.52386
+      },
+      "reason": "Unique named Karlskoga city; not an address within the city.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "place": "Karlskrona",
+      "uses": 4,
+      "precision": "exact",
+      "sourceId": "geonames:2701713",
+      "sourceUrl": "https://www.geonames.org/2701713/",
+      "sourceName": "Karlskrona",
+      "featureCode": "PPLA",
+      "countyCode": "02",
+      "municipalityCode": "1080",
+      "coordinates": {
+        "lat": 56.16156,
+        "lon": 15.58661
+      },
+      "reason": "Unique named Karlskrona city in the Swedish extract; not an address within the city.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8127886",
+      "sourceUrl": "https://www.geonames.org/8127886/",
+      "sourceName": "Osby socken",
+      "featureCode": "ADM4",
+      "countyCode": "27",
+      "municipalityCode": "1273",
+      "coordinates": {
+        "lat": 56.39289,
+        "lon": 14.02881
+      },
+      "place": "Klockaregården Osby (L)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127273",
+      "sourceUrl": "https://www.geonames.org/8127273/",
+      "sourceName": "Knista socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1814",
+      "coordinates": {
+        "lat": 59.21426,
+        "lon": 14.79702
+      },
+      "place": "Knista",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Knista är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "place": "Korrö Almeboda Kronoberg Sverige",
+      "uses": 1,
+      "precision": "approximate",
+      "sourceId": "tingsryd:korro-stf-map",
+      "sourceUrl": "https://www2.visittingsryd.se/sv/boende/858894/korr%C3%B6-stf-hotell/karta",
+      "sourceName": "Korrö hantverksby, Tingsryds kommun",
+      "featureCode": "bygd",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.625076,
+        "lon": 15.198212
+      },
+      "reason": "Den namngivna Korrö-bygden i Kronoberg är identifierad med Tingsryds turistinformations publicerade GPS-punkt. Den historiska sockentillhörigheten Almeboda/Älmeboda fastställs inte här; endast ungefärlig Korrö-by presenteras, inte en enskild bostad."
+    },
+    {
+      "sourceId": "geonames:2699282",
+      "sourceUrl": "https://www.geonames.org/2699282/",
+      "sourceName": "Kristinehamn",
+      "featureCode": "PPLA2",
+      "countyCode": "22",
+      "municipalityCode": "1781",
+      "coordinates": {
+        "lat": 59.30978,
+        "lon": 14.10808
+      },
+      "place": "Kristinehamn",
+      "uses": 2,
+      "precision": "exact",
+      "reason": "Kristinehamn är identifierat som stad (GeoNames PPLA2); ingen särskild adress anges."
+    },
+    {
+      "sourceId": "geonames:8127210",
+      "sourceUrl": "https://www.geonames.org/8127210/",
+      "sourceName": "Kroppa socken",
+      "featureCode": "ADM4",
+      "countyCode": "22",
+      "municipalityCode": "1782",
+      "coordinates": {
+        "lat": 59.60529,
+        "lon": 14.33712
+      },
+      "place": "Kroppa (S)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2698827",
+      "sourceUrl": "https://www.geonames.org/2698827/",
+      "sourceName": "Kullen",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.31667,
+        "lon": 14.86667
+      },
+      "place": "Kullen Grangärde (Dalarna)",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:2711266",
+      "sourceUrl": "https://www.geonames.org/2711266/",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "place": "Kyrkbyn  Grangärde sn. Dalarnas län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Grangärde Kyrkbyn / Kyrkbyn Grangärde avser den namngivna kyrkbyn. Ungefärlig bygdpunkt vid Grangärde; ingen särskild gård lokaliseras."
+    },
+    {
+      "sourceId": "geonames:8127174",
+      "sourceUrl": "https://www.geonames.org/8127174/",
+      "sourceName": "Tibro socken",
+      "featureCode": "ADM4",
+      "countyCode": "28",
+      "municipalityCode": "1472",
+      "coordinates": {
+        "lat": 58.40925,
+        "lon": 14.18263
+      },
+      "place": "Kyrkefalla",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Kyrkefalla är det äldre namnet på den församling/socken som senare heter Tibro. SHM:s ortsdefinition bekräftar namnbytet. Ungefärlig Tibro sockenpunkt.",
+      "evidenceUrls": [
+        "https://samlingar.shm.se/geo/3A310652-3445-4A95-96FB-618DF5370E49"
+      ]
+    },
+    {
+      "sourceId": "geonames:2701243",
+      "sourceUrl": "https://www.geonames.org/2701243/",
+      "sourceName": "Kåtorp",
+      "featureCode": "PPL",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 18.7
+      },
+      "place": "Kåtorp Häverö",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8126097",
+      "sourceUrl": "https://www.geonames.org/8126097/",
+      "sourceName": "Häverö socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 60.07435,
+        "lon": 18.66724
+      },
+      "place": "Kåtorpet Häverö",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "place": "Lindris Häverö",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2694817",
+      "sourceUrl": "https://www.geonames.org/2694817/",
+      "sourceName": "Lindris",
+      "featureCode": "PPL",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 18.68333
+      },
+      "reason": "Named Lindris settlement in Norrtälje matches the explicit Häverö context.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8126545",
+      "sourceUrl": "https://www.geonames.org/8126545/",
+      "sourceName": "Linneryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.62671,
+        "lon": 15.16913
+      },
+      "place": "Linneryd  (Bokås?)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126545",
+      "sourceUrl": "https://www.geonames.org/8126545/",
+      "sourceName": "Linneryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.62671,
+        "lon": 15.16913
+      },
+      "place": "Linneryd (G)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126545",
+      "sourceUrl": "https://www.geonames.org/8126545/",
+      "sourceName": "Linneryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.62671,
+        "lon": 15.16913
+      },
+      "place": "Linneryd Kronoberg Sverige",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126545",
+      "sourceUrl": "https://www.geonames.org/8126545/",
+      "sourceName": "Linneryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.62671,
+        "lon": 15.16913
+      },
+      "place": "Linneyd (Bökås?)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Linneyd är en stavningsvariant för Linneryd på samma personpost som uttryckligen har Svartabäck Linneryd KR. Bökås? lokaliseras inte och frågetecknet behålls. Ungefärlig Linneryd sockenpunkt.",
+      "evidencePersonIds": [
+        "@I262744862525@"
+      ]
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Lisselåsen Ljusnarsberg",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "place": "Ljusnarsberg",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "reason": "Nationally unique Ljusnarsberg socken; representative parish point.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Ljusnarsberg Örebro",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Ljusnarsberg(T)",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Ljusnarsberg/T",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128337",
+      "sourceUrl": "https://www.geonames.org/8128337/",
+      "sourceName": "Ludvika socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.15217,
+        "lon": 15.13959
+      },
+      "place": "Ludvika(W)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Lund Ljusnarsberg",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2697894",
+      "sourceUrl": "https://www.geonames.org/2697894/",
+      "sourceName": "Läggesta",
+      "featureCode": "PPL",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.91667,
+        "lon": 14.88333
+      },
+      "place": "Läggesta Askersund Örebro län",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Markalund Snavlunda (T)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127712",
+      "sourceUrl": "https://www.geonames.org/8127712/",
+      "sourceName": "Mörkö socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0181",
+      "coordinates": {
+        "lat": 58.94411,
+        "lon": 17.67943
+      },
+      "place": "Mörkö",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Mörkö är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Nitten Grangärde (Dalarna)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127337",
+      "sourceUrl": "https://www.geonames.org/8127337/",
+      "sourceName": "Njutånger socken",
+      "featureCode": "ADM4",
+      "countyCode": "03",
+      "municipalityCode": "2184",
+      "coordinates": {
+        "lat": 61.60474,
+        "lon": 17.10025
+      },
+      "place": "Njutånger/X",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2688544",
+      "sourceUrl": "https://www.geonames.org/2688544/",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "place": "Norrbo  Grangärde sn.  Dalarnas län",
+      "uses": 2,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:2688518",
+      "sourceUrl": "https://www.geonames.org/2688518/",
+      "sourceName": "Norrby",
+      "featureCode": "FRM",
+      "countyCode": "25",
+      "municipalityCode": "1907",
+      "coordinates": {
+        "lat": 59.76667,
+        "lon": 16.18333
+      },
+      "place": "Norrby Ramnäs (Västmanland)",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8128038",
+      "sourceUrl": "https://www.geonames.org/8128038/",
+      "sourceName": "Norrbärke socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2061",
+      "coordinates": {
+        "lat": 60.14263,
+        "lon": 15.35459
+      },
+      "place": "Norrbärke(W)",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128038",
+      "sourceUrl": "https://www.geonames.org/8128038/",
+      "sourceName": "Norrbärke socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2061",
+      "coordinates": {
+        "lat": 60.14263,
+        "lon": 15.35459
+      },
+      "place": "Näs gård Norrbärke  Dalarna",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127886",
+      "sourceUrl": "https://www.geonames.org/8127886/",
+      "sourceName": "Osby socken",
+      "featureCode": "ADM4",
+      "countyCode": "27",
+      "municipalityCode": "1273",
+      "coordinates": {
+        "lat": 56.39289,
+        "lon": 14.02881
+      },
+      "place": "Olastorp Osby -  Skåne",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2684144",
+      "sourceUrl": "https://www.geonames.org/2684144/",
+      "sourceName": "Piggsmåla",
+      "featureCode": "PPL",
+      "countyCode": "09",
+      "municipalityCode": "0862",
+      "coordinates": {
+        "lat": 56.5,
+        "lon": 15.41667
+      },
+      "place": "Piggsmåla Långasjö Kalmar",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Pärlby Grangärde (Dalarna)",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126887",
+      "sourceUrl": "https://www.geonames.org/8126887/",
+      "sourceName": "Ramnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1907",
+      "coordinates": {
+        "lat": 59.8075,
+        "lon": 16.11292
+      },
+      "place": "Ramnäs",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Ramnäs är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8126230",
+      "sourceUrl": "https://www.geonames.org/8126230/",
+      "sourceName": "Långasjö socken",
+      "featureCode": "ADM4",
+      "countyCode": "09",
+      "municipalityCode": "0862",
+      "coordinates": {
+        "lat": 56.56805,
+        "lon": 15.42974
+      },
+      "place": "Ramsjö Norregård Långasjö Kalmar",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2679616",
+      "sourceUrl": "https://www.geonames.org/2679616/",
+      "sourceName": "Saxhyttan",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.3,
+        "lon": 15.0
+      },
+      "place": "Saxhyttan Grangärde (Dalarna)",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8126285",
+      "sourceUrl": "https://www.geonames.org/8126285/",
+      "sourceName": "Singö socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 60.20415,
+        "lon": 18.81092
+      },
+      "place": "Singö (AB)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126887",
+      "sourceUrl": "https://www.geonames.org/8126887/",
+      "sourceName": "Ramnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1907",
+      "coordinates": {
+        "lat": 59.8075,
+        "lon": 16.11292
+      },
+      "place": "Sjönässtugan Ramnäs (Västmanland)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2678206",
+      "sourceUrl": "https://www.geonames.org/2678206/",
+      "sourceName": "Skaraborgs Län",
+      "featureCode": "ADM1H",
+      "countyCode": "28",
+      "municipalityCode": "",
+      "coordinates": {
+        "lat": 58.33333,
+        "lon": 13.5
+      },
+      "place": "Skaraborgs län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Strängen anger uttryckligen det historiska Skaraborgs län. GeoNames ADM1H-punkt används och märks ungefärlig region."
+    },
+    {
+      "sourceId": "geonames:8127299",
+      "sourceUrl": "https://www.geonames.org/8127299/",
+      "sourceName": "Skinnskatteberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.84461,
+        "lon": 15.61466
+      },
+      "place": "Skinnskatteberg (U)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126545",
+      "sourceUrl": "https://www.geonames.org/8126545/",
+      "sourceName": "Linneryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.62671,
+        "lon": 15.16913
+      },
+      "place": "Skogsryd Linneryd Kronoberg Sverige",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "place": "Snavlunda",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "reason": "Snavlunda socken; representative parish point avoids choosing between its namesake farm and settlement.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Snavlunda  Döberg",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Snavlunda (T) Torpa Södra",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Snavlunda Döberg",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Snavlunda förs. Örebro län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Snavlunda förs. Örebro län (Fattighuset)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126596",
+      "sourceUrl": "https://www.geonames.org/8126596/",
+      "sourceName": "Traryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.54822,
+        "lon": 13.73498
+      },
+      "place": "Snöresjö Traryd (G)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128498",
+      "sourceUrl": "https://www.geonames.org/8128498/",
+      "sourceName": "Gunnilbo socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.77154,
+        "lon": 15.88693
+      },
+      "place": "Solmyra ägor Gunnilbo Västmanland",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126596",
+      "sourceUrl": "https://www.geonames.org/8126596/",
+      "sourceName": "Traryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.54822,
+        "lon": 13.73498
+      },
+      "place": "Sonamad Traryd",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Spåsa Snavlunda Örebro län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2674618",
+      "sourceUrl": "https://www.geonames.org/2674618/",
+      "sourceName": "Stakheden",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.28333,
+        "lon": 14.96667
+      },
+      "place": "Stakheden Grangärde (Dalarna)",
+      "uses": 2,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:2673730",
+      "sourceUrl": "https://www.geonames.org/2673730/",
+      "sourceName": "Stockholm",
+      "featureCode": "PPLC",
+      "countyCode": "26",
+      "municipalityCode": "0180",
+      "coordinates": {
+        "lat": 59.32938,
+        "lon": 18.06871
+      },
+      "place": "Stockholm",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Stockholm är identifierat som stad (GeoNames PPLC); ingen särskild adress anges."
+    },
+    {
+      "sourceId": "geonames:2681825",
+      "sourceUrl": "https://www.geonames.org/2681825/",
+      "sourceName": "Ronneby",
+      "featureCode": "PPLA2",
+      "countyCode": "02",
+      "municipalityCode": "1081",
+      "coordinates": {
+        "lat": 56.20999,
+        "lon": 15.27602
+      },
+      "place": "Stockmakare vid gevärsfaktoriet i Ronneby",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Platsfältet är egentligen en yrkesbeskrivning men nämner uttryckligen Ronneby. En ungefärlig stadspunkt används; gevärsfaktoriets byggnad är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2672363",
+      "sourceUrl": "https://www.geonames.org/2672363/",
+      "sourceName": "Stora Tomsjön",
+      "featureCode": "PPL",
+      "countyCode": "15",
+      "municipalityCode": "1863",
+      "coordinates": {
+        "lat": 60.0,
+        "lon": 14.48333
+      },
+      "place": "Stora Tomsjön",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "GeoNames har bebyggelsen Stora Tomsjön inom Hällefors. Samma personpost anger Stora Tomsjön, Hällefors som födelseort. Ungefärlig bygdpunkt väljs, inte den närliggande sjön.",
+      "evidencePersonIds": [
+        "@I262744723016@"
+      ]
+    },
+    {
+      "sourceId": "geonames:8127402",
+      "sourceUrl": "https://www.geonames.org/8127402/",
+      "sourceName": "Ström socken",
+      "featureCode": "ADM4",
+      "countyCode": "07",
+      "municipalityCode": "2313",
+      "coordinates": {
+        "lat": 64.0533,
+        "lon": 15.33729
+      },
+      "place": "Ström",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Det tvetydiga Ström används på en personpost som uttryckligen föds i Grelsgård Ström Jämtland. Ingen annan Ström används av denna nyckel. Ungefärlig Ström sockenpunkt, inte en gissad ort i annan region.",
+      "evidencePersonIds": [
+        "@I262744864033@"
+      ]
+    },
+    {
+      "sourceId": "geonames:602518",
+      "sourceUrl": "https://www.geonames.org/602518/",
+      "sourceName": "Sundom",
+      "featureCode": "PPL",
+      "countyCode": "14",
+      "municipalityCode": "2580",
+      "coordinates": {
+        "lat": 65.77152,
+        "lon": 22.26688
+      },
+      "place": "Sundom",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Samma personpost anger Sundom 7, Nederluleå (BD) som dödsort. GeoNames har Sundom by i Luleå kommun, Norrbotten. Ungefärlig bygdpunkt, med denna direkta svenska kontext; inga finländska Sundom antas.",
+      "evidencePersonIds": [
+        "@I262744722879@"
+      ]
+    },
+    {
+      "sourceId": "geonames:8127294",
+      "sourceUrl": "https://www.geonames.org/8127294/",
+      "sourceName": "Hed socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.7147,
+        "lon": 15.72382
+      },
+      "place": "Sundsbrotorp Hed Västmanland",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126545",
+      "sourceUrl": "https://www.geonames.org/8126545/",
+      "sourceName": "Linneryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.62671,
+        "lon": 15.16913
+      },
+      "place": "Svartabäck   Linneryd  KR.",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "place": "Sånnamad Traryd (G)",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2679998",
+      "sourceUrl": "https://www.geonames.org/2679998/",
+      "sourceName": "Sånnamad",
+      "featureCode": "PPL",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.51667,
+        "lon": 13.76667
+      },
+      "reason": "Named Sånnamad settlement in Markaryd, Kronoberg agrees with explicit Traryd and G county letter.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:2676176",
+      "sourceUrl": "https://www.geonames.org/2676176/",
+      "sourceName": "Södertälje",
+      "featureCode": "PPLA2",
+      "countyCode": "26",
+      "municipalityCode": "0181",
+      "coordinates": {
+        "lat": 59.19554,
+        "lon": 17.62525
+      },
+      "place": "Södertälje (AB)",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Södertälje preciseras med länsbokstaven AB. GeoNames stadspunkt används; ingen särskild adress anges."
+    },
+    {
+      "sourceId": "geonames:8127294",
+      "sourceUrl": "https://www.geonames.org/8127294/",
+      "sourceName": "Hed socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.7147,
+        "lon": 15.72382
+      },
+      "place": "Sör Thulinge nr 18 Hed",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126887",
+      "sourceUrl": "https://www.geonames.org/8126887/",
+      "sourceName": "Ramnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1907",
+      "coordinates": {
+        "lat": 59.8075,
+        "lon": 16.11292
+      },
+      "place": "Sörby Ramnäs (Västmanland)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Tallmogården Grangärde",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "place": "Tallmogården Grangärde (Dalarna)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126595",
+      "sourceUrl": "https://www.geonames.org/8126595/",
+      "sourceName": "Tingsås socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.47471,
+        "lon": 14.95482
+      },
+      "place": "Tingsås (G)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127860",
+      "sourceUrl": "https://www.geonames.org/8127860/",
+      "sourceName": "Torsåker socken",
+      "featureCode": "ADM4",
+      "countyCode": "24",
+      "municipalityCode": "2282",
+      "coordinates": {
+        "lat": 63.07726,
+        "lon": 17.71426
+      },
+      "place": "Torsåker (Y) Kramfors Kramfors Västernorrland Sverige",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Torsåker preciseras med Y, Kramfors och Västernorrland. Detta skiljer den från Torsåker i Gävleborg/Södermanland. Ungefärlig sockenpunkt."
+    },
+    {
+      "place": "Traryd",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2667516",
+      "sourceUrl": "https://www.geonames.org/2667516/",
+      "sourceName": "Traryd",
+      "featureCode": "PPL",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.57864,
+        "lon": 13.74916
+      },
+      "reason": "Unique named Traryd settlement in the Swedish extract; not a street or farm address.",
+      "reusedFrom": "slakten-final-high-frequency-provenance.json"
+    },
+    {
+      "sourceId": "geonames:8126596",
+      "sourceUrl": "https://www.geonames.org/8126596/",
+      "sourceName": "Traryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.54822,
+        "lon": 13.73498
+      },
+      "place": "Traryd (G)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:602220",
+      "sourceUrl": "https://www.geonames.org/602220/",
+      "sourceName": "Trundavan",
+      "featureCode": "PPL",
+      "countyCode": "14",
+      "municipalityCode": "2581",
+      "coordinates": {
+        "lat": 65.4,
+        "lon": 21.75
+      },
+      "place": "Trundavan 2 Stenbacken Piteå Lf. Norrbottens Län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Trundavan är identifierad som by i Piteå i Norrbotten. En ungefärlig bypunkt används; nr2/Stenbacken är inte verifierad som en särskild bostad."
+    },
+    {
+      "sourceId": "geonames:8126412",
+      "sourceUrl": "https://www.geonames.org/8126412/",
+      "sourceName": "Tystberga socken",
+      "featureCode": "ADM4",
+      "countyCode": "18",
+      "municipalityCode": "0480",
+      "coordinates": {
+        "lat": 58.75845,
+        "lon": 17.28154
+      },
+      "place": "Tystberga",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Tystberga är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8126583",
+      "sourceUrl": "https://www.geonames.org/8126583/",
+      "sourceName": "Hovmantorp socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0761",
+      "coordinates": {
+        "lat": 56.77098,
+        "lon": 15.19701
+      },
+      "place": "Tången Hovmantorp Kronoberg Sverige",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2666067",
+      "sourceUrl": "https://www.geonames.org/2666067/",
+      "sourceName": "Utterbäck",
+      "featureCode": "PPL",
+      "countyCode": "15",
+      "municipalityCode": "1883",
+      "coordinates": {
+        "lat": 59.35,
+        "lon": 14.61667
+      },
+      "place": "Utterbäck Karskoga (T-län)",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Utterbäck är identifierad som ort i Karlskoga kommun, Örebro län. Karskoga i strängen är en tydlig stavningsvariant med samma T-län. Ortpunkt, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Västra Perstorp Snavlunda Örebro län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8128010",
+      "sourceUrl": "https://www.geonames.org/8128010/",
+      "sourceName": "Vimmerby socken",
+      "featureCode": "ADM4",
+      "countyCode": "09",
+      "municipalityCode": "0884",
+      "coordinates": {
+        "lat": 57.62266,
+        "lon": 15.86231
+      },
+      "place": "Vimmerby (H) Kalmar",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126600",
+      "sourceUrl": "https://www.geonames.org/8126600/",
+      "sourceName": "Väckelsång socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.6185,
+        "lon": 14.94383
+      },
+      "place": "Väckelsång",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Väckelsång är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8128215",
+      "sourceUrl": "https://www.geonames.org/8128215/",
+      "sourceName": "Väddö socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 59.99351,
+        "lon": 18.84427
+      },
+      "place": "Väddö (AB)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126322",
+      "sourceUrl": "https://www.geonames.org/8126322/",
+      "sourceName": "Västerhaninge socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0136",
+      "coordinates": {
+        "lat": 59.09026,
+        "lon": 18.0461
+      },
+      "place": "Västerhaninge",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Västerhaninge är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8127258",
+      "sourceUrl": "https://www.geonames.org/8127258/",
+      "sourceName": "Finnerödja socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1860",
+      "coordinates": {
+        "lat": 58.90896,
+        "lon": 14.44139
+      },
+      "place": "Västra Högelid Finnerödja (T)",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Västra Nybygge Ljusnarsberg",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126380",
+      "sourceUrl": "https://www.geonames.org/8126380/",
+      "sourceName": "Vårfrukyrka socken",
+      "featureCode": "ADM4",
+      "countyCode": "21",
+      "municipalityCode": "0381",
+      "coordinates": {
+        "lat": 59.66419,
+        "lon": 17.07003
+      },
+      "place": "Vårfrukyrka (C)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126887",
+      "sourceUrl": "https://www.geonames.org/8126887/",
+      "sourceName": "Ramnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1907",
+      "coordinates": {
+        "lat": 59.8075,
+        "lon": 16.11292
+      },
+      "place": "källdal norrby ramnäs",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126607",
+      "sourceUrl": "https://www.geonames.org/8126607/",
+      "sourceName": "Älmeboda socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.5468,
+        "lon": 15.28328
+      },
+      "place": "Älmeboda",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Älmeboda är ett entydigt svenskt sockennamn. Ungefärlig sockenpunkt."
+    },
+    {
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "place": "Älvhöjden",
+      "uses": 2,
+      "precision": "approximate",
+      "reason": "Älvhöjden är inte vald som en godtycklig höjd. Båda personposter som använder nyckeln ligger i Ljusnarsbergsbygden: en har även Östra Älvhöjden som dödsort, den andra Fläckmossen som födelseort (officiell Länsstyrelsekarta). Ungefärlig Ljusnarsbergs sockenpunkt eftersom östra/västra gård inte säkert avgörs.",
+      "evidencePersonIds": [
+        "@I262745192933@",
+        "@I262745192963@"
+      ],
+      "evidenceUrls": [
+        "https://www.lansstyrelsen.se/download/18.840e7ca163033c061f187ff/1526069106217/SE0240166_Djupdalshojden.pdf"
+      ]
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Äspelund Snavlunda (T)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Äspelund Snavlunda förs. Örebro län",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126652",
+      "sourceUrl": "https://www.geonames.org/8126652/",
+      "sourceName": "Ålem socken",
+      "featureCode": "ADM4",
+      "countyCode": "09",
+      "municipalityCode": "0861",
+      "coordinates": {
+        "lat": 56.95087,
+        "lon": 16.40835
+      },
+      "place": "Ålem (H)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8126652",
+      "sourceUrl": "https://www.geonames.org/8126652/",
+      "sourceName": "Ålem socken",
+      "featureCode": "ADM4",
+      "countyCode": "09",
+      "municipalityCode": "0861",
+      "coordinates": {
+        "lat": 56.95087,
+        "lon": 16.40835
+      },
+      "place": "Ålems sn.",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "place": "Örberget Södra Torpa Snavlunda (T)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2686657",
+      "sourceUrl": "https://www.geonames.org/2686657/",
+      "sourceName": "Örebro",
+      "featureCode": "PPLA",
+      "countyCode": "15",
+      "municipalityCode": "1880",
+      "coordinates": {
+        "lat": 59.27412,
+        "lon": 15.2066
+      },
+      "place": "Örebro",
+      "uses": 5,
+      "precision": "exact",
+      "reason": "Örebro är identifierat som stad (GeoNames PPLA); ingen särskild adress anges."
+    },
+    {
+      "sourceId": "geonames:2686089",
+      "sourceUrl": "https://www.geonames.org/2686089/",
+      "sourceName": "Östanbjörka",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.26667,
+        "lon": 15.01667
+      },
+      "place": "Östanbjörka Grangärde (Dalarna)",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Den namngivna orten matchar en GeoNames-bebyggelsepunkt i den uttryckligen angivna bygden/länet. Punkten identifierar orten, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:8127257",
+      "sourceUrl": "https://www.geonames.org/8127257/",
+      "sourceName": "Askersund socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.84934,
+        "lon": 14.79798
+      },
+      "place": "Österbytorp Askersund (T)",
+      "uses": 1,
+      "precision": "approximate",
+      "reason": "Den uttryckligen angivna socknen är identifierad i GeoNames. Punkten representerar socknen/bygden; en eventuell gård eller adress är inte lokaliserad."
+    },
+    {
+      "sourceId": "geonames:2685661",
+      "sourceUrl": "https://www.geonames.org/2685661/",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 60.0,
+        "lon": 14.78333
+      },
+      "place": "Östra Elfhöjden Ljusnarsberg Örebrolän",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Östra Elfhöjden är en registrerad GeoNames-namnvariant för Östra Älvhöjden (FRM), i Ljusnarsberg. Den uttryckliga bygden/länet stämmer."
+    },
+    {
+      "sourceId": "geonames:2685661",
+      "sourceUrl": "https://www.geonames.org/2685661/",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 60.0,
+        "lon": 14.78333
+      },
+      "place": "Östra Älvhöjden",
+      "uses": 2,
+      "precision": "exact",
+      "reason": "Östra Älvhöjden är identifierad som gård/ort i GeoNames. En av de två användningarna har på samma personpost och dödsdatum även fullständiga strängen Östra Älvhöjden, Ljusnarsberg, Örebro. Även den andra användningen finns i samma Ljusnarsbergsbygd.",
+      "evidencePersonIds": [
+        "@I262744723321@",
+        "@I262745192933@"
+      ]
+    },
+    {
+      "sourceId": "geonames:2685018",
+      "sourceUrl": "https://www.geonames.org/2685018/",
+      "sourceName": "Överhallen",
+      "featureCode": "PPL",
+      "countyCode": "07",
+      "municipalityCode": "2321",
+      "coordinates": {
+        "lat": 63.18333,
+        "lon": 14.01667
+      },
+      "place": "Överhallen",
+      "uses": 2,
+      "precision": "exact",
+      "reason": "Överhallen är ett entydigt svenskt bebyggelsenamn i GeoNames. Den andra strängen preciserar uttryckligen Hallen/Jämtland. Ortpunkt, inte en verifierad byggnad."
+    },
+    {
+      "sourceId": "geonames:2685018",
+      "sourceUrl": "https://www.geonames.org/2685018/",
+      "sourceName": "Överhallen",
+      "featureCode": "PPL",
+      "countyCode": "07",
+      "municipalityCode": "2321",
+      "coordinates": {
+        "lat": 63.18333,
+        "lon": 14.01667
+      },
+      "place": "Överhallen Hallen Jämtland",
+      "uses": 1,
+      "precision": "exact",
+      "reason": "Överhallen är ett entydigt svenskt bebyggelsenamn i GeoNames. Den andra strängen preciserar uttryckligen Hallen/Jämtland. Ortpunkt, inte en verifierad byggnad."
+    }
+  ],
+  "rejected": [
+    {
+      "place": "Bejby",
+      "uses": 1,
+      "reason": "Bejby saknar säker ortbeläggning. Samma posts Häverö/Edebo anger endast en vid trakt och räcker inte för att välja en specifik plats eller socken."
+    },
+    {
+      "place": "Dsgl",
+      "uses": 6,
+      "reason": "Dsgl är en hänvisningsförkortning (detsamma), inte en ort. Det finns ingen säker bakåtreferens till ett annat platsfält i GEDCOM."
+    },
+    {
+      "place": "Holmsjön",
+      "uses": 2,
+      "reason": "Holmsjön är ett mycket vanligt sjönamn med flera möjliga svenska platser. Ingen region anges."
+    },
+    {
+      "place": "Kullen",
+      "uses": 1,
+      "reason": "Kullen är ett mycket vanligt ort-/gårdsnamn. Nyckeln saknar region och samma post ger inte en säker socken. Den separata nyckeln Kullen Grangärde mappas endast för sin uttryckliga kontext."
+    },
+    {
+      "place": "Mjäryd",
+      "uses": 1,
+      "reason": "Mjäryd finns både i Berga/Ljungby och Traryd/Markaryd i Kronoberg. Bare-strängen saknar tillräcklig kontext; andra Mjäryd-nycklar med Traryd får inte styra denna."
+    },
+    {
+      "place": "Nora",
+      "uses": 4,
+      "reason": "Nora är tvetydigt mellan bland annat Örebro, Västmanland och Ångermanland. Tre av fyra användningar stödjer Örebro men en äldre användning saknar en säker precisering. En global nyckel kan därför inte väljas utan felrisk."
+    },
+    {
+      "place": "Norrbo",
+      "uses": 1,
+      "reason": "Norrbo finns på flera orter och som socken. Bare-strängen och samma personposts Kullen saknar regional precisering."
+    },
+    {
+      "place": "Nöbbeled Prästgård",
+      "uses": 1,
+      "reason": "Nöbbeled/Nöbbele finns på flera platser, även i andra socknar. Prästgård räcker inte för att säkert välja Nöbbele socken i Kronoberg. ISOF har också Nöbbeled i Näsby socken, Jönköpings län.",
+      "evidenceUrls": [
+        "https://www4.isof.se/NAU/bilder/_s1fx001/215208a1.htm"
+      ]
+    },
+    {
+      "place": "Okänd Dödsort",
+      "uses": 1,
+      "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats."
+    },
+    {
+      "place": "Okänt",
+      "uses": 1,
+      "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats."
+    },
+    {
+      "place": "Rofgölet",
+      "uses": 1,
+      "reason": "Sörmlands museums katalog belägger ett Rofgölet soldattorp i Björkvik, men GEDCOM-postens övriga orter är Stora Malm och händelsen saknar datum. Samma torp kan inte fastställas säkert för denna historiska bostadsuppgift; ingen socken väljs.",
+      "evidenceUrls": [
+        "https://cust.kulturhotell.se/c24/individuals/show/14552?edit_individual_id=5568&query=&sort_dir=a&sort_field=levnad&type%5B0%5D=2"
+      ]
+    },
+    {
+      "place": "Ryd Norregård",
+      "uses": 1,
+      "reason": "Ryd Norregård saknar socken och har flera möjliga Ryd. Födelsetextens Östra Torsås på samma person bevisar inte dödsorten; länspunkt får inte ersätta en okänd gård."
+    },
+    {
+      "place": "Sverige (Sweden)",
+      "uses": 1,
+      "reason": "Endast landet Sverige anges. Ingen lokal socken/bygd kan representeras försvarbart med en svensk mittpunkt."
+    },
+    {
+      "place": "Tommelsbo",
+      "uses": 1,
+      "reason": "Tommelsbo saknar säker ortbeläggning och socken. En annan händelse i Hed på samma person är inte belägg för att denna ort låg där."
+    },
+    {
+      "place": "Torberbo Dalarna Sverige",
+      "uses": 1,
+      "reason": "Torberbo Dalarna är ett historiskt namn som behöver säkrare ortidentifiering. Ett lexikon nämner Torberbo i ett stycke som fortsätter från föregående sida, medan sekundära uppgifter även säger Söderbärke. Ingen Dalarna-länspunkt ersätter den oidentifierade gården.",
+      "evidenceUrls": [
+        "https://runeberg.org/hgsl/5/0224.html"
+      ]
+    },
+    {
+      "place": "Torsåker?",
+      "uses": 1,
+      "reason": "Torsåker? har flera möjliga svenska socknar i olika län och inget län anges. Frågetecknet gör inte en av dem mer försvarbar."
+    },
+    {
+      "place": "Täby",
+      "uses": 1,
+      "reason": "Täby finns både i Stockholm/Uppland och Örebro/Närke. Bare-strängen saknar socken/län; senare bostad i Stockholm bevisar inte födelseorten."
+    },
+    {
+      "place": "Unknown",
+      "uses": 1,
+      "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats."
+    },
+    {
+      "place": "sweeden",
+      "uses": 1,
+      "reason": "Endast landet Sverige anges. Ingen lokal socken/bygd kan representeras försvarbart med en svensk mittpunkt."
+    },
+    {
+      "place": "und Ort nicht angegeben.",
+      "uses": 1,
+      "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats."
+    }
+  ],
+  "delegated": [
+    {
+      "place": "Alt Schwedendorf",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Balaclava South Australia",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Danzig",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Eidland i Gjesdal  - jfr g og Æ s 59 nr 14",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Holstein",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Härmä",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Koidma kula",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Kotst by",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Litlehamar Suldal",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "New York",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Plön",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    },
+    {
+      "place": "Räisälä",
+      "uses": 1,
+      "reason": "Utländsk ort. Överlämnad till det separata utlandsunderlaget från merge_design; ingen svensk punkt väljs."
+    }
+  ]
+}

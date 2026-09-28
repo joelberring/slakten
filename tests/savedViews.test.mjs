@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { beforeEach, test } from 'node:test';
-import { deleteSavedView, readSavedViews, renameSavedView, saveView } from '../src/utils/savedViews.ts';
+import { deleteSavedView, migrateDefaultSavedViews, readSavedViews, renameSavedView, saveView } from '../src/utils/savedViews.ts';
 
 const entries = new Map();
 globalThis.window = {
@@ -59,4 +59,48 @@ test('storage limit does not silently discard an older view', () => {
     viewMode: 'map', personId: null, branchMode: 'all',
   }, null), null);
   assert.equal(readSavedViews('gedcom-a').length, 30);
+});
+
+test('old bundled-GEDCOM views migrate once with retired person and family IDs remapped', () => {
+  const old = saveView('q72f-1rs9leb', 'Britas anor', {
+    viewMode: 'rings', personId: '@I262744865581@', branchMode: 'ancestors',
+    ring: {
+      ...ring,
+      rootPersonId: '@I262744889570@',
+      parentFamilyChoices: {
+        '@I262744865581@': '@F732@',
+        '@I262744889570@': '@F1342@',
+        I1: '@F1003@',
+      },
+    },
+  }, 'Brita Spielsbodotter');
+  const existing = saveView('pk0t-rnev9k', 'Ny vy', {
+    viewMode: 'tree', personId: null, branchMode: 'all',
+  }, null);
+  const uploaded = saveView('uploaded-file-fingerprint', 'Uppladdad fil', {
+    viewMode: 'map', personId: 'I1', branchMode: 'all',
+  }, 'Egen fil');
+  assert.ok(old && existing && uploaded);
+
+  assert.equal(migrateDefaultSavedViews('uploaded-file-fingerprint'), false);
+  assert.equal(migrateDefaultSavedViews('pk0t-rnev9k'), true);
+  const migrated = readSavedViews('pk0t-rnev9k').find(view => view.id === old.id);
+  assert.ok(migrated);
+  assert.equal(migrated.datasetKey, 'pk0t-rnev9k');
+  assert.equal(migrated.personId, '@I262744864953@');
+  assert.equal(migrated.ring.rootPersonId, '@I262744714665@');
+  assert.deepEqual(migrated.ring.parentFamilyChoices, {
+    '@I262744864953@': '@F423@',
+    '@I262744714665@': '@F1276@',
+    I1: '@F1033@',
+  });
+  assert.equal(migrated.savedAt, old.savedAt);
+  assert.equal(readSavedViews('pk0t-rnev9k').length, 2);
+  assert.equal(readSavedViews('uploaded-file-fingerprint')[0].id, uploaded.id);
+
+  // The migration marker prevents a deleted bookmark from reappearing.
+  assert.equal(deleteSavedView('pk0t-rnev9k', old.id), true);
+  assert.equal(migrateDefaultSavedViews('pk0t-rnev9k'), true);
+  assert.deepEqual(readSavedViews('pk0t-rnev9k').map(view => view.id), [existing.id]);
+  assert.equal(readSavedViews('q72f-1rs9leb')[0].id, old.id);
 });

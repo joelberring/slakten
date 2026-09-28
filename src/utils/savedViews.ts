@@ -1,4 +1,5 @@
 import type { RingColorMode } from './ringColor';
+import familyNormalization from '../../docs/duplicate-family-normalization.json' with { type: 'json' };
 
 export type FamilyViewMode = 'tree' | 'map' | 'stats' | 'rings' | 'review';
 export type FamilyBranchMode = 'all' | 'ancestors' | 'descendants';
@@ -36,6 +37,14 @@ const VIEW_MODES = new Set<FamilyViewMode>(['tree', 'map', 'stats', 'rings', 're
 const BRANCH_MODES = new Set<FamilyBranchMode>(['all', 'ancestors', 'descendants']);
 const COLOR_MODES = new Set<RingColorMode>(['century', 'birthRegion', 'residence', 'lifespan', 'overlap']);
 const DETAIL_OPTIONS: RingDetailOption[] = ['dates', 'residence', 'children', 'partners', 'places'];
+const OLD_DEFAULT_DATASET_KEY = 'q72f-1rs9leb';
+const NEW_DEFAULT_DATASET_KEY = 'pk0t-rnev9k';
+const DEFAULT_MIGRATION_MARKER = `slakten_saved_views_migrated_v1:${OLD_DEFAULT_DATASET_KEY}:${NEW_DEFAULT_DATASET_KEY}`;
+const RETIRED_PERSON_IDS = new Map([
+  ['@I262744865581@', '@I262744864953@'],
+  ['@I262744889570@', '@I262744714665@'],
+]);
+const RETIRED_FAMILY_IDS = new Map(familyNormalization.mapping.map(({ removedId, keptId }) => [removedId, keptId]));
 
 function object(value: unknown): Record<string, unknown> | null {
   return value !== null && typeof value === 'object' && !Array.isArray(value)
@@ -150,6 +159,51 @@ function writeAll(datasetKey: string, items: SavedViewSnapshot[]): boolean {
 export function readSavedViews(datasetKey: string): SavedViewSnapshot[] {
   return readAll(datasetKey)
     .sort((a, b) => b.savedAt.localeCompare(a.savedAt));
+}
+
+function remapDefaultSnapshot(snapshot: SavedViewSnapshot): SavedViewSnapshot {
+  const remapPerson = (id: string) => RETIRED_PERSON_IDS.get(id) ?? id;
+  const originalChoices = Object.entries(snapshot.ring?.parentFamilyChoices ?? {});
+  // If old and retained person IDs both had a choice, keep the retained one's
+  // choice. In this GEDCOM the removed FAM IDs point to identical records.
+  originalChoices.sort(([left], [right]) =>
+    Number(RETIRED_PERSON_IDS.has(left)) - Number(RETIRED_PERSON_IDS.has(right)));
+  const choices: Record<string, string> = {};
+  for (const [personId, familyId] of originalChoices) {
+    const currentPersonId = remapPerson(personId);
+    choices[currentPersonId] ??= RETIRED_FAMILY_IDS.get(familyId) ?? familyId;
+  }
+  return {
+    ...snapshot,
+    datasetKey: NEW_DEFAULT_DATASET_KEY,
+    personId: snapshot.personId === null ? null : remapPerson(snapshot.personId),
+    ...(snapshot.ring ? { ring: {
+      ...snapshot.ring,
+      ...(snapshot.ring.rootPersonId === undefined ? {} : {
+        rootPersonId: snapshot.ring.rootPersonId === null ? null : remapPerson(snapshot.ring.rootPersonId),
+      }),
+      parentFamilyChoices: choices,
+    } } : {}),
+  };
+}
+
+/** Run only after loading the bundled GEDCOM; uploaded files keep their own views. */
+export function migrateDefaultSavedViews(datasetKey: string): boolean {
+  if (datasetKey !== NEW_DEFAULT_DATASET_KEY) return false;
+  try {
+    if (window.localStorage.getItem(DEFAULT_MIGRATION_MARKER) === 'done') return true;
+    const oldViews = readAll(OLD_DEFAULT_DATASET_KEY);
+    if (oldViews.length === 0) return false;
+    const currentViews = readAll(NEW_DEFAULT_DATASET_KEY);
+    const knownIds = new Set(currentViews.map(view => view.id));
+    const missing = oldViews.filter(view => !knownIds.has(view.id)).map(remapDefaultSnapshot);
+    if (currentViews.length + missing.length > MAX_SAVED_VIEWS) return false;
+    if (missing.length > 0 && !writeAll(NEW_DEFAULT_DATASET_KEY, [...currentViews, ...missing])) return false;
+    window.localStorage.setItem(DEFAULT_MIGRATION_MARKER, 'done');
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export function saveView(

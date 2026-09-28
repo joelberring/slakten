@@ -6,6 +6,8 @@ export interface Coordinates {
 export interface LocationResolution {
     cache: Map<string, Coordinates | null>;
     sources: Map<string, LocationSource>;
+    /** Only places explicitly known to use a broad or uncertain point appear here. */
+    precision: Map<string, LocationPrecision>;
     total: number;
     resolved: number;
     unresolved: number;
@@ -14,17 +16,26 @@ export interface LocationResolution {
 }
 
 export type LocationSource = 'shared' | 'legacy' | 'manual' | 'missing' | 'rejected';
+export type LocationPrecision = 'approximate';
 export type LocationReviewStatus = 'verified' | 'uncertain' | 'incorrect' | 'corrected';
 
 const LEGACY_CACHE_KEY = 'slakten_geocode_cache';
 const MANUAL_OVERRIDES_KEY = 'slakten_location_overrides';
 const REVIEW_STATUS_KEY = 'slakten_location_review_status';
 
-// These two old automatic matches used the Sweden country point for named
-// localities. Keep the exact wrong pair out of legacy browser caches too.
+// Previously published automatic matches rejected during shared-data review.
+// Block only those exact old pairs; deliberate local corrections still win.
 const knownWrongLegacyPoints = new Map<string, Coordinates>([
     ['Göteborg och Bohus, Sverige', { lat: 59.6749712, lon: 14.5208584 }],
     ['Linneryd (Smalland), Sweden', { lat: 59.6749712, lon: 14.5208584 }],
+    ['Säfsnäs, Gällinge', { lat: 57.3955398, lon: 12.2488171 }],
+    ['Linneryd, Östergård, Kronobergs län, Sverige', { lat: 56.9472915, lon: 13.7481987 }],
+    ['Kristinehamn, Örebro, Sverige', { lat: 59.2747287, lon: 15.2151181 }],
+    ['Skogsryd backagård Linneryd, Kronoberg, Sverige', { lat: 56.8007878, lon: 14.410897 }],
+    ['Linneryds by, Kronobergs län, Sverige', { lat: 56.8007878, lon: 14.410897 }],
+    ['Jönköpings Sofia (F)', { lat: 57.2986503, lon: 13.5391543 }],
+    ['Nora stadsförsamling, Örebro, Sverige', { lat: 59.2747287, lon: 15.2151181 }],
+    ['Säfnäs, Kopparberg, Sweden', { lat: 59.8745061, lon: 14.9903848 }],
 ]);
 
 function isKnownWrongLegacyPoint(place: string, coordinates: Coordinates): boolean {
@@ -115,6 +126,7 @@ const legacyCache = readSavedCoordinates(LEGACY_CACHE_KEY);
 const manualOverrides = readSavedCoordinates(MANUAL_OVERRIDES_KEY);
 const reviewStatus = readReviewStatus();
 let sharedCatalog = new Map<string, Coordinates | null>();
+let approximateSharedPlaces = new Set<string>();
 
 /** Replace the read-only shared catalog from locations.json. Invalid rows are skipped. */
 export function hydrateGeocoderCache(entries: unknown): void {
@@ -134,6 +146,19 @@ export function hydrateGeocoderCache(entries: unknown): void {
     sharedCatalog = nextCatalog;
 }
 
+/** Optional companion rows are [exact GEDCOM place, 'approximate']; invalid rows are ignored. */
+export function hydrateLocationPrecision(entries: unknown): void {
+    const next = new Set<string>();
+    if (Array.isArray(entries)) {
+        for (const entry of entries) {
+            if (!Array.isArray(entry) || entry.length !== 2) continue;
+            const [place, precision] = entry as [unknown, unknown];
+            if (typeof place === 'string' && place.trim() && precision === 'approximate') next.add(place);
+        }
+    }
+    approximateSharedPlaces = next;
+}
+
 /** Look up places without network requests. Manual edits override shared data. */
 export function resolvePlaces(
     places: readonly string[],
@@ -141,6 +166,7 @@ export function resolvePlaces(
 ): LocationResolution {
     const cache = new Map<string, Coordinates | null>();
     const sources = new Map<string, LocationSource>();
+    const precision = new Map<string, LocationPrecision>();
     let resolved = 0;
     let sharedResolved = 0;
     let localResolved = 0;
@@ -158,6 +184,10 @@ export function resolvePlaces(
             : manual ? 'manual' : shared ? 'shared' : legacy ? 'legacy' : 'missing';
         cache.set(place, coordinates ? copyCoordinates(coordinates) : null);
         sources.set(place, source);
+        if (coordinates && (reviewStatus.get(place) === 'uncertain'
+            || (source === 'shared' && approximateSharedPlaces.has(place)))) {
+            precision.set(place, 'approximate');
+        }
         if (coordinates) {
             resolved += 1;
             if (manual || !shared) localResolved += 1;
@@ -165,8 +195,8 @@ export function resolvePlaces(
         }
     }
 
-    const summary = { cache, sources, total: cache.size, resolved, unresolved: cache.size - resolved, sharedResolved, localResolved };
-    onProgress?.({ ...summary, cache: new Map(cache), sources: new Map(sources) });
+    const summary = { cache, sources, precision, total: cache.size, resolved, unresolved: cache.size - resolved, sharedResolved, localResolved };
+    onProgress?.({ ...summary, cache: new Map(cache), sources: new Map(sources), precision: new Map(precision) });
     return summary;
 }
 

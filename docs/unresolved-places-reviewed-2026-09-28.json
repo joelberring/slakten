@@ -1,0 +1,3237 @@
+{
+  "kind": "unresolved-gedcom-place-review-coverage",
+  "date": "2026-09-28",
+  "catalogPath": "public/locations.json",
+  "catalogSha256": "512b7f0b9a9305a7b38a7ac3b1f8cf16c5c9caa190324aae0a93e7c7cd078eb0",
+  "gedcomPath": "public/berring_messing-cleaned.ged",
+  "gedcomSha256": "c13553086b6f80f129f89d93735c06f3bea14c846ba507df94c293a0c68c7d10",
+  "reports": [
+    "docs/swedish-places-reviewed-2026-09-27.json",
+    "docs/approximate-places-reviewed-2026-09-27.json",
+    "docs/high-frequency-places-reviewed-2026-09-28.json",
+    "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+    "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+    "docs/swedish-bare-places-reviewed-2026-09-28.json",
+    "docs/non-swedish-places-reviewed-2026-09-28.json",
+    "docs/final-place-supplement-2026-09-28.json",
+    "docs/place-context-supplement-2026-09-28.json"
+  ],
+  "totals": {
+    "gedcomPlaces": 2721,
+    "resolved": 2567,
+    "unresolved": 154,
+    "unresolvedEventUses": 243,
+    "reviewedUnresolved": 154,
+    "unreviewed": 0
+  },
+  "unresolved": [
+    {
+      "place": "Gammalsvenskby, Gotland, Sverige",
+      "uses": 9,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 0
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 0,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Garphyttan, Lindesberg, Örebro län",
+      "uses": 8,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 1
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 1,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Dsgl",
+      "uses": 6,
+      "status": "unresolved-after-review",
+      "reason": "Dsgl är en hänvisningsförkortning (detsamma), inte en ort. Det finns ingen säker bakåtreferens till ett annat platsfält i GEDCOM.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 1
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 2,
+          "reason": "Ditto marker, not a named place."
+        },
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 1,
+          "reason": "Dsgl är en hänvisningsförkortning (detsamma), inte en ort. Det finns ingen säker bakåtreferens till ett annat platsfält i GEDCOM."
+        }
+      ]
+    },
+    {
+      "place": "Kristinehamn, Örebro, Sverige",
+      "uses": 6,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 3
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 3,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Bronäs, Stora Malm, Katrineholm, Södermanland, Suède",
+      "uses": 5,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 4
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 4,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Helgum, Västernorrland, Sverige",
+      "uses": 5,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 5
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 5,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Kherson, Orenburg, Russia",
+      "uses": 5,
+      "status": "unresolved-after-review",
+      "reason": "Kherson och Orenburg är skilda städer/regioner långt från varandra. Historiskt Ryssland förklarar inte denna samtidiga ortkonflikt.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 8
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 6,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        },
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 8,
+          "reason": "Kherson och Orenburg är skilda städer/regioner långt från varandra. Historiskt Ryssland förklarar inte denna samtidiga ortkonflikt."
+        }
+      ]
+    },
+    {
+      "place": "Sjöboda, Traryd, Kronoberg, Sweden",
+      "uses": 5,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 7
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 7,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Torrvallen, Skinnskatteberg, Västmanland",
+      "uses": 5,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 8
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 8,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Björnbo, Skinnskatteberg, Västmanland, Sverige",
+      "uses": 4,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 10
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 10,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Finntorp, Askersund lf (T)",
+      "uses": 4,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 12
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 12,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Moxboda, Harg, Stockholm, Sverige",
+      "uses": 4,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 13
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 13,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Nora",
+      "uses": 4,
+      "status": "unresolved-after-review",
+      "reason": "Nora är tvetydigt mellan bland annat Örebro, Västmanland och Ångermanland. Tre av fyra användningar stödjer Örebro men en äldre användning saknar en säker precisering. En global nyckel kan därför inte väljas utan felrisk.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 5
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 14,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        },
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 5,
+          "reason": "Nora är tvetydigt mellan bland annat Örebro, Västmanland och Ångermanland. Tre av fyra användningar stödjer Örebro men en äldre användning saknar en säker precisering. En global nyckel kan därför inte väljas utan felrisk."
+        }
+      ]
+    },
+    {
+      "place": "Vägarås, Strömsnäsbruk, Markaryd, Kronoberg, Sverige",
+      "uses": 4,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 15
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 15,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Alvestaboda, Västra Skedvi, Västmanland",
+      "uses": 3,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 16
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 16,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Gräfte, Aspås, Jämtlands län",
+      "uses": 3,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 17
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 17,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Gällinge, Säfsnäs, Nås, Ludvika, Dalarna/Kopparberg, Suède",
+      "uses": 3,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 18
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 18,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Hagby, Medåker, Västmanland, Sverige",
+      "uses": 3,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 19
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 19,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Torsby, Värmland, Sweden",
+      "uses": 3,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 21
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 21,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Utterbäcken, Karlskoga, Örebro, Sverige",
+      "uses": 3,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 22
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 22,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Valla Boteå Västernorrland, Västernorrland, Suède",
+      "uses": 3,
+      "status": "unresolved-after-review",
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved.",
+      "reportReference": {
+        "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 23
+      },
+      "evidence": [
+        {
+          "path": "docs/high-frequency-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 23,
+          "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+        }
+      ]
+    },
+    {
+      "place": ", Örebro, Sverige?",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Only an uncertain broad Örebro label remains after empty components; city versus county is not established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 1
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 1,
+          "reason": "Only an uncertain broad Örebro label remains after empty components; city versus county is not established."
+        }
+      ]
+    },
+    {
+      "place": "Billa, Hemmesjö, Konga, Svalöv, Malmöhus, Suède",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Hemmesjö is in Kronoberg whereas Konga/Svalöv and Malmöhus indicate Skåne; the competing local contexts are unresolved.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 6
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 6,
+          "reason": "Hemmesjö is in Kronoberg whereas Konga/Svalöv and Malmöhus indicate Skåne; the competing local contexts are unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Byringe Nr. 2, Länna",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Länna alone has multiple parish matches; no county context or verified Byringe Nr 2 source resolves them.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 13
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 13,
+          "reason": "Länna alone has multiple parish matches; no county context or verified Byringe Nr 2 source resolves them."
+        }
+      ]
+    },
+    {
+      "place": "Fleen, Floda",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 24
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 24,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Garphyttan, Lindesberg, Örebro, Sweden",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Named Garphyttan sources are outside Lindesberg; known contradictory context retained unresolved.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 27
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 27,
+          "reason": "Named Garphyttan sources are outside Lindesberg; known contradictory context retained unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Gunnillebo, Västmanland",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 32
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 32,
+          "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established."
+        }
+      ]
+    },
+    {
+      "place": "Holmsjön",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Holmsjön är ett mycket vanligt sjönamn med flera möjliga svenska platser. Ingen region anges.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 2
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 2,
+          "reason": "Holmsjön är ett mycket vanligt sjönamn med flera möjliga svenska platser. Ingen region anges."
+        }
+      ]
+    },
+    {
+      "place": "Hovdsjö, Revsund (Z), Jämtland, Norvège",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Hovdsjö/Revsund/Jämtland ligger i Sverige, men strängen anger Norvège/Norge. Landskonflikten har inte reparerats genom en gissning.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 7
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 7,
+          "reason": "Hovdsjö/Revsund/Jämtland ligger i Sverige, men strängen anger Norvège/Norge. Landskonflikten har inte reparerats genom en gissning."
+        }
+      ]
+    },
+    {
+      "place": "Kulln, Norrbo, Grangärde Församling, Kopparbergs Län, Hudiksvall, Gävleborg, Suède",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 49
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 49,
+          "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point."
+        }
+      ]
+    },
+    {
+      "place": "Lödöse, Västra Götaland, Gotland, Suède",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 57
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 57,
+          "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point."
+        }
+      ]
+    },
+    {
+      "place": "Näs (Klockåsen), Suède, France",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Svenska Näs/Klockåsen respektive Revsund/Hovdsjö kombineras med France/Frankrike. Motstridiga landsangivelser lämnas utan koordinat.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 14
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 14,
+          "reason": "Svenska Näs/Klockåsen respektive Revsund/Hovdsjö kombineras med France/Frankrike. Motstridiga landsangivelser lämnas utan koordinat."
+        }
+      ]
+    },
+    {
+      "place": "Revsund (Hovdsjö), Suède, France",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Svenska Näs/Klockåsen respektive Revsund/Hovdsjö kombineras med France/Frankrike. Motstridiga landsangivelser lämnas utan koordinat.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 17
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 17,
+          "reason": "Svenska Näs/Klockåsen respektive Revsund/Hovdsjö kombineras med France/Frankrike. Motstridiga landsangivelser lämnas utan koordinat."
+        }
+      ]
+    },
+    {
+      "place": "Stockholm, Södermanlands län, Sverige., Stockholm, Stockholm, Suède",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 21
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 30,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 21,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Torrankankorva, Keksi, Norrbotten, Sverige",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 25
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 39,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 25,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        }
+      ]
+    },
+    {
+      "place": "Österbybruk, Uppland, Uppsala, Suède",
+      "uses": 2,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 42
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 65,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 42,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": ", , Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Only empty components and country; no named place.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 0
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 0,
+          "reason": "Only empty components and country; no named place."
+        }
+      ]
+    },
+    {
+      "place": ",, Örebro, Sverige?",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Only an uncertain broad Örebro label remains after empty components; city versus county is not established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 2
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 2,
+          "reason": "Only an uncertain broad Örebro label remains after empty components; city versus county is not established."
+        }
+      ]
+    },
+    {
+      "place": "(A) Stockholm, Barnhusförsamlingen",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Specific historical Barnhusförsamlingen is not established; Stockholm socken/city is not silently substituted.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 3
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 3,
+          "reason": "Specific historical Barnhusförsamlingen is not established; Stockholm socken/city is not silently substituted."
+        }
+      ]
+    },
+    {
+      "place": "(A) Stockholm, Huddinge ?",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Huddinge itself is marked as uncertain.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 4
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 4,
+          "reason": "Huddinge itself is marked as uncertain."
+        }
+      ]
+    },
+    {
+      "place": "1570 Trostheim Vold, Norvège",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Trostheim Vold är inte verifierat och något län eller någon socken anges inte. Årtalet 1570 kan inte användas som lokaliseringsunderlag; Norge ensamt räcker inte för en gårdpunkt.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 0
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 0,
+          "reason": "Trostheim Vold är inte verifierat och något län eller någon socken anges inte. Årtalet 1570 kan inte användas som lokaliseringsunderlag; Norge ensamt räcker inte för en gårdpunkt."
+        }
+      ]
+    },
+    {
+      "place": "Anunsjö, Västernorrland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 5
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 5,
+          "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established."
+        }
+      ]
+    },
+    {
+      "place": "Bejby",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Bejby saknar säker ortbeläggning. Samma posts Häverö/Edebo anger endast en vid trakt och räcker inte för att välja en specifik plats eller socken.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 0
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 0,
+          "reason": "Bejby saknar säker ortbeläggning. Samma posts Häverö/Edebo anger endast en vid trakt och räcker inte för att välja en specifik plats eller socken."
+        }
+      ]
+    },
+    {
+      "place": "Bjurbäckens bruk, Lungsund, Värmland, Sweden eller Asphyttans bruk, Färnebo, Värmland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The record explicitly offers Bjurbäcken in Lungsund or Asphyttan in Färnebo as alternatives; no one parish is established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 7
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 7,
+          "reason": "The record explicitly offers Bjurbäcken in Lungsund or Asphyttan in Färnebo as alternatives; no one parish is established."
+        }
+      ]
+    },
+    {
+      "place": "Bjurtjärn, Lungsund, Värmland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Bjurtjärn and Lungsund are separate parishes; the string does not establish which one contains the event place.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 8
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 8,
+          "reason": "Bjurtjärn and Lungsund are separate parishes; the string does not establish which one contains the event place."
+        }
+      ]
+    },
+    {
+      "place": "Björklund, Hjulsjö, Ljusnarsberg, Örebro, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Hjulsjö and Ljusnarsberg are separate local parishes; Björklund is not established independently.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 9
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 9,
+          "reason": "Hjulsjö and Ljusnarsberg are separate local parishes; Björklund is not established independently."
+        }
+      ]
+    },
+    {
+      "place": "Björneborg, Tavastland, Satakunta, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Björneborg/Pori ligger i Satakunta, medan Tavastland är en annan landskapsangivelse. Ingen källa har belagt den motsägande regionkedjan.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 1
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 1,
+          "reason": "Björneborg/Pori ligger i Satakunta, medan Tavastland är en annan landskapsangivelse. Ingen källa har belagt den motsägande regionkedjan."
+        }
+      ]
+    },
+    {
+      "place": "Bomsarvet, Dalarna, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 10
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 10,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Brofallet, Hjulsjö, Örebro, Sverige (Ljusnarsberg?)",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Hjulsjö is followed by the uncertain alternative Ljusnarsberg; Brofallet has not been established independently.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 12
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 12,
+          "reason": "Hjulsjö is followed by the uncertain alternative Ljusnarsberg; Brofallet has not been established independently."
+        }
+      ]
+    },
+    {
+      "place": "Böle, Dalarna, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 14
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 14,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Degerbyn 6, Degerbyn, Skellefteå landsförs (AC), Värmland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Explicit Skellefteå parish and AC/Västerbotten context conflict with Värmland.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 15
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 15,
+          "reason": "Explicit Skellefteå parish and AC/Västerbotten context conflict with Värmland."
+        }
+      ]
+    },
+    {
+      "place": "Drängsmark, Umeå, Västerbotten, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Drängsmark source is in Skellefteå; explicit Umeå context is not established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 17
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 17,
+          "reason": "Drängsmark source is in Skellefteå; explicit Umeå context is not established."
+        }
+      ]
+    },
+    {
+      "place": "Ed, Vastra Gotaland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 18
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 18,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Edebo, Stockholm, Sverige ; Gislöv, Nr.19, Trelleborg, Malmöhus, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Edebo and Gislöv/Trelleborg name different local contexts; the semicolon does not establish one event location.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 19
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 19,
+          "reason": "Edebo and Gislöv/Trelleborg name different local contexts; the semicolon does not establish one event location."
+        }
+      ]
+    },
+    {
+      "place": "Efwertsberg 9, Elfdahlen, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 20
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 20,
+          "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established."
+        }
+      ]
+    },
+    {
+      "place": "Ekeby, Västmanland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 21
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 21,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Elfdahlen, Sweden?",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 22
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 22,
+          "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established."
+        }
+      ]
+    },
+    {
+      "place": "Ennen, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Ennen är finska för före och ortnamnet är inte verifierat; Finland ensamt räcker inte för att tolka detta som en lokal ort.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 2
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 2,
+          "reason": "Ennen är finska för före och ortnamnet är inte verifierat; Finland ensamt räcker inte för att tolka detta som en lokal ort."
+        }
+      ]
+    },
+    {
+      "place": "Faxnälden, Näsko, Jämtland, Västerbotten, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 23
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 23,
+          "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point."
+        }
+      ]
+    },
+    {
+      "place": "Finnbaken, Norbaarke, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Norbaarke kan avse Norrbärke i Sverige, men strängen anger Finland. Finnbaken är inte verifierat i denna regionkedja.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 3
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 3,
+          "reason": "Norbaarke kan avse Norrbärke i Sverige, men strängen anger Finland. Finnbaken är inte verifierat i denna regionkedja."
+        }
+      ]
+    },
+    {
+      "place": "Finne, Fimreite, Sogndal or Seim, Hordaland, Norway",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Strängen anger uttryckliga alternativa orter: Fimreite/Sogndal eller Seim/Hordaland. Ingen enda lokal punkt kan väljas utan att avgöra vilket alternativ som avses.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 4
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 4,
+          "reason": "Strängen anger uttryckliga alternativa orter: Fimreite/Sogndal eller Seim/Hordaland. Ingen enda lokal punkt kan väljas utan att avgöra vilket alternativ som avses."
+        }
+      ]
+    },
+    {
+      "place": "Gammalsvenskby, Hiiumaa, Ukraine",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Gammalsvenskby/Kherson i Ukraina och Hiiumaa i Estland är skilda platser. Den motsägande strängen behålls utan koordinat.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 5
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 5,
+          "reason": "Gammalsvenskby/Kherson i Ukraina och Hiiumaa i Estland är skilda platser. Den motsägande strängen behålls utan koordinat."
+        }
+      ]
+    },
+    {
+      "place": "Gardet, Grangarde, Kopperberg, Orebro, Örebro, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Explicit Grangärde/Kopparberg context conflicts with repeated Örebro county context; no county/city suffix is used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 25
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 25,
+          "reason": "Explicit Grangärde/Kopparberg context conflicts with repeated Örebro county context; no county/city suffix is used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Garphyttan, Lindesberg, Orebro, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Named Garphyttan sources are outside Lindesberg; known contradictory context retained unresolved.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 26
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 26,
+          "reason": "Named Garphyttan sources are outside Lindesberg; known contradictory context retained unresolved."
+        }
+      ]
+    },
+    {
+      "place": "Grangnde, Dalarna, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 28
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 28,
+          "reason": "Unverified spelling/older-name interpretation; kept unresolved until primary name evidence is established."
+        }
+      ]
+    },
+    {
+      "place": "Graninge, Vasterbotten, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The place explicitly says Västerbotten. GeoNames source 2711221 has admin1 23 but its coordinate 63.08333, 16.85 lies in Västernorrland; neither that point nor Graninge socken in Västernorrland is safe for this string.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 29
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 29,
+          "reason": "The place explicitly says Västerbotten. GeoNames source 2711221 has admin1 23 but its coordinate 63.08333, 16.85 lies in Västernorrland; neither that point nor Graninge socken in Västernorrland is safe for this string."
+        }
+      ]
+    },
+    {
+      "place": "Gräfte, (Aspås Jämtland) Västernorrland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 30
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 30,
+          "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point."
+        }
+      ]
+    },
+    {
+      "place": "Gräsö, Börstil, Stockholm, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Gräsö and Börstil are different parishes. Historical Stockholm county context is compatible with both and does not resolve their relationship here.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 31
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 31,
+          "reason": "Gräsö and Börstil are different parishes. Historical Stockholm county context is compatible with both and does not resolve their relationship here."
+        }
+      ]
+    },
+    {
+      "place": "Haga, Värmland, Sigtuna, Stockholm, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 34
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 34,
+          "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point."
+        }
+      ]
+    },
+    {
+      "place": "Hammar, Värmland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 35
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 35,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Herregaarden Sonder Vosborg, Ringkobing, Hjorring, Nordjylland, Denmark",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Sønder Vosborg ligger i västra Jylland/Holstebrobygden; Hjørring/Nordjylland är en motsägande regional kedja.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 6
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 6,
+          "reason": "Sønder Vosborg ligger i västra Jylland/Holstebrobygden; Hjørring/Nordjylland är en motsägande regional kedja."
+        }
+      ]
+    },
+    {
+      "place": "Hohenfelde, Steinberg, Slesvig-Holstein, Schleswig Holstein, Allemagne",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Flera Hohenfelde finns i Schleswig-Holstein. Steinberg kan avse en egen kommun eller en felskrivning av Steinburg; ingen källa entydigt binder just denna fullständiga ortsträng till en Hohenfelde-post. En avvikande kommun/regionsuppgift korrigeras inte enbart på namnlikhet.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 23
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 39,
+          "reason": "Foreign place outside the Swedish source extract; delegated for separate foreign review."
+        },
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 23,
+          "reason": "Flera Hohenfelde finns i Schleswig-Holstein. Steinberg kan avse en egen kommun eller en felskrivning av Steinburg; ingen källa entydigt binder just denna fullständiga ortsträng till en Hohenfelde-post. En avvikande kommun/regionsuppgift korrigeras inte enbart på namnlikhet."
+        }
+      ]
+    },
+    {
+      "place": "Håvberg, Nås/Grangärde, Dalarna, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 40
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 40,
+          "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point."
+        }
+      ]
+    },
+    {
+      "place": "Hälla, Vänga, Skaraborg, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 41
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 41,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Hällestad, Östergötland, Sverige    (Suomi?)",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 42
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 42,
+          "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point."
+        }
+      ]
+    },
+    {
+      "place": "Härene, Västra Götaland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 43
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 43,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Ingelsby, Kyrkefalla, Västra Götaland, Gotland, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 44
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 44,
+          "reason": "Competing localities/parishes or contradictory county/province/country context; not assigned to a broad suffix point."
+        }
+      ]
+    },
+    {
+      "place": "Kalltjärn, Ovansjö, Västernorrland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Ovansjö may refer to a village in Borgsjö, Västernorrland, or the parish in Gävleborg. Kalltjärn has not been established independently, so the Gävleborg parish point is rejected.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 45
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 45,
+          "reason": "Ovansjö may refer to a village in Borgsjö, Västernorrland, or the parish in Gävleborg. Kalltjärn has not been established independently, so the Gävleborg parish point is rejected."
+        }
+      ]
+    },
+    {
+      "place": "Karl, Stockholm",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 46
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 46,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Klingsjön, Västerbottens län, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 47
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 47,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Korsgatan, Hidinge, Örebro Län, Västmanland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Hidinge belongs to Närke rather than the stated Västmanland province; the local context is unresolved despite the broad Örebro county component.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 48
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 48,
+          "reason": "Hidinge belongs to Närke rather than the stated Västmanland province; the local context is unresolved despite the broad Örebro county component."
+        }
+      ]
+    },
+    {
+      "place": "Kullen",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Kullen är ett mycket vanligt ort-/gårdsnamn. Nyckeln saknar region och samma post ger inte en säker socken. Den separata nyckeln Kullen Grangärde mappas endast för sin uttryckliga kontext.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 3
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 3,
+          "reason": "Kullen är ett mycket vanligt ort-/gårdsnamn. Nyckeln saknar region och samma post ger inte en säker socken. Den separata nyckeln Kullen Grangärde mappas endast för sin uttryckliga kontext."
+        }
+      ]
+    },
+    {
+      "place": "Kuopio pit Kallislahti, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Kallislahti by som verifierats ligger i Savonlinna, långt från Kuopio. Kuopio + Kallislahti/Mönkkölä kan inte säkert knytas till en och samma socken utan ytterligare historiskt belägg.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 9
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 9,
+          "reason": "Kallislahti by som verifierats ligger i Savonlinna, långt från Kuopio. Kuopio + Kallislahti/Mönkkölä kan inte säkert knytas till en och samma socken utan ytterligare historiskt belägg."
+        }
+      ]
+    },
+    {
+      "place": "Kuopio, Kallislahti, Mönkkölä, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Kallislahti by som verifierats ligger i Savonlinna, långt från Kuopio. Kuopio + Kallislahti/Mönkkölä kan inte säkert knytas till en och samma socken utan ytterligare historiskt belägg.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 10
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 10,
+          "reason": "Kallislahti by som verifierats ligger i Savonlinna, långt från Kuopio. Kuopio + Kallislahti/Mönkkölä kan inte säkert knytas till en och samma socken utan ytterligare historiskt belägg."
+        }
+      ]
+    },
+    {
+      "place": "Li, Fåberg, Numedal, Buskerud, Norway",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Fåberg hör till Lillehammer/Gudbrandsdalen och inte till Numedal/Buskerud. Den motsägande socken/regionskedjan med allmänna Li kan inte lösas säkert.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 11
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 11,
+          "reason": "Fåberg hör till Lillehammer/Gudbrandsdalen och inte till Numedal/Buskerud. Den motsägande socken/regionskedjan med allmänna Li kan inte lösas säkert."
+        }
+      ]
+    },
+    {
+      "place": "Liden, Vasterbotten, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 50
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 50,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Linde, Nyhammar",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 51
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 51,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Linneryd, Jönköping, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 52
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 52,
+          "reason": "More local parish or named-place interpretation remains ambiguous or unverified; broad county/city suffix is not used as a fallback."
+        }
+      ]
+    },
+    {
+      "place": "Lofterud, Edleskog, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Edleskog may be a spelling variant of Edsleskog, but that interpretation is unverified and the named Lofterud source has conflicting municipal context.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 53
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 53,
+          "reason": "Edleskog may be a spelling variant of Edsleskog, but that interpretation is unverified and the named Lofterud source has conflicting municipal context."
+        }
+      ]
+    },
+    {
+      "place": "Lofterud, Edleskog, Älvsborg, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Edleskog may be a spelling variant of Edsleskog, but that interpretation is unverified and the named Lofterud source has conflicting municipal context.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 54
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 54,
+          "reason": "Edleskog may be a spelling variant of Edsleskog, but that interpretation is unverified and the named Lofterud source has conflicting municipal context."
+        }
+      ]
+    },
+    {
+      "place": "Långmossen, Gravendal, Nås, Kopparberg, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Gravendal is associated with Säfsnäs while the record names Nås; the historical local-parish relationship has not been established.",
+      "reportReference": {
+        "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+        "section": "rejected",
+        "index": 55
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part1-2026-09-28.json",
+          "section": "rejected",
+          "index": 55,
+          "reason": "Gravendal is associated with Säfsnäs while the record names Nås; the historical local-parish relationship has not been established."
+        }
+      ]
+    },
+    {
+      "place": "Mammila, Turtolasrk, Ylitornio, Tornionjok, Ilaakso, Suomijärvi, Lansi-Suomi, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Mämmilä/Turtola/Ylitornio är i Lappland, medan Länsi-Suomi/Västra Finland anger en motsägande länsregion. Ingen regionskonflikt repareras genom att bara välja första namnträffen.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 12
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 12,
+          "reason": "Mämmilä/Turtola/Ylitornio är i Lappland, medan Länsi-Suomi/Västra Finland anger en motsägande länsregion. Ingen regionskonflikt repareras genom att bara välja första namnträffen."
+        }
+      ]
+    },
+    {
+      "place": "Maunonmäki, Palonurmi, Nilsiä, Juroinen, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Palonurmi/Nilsiä och Juroinen/Joroinen är olika geografiska bygder; Maunonmäki är inte verifierat i den sammanhängande regionkedjan.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 13
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 13,
+          "reason": "Palonurmi/Nilsiä och Juroinen/Joroinen är olika geografiska bygder; Maunonmäki är inte verifierat i den sammanhängande regionkedjan."
+        }
+      ]
+    },
+    {
+      "place": "Mjäryd",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Mjäryd finns både i Berga/Ljungby och Traryd/Markaryd i Kronoberg. Bare-strängen saknar tillräcklig kontext; andra Mjäryd-nycklar med Traryd får inte styra denna.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 4
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 4,
+          "reason": "Mjäryd finns både i Berga/Ljungby och Traryd/Markaryd i Kronoberg. Bare-strängen saknar tillräcklig kontext; andra Mjäryd-nycklar med Traryd får inte styra denna."
+        }
+      ]
+    },
+    {
+      "place": "Mjäryd, Kronoberg, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 0
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 0,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 0,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Myckle, Umeå, Västerbotten, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 1
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 1,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 1,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Mårdsjön, Jamtland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 2
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 2,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 2,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Njurunda, Härnösand, Västernorrland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 3
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 3,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 3,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Nora, Västmanland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 4
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 5,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 4,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Nora, Västmanland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 5
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 6,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 5,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Norrala, Hälsingland, Bollnäs, Gävleborg, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 6
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 8,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 6,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Norrbo",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Norrbo finns på flera orter och som socken. Bare-strängen och samma personposts Kullen saknar regional precisering.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 6
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 6,
+          "reason": "Norrbo finns på flera orter och som socken. Bare-strängen och samma personposts Kullen saknar regional precisering."
+        }
+      ]
+    },
+    {
+      "place": "Norrbo, Grangärde Församling, Kopparbergs Län, Hudiksvall, Gävleborg, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 7
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 9,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 7,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Norrvik, Kopparberg, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 8
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 10,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 8,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Nylodose, Lilla Edet, Västra Götaland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 9
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 11,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 9,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Näset, Strömsund, Jämtland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 10
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 12,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 10,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Nöbbeled Prästgård",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Nöbbeled/Nöbbele finns på flera platser, även i andra socknar. Prästgård räcker inte för att säkert välja Nöbbele socken i Kronoberg. ISOF har också Nöbbeled i Näsby socken, Jönköpings län.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 7
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 7,
+          "reason": "Nöbbeled/Nöbbele finns på flera platser, även i andra socknar. Prästgård räcker inte för att säkert välja Nöbbele socken i Kronoberg. ISOF har också Nöbbeled i Näsby socken, Jönköpings län."
+        }
+      ]
+    },
+    {
+      "place": "of Garphyttan, Lindesberg, Orebro, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 11
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 13,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 11,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Okänd Dödsort",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 8
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 8,
+          "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats."
+        }
+      ]
+    },
+    {
+      "place": "Okänt",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 9
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 9,
+          "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats."
+        }
+      ]
+    },
+    {
+      "place": "Olastorp, Farstorp, Osby, Kristianstad, Kristianstad, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 12
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 14,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 12,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Orsa, Finnmark, Norge",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Orsa är inte verifierat i Finnmark; svensk Orsa och norskt Finnmark ger inte en försvarbar lokal koordinat.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 15
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 15,
+          "reason": "Orsa är inte verifierat i Finnmark; svensk Orsa och norskt Finnmark ger inte en försvarbar lokal koordinat."
+        }
+      ]
+    },
+    {
+      "place": "Osby, Kristianstad, Haderslev, Danemark",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 13
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 16,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 13,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Osby, Kristianstad, Skåne, Haderslev, Danemark",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 14
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 17,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 14,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Pekkola, Lövhaugen, Grue Finnskog, Värmland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 15
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 18,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 15,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Rallbo, Uppsala, Sverige (Thålbo, Västra Skedevi,  Västmanland ???",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 16
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 20,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 16,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Resendal, Ringköbing, Denmark",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Verifierade Resendal ligger vid Silkeborg i tidigare Skanderborg/Århus amt, inte i Ringkøbing. Ingen motsägande region repareras med namnträff ensam.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 16
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 16,
+          "reason": "Verifierade Resendal ligger vid Silkeborg i tidigare Skanderborg/Århus amt, inte i Ringkøbing. Ingen motsägande region repareras med namnträff ensam."
+        }
+      ]
+    },
+    {
+      "place": "Rofgölet",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Sörmlands museums katalog belägger ett Rofgölet soldattorp i Björkvik, men GEDCOM-postens övriga orter är Stora Malm och händelsen saknar datum. Samma torp kan inte fastställas säkert för denna historiska bostadsuppgift; ingen socken väljs.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 10
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 10,
+          "reason": "Sörmlands museums katalog belägger ett Rofgölet soldattorp i Björkvik, men GEDCOM-postens övriga orter är Stora Malm och händelsen saknar datum. Samma torp kan inte fastställas säkert för denna historiska bostadsuppgift; ingen socken väljs."
+        }
+      ]
+    },
+    {
+      "place": "Rosendal, Västmanland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 17
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 21,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 17,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Ryd Norregård",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Ryd Norregård saknar socken och har flera möjliga Ryd. Födelsetextens Östra Torsås på samma person bevisar inte dödsorten; länspunkt får inte ersätta en okänd gård.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 11
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 11,
+          "reason": "Ryd Norregård saknar socken och har flera möjliga Ryd. Födelsetextens Östra Torsås på samma person bevisar inte dödsorten; länspunkt får inte ersätta en okänd gård."
+        }
+      ]
+    },
+    {
+      "place": "Ryholms sn, Östra härad.",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 18
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 22,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 18,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        }
+      ]
+    },
+    {
+      "place": "Räisälä",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Räisälä har flera orter i Finland och Karelen, och strängen anger ingen socken eller län. Lokal kontext med en senare dödsort i Rautalampi kan inte bevisa att födelseorten är samma bygd; ingen specifik Räisälä väljs.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 24
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 24,
+          "reason": "Räisälä har flera orter i Finland och Karelen, och strängen anger ingen socken eller län. Lokal kontext med en senare dödsort i Rautalampi kan inte bevisa att födelseorten är samma bygd; ingen specifik Räisälä väljs."
+        }
+      ]
+    },
+    {
+      "place": "Satakunta, Saavolax, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Satakunta/Satakunda, Savolax/Savo och Tavastland/Häme är skilda landskap. Denna sträng sammanför motstridiga landskap utan belagd gemensam lokal ort.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 18
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 18,
+          "reason": "Satakunta/Satakunda, Savolax/Savo och Tavastland/Häme är skilda landskap. Denna sträng sammanför motstridiga landskap utan belagd gemensam lokal ort."
+        }
+      ]
+    },
+    {
+      "place": "Savo, Kuopiola, Etela-Suomi, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Kuopio/Savo ligger i Savolax, medan Etelä-Suomi/Södra Finland anger en annan historisk länsregion. Kuopiola är inte verifierat så att konflikten kan lösas.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 19
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 19,
+          "reason": "Kuopio/Savo ligger i Savolax, medan Etelä-Suomi/Södra Finland anger en annan historisk länsregion. Kuopiola är inte verifierat så att konflikten kan lösas."
+        }
+      ]
+    },
+    {
+      "place": "Savolax, Lansi-Suomen Laani, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Savolax/Savo landskap och Länsi-Suomen län är olika regioner. En punkt kräver att en av de motsägande angivelserna väljs bort.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 20
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 20,
+          "reason": "Savolax/Savo landskap och Länsi-Suomen län är olika regioner. En punkt kräver att en av de motsägande angivelserna väljs bort."
+        }
+      ]
+    },
+    {
+      "place": "Silleryd, Värmland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 19
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 25,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 19,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        }
+      ]
+    },
+    {
+      "place": "skellefteå, Svedvi, Västmanland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 20
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 26,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 20,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Svenneby, Sillerup, Värmland, Tanum, Göteborg och Bohus, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 22
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 34,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 22,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Säter, Indal,Dalarna,  Västernorrland, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 23
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 37,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 23,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Tanska Finland / Varmland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Tanska kan betyda Danmark och strängen anger Finland / Värmland i Sverige som alternativ. Motstridiga länder/regioner ger ingen enda säker punkt.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 21
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 21,
+          "reason": "Tanska kan betyda Danmark och strängen anger Finland / Värmland i Sverige som alternativ. Motstridiga länder/regioner ger ingen enda säker punkt."
+        }
+      ]
+    },
+    {
+      "place": "Tavastland, Satakunta, Finland",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Satakunta/Satakunda, Savolax/Savo och Tavastland/Häme är skilda landskap. Denna sträng sammanför motstridiga landskap utan belagd gemensam lokal ort.",
+      "reportReference": {
+        "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 22
+      },
+      "evidence": [
+        {
+          "path": "docs/non-swedish-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 22,
+          "reason": "Satakunta/Satakunda, Savolax/Savo och Tavastland/Häme är skilda landskap. Denna sträng sammanför motstridiga landskap utan belagd gemensam lokal ort."
+        }
+      ]
+    },
+    {
+      "place": "Tommelsbo",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Tommelsbo saknar säker ortbeläggning och socken. En annan händelse i Hed på samma person är inte belägg för att denna ort låg där.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 13
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 13,
+          "reason": "Tommelsbo saknar säker ortbeläggning och socken. En annan händelse i Hed på samma person är inte belägg för att denna ort låg där."
+        }
+      ]
+    },
+    {
+      "place": "Torberbo Dalarna Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Torberbo Dalarna är ett historiskt namn som behöver säkrare ortidentifiering. Ett lexikon nämner Torberbo i ett stycke som fortsätter från föregående sida, medan sekundära uppgifter även säger Söderbärke. Ingen Dalarna-länspunkt ersätter den oidentifierade gården.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 14
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 14,
+          "reason": "Torberbo Dalarna är ett historiskt namn som behöver säkrare ortidentifiering. Ett lexikon nämner Torberbo i ett stycke som fortsätter från föregående sida, medan sekundära uppgifter även säger Söderbärke. Ingen Dalarna-länspunkt ersätter den oidentifierade gården."
+        }
+      ]
+    },
+    {
+      "place": "Torrakankorva, Keksi, Norrbottens län, Norrbotten, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 24
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 38,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 24,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        }
+      ]
+    },
+    {
+      "place": "Torsåker?",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Torsåker? har flera möjliga svenska socknar i olika län och inget län anges. Frågetecknet gör inte en av dem mer försvarbar.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 15
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 15,
+          "reason": "Torsåker? har flera möjliga svenska socknar i olika län och inget län anges. Frågetecknet gör inte en av dem mer försvarbar."
+        }
+      ]
+    },
+    {
+      "place": "Trönö, Lundberg, Dalarna, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 26
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 40,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 26,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Täby",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Täby finns både i Stockholm/Uppland och Örebro/Närke. Bare-strängen saknar socken/län; senare bostad i Stockholm bevisar inte födelseorten.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 16
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 16,
+          "reason": "Täby finns både i Stockholm/Uppland och Örebro/Närke. Bare-strängen saknar socken/län; senare bostad i Stockholm bevisar inte födelseorten."
+        }
+      ]
+    },
+    {
+      "place": "Umeå, Västerbotten, (Bureå, ), Umeå, Västerbotten, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 27
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 44,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 27,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "und Ort nicht angegeben.",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 19
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 19,
+          "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats."
+        }
+      ]
+    },
+    {
+      "place": "Unknown",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats.",
+      "reportReference": {
+        "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+        "section": "rejected",
+        "index": 17
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-bare-places-reviewed-2026-09-28.json",
+          "section": "rejected",
+          "index": 17,
+          "reason": "Fältet anger att orten är okänd/inte angiven och ger ingen geografisk plats."
+        }
+      ]
+    },
+    {
+      "place": "Varberg, Gavleborg, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 28
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 46,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 28,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Velanda, Örebro, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 29
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 47,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 29,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Virseryd, Kronoberg, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 30
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 48,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 30,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        }
+      ]
+    },
+    {
+      "place": "Vista, Forsa, Jönköpings län",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 31
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 49,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 31,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        }
+      ]
+    },
+    {
+      "place": "Väckelsång, Hovmantorp",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 32
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 50,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 32,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Väckelsång, Hovmantorp, Kronoberg, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 33
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 51,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 33,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Västansjö, Dalarna, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 34
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 52,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 34,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Västansjö, Vastmanland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 35
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 53,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 35,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Västergötland, Gotland, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 36
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 54,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 36,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Västra Åsaka, Älvsborg, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 37
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 55,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 37,
+          "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+        }
+      ]
+    },
+    {
+      "place": "Yttervik, Västerbotten, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 38
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 59,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 38,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Yxsjön, Örebro, Sverige",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 39
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 60,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 39,
+          "reason": "Several source places match the name; the provided county/region does not distinguish them."
+        }
+      ]
+    },
+    {
+      "place": "Ågården, Råda, Askims härad, Västergötland, Gotland, Suède",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 40
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 61,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 40,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    },
+    {
+      "place": "Ölmevalla, Skaraborgs län, Kungsbacka, Halland, Sweden",
+      "uses": 1,
+      "status": "unresolved-after-review",
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reportReference": {
+        "path": "docs/place-context-supplement-2026-09-28.json",
+        "section": "remaining",
+        "index": 41
+      },
+      "evidence": [
+        {
+          "path": "docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+          "section": "rejected",
+          "index": 63,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        },
+        {
+          "path": "docs/place-context-supplement-2026-09-28.json",
+          "section": "remaining",
+          "index": 41,
+          "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+        }
+      ]
+    }
+  ]
+}

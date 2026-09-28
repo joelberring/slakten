@@ -1,0 +1,721 @@
+{
+  "kind": "reviewed-part2-rejected-place-supplement",
+  "date": "2026-09-28",
+  "input": {
+    "file": "/private/tmp/slakten-dedupe-work/docs/swedish-parish-places-reviewed-part2-2026-09-28.json",
+    "sha256": "78c5e43d8bead9970f7b33af1d648ba02a1393cb17cd02a54c52fb9a931c5a19"
+  },
+  "source": {
+    "name": "GeoNames SE country extract",
+    "url": "https://download.geonames.org/export/dump/SE.zip",
+    "license": "CC BY 4.0",
+    "sha256": "0fa7a47700d36818fa4e2f22c83069b5016507e62418ab3d166ce6f85fdd0107"
+  },
+  "criteria": "Oberoende slutgranskning av 66 tidigare avvisade strängar. Sex utländska strängar är delegerade. Endast verifierade fullnamn, belagda historiska namn/kombinationer och försvarbara socken/bygd-punkter läggs i separat import. Ingen katalog eller GEDCOM ändras. Alla val är approximate; inga historiska bostäder påstås vara lokaliserade.",
+  "reviewedRejectedCount": 66,
+  "skippedForeignCount": 6,
+  "selectedCount": 17,
+  "selectedEventUses": 22,
+  "remainingSwedishRejectedCount": 43,
+  "selected": [
+    {
+      "index": 30,
+      "place": "Njutånger, Västernorrland, Sverige, (Sweden)",
+      "uses": 1,
+      "sourceId": "geonames:8127337",
+      "sourceUrl": "https://www.geonames.org/8127337/",
+      "sourceName": "Njutånger socken",
+      "sourceAsciiName": "Njutanger socken",
+      "sourceAlternativeNames": "Njutangers socken,Njutångers socken",
+      "featureCode": "ADM4",
+      "countyCode": "03",
+      "municipalityCode": "2184",
+      "coordinates": {
+        "lat": 61.60474,
+        "lon": 17.10025
+      },
+      "precision": "approximate",
+      "previousRejection": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reason": "Namngiven Njutånger socken. Det äldre Västernorrland omfattade Hälsingland, så dagens länsgräns är inte ensam grund för avslag. Länsnamnet i händelsen 1610 är efterhandsmetadata: länet bildades först 1634. Socknen/bygden får en ungefärlig punkt.",
+      "evidence": [
+        {
+          "title": "Länsstyrelsen Västernorrland: historisk länsindelning",
+          "url": "https://www.lansstyrelsen.se/vasternorrland/om-oss/om-lansstyrelsen-i-vasternorrlands-lan/landshovding-och-lansrad.html"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "place": "Norra Näsby, Kalmar, Sweden",
+      "uses": 2,
+      "sourceId": "geonames:2688812",
+      "sourceUrl": "https://www.geonames.org/2688812/",
+      "sourceName": "Norra Näsby",
+      "sourceAsciiName": "Norra Nasby",
+      "sourceAlternativeNames": "Nasby,Norra Nasby,Norra Näsby,Näsby",
+      "featureCode": "PPL",
+      "countyCode": "09",
+      "municipalityCode": "0840",
+      "coordinates": {
+        "lat": 56.6,
+        "lon": 16.66667
+      },
+      "precision": "approximate",
+      "previousRejection": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reason": "Det fullständiga namnet Norra Näsby har en bebyggelsepost i angivet Kalmar län. Andra Näsby-orter är inte fullständiga namnträffar. Punkten anger bygd, inte historisk bostad.",
+      "evidence": []
+    },
+    {
+      "index": 88,
+      "place": "Orrnäs, Jamtland, Sweden",
+      "uses": 2,
+      "sourceId": "geonames:2686401",
+      "sourceUrl": "https://www.geonames.org/2686401/",
+      "sourceName": "Orrnäs",
+      "sourceAsciiName": "Orrnas",
+      "sourceAlternativeNames": "",
+      "featureCode": "PPL",
+      "countyCode": "07",
+      "municipalityCode": "2313",
+      "coordinates": {
+        "lat": 63.95,
+        "lon": 16.33333
+      },
+      "precision": "approximate",
+      "previousRejection": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reason": "Exakt Orrnäs har en bebyggelsepost i Jämtland. De andra exakta Orrnäs-posterna ligger i andra län; Örnäs är ett annat namn. Ungefärlig bygdpunkt.",
+      "evidence": []
+    },
+    {
+      "index": 180,
+      "place": "Skolstad, Kronoberg, Sweden",
+      "uses": 1,
+      "sourceId": "geonames:2677350",
+      "sourceUrl": "https://www.geonames.org/2677350/",
+      "sourceName": "Skölstad",
+      "sourceAsciiName": "Skolstad",
+      "sourceAlternativeNames": "Skoelstad,Skoldstad,Skolstad,Sköldstad,Skölstad,Skølstad",
+      "featureCode": "PPL",
+      "countyCode": "12",
+      "municipalityCode": "0764",
+      "coordinates": {
+        "lat": 56.95,
+        "lon": 14.5
+      },
+      "precision": "approximate",
+      "previousRejection": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reason": "Skolstad är en uttryckligen registrerad alternativ namnform för Skölstad i Kronoberg. Den andra Skölstad-posten ligger i annat län. Ungefärlig bygdpunkt.",
+      "evidence": []
+    },
+    {
+      "index": 185,
+      "place": "Smedjebacken, Söderbärke/W, Smedjebacken, Dalarna/Kopparberg, Suède",
+      "uses": 1,
+      "sourceId": "geonames:2676586",
+      "sourceUrl": "https://www.geonames.org/2676586/",
+      "sourceName": "Smedjebacken",
+      "sourceAsciiName": "Smedjebacken",
+      "sourceAlternativeNames": "Smedebaken,Смедебакен,سمدیه‌بکن",
+      "featureCode": "PPLA2",
+      "countyCode": "10",
+      "municipalityCode": "2061",
+      "coordinates": {
+        "lat": 60.14181,
+        "lon": 15.41416
+      },
+      "precision": "approximate",
+      "previousRejection": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reason": "RAÄ dokumenterar att Norrbärke, där Smedjebacken ligger, avskildes från Söderbärke 1646. Händelsen är daterad 1494; Söderbärke är därför inte i sig en geografisk konflikt. Punkten representerar Smedjebackens bygd.",
+      "evidence": [
+        {
+          "title": "Riksantikvarieämbetet: Norrbärke kyrkas historik",
+          "url": "https://bebyggelseregistret.raa.se/bbr2/byggnad/visaHistorikText.raa?byggnadBeskrivningId=21720000081377&byggnadId=21400000442386&historikId=21000001875845"
+        }
+      ]
+    },
+    {
+      "index": 189,
+      "place": "Spräklan, Kopparberg, Dalarna (W) (SWE)",
+      "uses": 1,
+      "sourceId": "geonames:2674734",
+      "sourceUrl": "https://www.geonames.org/2674734/",
+      "sourceName": "Spräklan",
+      "sourceAsciiName": "Spraklan",
+      "sourceAlternativeNames": "Sprackla,Spraklan,Spräckla,Spräklan",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2061",
+      "coordinates": {
+        "lat": 60.18333,
+        "lon": 15.31667
+      },
+      "precision": "approximate",
+      "previousRejection": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reason": "Exakt Spräklan är registrerat som bebyggelse i Dalarna/Kopparbergs län. Orten får en ungefärlig bygdpunkt.",
+      "evidence": []
+    },
+    {
+      "index": 218,
+      "place": "Stormortsjon, Västernorrland, Sweden",
+      "uses": 1,
+      "sourceId": "geonames:2671885",
+      "sourceUrl": "https://www.geonames.org/2671885/",
+      "sourceName": "Stormörtsjön",
+      "sourceAsciiName": "Stormortsjon",
+      "sourceAlternativeNames": "Stormoertsjoen,Stormortsjon,Stormörtsjön,Stormørtsjøn",
+      "featureCode": "PPL",
+      "countyCode": "24",
+      "municipalityCode": "2260",
+      "coordinates": {
+        "lat": 62.29725,
+        "lon": 16.14407
+      },
+      "precision": "approximate",
+      "previousRejection": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reason": "Stormortsjon är GeoNames uttryckliga ASCII-namn för Stormörtsjön i Västernorrland. Andra Mörtsjön-namn är inte fullständiga träffar. Ungefärlig bygdpunkt.",
+      "evidence": []
+    },
+    {
+      "index": 221,
+      "place": "Stubberod, Vastra Gotaland, Sweden",
+      "uses": 1,
+      "sourceId": "geonames:3331718",
+      "sourceUrl": "https://www.geonames.org/3331718/",
+      "sourceName": "Stubberöd",
+      "sourceAsciiName": "Stubberod",
+      "sourceAlternativeNames": "Stubberod,Stubberoed,Stubberöd,Stubberød",
+      "featureCode": "PPL",
+      "countyCode": "28",
+      "municipalityCode": "1482",
+      "coordinates": {
+        "lat": 57.85833,
+        "lon": 11.95
+      },
+      "precision": "approximate",
+      "previousRejection": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reason": "Stubberod är registrerat ASCII-namn för bebyggelsen Stubberöd i Västra Götaland. Fullt namn och angiven region stöder denna bygdpunkt.",
+      "evidence": []
+    },
+    {
+      "index": 237,
+      "place": "Svanshals, Osby Sn, Östra Göinge Hd, Kristianstad (Skåne) Län",
+      "uses": 2,
+      "sourceId": "geonames:2670443",
+      "sourceUrl": "https://www.geonames.org/2670443/",
+      "sourceName": "Svanshals",
+      "sourceAsciiName": "Svanshals",
+      "sourceAlternativeNames": "",
+      "featureCode": "PPL",
+      "countyCode": "27",
+      "municipalityCode": "1273",
+      "coordinates": {
+        "lat": 56.41667,
+        "lon": 13.93333
+      },
+      "precision": "approximate",
+      "previousRejection": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reason": "Svanshals finns som by i Osby, vilket även Osby kommuns fastighetsprotokoll styrker. Homonymen Svanshals socken i Östergötland är inte den enda möjliga namnträffen. Ungefärlig bygdpunkt.",
+      "evidence": [
+        {
+          "title": "Osby kommun: Miljö- och byggnämnden 2022-08-25, Svanshals-fastigheter",
+          "url": "https://www.osby.se/download/18.2a85a567182e8f5015140194/1661924923862/Milj%C3%B6-%20och%20byggn%C3%A4mnden%202022-08-25.pdf"
+        }
+      ]
+    },
+    {
+      "index": 253,
+      "place": "Säfsnäs, Gällinge",
+      "uses": 2,
+      "sourceId": "geonames:8127057",
+      "sourceUrl": "https://www.geonames.org/8127057/",
+      "sourceName": "Säfsnäs socken",
+      "sourceAsciiName": "Saefsnaes socken",
+      "sourceAlternativeNames": "",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.13929,
+        "lon": 14.43955
+      },
+      "precision": "approximate",
+      "previousRejection": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reason": "ISOF registrerar byn Gällinge, även kallad Villbäck, i Säfsnäs socken. Kombinationen är belagd. Samma ungefärliga sockenpunkt som redan granskade Gällinge/Säfsnäs-varianter används.",
+      "evidence": [
+        {
+          "title": "ISOF Ortnamnsregistret: Säfsnäs, Gällinge/Villbäck",
+          "url": "https://www4.isof.se/NAU/scans/_s1wx001/411204c1.htm"
+        }
+      ]
+    },
+    {
+      "index": 254,
+      "place": "Säfsnäs, Gällinge, Kopparbergs län, Kungsbacka, Halland, Suède",
+      "uses": 1,
+      "sourceId": "geonames:8127057",
+      "sourceUrl": "https://www.geonames.org/8127057/",
+      "sourceName": "Säfsnäs socken",
+      "sourceAsciiName": "Saefsnaes socken",
+      "sourceAlternativeNames": "",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.13929,
+        "lon": 14.43955
+      },
+      "precision": "approximate",
+      "previousRejection": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reason": "ISOF belägger Gällinge i den uttryckligen namngivna Säfsnäs socken. Händelsepostens andra ort anger också Säfsnäs/Dunderberget. Kungsbacka/Halland är motstridigt tillägg från homonymen. Råtexten bevaras; endast en ungefärlig Säfsnäs-punkt väljs.",
+      "evidence": [
+        {
+          "title": "ISOF Ortnamnsregistret: Säfsnäs, Gällinge/Villbäck och Dunderberget",
+          "url": "https://www4.isof.se/NAU/scans/_s1wx001/411204c1.htm"
+        }
+      ]
+    },
+    {
+      "index": 327,
+      "place": "Ugglebo, Blomsö, Jönköping, Jönköping, Suède",
+      "uses": 1,
+      "sourceId": "geonames:2666615",
+      "sourceUrl": "https://www.geonames.org/2666615/",
+      "sourceName": "Ugglebo",
+      "sourceAsciiName": "Ugglebo",
+      "sourceAlternativeNames": "",
+      "featureCode": "FRM",
+      "countyCode": "08",
+      "municipalityCode": "0662",
+      "coordinates": {
+        "lat": 57.01667,
+        "lon": 13.61667
+      },
+      "precision": "approximate",
+      "previousRejection": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reason": "Rosenbergs historiska ortlexikon belägger Ugglebo i Jönköpings län som by i Bolmsö socken på fastlandet. Detta stöder det fulla ortnamnet/länet trots stavningen Blomsö. Ungefärlig Ugglebo-bygdpunkt; gårdsbyggnad är inte identifierad.",
+      "evidence": [
+        {
+          "title": "Rosenberg: Ugglebo i Jönköpings län, Bolmsö socken",
+          "url": "https://runeberg.org/rosenberg/2/0927.html"
+        }
+      ]
+    },
+    {
+      "index": 328,
+      "place": "Ugglebo, Blomsö, Jönköping, Sweden",
+      "uses": 2,
+      "sourceId": "geonames:2666615",
+      "sourceUrl": "https://www.geonames.org/2666615/",
+      "sourceName": "Ugglebo",
+      "sourceAsciiName": "Ugglebo",
+      "sourceAlternativeNames": "",
+      "featureCode": "FRM",
+      "countyCode": "08",
+      "municipalityCode": "0662",
+      "coordinates": {
+        "lat": 57.01667,
+        "lon": 13.61667
+      },
+      "precision": "approximate",
+      "previousRejection": "Several source places match the name; the provided county/region does not distinguish them.",
+      "reason": "Ugglebo i angivet län beläggs av Rosenberg som by i Bolmsö socken på fastlandet. Ungefärlig bygdpunkt.",
+      "evidence": [
+        {
+          "title": "Rosenberg: Ugglebo i Jönköpings län, Bolmsö socken",
+          "url": "https://runeberg.org/rosenberg/2/0927.html"
+        }
+      ]
+    },
+    {
+      "index": 347,
+      "place": "valle, härad, Ölanda, Västra Götaland, Sverige",
+      "uses": 1,
+      "sourceId": "geonames:8127115",
+      "sourceUrl": "https://www.geonames.org/8127115/",
+      "sourceName": "Istrum socken",
+      "sourceAsciiName": "Istrum socken",
+      "sourceAlternativeNames": "",
+      "featureCode": "ADM4",
+      "countyCode": "28",
+      "municipalityCode": "1495",
+      "coordinates": {
+        "lat": 58.45567,
+        "lon": 13.611
+      },
+      "precision": "approximate",
+      "previousRejection": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reason": "ISOF belägger Ölanda som tidigare socken och senare gård i Istrum, Valle härad. Den namngivna bygden representeras med Istrums ungefärliga sockenpunkt, som redan används för den mer fullständiga Ölanda/Istrum-strängen.",
+      "evidence": [
+        {
+          "title": "ISOF Ortnamnsregistret: Istrum, Valle härad, Ölanda",
+          "url": "https://www4.isof.se/NAU/bilder/_s1rx001/306125b1.htm"
+        }
+      ]
+    },
+    {
+      "index": 402,
+      "place": "Wahlbo,Gavleborg,,Sweden",
+      "uses": 1,
+      "sourceId": "geonames:8128436",
+      "sourceUrl": "https://www.geonames.org/8128436/",
+      "sourceName": "Valbo socken",
+      "sourceAsciiName": "Valbo socken",
+      "sourceAlternativeNames": "",
+      "featureCode": "ADM4",
+      "countyCode": "03",
+      "municipalityCode": "2180",
+      "coordinates": {
+        "lat": 60.62132,
+        "lon": 17.01114
+      },
+      "precision": "approximate",
+      "previousRejection": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reason": "Det historiska ortlexikonet anger Wahlbo socken i Gästrikland, Gävleborgs län. Detta belägger den äldre namnformen för dagens Valbo. Ungefärlig sockenpunkt.",
+      "evidence": [
+        {
+          "title": "Historiskt-geografiskt och statistiskt lexikon: Wahlbo i Gävleborg",
+          "url": "https://runeberg.org/hgsl/supp/0360.html"
+        }
+      ]
+    },
+    {
+      "index": 405,
+      "place": "Willbäck, Gällinge, Kopparberg, Kungsbacka, Halland, Suède",
+      "uses": 1,
+      "sourceId": "geonames:8127057",
+      "sourceUrl": "https://www.geonames.org/8127057/",
+      "sourceName": "Säfsnäs socken",
+      "sourceAsciiName": "Saefsnaes socken",
+      "sourceAlternativeNames": "",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.13929,
+        "lon": 14.43955
+      },
+      "precision": "approximate",
+      "previousRejection": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed.",
+      "reason": "ISOF anger Villbäck och Gällinge som namn för samma by i Säfsnäs, Kopparbergs län. Den specifika kombinationen styrker Säfsnäs trots Kungsbacka/Halland-tillägget. Willbäck tolkas som äldre W-stavning. Råtexten bevaras och punkten är ungefärlig.",
+      "evidence": [
+        {
+          "title": "ISOF Ortnamnsregistret: Säfsnäs, Villbäck även Gällinge",
+          "url": "https://www4.isof.se/NAU/scans/_s1wx001/411204c1.htm"
+        }
+      ]
+    },
+    {
+      "index": 435,
+      "place": "Önskan, Anudsjön, Västernorrland, Suède",
+      "uses": 1,
+      "sourceId": "geonames:2686836",
+      "sourceUrl": "https://www.geonames.org/2686836/",
+      "sourceName": "Önskan",
+      "sourceAsciiName": "Onskan",
+      "sourceAlternativeNames": "OEnskan,Onskan,Önskan,Ønskan",
+      "featureCode": "PPL",
+      "countyCode": "24",
+      "municipalityCode": "2284",
+      "coordinates": {
+        "lat": 63.43333,
+        "lon": 17.8
+      },
+      "precision": "approximate",
+      "previousRejection": "No sufficiently verified source or named parish/bygd was established in the manual review.",
+      "reason": "Exakt Önskan är en bebyggelsepost i angivet Västernorrland, inom Örnsköldsviks kommun. Punkten representerar denna namngivna bygd. Den avvikande stavningen Anudsjön ändras inte och ingen bostad antas.",
+      "evidence": []
+    }
+  ],
+  "remaining": [
+    {
+      "index": 8,
+      "place": "Mjäryd, Kronoberg, Sverige",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 10,
+      "place": "Myckle, Umeå, Västerbotten, Suède",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 14,
+      "place": "Mårdsjön, Jamtland, Sweden",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 28,
+      "place": "Njurunda, Härnösand, Västernorrland, Sweden",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 34,
+      "place": "Nora, Västmanland, Sverige",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 35,
+      "place": "Nora, Västmanland, Sweden",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 47,
+      "place": "Norrala, Hälsingland, Bollnäs, Gävleborg, Suède",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 48,
+      "place": "Norrbo, Grangärde Församling, Kopparbergs Län, Hudiksvall, Gävleborg, Suède",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 59,
+      "place": "Norrvik, Kopparberg, Sverige",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 64,
+      "place": "Nylodose, Lilla Edet, Västra Götaland, Sweden",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 69,
+      "place": "Näset, Strömsund, Jämtland, Sweden",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 77,
+      "place": "of Garphyttan, Lindesberg, Orebro, Sweden",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 81,
+      "place": "Olastorp, Farstorp, Osby, Kristianstad, Kristianstad, Suède",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 93,
+      "place": "Osby, Kristianstad, Haderslev, Danemark",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 96,
+      "place": "Osby, Kristianstad, Skåne, Haderslev, Danemark",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 105,
+      "place": "Pekkola, Lövhaugen, Grue Finnskog, Värmland, Sweden",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 114,
+      "place": "Rallbo, Uppsala, Sverige (Thålbo, Västra Skedevi,  Västmanland ???",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 123,
+      "place": "Rosendal, Västmanland, Sweden",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 127,
+      "place": "Ryholms sn, Östra härad.",
+      "uses": 1,
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+    },
+    {
+      "index": 158,
+      "place": "Silleryd, Värmland, Sverige",
+      "uses": 1,
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+    },
+    {
+      "index": 172,
+      "place": "skellefteå, Svedvi, Västmanland, Sverige",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 198,
+      "place": "Stockholm, Södermanlands län, Sverige., Stockholm, Stockholm, Suède",
+      "uses": 2,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 244,
+      "place": "Svenneby, Sillerup, Värmland, Tanum, Göteborg och Bohus, Suède",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 257,
+      "place": "Säter, Indal,Dalarna,  Västernorrland, Sverige",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 296,
+      "place": "Torrakankorva, Keksi, Norrbottens län, Norrbotten, Suède",
+      "uses": 1,
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+    },
+    {
+      "index": 297,
+      "place": "Torrankankorva, Keksi, Norrbotten, Sverige",
+      "uses": 2,
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+    },
+    {
+      "index": 310,
+      "place": "Trönö, Lundberg, Dalarna, Sverige",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 334,
+      "place": "Umeå, Västerbotten, (Bureå, ), Umeå, Västerbotten, Suède",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 349,
+      "place": "Varberg, Gavleborg, Sweden",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 354,
+      "place": "Velanda, Örebro, Sverige",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 361,
+      "place": "Virseryd, Kronoberg, Sweden",
+      "uses": 1,
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+    },
+    {
+      "index": 367,
+      "place": "Vista, Forsa, Jönköpings län",
+      "uses": 1,
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+    },
+    {
+      "index": 371,
+      "place": "Väckelsång, Hovmantorp",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 372,
+      "place": "Väckelsång, Hovmantorp, Kronoberg, Sverige",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 383,
+      "place": "Västansjö, Dalarna, Sweden",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 386,
+      "place": "Västansjö, Vastmanland, Sweden",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 392,
+      "place": "Västergötland, Gotland, Suède",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 401,
+      "place": "Västra Åsaka, Älvsborg, Sverige",
+      "uses": 1,
+      "reason": "No sufficiently verified source or named parish/bygd was established in the manual review."
+    },
+    {
+      "index": 409,
+      "place": "Yttervik, Västerbotten, Sverige",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 412,
+      "place": "Yxsjön, Örebro, Sverige",
+      "uses": 1,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    },
+    {
+      "index": 421,
+      "place": "Ågården, Råda, Askims härad, Västergötland, Gotland, Suède",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 434,
+      "place": "Ölmevalla, Skaraborgs län, Kungsbacka, Halland, Sweden",
+      "uses": 1,
+      "reason": "The exact string contains contradictory or competing localities/regions. No historic dwelling position is guessed."
+    },
+    {
+      "index": 448,
+      "place": "Österbybruk, Uppland, Uppsala, Suède",
+      "uses": 2,
+      "reason": "Several source places match the name; the provided county/region does not distinguish them."
+    }
+  ],
+  "reviewNotes": [
+    {
+      "place": "Österbybruk, Uppland, Uppsala, Suède",
+      "decision": "remain unresolved",
+      "reason": "Två exakta Österbybruk-bebyggelseposter finns inom Uppsala län/Uppland (Östhammar och Enköping). Den tillgängliga händelsetexten skiljer dem inte; födelse i Belgien används inte som bevis för en dödsort.",
+      "sourceIds": [
+        "geonames:2685903",
+        "geonames:2726357"
+      ],
+      "evidence": [
+        {
+          "title": "SMHI: Österbybruk, Enköping",
+          "url": "https://www.smhi.se/vader/prognoser-och-varningar/vaderprognos/q/%C3%96sterbybruk/Enk%C3%B6ping/2726357"
+        }
+      ]
+    },
+    {
+      "place": "Yttervik, Västerbotten, Sverige",
+      "decision": "remain unresolved",
+      "reason": "Yttervik har mer än en källa i Västerbotten. Samma persons dödshändelse anger Bureå, men det identifierar inte säkert födelsehändelsens Yttervik."
+    },
+    {
+      "place": "Njurunda, Härnösand, Västernorrland, Sweden",
+      "decision": "remain unresolved",
+      "reason": "Njurunda och Härnösand är två uttryckliga orter. Samma persons födelseort Njurunda ger en ledtråd men är inte tillräcklig för att bekräfta dödsortens geografiska betydelse."
+    },
+    {
+      "place": "Virseryd, Kronoberg, Sweden",
+      "decision": "remain unresolved",
+      "reason": "Virsryd/Linneryd är belagt, men den exakta namnformen Virseryd har inte styrkts av primärkälla. Ingen punkt väljs enbart efter namnlikhet."
+    }
+  ]
+}

@@ -1,0 +1,901 @@
+{
+  "kind": "reviewed-high-frequency-place-points",
+  "date": "2026-09-28",
+  "source": {
+    "name": "GeoNames SE country extract",
+    "url": "https://download.geonames.org/export/dump/SE.zip",
+    "license": "CC BY 4.0",
+    "sha256": "0fa7a47700d36818fa4e2f22c83069b5016507e62418ab3d166ce6f85fdd0107"
+  },
+  "reviewedResidualNames": 70,
+  "reviewedResidualEventUses": 278,
+  "selected": [
+    {
+      "place": "(A) Stockholm, Huddinge, Hästvreten",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127418",
+      "sourceUrl": "https://www.geonames.org/8127418/",
+      "sourceName": "Huddinge socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0126",
+      "coordinates": {
+        "lat": 59.21353,
+        "lon": 18.01889
+      },
+      "reason": "Explicit Huddinge within Stockholm identifies the parish; Hästvreten address remains unverified."
+    },
+    {
+      "place": "(W) Grangärde Saxhyttan",
+      "uses": 5,
+      "precision": "exact",
+      "sourceId": "geonames:2679616",
+      "sourceUrl": "https://www.geonames.org/2679616/",
+      "sourceName": "Saxhyttan",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.3,
+        "lon": 15
+      },
+      "reason": "County letter W and Grangärde identify the Saxhyttan settlement in Ludvika, Dalarna, rather than its namesake in Örebro."
+    },
+    {
+      "place": "Backen, Ljusnarsberg",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "reason": "Explicit nationally unique Ljusnarsberg parish. Generic Backen is unverified and represented only by the parish."
+    },
+    {
+      "place": "Böle, Råneå, Norrbotten, Sweden",
+      "uses": 4,
+      "precision": "exact",
+      "sourceId": "geonames:606511",
+      "sourceUrl": "https://www.geonames.org/606511/",
+      "sourceName": "Böle",
+      "featureCode": "PPL",
+      "countyCode": "14",
+      "municipalityCode": "2580",
+      "coordinates": {
+        "lat": 65.88333,
+        "lon": 22.26667
+      },
+      "reason": "Böle settlement in Luleå municipality near Råneå, Norrbotten; other Böle settlements are outside this context."
+    },
+    {
+      "place": "Edebo, Norrtälje, Uppland",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8126095",
+      "sourceUrl": "https://www.geonames.org/8126095/",
+      "sourceName": "Edebo socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 60.05064,
+        "lon": 18.52384
+      },
+      "reason": "Explicit Edebo parish in Norrtälje and Uppland context."
+    },
+    {
+      "place": "Ekeby, Söderby, Söderbykarl, AB",
+      "uses": 5,
+      "precision": "approximate",
+      "sourceId": "geonames:8126286",
+      "sourceUrl": "https://www.geonames.org/8126286/",
+      "sourceName": "Söderby-Karl socken",
+      "featureCode": "ADM4",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 59.9022,
+        "lon": 18.70663
+      },
+      "reason": "Explicit Söderby-Karl and AB identify this parish. Several Ekeby settlements exist in Norrtälje; none is asserted as the farm point."
+    },
+    {
+      "place": "Färnebo, Värmland, Sweden",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127219",
+      "sourceUrl": "https://www.geonames.org/8127219/",
+      "sourceName": "Färnebo socken",
+      "featureCode": "ADM4",
+      "countyCode": "22",
+      "municipalityCode": "1782",
+      "coordinates": {
+        "lat": 59.76313,
+        "lon": 14.16956
+      },
+      "reason": "Färnebo socken in Värmland; excludes Västerfärnebo and Österfärnebo."
+    },
+    {
+      "place": "Grängesberg",
+      "uses": 4,
+      "precision": "exact",
+      "sourceId": "geonames:2711256",
+      "sourceUrl": "https://www.geonames.org/2711256/",
+      "sourceName": "Grängesberg",
+      "featureCode": "PPL",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.07465,
+        "lon": 15.00784
+      },
+      "reason": "Unique named Grängesberg settlement in the Swedish extract; not a farm address."
+    },
+    {
+      "place": "Gunnilbo (U), Sweden",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8128498",
+      "sourceUrl": "https://www.geonames.org/8128498/",
+      "sourceName": "Gunnilbo socken",
+      "featureCode": "ADM4",
+      "countyCode": "25",
+      "municipalityCode": "1904",
+      "coordinates": {
+        "lat": 59.77154,
+        "lon": 15.88693
+      },
+      "reason": "Gunnilbo socken and historical county letter U agree."
+    },
+    {
+      "place": "Heden, Grangärde(W)",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "reason": "Explicit Grangärde and W identify the parish. Generic Heden is not assigned to a namesake elsewhere."
+    },
+    {
+      "place": "Helgum, Säbrå, Ångermanland, Västernorrland, Sweden",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2706786",
+      "sourceUrl": "https://www.geonames.org/2706786/",
+      "sourceName": "Helgum",
+      "featureCode": "PPL",
+      "countyCode": "24",
+      "municipalityCode": "2280",
+      "coordinates": {
+        "lat": 62.63333,
+        "lon": 17.83333
+      },
+      "reason": "Named Helgum settlement has Säbrå socken and Härnösand context, unlike its Sollefteå namesakes."
+    },
+    {
+      "place": "Helgum, VÃ¤sternorrland County, Sollefteå, Västernorrland, Suède",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8133044",
+      "sourceUrl": "https://www.geonames.org/8133044/",
+      "sourceName": "Helgum",
+      "featureCode": "ADM3",
+      "countyCode": "24",
+      "municipalityCode": "2283",
+      "coordinates": {
+        "lat": 63.21959,
+        "lon": 16.82942
+      },
+      "reason": "Sollefteå context resolves Helgum administrative parish despite a mojibake county spelling; representative parish point."
+    },
+    {
+      "place": "Hinseberg, Näsby, Fellingsbro härad, Västmanland, Suède",
+      "uses": 5,
+      "precision": "exact",
+      "sourceId": "geonames:2706361",
+      "sourceUrl": "https://www.geonames.org/2706361/",
+      "sourceName": "Hinseberg",
+      "featureCode": "FRM",
+      "countyCode": "15",
+      "municipalityCode": "1885",
+      "coordinates": {
+        "lat": 59.46667,
+        "lon": 15.35
+      },
+      "reason": "Hinseberg named farm in Lindesberg municipality coincides with Näsby socken context. Västmanland is the historical province, not an assertion of modern county."
+    },
+    {
+      "place": "Hjulsjö",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8127264",
+      "sourceUrl": "https://www.geonames.org/8127264/",
+      "sourceName": "Hjulsjö socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1863",
+      "coordinates": {
+        "lat": 59.8022,
+        "lon": 14.78258
+      },
+      "reason": "Unique Hjulsjö socken; representative parish point avoids assuming village versus parish usage."
+    },
+    {
+      "place": "Hällefors (T)",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127269",
+      "sourceUrl": "https://www.geonames.org/8127269/",
+      "sourceName": "Hällefors socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1863",
+      "coordinates": {
+        "lat": 59.89679,
+        "lon": 14.55804
+      },
+      "reason": "Hällefors socken in Örebro county, identified by T."
+    },
+    {
+      "place": "Karlskoga",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2701715",
+      "sourceUrl": "https://www.geonames.org/2701715/",
+      "sourceName": "Karlskoga",
+      "featureCode": "PPLA2",
+      "countyCode": "15",
+      "municipalityCode": "1883",
+      "coordinates": {
+        "lat": 59.32667,
+        "lon": 14.52386
+      },
+      "reason": "Unique named Karlskoga city; not an address within the city."
+    },
+    {
+      "place": "Karlskrona",
+      "uses": 4,
+      "precision": "exact",
+      "sourceId": "geonames:2701713",
+      "sourceUrl": "https://www.geonames.org/2701713/",
+      "sourceName": "Karlskrona",
+      "featureCode": "PPLA",
+      "countyCode": "02",
+      "municipalityCode": "1080",
+      "coordinates": {
+        "lat": 56.16156,
+        "lon": 15.58661
+      },
+      "reason": "Unique named Karlskrona city in the Swedish extract; not an address within the city."
+    },
+    {
+      "place": "Knista socken, Örebro län, Sverige",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127273",
+      "sourceUrl": "https://www.geonames.org/8127273/",
+      "sourceName": "Knista socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1814",
+      "coordinates": {
+        "lat": 59.21426,
+        "lon": 14.79702
+      },
+      "reason": "Explicit Knista socken in Örebro county."
+    },
+    {
+      "place": "Kronoberg, Sweden",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:2699050",
+      "sourceUrl": "https://www.geonames.org/2699050/",
+      "sourceName": "Kronoberg County",
+      "featureCode": "ADM1",
+      "countyCode": "12",
+      "municipalityCode": "",
+      "coordinates": {
+        "lat": 56.66667,
+        "lon": 14.66667
+      },
+      "reason": "Representative Kronoberg county point; this intentionally shows a broad region and does not assert a village."
+    },
+    {
+      "place": "Kyrkbyn, Grangärde(W)",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8128198",
+      "sourceUrl": "https://www.geonames.org/8128198/",
+      "sourceName": "Grangärde socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2085",
+      "coordinates": {
+        "lat": 60.22095,
+        "lon": 14.89502
+      },
+      "reason": "Explicit Grangärde parish and county letter W. Generic Kyrkbyn is not located exactly; point represents the parish."
+    },
+    {
+      "place": "Lindris Häverö",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2694817",
+      "sourceUrl": "https://www.geonames.org/2694817/",
+      "sourceName": "Lindris",
+      "featureCode": "PPL",
+      "countyCode": "26",
+      "municipalityCode": "0188",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 18.68333
+      },
+      "reason": "Named Lindris settlement in Norrtälje matches the explicit Häverö context."
+    },
+    {
+      "place": "Ljuder, Lessebo, Småland, Kronobergs län, Sverige",
+      "uses": 5,
+      "precision": "approximate",
+      "sourceId": "geonames:8126541",
+      "sourceUrl": "https://www.geonames.org/8126541/",
+      "sourceName": "Ljuder socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0761",
+      "coordinates": {
+        "lat": 56.68799,
+        "lon": 15.34196
+      },
+      "reason": "Explicit Ljuder parish, Lessebo municipality and Kronoberg county agree."
+    },
+    {
+      "place": "Ljusnarsberg",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "reason": "Nationally unique Ljusnarsberg socken; representative parish point."
+    },
+    {
+      "place": "Ljusnarsberg, Örebro län Skäret",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "reason": "Explicit Ljusnarsberg and Örebro county despite malformed ordering. Skäret is not located at this parish center."
+    },
+    {
+      "place": "Mjäryd, Traryd Kronobergs län",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2691780",
+      "sourceUrl": "https://www.geonames.org/2691780/",
+      "sourceName": "Mjäryd",
+      "featureCode": "FRM",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.55,
+        "lon": 13.75
+      },
+      "reason": "Named Mjäryd farm in Markaryd municipality matches Traryd context; excludes Mjäryd settlement in Ljungby."
+    },
+    {
+      "place": "Nora bergslagsförsamling, Örebro, Sverige",
+      "uses": 7,
+      "precision": "approximate",
+      "sourceId": "geonames:8131846",
+      "sourceUrl": "https://www.geonames.org/8131846/",
+      "sourceName": "Nora bergsförs.",
+      "featureCode": "ADM3",
+      "countyCode": "15",
+      "municipalityCode": "1884",
+      "coordinates": {
+        "lat": 59.51957,
+        "lon": 15.04084
+      },
+      "reason": "Nora bergsförs. in Nora municipality and Örebro county; representative administrative point."
+    },
+    {
+      "place": "Norrbärke, Dalarna, Sverige",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8128038",
+      "sourceUrl": "https://www.geonames.org/8128038/",
+      "sourceName": "Norrbärke socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2061",
+      "coordinates": {
+        "lat": 60.14263,
+        "lon": 15.35459
+      },
+      "reason": "Explicit Norrbärke socken and Dalarna context."
+    },
+    {
+      "place": "Nya Kopparberg, Örebro län, Västmanland, Sverige",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "reason": "ISOF identifies Nya Kopparberg/Ljusnars Kopparberg in Ljusnarsberg, Västmanland. Parish representative point; historical settlement boundary is not asserted.",
+      "contextSource": "https://www.isof.se/namn/ortnamn/sol/ortnamnslexikon/kaalasjarvi-kopingsvik"
+    },
+    {
+      "place": "Ostergard, Linneryd, Kronoberg, Sweden",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8126545",
+      "sourceUrl": "https://www.geonames.org/8126545/",
+      "sourceName": "Linneryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0763",
+      "coordinates": {
+        "lat": 56.62671,
+        "lon": 15.16913
+      },
+      "reason": "Explicit Linneryd and Kronoberg resolve the parish; generic Östergård is not assigned to namesakes in other counties."
+    },
+    {
+      "place": "Sankt Ilian, Västmanland, Sweden",
+      "uses": 5,
+      "precision": "approximate",
+      "sourceId": "geonames:2664454",
+      "sourceUrl": "https://www.geonames.org/2664454/",
+      "sourceName": "Västerås",
+      "featureCode": "PPLA",
+      "countyCode": "25",
+      "municipalityCode": "1980",
+      "coordinates": {
+        "lat": 59.61617,
+        "lon": 16.55276
+      },
+      "reason": "Riksarkivet identifies Sankt Ilians församling in Västmanland and its relation to Västerås. Västerås city represents the area; historic parish boundaries are not established.",
+      "contextSource": "https://sok.riksarkivet.se/?postid=Arkis+aca63f4f-2793-4484-a95e-2103380434b0&s=Balder"
+    },
+    {
+      "place": "Saxhyttan, Orebro, Sweden",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2679617",
+      "sourceUrl": "https://www.geonames.org/2679617/",
+      "sourceName": "Saxhyttan",
+      "featureCode": "PPL",
+      "countyCode": "15",
+      "municipalityCode": "1863",
+      "coordinates": {
+        "lat": 59.73333,
+        "lon": 14.46667
+      },
+      "reason": "Örebro county disambiguates the Saxhyttan settlement in Hällefors from its Dalarna namesake."
+    },
+    {
+      "place": "Skellefteå lfs, Västerbotten, Sverige",
+      "uses": 6,
+      "precision": "approximate",
+      "sourceId": "geonames:8131951",
+      "sourceUrl": "https://www.geonames.org/8131951/",
+      "sourceName": "Skellefteå landsförs.",
+      "featureCode": "ADM3",
+      "countyCode": "23",
+      "municipalityCode": "2482",
+      "coordinates": {
+        "lat": 64.75169,
+        "lon": 20.91928
+      },
+      "reason": "Explicit landsförsamling abbreviation matches Skellefteå landsförs.; representative parish point."
+    },
+    {
+      "place": "Skäret, Ljusnarsberg, Kopparberg, Örebro, Sweden",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2678146",
+      "sourceUrl": "https://www.geonames.org/2678146/",
+      "sourceName": "Skäret",
+      "featureCode": "FRM",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.9,
+        "lon": 14.93333
+      },
+      "reason": "Named Skäret farm in Ljusnarsberg matches municipality and Örebro county. Kopparberg here is local town context, not an alternative Dalarna county."
+    },
+    {
+      "place": "Snavlunda",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8127286",
+      "sourceUrl": "https://www.geonames.org/8127286/",
+      "sourceName": "Snavlunda socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1882",
+      "coordinates": {
+        "lat": 58.96202,
+        "lon": 14.88064
+      },
+      "reason": "Snavlunda socken; representative parish point avoids choosing between its namesake farm and settlement."
+    },
+    {
+      "place": "Stora Malm, Katrineholm, Södermanland, Suède",
+      "uses": 5,
+      "precision": "approximate",
+      "sourceId": "geonames:8126405",
+      "sourceUrl": "https://www.geonames.org/8126405/",
+      "sourceName": "Stora Malm socken",
+      "featureCode": "ADM4",
+      "countyCode": "18",
+      "municipalityCode": "0483",
+      "coordinates": {
+        "lat": 58.93079,
+        "lon": 16.27906
+      },
+      "reason": "Stora Malm socken in Katrineholm, Södermanland; parish point rather than its church building."
+    },
+    {
+      "place": "Stora Malm, Södermanland, Sverige",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8126405",
+      "sourceUrl": "https://www.geonames.org/8126405/",
+      "sourceName": "Stora Malm socken",
+      "featureCode": "ADM4",
+      "countyCode": "18",
+      "municipalityCode": "0483",
+      "coordinates": {
+        "lat": 58.93079,
+        "lon": 16.27906
+      },
+      "reason": "Unique Stora Malm socken in stated county."
+    },
+    {
+      "place": "Stora Malm, Södermanlands län, Katrineholm, Södermanland, Suède",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8126405",
+      "sourceUrl": "https://www.geonames.org/8126405/",
+      "sourceName": "Stora Malm socken",
+      "featureCode": "ADM4",
+      "countyCode": "18",
+      "municipalityCode": "0483",
+      "coordinates": {
+        "lat": 58.93079,
+        "lon": 16.27906
+      },
+      "reason": "Explicit Stora Malm parish, Katrineholm and county agree."
+    },
+    {
+      "place": "Stora Smedbergsgruvan, Ljusnarsberg, Örebro län, Västmanland, Sverige",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "reason": "Explicit Ljusnarsberg parish and Örebro county; Västmanland is compatible province context. Mine location remains unverified."
+    },
+    {
+      "place": "Stora Tuna, Dalarna, Sverige",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8127037",
+      "sourceUrl": "https://www.geonames.org/8127037/",
+      "sourceName": "Stora Tuna socken",
+      "featureCode": "ADM4",
+      "countyCode": "10",
+      "municipalityCode": "2081",
+      "coordinates": {
+        "lat": 60.43866,
+        "lon": 15.32295
+      },
+      "reason": "Explicit Stora Tuna parish and Dalarna agree; not its church point."
+    },
+    {
+      "place": "Sånnamad Traryd (G)",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2679998",
+      "sourceUrl": "https://www.geonames.org/2679998/",
+      "sourceName": "Sånnamad",
+      "featureCode": "PPL",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.51667,
+        "lon": 13.76667
+      },
+      "reason": "Named Sånnamad settlement in Markaryd, Kronoberg agrees with explicit Traryd and G county letter."
+    },
+    {
+      "place": "Traryd",
+      "uses": 3,
+      "precision": "exact",
+      "sourceId": "geonames:2667516",
+      "sourceUrl": "https://www.geonames.org/2667516/",
+      "sourceName": "Traryd",
+      "featureCode": "PPL",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.57864,
+        "lon": 13.74916
+      },
+      "reason": "Unique named Traryd settlement in the Swedish extract; not a street or farm address."
+    },
+    {
+      "place": "Traryd, Kronoborg, Sweden",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8126596",
+      "sourceUrl": "https://www.geonames.org/8126596/",
+      "sourceName": "Traryd socken",
+      "featureCode": "ADM4",
+      "countyCode": "12",
+      "municipalityCode": "0767",
+      "coordinates": {
+        "lat": 56.54822,
+        "lon": 13.73498
+      },
+      "reason": "Traryd socken in Kronoberg; Kronoborg is a spelling variant in this string."
+    },
+    {
+      "place": "Trönö, Lundberg 1, Gävleborgs län, Sweden",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8126211",
+      "sourceUrl": "https://www.geonames.org/8126211/",
+      "sourceName": "Trönö socken",
+      "featureCode": "ADM4",
+      "countyCode": "03",
+      "municipalityCode": "2182",
+      "coordinates": {
+        "lat": 61.43025,
+        "lon": 16.80971
+      },
+      "reason": "Trönö parish uniquely resolves in Gävleborg; Lundberg 1 address is not established."
+    },
+    {
+      "place": "Uvberget, Ljusnarsberg(T)",
+      "uses": 4,
+      "precision": "approximate",
+      "sourceId": "geonames:8127282",
+      "sourceUrl": "https://www.geonames.org/8127282/",
+      "sourceName": "Ljusnarsberg socken",
+      "featureCode": "ADM4",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 59.93704,
+        "lon": 14.96802
+      },
+      "reason": "Explicit Ljusnarsberg parish and T county letter. Generic Uvberget may name a local hill; no hill or farm point is asserted."
+    },
+    {
+      "place": "Vedlösa, Hållnäs, Uppsala (C), Sweden",
+      "uses": 3,
+      "precision": "approximate",
+      "sourceId": "geonames:8127737",
+      "sourceUrl": "https://www.geonames.org/8127737/",
+      "sourceName": "Hållnäs socken",
+      "featureCode": "ADM4",
+      "countyCode": "21",
+      "municipalityCode": "0360",
+      "coordinates": {
+        "lat": 60.54709,
+        "lon": 17.99735
+      },
+      "reason": "Explicit Hållnäs parish in Uppsala county C agrees. Vedlösa dwelling remains unverified."
+    },
+    {
+      "place": "Östra Älvhöjden, Ljusnarsberg, Örebro län, Västmanland, Sverige",
+      "uses": 4,
+      "precision": "exact",
+      "sourceId": "geonames:2685661",
+      "sourceUrl": "https://www.geonames.org/2685661/",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "countyCode": "15",
+      "municipalityCode": "1864",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.78333
+      },
+      "reason": "Named Östra Älvhöjden farm matches Ljusnarsberg and Örebro county. Västmanland is a compatible province, not a second county."
+    }
+  ],
+  "rejected": [
+    {
+      "place": "Gammalsvenskby, Gotland, Sverige",
+      "uses": 9,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Garphyttan, Lindesberg, Örebro län",
+      "uses": 8,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Dsgl",
+      "uses": 6,
+      "reason": "Ditto marker, not a named place."
+    },
+    {
+      "place": "Kristinehamn, Örebro, Sverige",
+      "uses": 6,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Bronäs, Stora Malm, Katrineholm, Södermanland, Suède",
+      "uses": 5,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Helgum, Västernorrland, Sverige",
+      "uses": 5,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Kherson, Orenburg, Russia",
+      "uses": 5,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Sjöboda, Traryd, Kronoberg, Sweden",
+      "uses": 5,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Torrvallen, Skinnskatteberg, Västmanland",
+      "uses": 5,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Örebro",
+      "uses": 5,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Björnbo, Skinnskatteberg, Västmanland, Sverige",
+      "uses": 4,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Finland, Finlande",
+      "uses": 4,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Finntorp, Askersund lf (T)",
+      "uses": 4,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Moxboda, Harg, Stockholm, Sverige",
+      "uses": 4,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Nora",
+      "uses": 4,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Vägarås, Strömsnäsbruk, Markaryd, Kronoberg, Sverige",
+      "uses": 4,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Alvestaboda, Västra Skedvi, Västmanland",
+      "uses": 3,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Gräfte, Aspås, Jämtlands län",
+      "uses": 3,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Gällinge, Säfsnäs, Nås, Ludvika, Dalarna/Kopparberg, Suède",
+      "uses": 3,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Hagby, Medåker, Västmanland, Sverige",
+      "uses": 3,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Ort, Bad Tolz-Wolfratshausen, Bayern, Germany",
+      "uses": 3,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Torsby, Värmland, Sweden",
+      "uses": 3,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Utterbäcken, Karlskoga, Örebro, Sverige",
+      "uses": 3,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    },
+    {
+      "place": "Valla Boteå Västernorrland, Västernorrland, Suède",
+      "uses": 3,
+      "reason": "Ambiguous, conflicting geographical context, or outside the Swedish source extract; kept unresolved."
+    }
+  ],
+  "totals": {
+    "selected": 46,
+    "exact": 14,
+    "approximate": 32,
+    "selectedEventUses": 171,
+    "remainingHighFrequencyNames": 24,
+    "remainingHighFrequencyEventUses": 107
+  },
+  "coverage": {
+    "before": {
+      "gedcomPlaces": 2721,
+      "resolved": 1347,
+      "unresolved": 1374,
+      "catalogEntries": 2725,
+      "ignoredImported": 0
+    },
+    "after": {
+      "gedcomPlaces": 2721,
+      "resolved": 1393,
+      "unresolved": 1328,
+      "catalogEntries": 2725,
+      "ignoredImported": 0
+    },
+    "eventUsesBefore": 2656,
+    "eventUsesAfter": 2827,
+    "eventUsesTotal": 4449
+  }
+}

@@ -498,7 +498,6 @@
 2 SURN Göransson
 1 SEX M
 1 FAMC @F296@
-1 FAMC @F297@
 1 FAMS @F989@
 1 BIRT
 2 DATE 8 JAN 1811
@@ -1975,7 +1974,6 @@
 2 GIVN Karin
 2 SURN Matsdotter
 1 SEX F
-1 FAMS @F615@
 1 BIRT
 2 DATE 1700
 2 PLAC Stora Tomsjön Hällefors Sverige
@@ -1984,7 +1982,6 @@
 2 PLAC Gällinge  Säfsnäs Dalarna Sweden
 1 OBJE @O170@
 2 _PRIM Y
-1 FAMS @F616@
 1 FAMS @F530@
 0 @I262744691149@ INDI
 1 NAME Samuel /Mattsson/
@@ -1992,14 +1989,12 @@
 2 SURN Mattsson
 1 SEX M
 1 FAMC @F1568@
-1 FAMS @F593@
 1 BIRT
 2 DATE 1673
 2 PLAC Gällinge, Säfsnäs, Dalarna, Sverige
 1 DEAT
 2 DATE 1731
 2 PLAC Gällinge vilbäck, Nås, Dalarna, Sverige
-1 FAMS @F594@
 1 FAMS @F521@
 0 @I262744691181@ INDI
 1 NAME Marit* /Hindrichsdotter/
@@ -2013,21 +2008,17 @@
 1 DEAT
 2 DATE DEC 1716
 2 PLAC Gällinge, Säfsnäs, Sweden
-1 FAMS @F1395@
-1 FAMS @F1369@
 0 @I262744691223@ INDI
 1 NAME Malin /Nilsdotter/
 2 GIVN Malin
 2 SURN Nilsdotter
 1 SEX F
-1 FAMS @F574@
 1 BIRT
 2 DATE Abt. 1622
 2 PLAC Lernbo, Norrbärke, Kopparberg, Sweden
 1 DEAT
 2 DATE abt 1704
 2 PLAC Sverige
-1 FAMS @F575@
 1 FAMS @F493@
 0 @I262744691240@ INDI
 1 NAME Jakob /Månsson Pakkanen/
@@ -2042,8 +2033,6 @@
 1 DEAT
 2 DATE 1656
 2 PLAC Stora havsjön, Hjulsjö, Västmanland, Hällefors, Örebro, Suède
-1 FAMS @F728@
-1 FAMS @F665@
 0 @I262744691245@ INDI
 1 NAME Margit ("Unga") /Månsdotter Viinikka/
 2 GIVN Margit ("Unga")
@@ -2057,8 +2046,6 @@
 1 DEAT
 2 DATE 1663
 2 PLAC Hjulsjö, Hällefors, Örebro, Sverige
-1 FAMS @F728@
-1 FAMS @F665@
 0 @I262744691258@ INDI
 1 NAME Måns /Vinikka Finne/
 2 GIVN Måns
@@ -2071,7 +2058,6 @@
 1 DEAT
 2 DATE 1 Jan 1618
 2 PLAC Gloppsjön, Hällefors, Örebro, Sverige
-1 FAMS @F670@
 0 @I262744691316@ INDI
 1 NAME Olof /Nilsson av Hinseberg/
 2 GIVN Olof
@@ -2085,8 +2071,6 @@
 1 DEAT
 2 DATE 1610
 2 PLAC Hinseberg, Näsby, Fellingsbro härad, Västmanland, Suède
-1 FAMS @F1416@
-1 FAMS @F1417@
 0 @I262744691331@ INDI
 1 NAME Nils /Mattsson av Hinseberg/
 2 GIVN Nils
@@ -2100,7 +2084,6 @@
 1 DEAT
 2 DATE 1580
 2 PLAC Hinseberg, Näsby, Fellingsbro härad, Västmanland, Suède
-1 FAMS @F655@
 0 @I262744691392@ INDI
 1 NAME Anna /Knutsdotter Lilliehöök af Gälared o Kolbäck/ "
 2 GIVN Anna
@@ -2115,7 +2098,6 @@
 1 DEAT
 2 DATE 26 Sep 1586
 2 PLAC Hinseberg, Näsby, Fellingsbro härad, Västmanland, Suède
-1 FAMS @F655@
 0 @I262744691414@ INDI
 1 NAME Matts /Hemmingsson, of Hinseberg/
 2 GIVN Matts
@@ -2124,7 +2106,6 @@
 1 FAMS @F1125@
 1 DEAT
 2 DATE 1558
-1 FAMS @F645@
 0 @I262744691417@ INDI
 1 NAME Ellika (Elsa) /Davidsdotter (Körning)/ Ehepartnerin von Erik UNBEKANNT
 2 GIVN Ellika (Elsa)
@@ -2137,7 +2118,6 @@
 2 PLAC und Ort nicht angegeben.
 1 DEAT
 2 DATE AFT 1558
-1 FAMS @F645@
 0 @I262744691422@ INDI
 1 NAME Bengta /Hansdotter/
 2 GIVN Bengta
@@ -2149,14 +2129,12 @@
 2 PLAC valle, härad, Ölanda, Västra Götaland, Sverige
 1 DEAT
 2 DATE 1555
-1 FAMS @F1410@
 0 @I262744692449@ INDI
 1 NAME Stina /Jeansdotter/
 2 GIVN Stina
 2 SURN Jeansdotter
 1 SEX F
 1 FAMC @F265@
-1 FAMC @F341@
 1 FAMS @F81@
 1 BIRT
 2 DATE 9 april 1729
@@ -2184,7 +2162,6 @@
 2 NSFX 2nd 1663-1743
 1 SEX M
 1 FAMC @F56@
-1 FAMC @F818@
 1 FAMS @F60@
 1 BIRT
 2 DATE 1 Jan 1663
@@ -2202,7 +2179,6 @@
 2 NSFX 3rd 1635-1691
 1 SEX M
 1 FAMC @F1536@
-1 FAMS @F818@
 1 BIRT
 2 DATE 1 Jan 1635 (Child of Henrik Henriksson 2nd bef 1617-)
 2 PLAC Säfsnäs, Ludvika, Dalarna/Kopparberg, Suède
@@ -2619,7 +2595,6 @@
 1 FAMS @F587@
 1 FAMS @F604@
 1 FAMS @F353@
-1 FAMS @F337@
 1 BIRT
 2 DATE 1725
 2 PLAC Dagö
@@ -2654,7 +2629,6 @@
 2 DATE 1782
 2 PLAC Gammalsvenskby, Ukraina
 1 FAMS @F353@
-1 FAMS @F337@
 0 @I262744693554@ INDI
 1 NAME Siffer Christiansson /Reigi/
 2 GIVN Siffer Christiansson
@@ -2667,16 +2641,12 @@
 1 DEAT
 2 DATE ABT 1740
 2 PLAC Hiiumaa, Estonia
-1 FAMS @F1315@
-1 FAMS @F1316@
 0 @I262744694736@ INDI
 1 NAME Hindrik /Siffersson Reigi/
 2 GIVN Hindrik
 2 SURN Siffersson Reigi
 1 SEX M
 1 FAMC @F1314@
-1 FAMC @F1315@
-1 FAMC @F1316@
 1 FAMS @F1394@
 1 BIRT
 2 DATE 1700
@@ -2697,7 +2667,6 @@
 1 DEAT
 2 DATE ABT 1726
 2 PLAC Hiiumaa, Estonia
-1 FAMS @F1613@
 0 @I262744694787@ INDI
 1 NAME Siffer Clemetsson /Röicks/
 2 GIVN Siffer Clemetsson
@@ -2711,7 +2680,6 @@
 1 DEAT
 2 DATE Abt. 1726
 2 PLAC Dagö, Estland
-1 FAMS @F1611@
 0 @I262744694796@ INDI
 1 NAME Clemet /Greisson Reigi/
 2 GIVN Clemet
@@ -2725,7 +2693,6 @@
 1 DEAT
 2 DATE 1648
 2 PLAC Dagö, Wiek, Estland, Russie
-1 FAMS @F1609@
 0 @I262744694812@ INDI
 1 NAME Greis /Greisson Röicks/
 2 GIVN Greis
@@ -2814,7 +2781,6 @@
 2 SURN Olofsdotter
 1 SEX F
 1 FAMC @F1351@
-1 FAMC @F1352@
 1 FAMS @F453@
 1 BIRT
 2 DATE 04 Dec 1762
@@ -2980,31 +2946,25 @@
 2 SURN Ersson
 1 SEX M
 1 FAMS @F1351@
-1 FAMS @F1352@
 0 @I262744697103@ INDI
 1 NAME Märta /Persdotter/
 2 GIVN Märta
 2 SURN Persdotter
 1 SEX F
 1 FAMC @F18@
-1 FAMS @F570@
 1 BIRT
 2 DATE 1707-06-08
 2 PLAC Runnamåla Norregård, Långasjö, Kalmar, Sverige
 1 DEAT
 2 DATE 1771-02-16
 2 PLAC Enkoneryd, Långasjö, Kalmar, Sverige
-1 FAMS @F793@
 1 FAMS @F419@
-1 FAMS @F794@
-1 FAMS @F420@
 0 @I262744697128@ INDI
 1 NAME Tore /Jönsson/
 2 GIVN Tore
 2 SURN Jönsson
 1 SEX M
 1 FAMC @F504@
-1 FAMS @F563@
 1 BIRT
 2 DATE 1641
 2 PLAC Enkonaryd, Långasjö, Emmaboda, Kalmar, Suède
@@ -3013,13 +2973,10 @@
 2 PLAC Enkonaryd, Långasjö, Kalmar, Sweden
 1 OBJE @O464@
 2 _PRIM Y
-1 FAMS @F564@
 1 OBJE @O374@
-1 FAMS @F565@
 1 OBJE @O194@
 1 FAMS @F490@
 1 OBJE @O316@
-1 FAMS @F566@
 1 OBJE @O168@
 0 @I262744697134@ INDI
 1 NAME Inga /Månsdotter/
@@ -3027,13 +2984,7 @@
 2 SURN Månsdotter
 1 SEX F
 1 FAMC @F467@
-1 FAMC @F549@
-1 FAMC @F878@
-1 FAMS @F563@
-1 FAMS @F564@
-1 FAMS @F565@
 1 FAMS @F490@
-1 FAMS @F566@
 1 BIRT
 2 DATE 1654
 2 PLAC Långasjö, Emmaboda, Kalmar, Sverige
@@ -3051,7 +3002,6 @@
 1 DEAT
 2 DATE 1684
 2 PLAC Långasjö, Emmaboda, Kalmar, Suède
-1 FAMS @F780@
 0 @I262744697177@ INDI
 1 NAME Måns /Persson/ ISA10
 2 GIVN Måns
@@ -3059,27 +3009,23 @@
 2 NSFX ISA10
 1 SEX M
 1 FAMC @F1382@
-1 FAMS @F549@
 1 BIRT
 2 DATE 1630
 2 PLAC Hustofta, Väsby, Skåne, Sverige
 1 DEAT
 2 DATE 15 Mar 1700
 2 PLAC Ausås, Skåne, Sverige
-1 FAMS @F878@
 1 FAMS @F467@
 0 @I262744697198@ INDI
 1 NAME Bengta /Svensdotter/
 2 GIVN Bengta
 2 SURN Svensdotter
 1 SEX F
-1 FAMS @F549@
 1 BIRT
 2 DATE 1628
 1 DEAT
 2 DATE 1694
 2 PLAC Ausås, Skåne, Sverige
-1 FAMS @F878@
 1 FAMS @F467@
 0 @I262744697219@ INDI
 1 NAME Elin /Nilsdotter Freberg/
@@ -3094,8 +3040,6 @@
 1 DEAT
 2 DATE 1663
 2 PLAC Helganäs, Långasjö, Kalmar län
-1 FAMS @F1496@
-1 FAMS @F1360@
 0 @I262744697250@ INDI
 1 NAME Nils Svensson /Freberg/
 2 GIVN Nils Svensson
@@ -3108,8 +3052,6 @@
 1 DEAT
 2 DATE 1650
 2 PLAC Freberga, Östergötland, Sverige
-1 FAMS @F850@
-1 FAMS @F458@
 0 @I262744697265@ INDI
 1 NAME Maka /Berrithe/
 2 GIVN Maka
@@ -3122,8 +3064,6 @@
 1 DEAT
 2 DATE 1650
 2 PLAC Freberga, Östergötland, Sverige
-1 FAMS @F850@
-1 FAMS @F458@
 0 @I262744697315@ INDI
 1 NAME Elin /Matthesdotter/
 2 GIVN Elin
@@ -3136,7 +3076,6 @@
 1 DEAT
 2 DATE 13 November 1698
 2 PLAC Långasjö, Emmaboda, Kalmar, Suède
-1 FAMS @F780@
 0 @I262744697370@ INDI
 1 NAME Christina /Håkansdotter/
 2 GIVN Christina
@@ -3155,23 +3094,19 @@
 2 GIVN Peter
 2 SURN Petersson
 1 SEX M
-1 FAMS @F661@
 1 BIRT
 2 DATE 1734
 1 FAMS @F408@
-1 FAMS @F409@
 0 @I262744697390@ INDI
 1 NAME Karin /Månsdotter/
 2 GIVN Karin
 2 SURN Månsdotter
 1 SEX F
-1 FAMS @F661@
 1 BIRT
 2 DATE 1717
 1 FAMS @F408@
 2 DATE Ca 1795
 2 PLAC Teskogen Skogsnäs, Linneryd, Kronoberg, Sverige
-1 FAMS @F409@
 0 @I262744697440@ INDI
 1 NAME Ingrid /Persdotter/
 2 GIVN Ingrid
@@ -3191,7 +3126,6 @@
 2 SURN Håkansdotter
 1 SEX F
 1 FAMS @F1481@
-1 FAMS @F1482@
 0 @I262744697481@ INDI
 1 NAME Pehr /Marcusson/ ¤
 2 GIVN Pehr
@@ -5237,10 +5171,6 @@
 2 SURN Svensson
 1 SEX M
 1 FAMC @F419@
-1 FAMC @F420@
-1 FAMC @F570@
-1 FAMC @F793@
-1 FAMC @F794@
 1 FAMS @F804@
 1 BIRT
 2 DATE 15 Sep 1731
@@ -5260,15 +5190,7 @@
 2 SURN Toresson
 1 SEX M
 1 FAMC @F490@
-1 FAMC @F563@
-1 FAMC @F564@
-1 FAMC @F565@
-1 FAMC @F566@
-1 FAMS @F570@
-1 FAMS @F793@
 1 FAMS @F419@
-1 FAMS @F794@
-1 FAMS @F420@
 1 BIRT
 2 DATE Jul 1694
 2 PLAC Enkonaryd, Långasjö, Kalmar, Sverige
@@ -5300,41 +5222,35 @@
 2 SURN Tuvesdotter
 1 SEX F
 1 FAMC @F944@
-1 FAMS @F559@
 1 BIRT
 2 DATE 1657
 2 PLAC Ramsjö Norregård Långasjö Kalmar
 1 DEAT
 2 DATE 28 February 1732
 2 PLAC Piggsmåla, Långasjö, Kalmar, Sverige
-1 FAMS @F560@
 1 FAMS @F204@
 0 @I262744704569@ INDI
 1 NAME Bonde /Persson/
 2 GIVN Bonde
 2 SURN Persson
 1 SEX M
-1 FAMS @F947@
 1 BIRT
 2 DATE 1634
 2 PLAC Långasjö, Pixmåla, Kalmar län
 1 DEAT
 2 DATE 1691
 2 PLAC Piggsmåla Långasjö Kalmar
-1 FAMS @F556@
 1 FAMS @F4@
 0 @I262744704578@ INDI
 1 NAME Kerstin /Jonsdotter/
 2 GIVN Kerstin
 2 SURN Jonsdotter
 1 SEX F
-1 FAMS @F947@
 1 BIRT
 2 PLAC Piggsmåla, Långasjö, Kalmar
 1 DEAT
 2 DATE 1692
 2 PLAC Piggsmåla, Långasjö, Kronoberg, Sverige
-1 FAMS @F556@
 1 FAMS @F4@
 0 @I262744704600@ INDI
 1 NAME Thuve /Mattisson/
@@ -5348,8 +5264,6 @@
 1 DEAT
 2 DATE 12 April 1709
 2 PLAC Ramsjö, Norregård, Långasjö, Kalmar, Sverige
-1 FAMS @F637@
-1 FAMS @F198@
 0 @I262744704622@ INDI
 1 NAME Maria /Olofsdotter/
 2 GIVN Maria
@@ -5362,8 +5276,6 @@
 1 DEAT
 2 DATE 9 Okt 1710
 2 PLAC Ramsjö Södergård, Långasjö, Kalmar, Sverige
-1 FAMS @F637@
-1 FAMS @F198@
 0 @I262744704647@ INDI
 1 NAME Katarina /Hakansdotterr/
 2 GIVN Katarina
@@ -5383,7 +5295,6 @@
 2 SURN Månsson
 1 SEX M
 1 FAMC @F96@
-1 FAMC @F97@
 1 FAMS @F187@
 1 BIRT
 2 DATE 1710
@@ -5397,7 +5308,6 @@
 2 SURN Jakobsson Flick
 1 SEX M
 1 FAMC @F541@
-1 FAMC @F548@
 1 FAMS @F494@
 1 BIRT
 2 DATE 1712
@@ -5411,7 +5321,6 @@
 2 SURN Flick
 1 SEX M
 1 FAMS @F541@
-1 FAMS @F548@
 1 BIRT
 2 DATE 1673
 2 PLAC Nora, Örebro, Sweden
@@ -5430,15 +5339,12 @@
 1 DEAT
 2 DATE 12 JAN 1759
 2 PLAC Nora bergsförsamling, Örebro, Sweden
-1 FAMS @F548@
 0 @I262744705401@ INDI
 1 NAME Måns /Nilsson/
 2 GIVN Måns
 2 SURN Nilsson
 1 SEX M
 1 FAMC @F514@
-1 FAMC @F547@
-1 FAMC @F644@
 1 FAMS @F544@
 1 BIRT
 2 DATE 1680
@@ -5458,8 +5364,6 @@
 1 DEAT
 2 DATE APR 1711
 2 PLAC Gåsborn, Värmland, Sweden
-1 FAMS @F644@
-1 FAMS @F547@
 0 @I262744705450@ INDI
 1 NAME Måns /Börjesson/
 2 GIVN Måns
@@ -5471,7 +5375,6 @@
 1 DEAT
 2 DATE 2 February 1715
 2 PLAC Nora stadsförs (T), Nora, Örebro, Sweden
-1 FAMS @F1413@
 0 @I262744705475@ INDI
 1 NAME Marit /Hansdotter/
 2 GIVN Marit
@@ -5484,8 +5387,6 @@
 1 DEAT
 2 DATE 18 MAY 1734
 2 PLAC Gåsborn Filipstad, Värmland, Sweden
-1 FAMS @F644@
-1 FAMS @F547@
 0 @I262744705519@ INDI
 1 NAME Marit /Svensdotter/
 2 GIVN Marit
@@ -5498,8 +5399,6 @@
 1 DEAT
 2 DATE BEF 1723
 2 PLAC Sunne,Toneby,Värmlands län
-1 FAMS @F1408@
-1 FAMS @F1409@
 0 @I262744705539@ INDI
 1 NAME Hans /Andersson Hamarsund/
 2 GIVN Hans
@@ -5512,8 +5411,6 @@
 1 DEAT
 2 DATE MAY 1696
 2 PLAC Gåsborn, Värmland, Sweden
-1 FAMS @F1405@
-1 FAMS @F1379@
 0 @I262744708157@ INDI
 1 NAME Johan Anton //
 2 GIVN Johan Anton
@@ -5874,7 +5771,6 @@
 1 SEX M
 1 FAMC @F262@
 1 FAMC @F848@
-1 FAMS @F341@
 1 FAMS @F265@
 1 BIRT
 2 DATE 20 Jan 1694
@@ -5889,7 +5785,6 @@
 2 NSFX DNA. 7:e gammelmorförälders trassling
 1 SEX F
 1 FAMC @F325@
-1 FAMS @F341@
 1 BIRT
 2 DATE 1694 or 14 February 1698
 2 PLAC Djuprämmen, Gåsborn, Filipstad, Värmland, Suède
@@ -5905,7 +5800,6 @@
 1 SEX M
 1 FAMC @F736@
 1 FAMS @F325@
-1 FAMS @F263@
 1 BIRT
 2 DATE 1649
 2 PLAC Djuprämmen, Färnebo, Värmland, Sverige
@@ -5928,7 +5822,6 @@
 1 DEAT
 2 DATE 10 juni 1716
 2 PLAC Djuprämmen, Rämmen, Filipstad, Värmland, Suède
-1 FAMS @F263@
 0 @I262744711171@ INDI
 1 NAME Christopher /Christophersson (Honkainen)/
 2 GIVN Christopher
@@ -5958,7 +5851,6 @@
 2 PLAC Rämmen, Filipstad, Värmland, Suède
 1 OBJE @O218@
 2 _PRIM Y
-1 FAMS @F236@
 1 OBJE @O86@
 0 @I262744711205@ INDI
 1 NAME Ingeborg Ingrid /Henriksdotter Kukkoinen/ 1615-1694
@@ -5976,7 +5868,6 @@
 2 PLAC Filipstad, Västra Näsrämshyttan, Rämmen, Värmland, Sverige
 1 OBJE @O430@
 2 _PRIM Y
-1 FAMS @F236@
 1 OBJE @O504@
 0 @I262744711261@ INDI
 1 NAME Per /Kropp (Korppinen)/
@@ -5991,7 +5882,6 @@
 1 DEAT
 2 DATE 10 April 1634
 2 PLAC Nordmarkshyttan, Nordmark, Värmland, Sweden
-1 FAMS @F239@
 0 @I262744711275@ INDI
 1 NAME Brita /Christiansdotter Agricola/
 2 GIVN Brita
@@ -6005,7 +5895,6 @@
 1 DEAT
 2 DATE 1653
 2 PLAC Uusikirkko, Turku-Pori, Varsinais-Suomi, Finland
-1 FAMS @F239@
 0 @I262744711297@ INDI
 1 NAME Sigrid /Persdotter/
 2 GIVN Sigrid
@@ -6021,7 +5910,6 @@
 2 PLAC Nordmanshyttan, Nordmark, Värmland, Sweden
 1 OBJE @O240@
 2 _PRIM Y
-1 FAMS @F1302@
 1 OBJE @O362@
 0 @I262744711325@ INDI
 1 NAME Kristian\Christian /Mikaelsson/ Agricola, Bishop of Revel Talinn
@@ -6036,8 +5924,6 @@
 1 DEAT
 2 DATE 19 februari 1586
 2 PLAC Tallinn, Harjumaa, Estonia
-1 FAMS @F213@
-1 FAMS @F214@
 0 @I262744711364@ INDI
 1 NAME Elin Persdotter /Fleming/
 2 GIVN Elin Persdotter
@@ -6051,8 +5937,6 @@
 1 DEAT
 2 DATE 1608
 2 PLAC Finland, Finlande
-1 FAMS @F213@
-1 FAMS @F214@
 0 @I262744711405@ INDI
 1 NAME Peder (Per) /Hermansson Fleming/
 2 GIVN Peder (Per)
@@ -6066,7 +5950,6 @@
 1 DEAT
 2 DATE 3 Mar 1560
 2 PLAC Viljais, Rymättylä, Lansi-Suomi, Finland
-1 FAMS @F389@
 0 @I262744711426@ INDI
 1 NAME Margareta /Torstensdotter (Ram)/
 2 GIVN Margareta
@@ -6080,7 +5963,6 @@
 1 DEAT
 2 DATE 1558
 2 PLAC Eskilsater, Värmland, Sweden
-1 FAMS @F389@
 0 @I262744711454@ INDI
 1 NAME Erik Hermansson /Fleming till Salontaka/
 2 GIVN Erik Hermansson
@@ -6093,7 +5975,6 @@
 1 DEAT
 2 DATE 1537
 2 PLAC Salontaka, Halikko, Finland
-1 FAMS @F400@
 0 @I262744711470@ INDI
 1 NAME Anna Engelbrecthin tytär /Björnram Till Isnäs/
 2 GIVN Anna Engelbrecthin tytär
@@ -6107,7 +5988,6 @@
 1 DEAT
 2 DATE ca 1555
 2 PLAC Turku, Finland
-1 FAMS @F400@
 0 @I262744711486@ INDI
 1 NAME Engelbrekt /Larsson Björnram till Isnäs i Pärnå/
 2 GIVN Engelbrekt
@@ -6167,7 +6047,6 @@
 2 PLAC Värmland, Sverige
 1 DEAT
 2 PLAC Nordmark, Värmland, Sverige
-1 FAMS @F1333@
 0 @I262744712418@ INDI
 1 NAME Margita /Persdotter Nurminen/ IX:258
 2 GIVN Margita
@@ -6185,7 +6064,6 @@
 2 _PRIM Y
 1 FAMS @F1484@
 1 OBJE @O23@
-1 FAMS @F1554@
 1 OBJE @O466@
 0 @I262744712535@ INDI
 1 NAME Maria Berg Karin /Christophersdotter/
@@ -6315,7 +6193,6 @@
 1 DEAT
 2 DATE 10 April 1690
 2 PLAC Håen, Säfsnäs, Dalarna, Sverige
-1 FAMS @F267@
 0 @I262744712782@ INDI
 1 NAME Hans /Nilsson Nikarainen/
 2 GIVN Hans
@@ -6330,7 +6207,6 @@
 2 DATE 1684
 2 PLAC Håen, Säfsnäs, Kopparberg, Sweden
 1 FAMS @F1274@
-1 FAMS @F267@
 0 @I262744712815@ INDI
 1 NAME Nils /Nikarainen Finne/
 2 GIVN Nils
@@ -6344,7 +6220,6 @@
 1 DEAT
 2 DATE 1636
 2 PLAC Håen, Säfsnäs, Kopparbergs län, Ludvika, Dalarna/Kopparberg, Suède
-1 FAMS @F122@
 0 @I262744712851@ INDI
 1 NAME Karin /Gift Nikarainen Finne/
 2 GIVN Karin
@@ -6356,7 +6231,6 @@
 2 PLAC Hån, Säfsnäs, Ludvika, Dalarna/Kopparberg, Suède
 1 OBJE @O517@
 2 _PRIM Y
-1 FAMS @F122@
 1 OBJE @O63@
 0 @I262744712896@ INDI
 1 NAME Malin /Johansdotter/
@@ -6370,7 +6244,6 @@
 1 DEAT
 2 DATE abt 1679
 2 PLAC Gunnillebo, Västmanland
-1 FAMS @F102@
 0 @I262744712911@ INDI
 1 NAME Nils /Finne/
 2 GIVN Nils
@@ -6384,7 +6257,6 @@
 1 DEAT
 2 DATE efter 1615
 2 PLAC Åsjögle , Mörlunda, Kalmar, Sverige
-1 FAMS @F102@
 0 @I262744712926@ INDI
 1 NAME Jon /Jonsson/
 2 GIVN Jon
@@ -6398,7 +6270,6 @@
 1 DEAT
 2 DATE 10 aug 1698
 2 PLAC Näsbyn, Alfta Parish, Gävleborg Lan, Sweden
-1 FAMS @F108@
 0 @I262744712935@ INDI
 1 NAME Brita Kerstin /Andersdotter/
 2 GIVN Brita Kerstin
@@ -6412,7 +6283,6 @@
 1 DEAT
 2 DATE 18 October 1696
 2 PLAC Näsbyn, Alfta, Ovanåker, Gävleborg, Suède
-1 FAMS @F108@
 0 @I262744712952@ INDI
 1 NAME Jon /Andersson/
 2 GIVN Jon
@@ -6428,7 +6298,6 @@
 2 PLAC Eden, Junsele, Sweden
 1 OBJE @O476@
 2 _PRIM Y
-1 FAMS @F110@
 1 OBJE @O96@
 0 @I262744712963@ INDI
 1 NAME Bryta /Staphansdotter/
@@ -6441,7 +6310,6 @@
 2 PLAC Piteå, Norrbotten, Sweden
 1 DEAT
 2 PLAC Fjolsta Attmar, Sweden
-1 FAMS @F110@
 0 @I262744712985@ INDI
 1 NAME Anders Börjesson /Gadd/
 2 GIVN Anders Börjesson
@@ -6455,7 +6323,6 @@
 1 DEAT
 2 DATE ABT 1667
 2 PLAC Borg Norrala, Gävleborg, Sverige
-1 FAMS @F401@
 0 @I262744713002@ INDI
 1 NAME Karin /Kristoffersdotter Bure/
 2 GIVN Karin
@@ -6464,7 +6331,6 @@
 1 FAMC @F1019@
 1 FAMC @F1538@
 1 FAMS @F1027@
-1 FAMS @F401@
 1 BIRT
 2 DATE ABT 1622
 2 PLAC Helgum, Säbrå, Ångermanland, Västernorrland, Sweden
@@ -6535,7 +6401,6 @@
 1 DEAT
 2 DATE 3 JUN 1632
 2 PLAC Helgum, Säbrå, Ångermanland, Västernorrland, Sweden
-1 FAMS @F1336@
 0 @I262744713119@ INDI
 1 NAME Gertrud /Ulvsdatter/ 92
 2 GIVN Gertrud
@@ -6583,7 +6448,6 @@
 2 PLAC Helgum, Vasternorrland, Sweden
 1 OBJE @O335@
 2 _PRIM Y
-1 FAMS @F385@
 1 OBJE @O205@
 0 @I262744713170@ INDI
 1 NAME Ingrid Kajsa Magdalena /Nilsdotter-Nilsson/
@@ -6597,7 +6461,6 @@
 1 DEAT
 2 DATE 1568
 2 PLAC Gudmundrå, Västernorrland, Sweden
-1 FAMS @F385@
 0 @I262744713210@ INDI
 1 NAME Nils /Olofsson Rehn/
 2 GIVN Nils
@@ -6612,7 +6475,6 @@
 2 PLAC Hamnen, Öjebyn, Norrbotten County, Piteå, Norrbotten, Suède
 1 OBJE @O338@
 2 _PRIM Y
-1 FAMS @F1331@
 1 OBJE @O144@
 0 @I262744713271@ INDI
 1 NAME Gulle /Gullesson Laurensson/ 78
@@ -6673,7 +6535,6 @@
 1 FAMS @F1539@
 1 BIRT
 2 DATE 1575
-1 FAMS @F1334@
 0 @I262744713402@ INDI
 1 NAME Anders /Jonsson/
 2 GIVN Anders
@@ -6687,7 +6548,6 @@
 1 DEAT
 2 DATE abt 1695
 2 PLAC olingdal, lillhärdal, härjedalen, Sverige
-1 FAMS @F1264@
 0 @I262744713419@ INDI
 1 NAME Bård el Baard (i Dalås) /Eriksson/
 2 GIVN Bård el Baard (i Dalås)
@@ -6697,7 +6557,6 @@
 1 BIRT
 2 DATE 1515
 2 PLAC Dalåsen, Berg, Jämtland, Sverige
-1 FAMS @F243@
 0 @I262744713432@ INDI
 1 NAME Karin /Olofsdotter Bure/
 2 GIVN Karin
@@ -6711,7 +6570,6 @@
 1 DEAT
 2 DATE 24 Feb 1646
 2 PLAC Snöån, Norrbärke, Dalarna, Sverige
-1 FAMS @F243@
 0 @I262744713439@ INDI
 1 NAME Olof Phardonis Fåresson /Balck (Vicar)/
 2 GIVN Olof Phardonis Fåresson
@@ -6725,7 +6583,6 @@
 1 DEAT
 2 DATE 1599
 2 PLAC Nora, Västmanland, Sweden
-1 FAMS @F211@
 0 @I262744713470@ INDI
 1 NAME Annika Rosenbielke (1525–) //
 2 GIVN Annika Rosenbielke (1525–)
@@ -6737,7 +6594,6 @@
 1 DEAT
 2 DATE 1575
 2 PLAC Stockholm, County, Stockholm, Stockholm, Suède
-1 FAMS @F211@
 0 @I262744713551@ INDI
 1 NAME Anna Bengtsdotter /Stierna Ginbalk af Grisatorp til Lästad/
 2 GIVN Anna Bengtsdotter
@@ -6750,7 +6606,6 @@
 1 DEAT
 2 DATE 7 January 1599
 2 PLAC Lästad, Blädinge, Allbo härad, Småland, Alvesta, Kronoberg, Suède
-1 FAMS @F250@
 0 @I262744713587@ INDI
 1 NAME Ev. Nils /Finne i Turlunda/
 2 GIVN Ev. Nils
@@ -6761,7 +6616,6 @@
 2 DATE 1533
 1 DEAT
 2 DATE 1567
-1 FAMS @F1267@
 0 @I262744713653@ INDI
 1 NAME Mats /Eriksson/ *
 2 GIVN Mats
@@ -6776,7 +6630,6 @@
 1 DEAT
 2 DATE 2 Nov 1650
 2 PLAC Grangärde, Dalarnas, Sweden
-1 FAMS @F1056@
 0 @I262744713665@ INDI
 1 NAME Karin /Olofsdotter/
 2 GIVN Karin
@@ -6790,7 +6643,6 @@
 1 DEAT
 2 DATE 16 Dec 1660
 2 PLAC Sandviken, Grangärde, W, Sweden
-1 FAMS @F1056@
 0 @I262744713684@ INDI
 1 NAME Erik Alf /Olofsson Östensson Ostensson/
 2 GIVN Erik Alf
@@ -6812,9 +6664,7 @@
 2 SURN Hendricksson
 1 SEX M
 1 FAMC @F62@
-1 FAMC @F710@
 1 FAMS @F96@
-1 FAMS @F97@
 1 BIRT
 2 DATE 1675
 2 PLAC Älmeboda fg, Kålleboda, Kronoberg, Suède
@@ -6833,7 +6683,6 @@
 1 DEAT
 2 DATE 29 Feb 1748
 2 PLAC Skogsryd Barkagård, Linneryd, Tingsryd, Kronoberg, Suède
-1 FAMS @F97@
 0 @I262744714276@ INDI
 1 NAME Hindric /Tofvesson/
 2 GIVN Hindric
@@ -6847,7 +6696,6 @@
 1 DEAT
 2 DATE 1697 juli
 2 PLAC Kållebo, Älmeboda, Tingsryd, Kronoberg, Suède
-1 FAMS @F710@
 0 @I262744714289@ INDI
 1 NAME Tove /Andersson/
 2 GIVN Tove
@@ -6857,7 +6705,6 @@
 1 DEAT
 2 DATE 10 March 1678
 2 PLAC Kampingemåla, Södra Sandsjö, Tingsryd, Kronoberg, Suède
-1 FAMS @F703@
 0 @I262744714307@ INDI
 1 NAME Gyret /Svensdotter/
 2 GIVN Gyret
@@ -6870,7 +6717,6 @@
 1 DEAT
 2 DATE 5 April 1674
 2 PLAC Kampingemåla, Södra Sandsjö, Tingsryd, Kronoberg, Suède
-1 FAMS @F703@
 0 @I262744714314@ INDI
 1 NAME Sven /Hindriksson/ (Bonde)
 2 GIVN Sven
@@ -6896,7 +6742,6 @@
 2 PLAC Skogsryd, Linneryd, Tingsryd, Kronoberg, Suède
 1 DEAT
 2 PLAC Kållebo Wästergård, Älmeboda, Kronoberg. Sverige
-1 FAMS @F710@
 0 @I262744714350@ INDI
 1 NAME Mattis /Jonsson/
 2 GIVN Mattis
@@ -6907,7 +6752,6 @@
 2 DATE 1595
 1 DEAT
 2 PLAC Skogsryd, Linneryd, Tingsryd, Kronoberg, Suède
-1 FAMS @F690@
 0 @I262744714399@ INDI
 1 NAME Elin /Karlsdotter Bark/
 2 GIVN Elin
@@ -6921,7 +6765,6 @@
 1 DEAT
 2 DATE 1641
 2 PLAC Korrö Almeboda Kronoberg Sverige
-1 FAMS @F690@
 0 @I262744714480@ INDI
 1 NAME Carl /Månsson Bark/
 2 GIVN Carl
@@ -6942,7 +6785,6 @@
 3 _WDTH 960
 3 _HGHT 1164
 3 _TYPE primary
-1 FAMS @F688@
 0 @I262744714486@ INDI
 1 NAME Måns /Bark bonde/
 2 GIVN Måns
@@ -6955,7 +6797,6 @@
 1 DEAT
 2 DATE 1600
 2 PLAC Skogsryd, Linneryd, Tingsryd, Kronoberg, Suède
-1 FAMS @F1424@
 0 @I262744714511@ INDI
 1 NAME Kerstin Bark /Tofvesdotter/
 2 GIVN Kerstin Bark
@@ -6967,7 +6808,6 @@
 2 PLAC Skogsryd Linneryd Kronoberg Sverige
 1 DEAT
 2 PLAC Skogsryd, Linneryd, Tingsryd, Kronoberg, Suède
-1 FAMS @F688@
 0 @I262744714530@ INDI
 1 NAME Margareta /Åkesdotter/
 2 GIVN Margareta
@@ -6992,8 +6832,6 @@
 2 SURN Larsson
 1 SEX M
 1 FAMC @F191@
-1 FAMC @F192@
-1 FAMC @F193@
 1 FAMS @F164@
 1 BIRT
 2 DATE 27 Sep 1737
@@ -7007,7 +6845,6 @@
 1 SEX M
 1 FAMC @F1042@
 1 FAMC @F1284@
-1 FAMC @F136@
 1 FAMS @F151@
 1 BIRT
 2 DATE ca 1670
@@ -7021,9 +6858,6 @@
 2 SURN OLSSON
 1 SEX M
 1 FAMC @F139@
-1 FAMC @F405@
-1 FAMC @F406@
-1 FAMC @F407@
 1 FAMS @F142@
 1 BIRT
 2 DATE 1688
@@ -7044,7 +6878,11 @@
 1 DEAT
 2 DATE 15 MAY 1726
 2 PLAC Gräsholma, Traryd
-1 FAMS @F405@
+1 NOTE Sammanförd med ursprunglig personpost @I262744889570@. Alternativa originaluppgifter:
+2 CONT Födelsedatum: ca 1645
+2 CONT Födelseplats: Lille Tappa, Österåker, Södermanland, Sverige
+2 CONT Dödsdatum: 15 Maj 1726
+2 CONT Dödsplats: Gräsholma, Traryd, Kronoberg, Sverige
 0 @I262744714700@ INDI
 1 NAME Johan /Eriksson/
 2 GIVN Johan
@@ -7054,8 +6892,6 @@
 1 DEAT
 2 DATE ABT 1678
 2 PLAC Traryd, Kronobergs län
-1 FAMS @F1572@
-1 FAMS @F1342@
 0 @I262744714723@ INDI
 1 NAME Nils /Persson/
 2 GIVN Nils
@@ -7069,9 +6905,6 @@
 1 DEAT
 2 DATE 27 APR 1694
 2 PLAC Koppartorp, Tunaberg, Södermanlands län
-1 FAMS @F1339@
-1 FAMS @F1340@
-1 FAMS @F1341@
 0 @I262744714802@ INDI
 1 NAME Per /Michelsson Fjärdringsman/
 2 GIVN Per
@@ -7085,8 +6918,6 @@
 1 DEAT
 2 DATE 12 Apr 1646
 2 PLAC Tuna, Piacenza, Emilia-Romagna, Italy
-1 FAMS @F1095@
-1 FAMS @F928@
 0 @I262744714838@ INDI
 1 NAME Ingeborg /Gunnersdatter/
 2 GIVN Ingeborg
@@ -7095,8 +6926,6 @@
 1 FAMS @F277@
 1 DEAT
 2 PLAC Tunaberg, (D) Sweden
-1 FAMS @F1095@
-1 FAMS @F928@
 0 @I262744714851@ INDI
 1 NAME Cajsa /Jans-Dotter/
 2 GIVN Cajsa
@@ -7106,8 +6935,6 @@
 1 BIRT
 2 DATE 1534
 2 PLAC Tunaberg Södermanland Sverige, Södermanland, Suède
-1 FAMS @F1571@
-1 FAMS @F1511@
 0 @I262744714861@ INDI
 1 NAME Johanna /Uddesdotter/
 2 GIVN Johanna
@@ -7133,10 +6960,6 @@
 2 SURN Jönsdotter
 1 SEX F
 1 FAMC @F1108@
-1 FAMC @F1111@
-1 FAMC @F233@
-1 FAMC @F291@
-1 FAMC @F303@
 1 FAMS @F256@
 1 BIRT
 2 DATE ca 1666
@@ -7179,7 +7002,6 @@
 2 GIVN Jöns
 2 SURN Assarsson
 1 SEX M
-1 FAMS @F233@
 1 BIRT
 2 DATE 1625
 2 PLAC Aggalt, Traryd, Markaryd, Kronoberg, Sverige
@@ -7187,15 +7009,11 @@
 2 DATE 16 Feb 1702
 2 PLAC Aggalt, Traryd, Markaryd, Kronoberg, Sverige
 1 FAMS @F1108@
-1 FAMS @F1111@
-1 FAMS @F291@
-1 FAMS @F303@
 0 @I262744714965@ INDI
 1 NAME Lucia /N/
 2 GIVN Lucia
 2 SURN N
 1 SEX F
-1 FAMS @F233@
 1 BIRT
 2 DATE 1634
 2 PLAC Traryd, Agghult, Kronoberg, Sverige
@@ -7203,26 +7021,19 @@
 2 DATE 10 Maj 1708
 2 PLAC Traryd, Agghult, Kronoberg, Sverige
 1 FAMS @F1108@
-1 FAMS @F1111@
-1 FAMS @F291@
-1 FAMS @F303@
 0 @I262744715005@ INDI
 1 NAME Jens ( Jöns) av Svanhals /Nielsen (Nilsson)/
 2 GIVN Jens ( Jöns) av Svanhals
 2 SURN Nielsen (Nilsson)
 1 SEX M
 1 FAMC @F398@
-1 FAMS @F220@
 1 BIRT
 2 DATE Abt. 1630
 2 PLAC Osby, Kristianstad, Sweden
 1 DEAT
 2 DATE 16 Aug 1699
 2 PLAC Hemmeströ, N. Åkarp Sn, Kristianstad
-1 FAMS @F336@
 1 FAMS @F1123@
-1 FAMS @F170@
-1 FAMS @F642@
 0 @I262744715017@ INDI
 1 NAME Niels av Svanshals /Thuesen/ ' Pajen' Enkem. (1651) 7 efterlev. barn
 2 GIVN Niels av Svanshals
@@ -7237,10 +7048,6 @@
 1 DEAT
 2 DATE 6 feb 1667
 2 PLAC Svanshals, Osby Sn, Östra Göinge Hd, Kristianstad (Skåne) Län
-1 FAMS @F318@
-1 FAMS @F1179@
-1 FAMS @F173@
-1 FAMS @F27@
 0 @I262744715031@ INDI
 1 NAME Kirstine av Svanshals och Åbrölla /Jeppesdatter ( Jeppsdotter)/
 2 GIVN Kirstine av Svanshals och Åbrölla
@@ -7254,10 +7061,6 @@
 1 DEAT
 2 DATE 22 mar 1651
 2 PLAC Svanhals, Osby, Skåne län, Sverige
-1 FAMS @F318@
-1 FAMS @F1179@
-1 FAMS @F173@
-1 FAMS @F27@
 0 @I262744715051@ INDI
 1 NAME Tufve /Olufsen Av Svanhals/
 2 GIVN Tufve
@@ -7273,13 +7076,9 @@
 2 PLAC Osby, Kristianstad, Skåne, Haderslev, Danemark
 1 OBJE @O92@
 2 _PRIM Y
-1 FAMS @F1077@
 1 OBJE @O490@
-1 FAMS @F1133@
 1 OBJE @O234@
-1 FAMS @F99@
 1 OBJE @O308@
-1 FAMS @F42@
 1 OBJE @O497@
 0 @I262744715071@ INDI
 1 NAME Anne (Hanna) /Olofsdotter/
@@ -7293,16 +7092,11 @@
 1 DEAT
 2 DATE 1640
 2 PLAC Osby, Skåne, Kristianstad, Kristianstad, Suède
-1 FAMS @F1077@
-1 FAMS @F1133@
-1 FAMS @F99@
-1 FAMS @F42@
 0 @I262744715103@ INDI
 1 NAME Ebbe /Olufsson./
 2 GIVN Ebbe
 2 SURN Olufsson.
 1 SEX M
-1 FAMS @F371@
 1 BIRT
 2 DATE 1500
 2 PLAC Osby, Skåne, Sweden
@@ -7310,15 +7104,11 @@
 2 DATE 1575
 2 PLAC , Osby, Kristianstad, Sweden
 1 FAMS @F1072@
-1 FAMS @F1135@
-1 FAMS @F288@
-1 FAMS @F676@
 0 @I262744715120@ INDI
 1 NAME Elseby /Olufsson/
 2 GIVN Elseby
 2 SURN Olufsson
 1 SEX F
-1 FAMS @F371@
 1 BIRT
 2 DATE 1500
 2 PLAC Åbrolla, Osby, Skåne, Sverige
@@ -7326,20 +7116,13 @@
 2 DATE 1575
 2 PLAC Osby, Kristianstad, Sweden
 1 FAMS @F1072@
-1 FAMS @F1135@
-1 FAMS @F288@
-1 FAMS @F676@
 0 @I262744715160@ INDI
 1 NAME Jeppe Jep /Andersen/
 2 GIVN Jeppe Jep
 2 SURN Andersen
 1 SEX M
 1 FAMC @F124@
-1 FAMC @F345@
-1 FAMC @F346@
 1 FAMS @F360@
-1 FAMS @F361@
-1 FAMS @F172@
 1 BIRT
 2 DATE 1565
 2 PLAC Åbrolla, Osby, Kristianstad, Suède
@@ -7350,7 +7133,6 @@
 2 _PRIM Y
 1 OBJE @O188@
 1 OBJE @O164@
-1 FAMS @F162@
 1 OBJE @O159@
 0 @I262744715179@ INDI
 1 NAME Anders /Mogensson Skreder*/
@@ -7358,25 +7140,19 @@
 2 SURN Mogensson Skreder*
 1 SEX M
 1 FAMC @F313@
-1 FAMS @F345@
 1 BIRT
 2 DATE 1525
 2 PLAC Åbrölla, Kristianstad, Osby, Kristianstad, Suède
 1 DEAT
 2 DATE 1597
 2 PLAC Åbrölla, Kristianstad, Osby, Kristianstad, Suède
-1 FAMS @F346@
 1 FAMS @F124@
-1 FAMS @F179@
 0 @I262744715191@ INDI
 1 NAME Kierstin Nielsdotter /Andersen Skreder/
 2 GIVN Kierstin Nielsdotter
 2 SURN Andersen Skreder
 1 SEX F
 1 FAMC @F1073@
-1 FAMC @F119@
-1 FAMS @F345@
-1 FAMS @F346@
 1 FAMS @F124@
 1 BIRT
 2 DATE 1530
@@ -7388,7 +7164,6 @@
 2 _PRIM Y
 1 OBJE @O214@
 1 OBJE @O150@
-1 FAMS @F179@
 1 OBJE @O31@
 0 @I262744715212@ INDI
 1 NAME Mogens /Larssen*/
@@ -7405,11 +7180,8 @@
 2 PLAC Åbrolla, Osby, Kristianstad, Kristianstad, Suède
 1 OBJE @O413@
 2 _PRIM Y
-1 FAMS @F1060@
 1 OBJE @O216@
-1 FAMS @F101@
 1 OBJE @O30@
-1 FAMS @F190@
 1 OBJE @O451@
 0 @I262744715231@ INDI
 1 NAME Anne /Rasmusdotter/
@@ -7423,9 +7195,6 @@
 1 DEAT
 2 DATE 1550
 2 PLAC Osby, Kristianstad, Osby, Kristianstad, Suède
-1 FAMS @F1553@
-1 FAMS @F1259@
-1 FAMS @F1293@
 0 @I262744715253@ INDI
 1 NAME Mrs. Mogens /Lassessön/
 2 GIVN Mrs. Mogens
@@ -7438,9 +7207,6 @@
 1 DEAT
 2 DATE 1565
 2 PLAC Åbrolla, Göinge, Skåne, Osby, Kristianstad, Suède
-1 FAMS @F1060@
-1 FAMS @F101@
-1 FAMS @F190@
 0 @I262744715305@ INDI
 1 NAME Anders /Mogensen Skreder*/
 2 GIVN Anders
@@ -7455,7 +7221,6 @@
 2 PLAC Kristianstad, Skåne, Kristianstad, Kristianstad, Suède
 1 OBJE @O69@
 2 _PRIM Y
-1 FAMS @F119@
 1 OBJE @O414@
 0 @I262744715335@ INDI
 1 NAME Marika /Mogensson*/
@@ -7469,7 +7234,6 @@
 1 DEAT
 2 DATE 1565
 2 PLAC Ostergotland, Sweden
-1 FAMS @F119@
 0 @I262744715380@ INDI
 1 NAME Johanna Hanna /Pedersdotter/
 2 GIVN Johanna Hanna
@@ -7483,9 +7247,6 @@
 1 DEAT
 2 DATE 21 maj 1665
 2 PLAC Hamsarp, Osby, Skåne, Sverige
-1 FAMS @F361@
-1 FAMS @F172@
-1 FAMS @F162@
 0 @I262744715389@ INDI
 1 NAME Peder  av Olastorp /Joensson  Synes Enander/ *
 2 GIVN Peder  av Olastorp
@@ -7500,9 +7261,6 @@
 1 DEAT
 2 DATE 1602
 2 PLAC Osby, Kristianstads, län, Sverige
-1 FAMS @F1034@
-1 FAMS @F161@
-1 FAMS @F128@
 0 @I262744715393@ INDI
 1 NAME Jon Eilifsen /Synes?/
 2 GIVN Jon Eilifsen
@@ -7518,11 +7276,8 @@
 2 PLAC Øvrelid, Ulstein, Møre og Romsdal, Norway
 1 OBJE @O61@
 2 _PRIM Y
-1 FAMS @F1548@
 1 OBJE @O64@
-1 FAMS @F1287@
 1 OBJE @O312@
-1 FAMS @F1288@
 1 OBJE @O353@
 0 @I262744715439@ INDI
 1 NAME /Flo/
@@ -7534,8 +7289,6 @@
 2 PLAC Oppstryn, Stryn, Sogn og Fjordane, Norvège
 1 DEAT
 2 PLAC Vigra, Møre og Romsdal, Norvège
-1 FAMS @F1266@
-1 FAMS @F1278@
 0 @I262744715463@ INDI
 1 NAME Elsa (Else) /Joensson (Född Trulsdotter)/
 2 GIVN Elsa (Else)
@@ -7551,11 +7304,8 @@
 2 PLAC Olastorp,Osby,Kristianstad,Sweden
 1 OBJE @O425@
 2 _PRIM Y
-1 FAMS @F1034@
 1 OBJE @O41@
-1 FAMS @F161@
 1 OBJE @O385@
-1 FAMS @F128@
 1 OBJE @O25@
 0 @I262744715492@ INDI
 1 NAME Truls " Trols" /Haraldsson/
@@ -7572,9 +7322,7 @@
 2 PLAC Hönjarum, Kristianstad, Osby, Kristianstad, Suède
 1 FAMS @F949@
 2 PLAC Hönjarum, Osby, Kristianstad, Sweden
-1 FAMS @F1286@
 1 FAMS @F557@
-1 FAMS @F1270@
 0 @I262744715517@ INDI
 1 NAME Harald /Trulsson/
 2 GIVN Harald
@@ -7589,13 +7337,9 @@
 2 PLAC Honjarum, Osby, Sweden
 1 OBJE @O277@
 2 _PRIM Y
-1 FAMS @F940@
 1 OBJE @O519@
-1 FAMS @F115@
 1 OBJE @O167@
-1 FAMS @F561@
 1 OBJE @O121@
-1 FAMS @F114@
 1 OBJE @O6@
 0 @I262744715534@ INDI
 1 NAME Bängta /Olofsdotter/
@@ -7611,13 +7355,9 @@
 2 PLAC Osby, Skåne, Sverige
 1 OBJE @O424@
 2 _PRIM Y
-1 FAMS @F940@
 1 OBJE @O90@
-1 FAMS @F115@
 1 OBJE @O2@
-1 FAMS @F561@
 1 OBJE @O457@
-1 FAMS @F114@
 1 OBJE @O384@
 0 @I262744715654@ INDI
 1 NAME Kerstin /Ersdotter Sokkainen/
@@ -7638,7 +7378,6 @@
 2 SURN Larsdotter Heiloinen
 1 SEX F
 1 FAMC @F1180@
-1 FAMC @F80@
 1 FAMS @F707@
 1 BIRT
 2 DATE 1669
@@ -7665,9 +7404,7 @@
 2 PLAC Silken, Hällefors (T), Örebro, Sweden
 1 OBJE @O101@
 2 _PRIM Y
-1 FAMS @F695@
 1 OBJE @O221@
-1 FAMS @F619@
 1 OBJE @O226@
 0 @I262744715768@ INDI
 1 NAME Anna Annika /Jonsdotter/
@@ -7682,17 +7419,13 @@
 1 DEAT
 2 DATE 16 Apr 1699
 2 PLAC Silken, Hällefors, Örebro, Sweden
-1 FAMS @F695@
-1 FAMS @F619@
 0 @I262744715779@ INDI
 1 NAME Lars /Larsson Heiloinen/
 2 GIVN Lars
 2 SURN Larsson Heiloinen
 1 SEX M
 1 FAMC @F681@
-1 FAMC @F773@
 1 FAMS @F1180@
-1 FAMS @F80@
 1 BIRT
 2 DATE 1640
 2 PLAC Gällinge, Säfsnäs, Nås, Ludvika, Dalarna/Kopparberg, Suède
@@ -7716,7 +7449,6 @@
 1 DEAT
 2 DATE 1684
 2 PLAC Gällinge, Säfsnäs (W)
-1 FAMS @F80@
 0 @I262744715830@ INDI
 1 NAME Matts "Matte Burk" /Klementsson Porkka/
 2 GIVN Matts "Matte Burk"
@@ -7739,7 +7471,6 @@
 3 _HGHT 719
 3 _TYPE primary
 1 FAMS @F1431@
-1 FAMS @F605@
 0 @I262744715843@ INDI
 1 NAME Klemet /Henriksson Porkka/
 2 GIVN Klemet
@@ -7753,8 +7484,6 @@
 1 DEAT
 2 DATE 1623
 2 PLAC Östmark, Torsby, Värmland, Sverige
-1 FAMS @F1421@
-1 FAMS @F1398@
 0 @I262744715856@ INDI
 1 NAME Peder Clement /Pedersson Porkka/
 2 GIVN Peder Clement
@@ -7768,7 +7497,6 @@
 1 DEAT
 2 DATE 1634
 2 PLAC Siikajoki, Oulun Laani, Finland
-1 FAMS @F580@
 0 @I262744715896@ INDI
 1 NAME Okänd /Gift Petersson Porkka/ 0- RP
 2 GIVN Okänd
@@ -7783,7 +7511,6 @@
 2 DATE 1616
 2 PLAC Siikajoki, Oulun Laani, Pohjois-Pohjanmaa / Norra Österbotten, Finlande
 1 FAMS @F1257@
-1 FAMS @F580@
 0 @I262744715909@ INDI
 1 NAME Peter /Pedersen Porkka/
 2 GIVN Peter
@@ -7805,7 +7532,6 @@
 2 NSFX [72]
 1 SEX M
 1 FAMS @F1131@
-1 FAMS @F778@
 1 BIRT
 2 DATE 1500
 2 PLAC Burg, Hainaut, Vallonia, Belgium
@@ -7824,7 +7550,6 @@
 1 DEAT
 2 DATE 1572
 2 PLAC Belgium
-1 FAMS @F778@
 0 @I262744716015@ INDI
 1 NAME Sissa /Nielsdatter Eriksdatter Ev Stensdatter/
 2 GIVN Sissa
@@ -7851,7 +7576,6 @@
 2 PLAC Östmark, Värmland, Sverige
 1 DEAT
 2 PLAC Arnsjön, Värmland, Suède
-1 FAMS @F605@
 0 @I262744716107@ INDI
 1 NAME Lars /Klemetsson Porkka/ 0- RP
 2 GIVN Lars
@@ -7866,7 +7590,6 @@
 1 DEAT
 2 DATE ca 1665
 2 PLAC Runnsjön, Fryksände, Torsby, Värmland, Suède
-1 FAMS @F596@
 0 @I262744716128@ INDI
 1 NAME Karin /Henriksdotter Manninen/
 2 GIVN Karin
@@ -7879,7 +7602,6 @@
 1 DEAT
 2 DATE 1685
 2 PLAC Runnsjön, Fryksände, Torsby, Värmland, Suède
-1 FAMS @F596@
 0 @I262744716137@ INDI
 1 NAME Peder /PERSSON PORKKA/
 2 GIVN Peder
@@ -7893,7 +7615,6 @@
 1 DEAT
 2 DATE 1623
 2 PLAC Finland
-1 FAMS @F718@
 0 @I262744716149@ INDI
 1 NAME Karin Karen /Örjansdotter/
 2 GIVN Karin Karen
@@ -7907,7 +7628,6 @@
 1 DEAT
 2 DATE 1663
 2 PLAC Vittjärn, Östmark, Sverige
-1 FAMS @F718@
 0 @I262744716164@ INDI
 1 NAME Karin /Sjulsdotter Orjansson/
 2 GIVN Karin
@@ -7921,7 +7641,6 @@
 1 DEAT
 2 DATE 1632
 2 PLAC Jämtland Sweden
-1 FAMS @F1436@
 0 @I262744716181@ INDI
 1 NAME Sigurd (Siord I Hovdsjö) /Eriksson. Blix. (Ryss)./ * D
 2 GIVN Sigurd (Siord I Hovdsjö)
@@ -7993,7 +7712,6 @@
 1 DEAT
 2 DATE 1667
 2 PLAC Vattnäs Mora, Dalarna, Sverige
-1 FAMS @F1397@
 0 @I262744716363@ INDI
 1 NAME Lars /Tomasson Heiloinen/ 🌺
 2 GIVN Lars
@@ -8005,9 +7723,6 @@
 1 SEX M
 1 FAMC @F1461@
 1 FAMC @F673@
-1 FAMC @F752@
-1 FAMC @F845@
-1 FAMS @F773@
 1 FAMS @F681@
 1 FAMS @F479@
 1 FAMS @F1600@
@@ -8033,7 +7748,6 @@
 2 SURN Tomasson Heiloinen
 1 SEX F
 1 FAMC @F1458@
-1 FAMS @F773@
 1 BIRT
 2 DATE 1620
 2 PLAC Nas, Kopparberg, Sweden
@@ -8044,7 +7758,6 @@
 2 PLAC Nås, Kopparberg, Sweden
 2 DATE 6 Apr 1694
 1 FAMS @F681@
-1 FAMS @F25@
 1 FAMS @F479@
 0 @I262744716447@ INDI
 1 NAME Tomas /Andersson Heiloinen/
@@ -8052,7 +7765,6 @@
 2 SURN Andersson Heiloinen
 1 SEX M
 1 FAMC @F756@
-1 FAMS @F752@
 1 BIRT
 2 DATE 1590
 2 PLAC Heilola, St Michels Parish, Finlande
@@ -8063,15 +7775,12 @@
 2 _PRIM Y
 1 FAMS @F1458@
 1 OBJE @O400@
-1 FAMS @F845@
 1 OBJE @O459@
 1 FAMS @F937@
 1 OBJE @O117@
-1 FAMS @F1513@
 1 OBJE @O157@
 1 FAMS @F673@
 1 OBJE @O158@
-1 FAMS @F1422@
 1 OBJE @O294@
 1 FAMS @F1461@
 1 OBJE @O184@
@@ -8087,11 +7796,6 @@
 1 DEAT
 2 DATE 1612
 2 PLAC Säfsnäs, Dalarna, Sverige
-1 FAMS @F885@
-1 FAMS @F852@
-1 FAMS @F941@
-1 FAMS @F922@
-1 FAMS @F675@
 0 @I262744716480@ INDI
 1 NAME Anna /Heiskainen/ 🌺
 2 GIVN Anna
@@ -8105,21 +7809,14 @@
 1 DEAT
 2 DATE 1632
 2 PLAC Säfsnäs, Dalarna, Sverige
-1 FAMS @F885@
-1 FAMS @F852@
-1 FAMS @F941@
-1 FAMS @F922@
-1 FAMS @F675@
 0 @I262744716500@ INDI
 1 NAME Mrs. Thomas Andersson /Heiloinen/
 2 GIVN Mrs. Thomas Andersson
 2 SURN Heiloinen
 1 SEX F
-1 FAMS @F752@
 1 BIRT
 2 DATE 1595
 2 PLAC Finland, Finlande
-1 FAMS @F845@
 1 FAMS @F937@
 1 FAMS @F673@
 0 @I262744716526@ INDI
@@ -8130,14 +7827,12 @@
 1 FAMS @F1467@
 1 BIRT
 2 DATE 1580
-1 FAMS @F1432@
 0 @I262744716757@ INDI
 1 NAME Brita Larsdotter /Heiloinen/
 2 GIVN Brita Larsdotter
 2 SURN Heiloinen
 1 SEX F
 1 FAMC @F933@
-1 FAMS @F818@
 1 BIRT
 2 DATE 1635
 2 PLAC Gällinge, Säfsnäs, Dalarna, Sverige
@@ -8159,7 +7854,6 @@
 2 DATE UNKNOWN
 1 OBJE @O431@
 2 _PRIM Y
-1 FAMS @F1245@
 1 OBJE @O210@
 0 @I262744716840@ INDI
 1 NAME Lars "Lukainen" /Tomasson Heiloinen/ 1610-1676
@@ -8177,7 +7871,6 @@
 2 PLAC Willbäck, Gällinge, Kopparberg, Kungsbacka, Halland, Suède
 1 OBJE @O142@
 2 _PRIM Y
-1 FAMS @F25@
 1 OBJE @O238@
 0 @I262744716864@ INDI
 1 NAME Henrik /Henriksson/ 1st abt 1588-
@@ -8204,7 +7897,6 @@
 2 SURN Andersson
 1 SEX M
 1 FAMC @F910@
-1 FAMS @F915@
 1 BIRT
 2 DATE 1621
 2 PLAC Östanskär, Indal, Västernorrland, Sweden
@@ -8298,7 +7990,6 @@
 2 GIVN Anna
 2 SURN Olofsdotter
 1 SEX F
-1 FAMS @F915@
 1 BIRT
 2 DATE 1628
 2 PLAC Indal, Västernorrland, Sweden
@@ -8314,7 +8005,6 @@
 2 SURN Persson Sikainen
 1 SEX M
 1 FAMC @F206@
-1 FAMC @F422@
 1 FAMS @F200@
 1 BIRT
 2 DATE 1662
@@ -8338,7 +8028,6 @@
 2 NSFX Siikainen, ("Whitefish")
 1 SEX M
 1 FAMC @F455@
-1 FAMS @F422@
 1 BIRT
 2 DATE 16 Oct 1636
 2 PLAC Södra Hörken, Ljusnarsberg, Örebro, Sweden
@@ -8563,7 +8252,6 @@
 2 SURN Persdotter Räisäinen Løvhaugen
 1 SEX F
 1 FAMC @F410@
-1 FAMS @F422@
 1 FAMS @F206@
 1 BIRT
 2 DATE 02 Mar 1645
@@ -8847,7 +8535,6 @@
 2 SURN Mansson
 1 SEX F
 1 FAMC @F679@
-1 FAMS @F160@
 1 BIRT
 2 DATE 1617
 2 PLAC Valla, Boteå, Västernorrland, Sweden
@@ -8861,7 +8548,6 @@
 2 SURN Eriksson Ersson
 1 SEX M
 1 FAMC @F731@
-1 FAMS @F589@
 1 BIRT
 2 DATE 1570
 2 PLAC Utanö 384, Högsjö församling, Västernorrland, Sverige
@@ -8887,7 +8573,6 @@
 2 PLAC Högsjö, Sodermanland, Sweden
 1 OBJE @O262@
 2 _PRIM Y
-1 FAMS @F117@
 1 OBJE @O426@
 0 @I262744718100@ INDI
 1 NAME Sjul /Eriksson/
@@ -8903,7 +8588,6 @@
 2 PLAC Utanö, Hemsö, Härnösand, Västernorrland, Suède
 1 OBJE @O95@
 2 _PRIM Y
-1 FAMS @F1273@
 1 OBJE @O418@
 0 @I262744718115@ INDI
 1 NAME Anna /Sjulsson/ *
@@ -8921,7 +8605,6 @@
 2 PLAC Åsen, Villtvattnet, Burträsk, Sverige
 1 OBJE @O541@
 2 _PRIM Y
-1 FAMS @F117@
 1 OBJE @O232@
 0 @I262744718125@ INDI
 1 NAME Oleg Ragnar /Sjulsson/
@@ -8935,7 +8618,6 @@
 1 DEAT
 2 DATE 1565
 2 PLAC Utanö, Hemsö, Västernorrland, Sverige
-1 FAMS @F106@
 0 @I262744718142@ INDI
 1 NAME Lovisa /Sjul/
 2 GIVN Lovisa
@@ -8948,14 +8630,12 @@
 1 DEAT
 2 DATE 1565
 2 PLAC Utanö, Hemsö, Västernorrland, Sweden
-1 FAMS @F106@
 0 @I262744718155@ INDI
 1 NAME Anna /Eriksdotter/
 2 GIVN Anna
 2 SURN Eriksdotter
 1 SEX F
 1 FAMC @F696@
-1 FAMS @F589@
 1 BIRT
 2 DATE januari 1570
 2 PLAC Utanö, Högsjö, Västernorrland, Sverige
@@ -8977,7 +8657,6 @@
 1 DEAT
 2 DATE 1595
 2 PLAC Indal, Medelpad, Sverige
-1 FAMS @F113@
 0 @I262744718190@ INDI
 1 NAME Sven /Eriksson/
 2 GIVN Sven
@@ -8985,7 +8664,6 @@
 1 SEX M
 1 FAMC @F1199@
 1 FAMS @F705@
-1 FAMS @F299@
 1 BIRT
 2 DATE 1520
 2 PLAC Indal (Skällsta), Sundsvall, Västernorrland, Suède
@@ -9004,16 +8682,13 @@
 1 DEAT
 2 DATE 1595
 2 PLAC Skällsta, Indal, Medelpad, Sweden
-1 FAMS @F299@
 0 @I262744718255@ INDI
 1 NAME Kerstin (Karin) /Påvelsdotter/
 2 GIVN Kerstin (Karin)
 2 SURN Påvelsdotter
 1 SEX F
 1 FAMC @F1428@
-1 FAMC @F1429@
 1 FAMS @F696@
-1 FAMS @F113@
 1 BIRT
 2 DATE 1540
 2 PLAC Indal (Y)
@@ -9032,7 +8707,6 @@
 1 DEAT
 2 DATE 1563
 2 PLAC Yttersel 4, Anundsjö, Örnsköldsvik, Västernorrland, Suède
-1 FAMS @F1429@
 0 @I262744718312@ INDI
 1 NAME Marcus /Månsson/
 2 GIVN Marcus
@@ -9046,7 +8720,6 @@
 1 DEAT
 2 DATE 1629
 2 PLAC Valla Boteå Västernorrland, Västernorrland, Suède
-1 FAMS @F125@
 0 @I262744718334@ INDI
 1 NAME Nicolausdotter (Nilsdotter) /Sidenia/
 2 GIVN Nicolausdotter (Nilsdotter)
@@ -9062,7 +8735,6 @@
 2 PLAC Näs Sidensjö Västernorrland, Västernorrland, Suède
 1 OBJE @O514@
 2 _PRIM Y
-1 FAMS @F125@
 1 OBJE @O102@
 0 @I262744718354@ INDI
 1 NAME Kirstin Karin /Pärsdotter/ (Thomasson Thomsson)
@@ -9071,7 +8743,6 @@
 2 NSFX (Thomasson Thomsson)
 1 SEX F
 1 FAMC @F1255@
-1 FAMS @F86@
 1 BIRT
 2 DATE 17 Apr 1652
 2 PLAC Stegared, Sibbarp, Halland, Sweden
@@ -9127,16 +8798,12 @@
 1 FAMS @F191@
 1 DEAT
 2 DATE before 1746
-1 FAMS @F192@
-1 FAMS @F193@
 0 @I262744718634@ INDI
 1 NAME Ingjerd /Jonsdotter/
 2 GIVN Ingjerd
 2 SURN Jonsdotter
 1 SEX F
 1 FAMS @F191@
-1 FAMS @F192@
-1 FAMS @F193@
 1 BIRT
 2 DATE 1713
 1 DEAT
@@ -9161,7 +8828,6 @@
 2 SURN Olofsson
 1 SEX M
 1 FAMC @F130@
-1 FAMS @F136@
 1 BIRT
 2 DATE 1634
 2 PLAC Lilla Domaryd, Berga, Ljungby, Kronoberg, Suède
@@ -9182,14 +8848,12 @@
 1 DEAT
 2 DATE 1693
 2 PLAC Torlarp, Berga, Ljungby, Kronoberg, Suède
-1 FAMS @F131@
 0 @I262744718783@ INDI
 1 NAME Bengta /Persdotter/
 2 GIVN Bengta
 2 SURN Persdotter
 1 SEX F
 1 FAMS @F130@
-1 FAMS @F131@
 1 BIRT
 2 DATE 1611
 2 PLAC Torlarp, Berga, Ljungby, Kronoberg, Suède
@@ -9203,13 +8867,11 @@
 1 FAMS @F1277@
 1 DEAT
 2 PLAC Berga, Kronoberg
-1 FAMS @F1545@
 0 @I262744718886@ INDI
 1 NAME Ingrid /Bengtsdotter/
 2 GIVN Ingrid
 2 SURN Bengtsdotter
 1 SEX F
-1 FAMS @F136@
 1 BIRT
 2 DATE 1652
 2 PLAC Lilla Kyet, Hånger, Värnamo, Jönköping, Suède
@@ -9224,7 +8886,6 @@
 2 SURN Larsdotter
 1 SEX F
 1 FAMC @F280@
-1 FAMC @F281@
 1 FAMS @F151@
 1 BIRT
 2 DATE 04 Nov 1696
@@ -9245,14 +8906,12 @@
 1 DEAT
 2 DATE 1729
 2 PLAC Södergården, Åby, Berga Kronoberg
-1 FAMS @F281@
 0 @I262744718942@ INDI
 1 NAME Kerstin /Jönsdotter/
 2 GIVN Kerstin
 2 SURN Jönsdotter
 1 SEX F
 1 FAMS @F280@
-1 FAMS @F281@
 1 BIRT
 2 DATE 1672
 2 PLAC Berga, Kronoberg, Sweden
@@ -9402,7 +9061,6 @@
 2 SURN Uddesson
 1 SEX M
 1 FAMC @F256@
-1 FAMS @F356@
 1 BIRT
 2 DATE ABT 10 FEB 1695
 2 PLAC Bökhult, Traryd
@@ -9416,10 +9074,6 @@
 2 SURN Jönsson
 1 SEX M
 1 FAMC @F1123@
-1 FAMC @F170@
-1 FAMC @F220@
-1 FAMC @F336@
-1 FAMC @F642@
 1 FAMS @F256@
 1 BIRT
 2 DATE 1646
@@ -9433,10 +9087,6 @@
 2 SURN Ebbesson
 1 SEX M
 1 FAMC @F1072@
-1 FAMC @F1135@
-1 FAMC @F288@
-1 FAMC @F371@
-1 FAMC @F676@
 1 FAMS @F1263@
 1 BIRT
 2 DATE 1525
@@ -9449,7 +9099,6 @@
 2 GIVN Kirstin
 2 SURN Nilsdotter
 1 SEX F
-1 FAMS @F356@
 1 FAMS @F176@
 1 BIRT
 2 DATE FEB 1694
@@ -9462,11 +9111,7 @@
 2 GIVN Gunnil
 2 SURN Jönsson
 1 SEX F
-1 FAMS @F220@
-1 FAMS @F336@
 1 FAMS @F1123@
-1 FAMS @F170@
-1 FAMS @F642@
 1 BIRT
 2 DATE 1633
 1 DEAT
@@ -9616,7 +9261,6 @@
 2 NSFX or ingrid Marit Arvidsdotter
 1 SEX F
 1 FAMC @F1507@
-1 FAMC @F1508@
 1 FAMS @F849@
 1 BIRT
 2 DATE 1525
@@ -9636,7 +9280,6 @@
 1 DEAT
 2 DATE 1572
 2 PLAC Norrvik, Grangärde, (Sweden), Ludvika, Dalarna/Kopparberg, Suède
-1 FAMS @F1508@
 0 @I262744721192@ INDI
 1 NAME Olof /Erlandsson  i Östansbo/
 2 GIVN Olof
@@ -9712,17 +9355,11 @@
 2 _PRIM Y
 1 FAMS @F1343@
 1 OBJE @O185@
-1 FAMS @F1346@
 1 OBJE @O498@
-1 FAMS @F1390@
 1 OBJE @O125@
-1 FAMS @F146@
 1 OBJE @O500@
-1 FAMS @F1281@
 1 OBJE @O7@
-1 FAMS @F1622@
 1 OBJE @O78@
-1 FAMS @F1514@
 0 @I262744721396@ INDI
 1 NAME Anna Karin /Tidichsdotter i Stimmerbo  65 år/ g. Posse
 2 GIVN Anna Karin
@@ -9741,10 +9378,8 @@
 1 OBJE @O279@
 2 _PRIM Y
 1 FAMS @F582@
-1 FAMS @F146@
 1 OBJE @O149@
 1 FAMS @F1225@
-1 FAMS @F938@
 0 @I262744721436@ INDI
 1 NAME Karin Tidichisson /Olofsson/
 2 GIVN Karin Tidichisson
@@ -9831,7 +9466,6 @@
 2 PLAC Persbo, Grangärde, Dalarna, Sverige
 1 OBJE @O488@
 2 _PRIM Y
-1 FAMS @F938@
 1 OBJE @O220@
 0 @I262744721557@ INDI
 1 NAME Marit Bengtsson /Henniksdotter Sparre/ *
@@ -10300,7 +9934,6 @@
 2 SURN Hansson
 1 SEX M
 1 FAMC @F1268@
-1 FAMC @F1269@
 1 FAMS @F121@
 1 BIRT
 2 DATE 1605
@@ -10320,7 +9953,6 @@
 1 DEAT
 2 DATE Aft. 1623
 2 PLAC Sundom nr 7, Nederluleå sn, Norrbotten, Sweden
-1 FAMS @F1269@
 0 @I262744722924@ INDI
 1 NAME Malin /HALVARDSDOTTER/
 2 GIVN Malin
@@ -10433,7 +10065,6 @@
 2 DATE 1 January 1645
 2 PLAC Stora Tomsjön Hällefors Sverige, Hällefors, Örebro, Suède
 1 FAMS @F1@
-1 FAMS @F386@
 0 @I262744723176@ INDI
 1 NAME Agnes Henriksdotter /Laaininen/
 2 GIVN Agnes Henriksdotter
@@ -10450,7 +10081,6 @@
 2 _PRIM Y
 1 FAMS @F1@
 1 OBJE @O215@
-1 FAMS @F386@
 1 OBJE @O171@
 0 @I262744723222@ INDI
 1 NAME Nils /Månsson/
@@ -10851,7 +10481,6 @@
 1 DEAT
 2 DATE Bef. 1615
 2 PLAC Härmä, Lansi-Suomen Laani, Finland
-1 FAMS @F1156@
 0 @I262744723815@ INDI
 1 NAME Mårtten (Martti) Heikinpoika Mattila /Härmä 11GGF/
 2 GIVN Mårtten (Martti) Heikinpoika Mattila
@@ -10865,7 +10494,6 @@
 1 DEAT
 2 DATE 1615
 2 PLAC Härmä, Lansi-Suomen Laani, Finland
-1 FAMS @F1156@
 0 @I262744723842@ INDI
 1 NAME Eeva Gunnarintr /Härmä/
 2 GIVN Eeva Gunnarintr
@@ -10881,7 +10509,6 @@
 2 PLAC Härmäsilä, Härsilä, Lapua, Etelä-Pohjanmaa / Södra Österbotten, Finlande
 1 OBJE @O156@
 2 _PRIM Y
-1 FAMS @F1143@
 1 OBJE @O89@
 0 @I262744723864@ INDI
 1 NAME Henric (Heikki Maunonpoika Härma) /Månsson Härmä/
@@ -10895,7 +10522,6 @@
 1 DEAT
 2 DATE Nov 1570
 2 PLAC Härmälä, Lansi-Suomen Laani, Finland
-1 FAMS @F1143@
 0 @I262744723885@ INDI
 1 NAME Gunnar Asbjoernsen /Tengs/
 2 GIVN Gunnar Asbjoernsen
@@ -10908,7 +10534,6 @@
 1 DEAT
 2 DATE 1546
 2 PLAC Drageid Br. 4. IV, Nes, Vest Agder, Norway
-1 FAMS @F1586@
 0 @I262744723970@ INDI
 1 NAME Pentti Tyniuksenpoika (Bengt Tyniusson) /Piri, Tynjälä/
 2 GIVN Pentti Tyniuksenpoika (Bengt Tyniusson)
@@ -11649,7 +11274,6 @@
 2 DATE 1656
 2 PLAC Norra Hörken, Ljusnarsberg, län, Örebro, Örebro, Sweden
 1 FAMS @F969@
-1 FAMS @F440@
 0 @I262744725432@ INDI
 1 NAME Daniel /Persson Dunder/
 2 GIVN Daniel
@@ -11676,7 +11300,6 @@
 1 SEX M
 1 FAMC @F969@
 1 FAMS @F981@
-1 FAMS @F440@
 1 BIRT
 2 DATE 1569
 2 PLAC Tavastland, Satakunta, Finland
@@ -11985,7 +11608,6 @@
 2 SURN Hansdotter Skotte
 1 SEX F
 1 FAMC @F1372@
-1 FAMC @F1373@
 1 FAMS @F1366@
 1 BIRT
 2 DATE 1653
@@ -12007,7 +11629,6 @@
 1 DEAT
 2 DATE 24 Jun 1677
 2 PLAC Silvergruvan, Hallefors, Orebro, Sweden
-1 FAMS @F1373@
 0 @I262744725977@ INDI
 1 NAME Anders /Andersson Skotte/
 2 GIVN Anders
@@ -12020,7 +11641,6 @@
 1 DEAT
 2 DATE 1645
 2 PLAC Hällefors, Orebro, Sweden
-1 FAMS @F519@
 0 @I262744726005@ INDI
 1 NAME Katarina Karin /Hansdotter/ 6., done
 2 GIVN Katarina Karin
@@ -12034,7 +11654,6 @@
 1 DEAT
 2 DATE February 21, 1652
 2 PLAC Hällefors, Örebro, Sweden
-1 FAMS @F519@
 0 @I262744726019@ INDI
 1 NAME Katarina Kerstin /Palsdotter/
 2 GIVN Katarina Kerstin
@@ -12420,7 +12039,6 @@
 1 DEAT
 2 DATE 20 Nov 1823
 2 PLAC Bråna, Traryd, Kronoberg, Sverige
-1 FAMS @F297@
 0 @I262744731181@ INDI
 1 NAME Göran /Johansson/
 2 GIVN Göran
@@ -12428,7 +12046,6 @@
 1 SEX M
 1 FAMC @F282@
 1 FAMS @F296@
-1 FAMS @F297@
 1 BIRT
 2 DATE 21 Oct 1786
 2 PLAC Kylhult, Traryd Parish, Kronoberg, Sweden
@@ -12505,7 +12122,6 @@
 2 SURN Jonsson
 1 SEX M
 1 FAMC @F176@
-1 FAMC @F356@
 1 FAMS @F182@
 1 BIRT
 2 DATE 29 APR 1722
@@ -13114,7 +12730,6 @@
 2 GIVN Borje
 2 SURN Jansson
 1 SEX M
-1 FAMS @F1085@
 1 BIRT
 2 DATE abt 1520
 2 PLAC Kronoberg, Sweden
@@ -13129,7 +12744,6 @@
 2 GIVN Maria
 2 SURN Göransdotter
 1 SEX F
-1 FAMS @F1085@
 1 BIRT
 2 DATE 1520
 2 PLAC Sverige
@@ -13462,7 +13076,6 @@
 2 PLAC Dågo/Hiiumaa, Estonia
 1 DEAT
 2 DATE ABT 1712
-1 FAMS @F1602@
 0 @I262744863350@ INDI
 1 NAME Peter Matsson /Kotsta/
 2 GIVN Peter Matsson
@@ -13476,7 +13089,6 @@
 1 DEAT
 2 DATE ABT 1656
 2 PLAC Dågo/Hiiumaa, Estonia
-1 FAMS @F1610@
 0 @I262744863354@ INDI
 1 NAME Mats Mickelsson /Kotsta/
 2 GIVN Mats Mickelsson
@@ -13490,7 +13102,6 @@
 1 DEAT
 2 DATE ABT 1606
 2 PLAC Dågo/Hiiumaa, Estonia
-1 FAMS @F1608@
 0 @I262744863356@ INDI
 1 NAME Mickel Hansson /Kötsta/
 2 GIVN Mickel Hansson
@@ -13503,7 +13114,6 @@
 1 DEAT
 2 DATE 1576
 2 PLAC Hiiumaa (Dagö), Estonia
-1 FAMS @F1605@
 0 @I262744863362@ INDI
 1 NAME Margareta Matsdotter /Kitas/
 2 GIVN Margareta Matsdotter
@@ -13755,7 +13365,6 @@
 1 SEX M
 1 FAMC @F1615@
 1 FAMS @F1189@
-1 FAMS @F659@
 1 BIRT
 2 DATE 1690
 1 DEAT
@@ -13769,7 +13378,6 @@
 2 PLAC Dagö, Estland
 1 DEAT
 2 PLAC Dagö, Estland
-1 FAMS @F659@
 0 @I262744863694@ INDI
 1 NAME Kiddas Kadri /Mickelsdotter/
 2 GIVN Kiddas Kadri
@@ -14521,9 +14129,7 @@
 2 _PRIM Y
 1 FAMS @F269@
 2 PLAC Danmark, Uppsala, Sweden
-1 FAMS @F270@
 1 OBJE @O368@
-1 FAMS @F271@
 1 OBJE @O435@
 1 FAMS @F264@
 1 OBJE @O177@
@@ -15076,7 +14682,6 @@
 2 NSFX ☘️🍎
 1 SEX M
 1 FAMC @F1527@
-1 FAMC @F1528@
 1 FAMS @F979@
 1 FAMS @F485@
 1 BIRT
@@ -15111,7 +14716,6 @@
 1 DEAT
 2 DATE Abt. 1540
 2 PLAC Sweden
-1 FAMS @F1528@
 0 @I262744864741@ INDI
 1 NAME Ingeborg /Engelbrektsdotter/
 2 GIVN Ingeborg
@@ -15478,12 +15082,18 @@
 1 SEX F
 1 FAMC @F423@
 1 FAMS @F436@
+1 FAMS @F1439@
 1 BIRT
 2 DATE 5 jan 1510
 2 PLAC Söderbärke, Dalarna, Sverige (Halvarsbenning) (W)
 1 DEAT
 2 DATE 5 Jan 1607
 2 PLAC Söderbärke, (Vad), Smedjebacken, Dalarna/Kopparberg, Suède
+1 NOTE Sammanförd med ursprunglig personpost @I262744865581@. Alternativa originaluppgifter:
+2 CONT Födelsedatum: 5 January 1510
+2 CONT Födelseplats: Söderbärke/W, Suède
+2 CONT Dödsdatum: 5 January 1607
+2 CONT Dödsplats: Vad, Söderbärke/W, Suède
 0 @I262744864956@ INDI
 1 NAME Sven Godsven (Sven I Hagge) /Hansson/
 2 GIVN Sven Godsven (Sven I Hagge)
@@ -15496,7 +15106,6 @@
 1 DEAT
 2 DATE 1565
 2 PLAC Hagge Västergården, Norrbärke, Dalarna, Sweden
-1 FAMS @F732@
 1 FAMS @F961@
 0 @I262744864971@ INDI
 1 NAME Karin /Olafsdotter/
@@ -15510,7 +15119,6 @@
 1 DEAT
 2 DATE 1554
 2 PLAC Kopparberg, Örebro, Örebro, Suède
-1 FAMS @F732@
 1 FAMS @F961@
 0 @I262744864981@ INDI
 1 NAME Håkan /Andersson/
@@ -15661,7 +15269,6 @@
 1 DEAT
 2 DATE 1675
 2 PLAC Stubberod, Vastra Gotaland, Sweden
-1 FAMS @F526@
 0 @I262744865120@ INDI
 1 NAME Anders /Andersson Brandt/
 2 GIVN Anders
@@ -15725,7 +15332,6 @@
 2 NSFX (Andersson)
 1 SEX F
 1 FAMC @F525@
-1 FAMC @F526@
 1 FAMS @F537@
 1 BIRT
 2 DATE 1668
@@ -15859,7 +15465,6 @@
 2 SURN Bengtsdotter
 1 SEX F
 1 FAMS @F525@
-1 FAMS @F526@
 1 BIRT
 2 DATE Abt. 1648
 1 DEAT
@@ -16279,7 +15884,6 @@
 2 SURN Nilsdotter
 1 SEX F
 1 FAMC @F26@
-1 FAMC @F629@
 1 FAMS @F617@
 1 FAMS @F30@
 1 BIRT
@@ -16293,7 +15897,6 @@
 2 GIVN Per (Peder)
 2 SURN Hermansson Fleming Af Liebelitz
 1 SEX M
-1 FAMS @F629@
 1 BIRT
 2 DATE 1480
 2 PLAC Villnas, Masku, Lansi-Suomen Laani, Finland
@@ -16308,7 +15911,6 @@
 2 GIVN Elin Hansdotter
 2 SURN Lydeke (Vit Duva)
 1 SEX F
-1 FAMS @F629@
 1 BIRT
 2 DATE 1480
 2 PLAC Älvsborg, Norrbotten, Sweden
@@ -16376,9 +15978,6 @@
 1 DEAT
 2 DATE 1545
 2 PLAC Stora Kopparberg, Falun, Dalarna/Kopparberg, Suède
-1 FAMS @F41@
-1 FAMS @F1213@
-1 FAMS @F791@
 0 @I262744865456@ INDI
 1 NAME Barbro /Johansdotter Hjort Af Ornäs/
 2 GIVN Barbro
@@ -16391,9 +15990,6 @@
 1 DEAT
 2 DATE 31 May 1545
 2 PLAC Stora Kopparberg, Falun, Dalarna/Kopparberg, Suède
-1 FAMS @F41@
-1 FAMS @F1213@
-1 FAMS @F791@
 0 @I262744865471@ INDI
 1 NAME Margareta /Hansdotter/ Svinhufvud af Qvalstad
 2 GIVN Margareta
@@ -16620,19 +16216,6 @@
 1 DEAT
 2 DATE 1 March 1629
 2 PLAC Grangärde/ W, Suède
-0 @I262744865581@ INDI
-1 NAME Brita /Spielsbodotter/
-2 GIVN Brita
-2 SURN Spielsbodotter
-1 SEX F
-1 FAMC @F732@
-1 FAMS @F1439@
-1 BIRT
-2 DATE 5 January 1510
-2 PLAC Söderbärke/W, Suède
-1 DEAT
-2 DATE 5 January 1607
-2 PLAC Vad, Söderbärke/W, Suède
 0 @I262744865588@ INDI
 1 NAME Kerstin /Jonsdotter/
 2 GIVN Kerstin
@@ -16896,7 +16479,6 @@
 1 DEAT
 2 DATE Ca 1580
 2 PLAC Baggböle, Umeå lfs, Västerbotten, Sverige
-1 FAMS @F1118@
 0 @I262744865711@ INDI
 1 NAME Anders /Jacobsson Bure/
 2 GIVN Anders
@@ -16909,7 +16491,6 @@
 1 DEAT
 2 DATE 1539
 2 PLAC Kågedalen, Skellefteå landsförsamling, Västerbotten, Sverige
-1 FAMS @F1580@
 0 @I262744865713@ INDI
 1 NAME Kerstin /Svensdotter/
 2 GIVN Kerstin
@@ -17144,7 +16725,6 @@
 1 DEAT
 2 DATE 1550
 2 PLAC Hagge, Dalarna/Kopparberg, Suède
-1 FAMS @F1139@
 0 @I262744865854@ INDI
 1 NAME Okänd /Gift Stierna Hagge/
 2 GIVN Okänd
@@ -17159,7 +16739,6 @@
 2 PLAC Hagge, Dalarna/Kopparberg, Suède
 1 OBJE @O512@
 2 _PRIM Y
-1 FAMS @F1139@
 1 OBJE @O13@
 0 @I262744865866@ INDI
 1 NAME Anna Maja /Bengtsdotter/
@@ -17456,7 +17035,6 @@
 2 NSFX 1628-1708
 1 SEX M
 1 FAMC @F1@
-1 FAMS @F5@
 1 BIRT
 2 DATE 1628
 2 PLAC Hällefors, Örebro, Örebro, Suède
@@ -17469,7 +17047,6 @@
 2 GIVN Kerstin
 2 SURN Eriksdotter
 1 SEX F
-1 FAMS @F5@
 1 FAMS @F15@
 1 BIRT
 2 DATE 1631
@@ -17652,7 +17229,6 @@
 2 PLAC Stora Tuna, Dalarna
 1 OBJE @O147@
 2 _PRIM Y
-1 FAMS @F289@
 1 OBJE @O172@
 0 @I262744866102@ INDI
 1 NAME Kristina /Jonsdotter-Eriksson/
@@ -17669,7 +17245,6 @@
 2 PLAC Säter, Indal,Dalarna,  Västernorrland, Sverige
 1 OBJE @O299@
 2 _PRIM Y
-1 FAMS @F289@
 1 OBJE @O296@
 0 @I262744866104@ INDI
 1 NAME Jonas Peter /Andersson 64 år/ # end
@@ -17687,7 +17262,6 @@
 2 PLAC Korsgatan, Hidinge, Örebro Län, Västmanland
 1 OBJE @O19@
 2 _PRIM Y
-1 FAMS @F266@
 1 OBJE @O46@
 0 @I262744866107@ INDI
 1 NAME Anna Beata /Lekeberg/ SLUT
@@ -17703,7 +17277,6 @@
 1 DEAT
 2 DATE 30 Oct 1590
 2 PLAC Hidinge, Örebro, Sweden
-1 FAMS @F266@
 0 @I262744866110@ INDI
 1 NAME Anders /Jonsson/ # End
 2 GIVN Anders
@@ -17867,7 +17440,6 @@
 1 SEX M
 1 FAMC @F249@
 1 FAMS @F252@
-1 FAMS @F250@
 1 BIRT
 2 DATE 1501
 2 PLAC Blädinge, Kronoberg, Sverige
@@ -19367,7 +18939,6 @@
 2 SURN Kotsta
 1 SEX M
 1 FAMC @F1601@
-1 FAMC @F1602@
 1 FAMS @F1155@
 1 BIRT
 2 DATE ABT 1670
@@ -21640,7 +21211,6 @@
 1 DEAT
 2 DATE February 1726
 2 PLAC Hed,Vastmanlands,Sweden
-1 FAMS @F974@
 0 @I262744888344@ INDI
 1 NAME Kerstin /Persdotter/
 2 GIVN Kerstin
@@ -21652,7 +21222,6 @@
 2 PLAC of Tomesbo, Hed, Vastmanland, Sweden
 1 DEAT
 2 DATE 1719
-1 FAMS @F974@
 0 @I262744888351@ INDI
 1 NAME Anders /Larsson/
 2 GIVN Anders
@@ -21917,7 +21486,6 @@
 1 DEAT
 2 DATE 7 January 1686
 2 PLAC Kumla, Vastmanland. Sweden
-1 FAMS @F857@
 0 @I262744888673@ INDI
 1 NAME Mats /Persson/ 2 232 \ 5 304
 2 GIVN Mats
@@ -21931,7 +21499,6 @@
 1 DEAT
 2 DATE 1620
 2 PLAC Tärna, Västmanland
-1 FAMS @F486@
 0 @I262744888684@ INDI
 1 NAME Anna //
 2 GIVN Anna
@@ -21939,7 +21506,6 @@
 1 FAMS @F847@
 1 DEAT
 2 PLAC Tärnaby, Tärna, Västmanland, Sverige
-1 FAMS @F486@
 0 @I262744888701@ INDI
 1 NAME Brita /Andersdotter/ 1 117 \ 2 653
 2 GIVN Brita
@@ -21947,9 +21513,7 @@
 2 NSFX 1 117 \ 2 653
 1 SEX F
 1 FAMC @F474@
-1 FAMC @F828@
 1 FAMS @F856@
-1 FAMS @F857@
 1 BIRT
 2 DATE 1609
 2 PLAC Kumla, Västmanland
@@ -21962,7 +21526,6 @@
 2 SURN Jonsson
 2 NSFX 2 234 \ 5 306
 1 SEX M
-1 FAMS @F828@
 1 BIRT
 2 PLAC Ekeby, Västmanland
 1 FAMS @F474@
@@ -21973,7 +21536,6 @@
 2 NSFX 2 235
 1 SEX F
 1 FAMC @F1480@
-1 FAMS @F828@
 1 BIRT
 2 PLAC Sala, Fräbrunn
 1 FAMS @F474@
@@ -22170,7 +21732,6 @@
 2 NSFX Smed
 1 SEX M
 1 FAMC @F936@
-1 FAMC @F948@
 1 FAMS @F1516@
 1 BIRT
 2 DATE 1535
@@ -22183,7 +21744,6 @@
 2 GIVN Jon
 2 SURN Giolsson
 1 SEX M
-1 FAMS @F948@
 1 FAMS @F936@
 1 BIRT
 2 DATE 1500
@@ -22197,7 +21757,6 @@
 2 SURN Giolsson
 2 NSFX Giolsson
 1 SEX F
-1 FAMS @F948@
 1 BIRT
 2 DATE 1500
 2 PLAC Västerkäl, Sidensjö, Vasternorrland, Sweden
@@ -22436,7 +21995,6 @@
 2 SURN Olofsson
 1 SEX M
 1 FAMC @F799@
-1 FAMC @F974@
 1 FAMS @F985@
 1 FAMS @F986@
 1 BIRT
@@ -22489,33 +22047,13 @@
 1 OBJE @O535@
 1 OBJE @O505@
 1 OBJE @O273@
-0 @I262744889570@ INDI
-1 NAME Olof /Nilsson/
-2 GIVN Olof
-2 SURN Nilsson
-1 SEX M
-1 FAMC @F1342@
-1 FAMS @F406@
-1 BIRT
-2 DATE ca 1645
-2 PLAC Lille Tappa, Österåker, Södermanland, Sverige
-1 DEAT
-2 DATE 15 Maj 1726
-2 PLAC Gräsholma, Traryd, Kronoberg, Sverige
-1 FAMS @F407@
 0 @I262744889581@ INDI
 1 NAME Brita /Jornsdotter Nilsson/
 2 GIVN Brita
 2 SURN Jornsdotter Nilsson
 1 SEX F
 1 FAMC @F1338@
-1 FAMC @F1339@
-1 FAMC @F1340@
-1 FAMC @F1341@
 1 FAMS @F139@
-1 FAMS @F405@
-1 FAMS @F406@
-1 FAMS @F407@
 1 BIRT
 2 DATE ca 1646
 2 PLAC Berg, Ostraker, Soedermanland, Sweden
@@ -22534,7 +22072,6 @@
 2 SURN Persdotter
 1 SEX F
 1 FAMC @F1193@
-1 FAMC @F701@
 1 FAMS @F7@
 1 BIRT
 2 DATE 28 Sep 1758
@@ -22566,7 +22103,6 @@
 1 DEAT
 2 DATE 27 MAY 1709
 2 PLAC Sjöboda, Traryd
-1 FAMS @F1521@
 0 @I262744890216@ INDI
 1 NAME Anna *** /Erlandsdotter/
 2 GIVN Anna ***
@@ -22589,7 +22125,6 @@
 2 GIVN Per
 2 SURN Persson
 1 SEX M
-1 FAMS @F701@
 1 BIRT
 2 DATE 1721
 2 PLAC Balkö, Nöttja, Kronobergs län
@@ -22616,7 +22151,6 @@
 2 SURN Nilsson
 1 SEX M
 1 FAMC @F1426@
-1 FAMC @F1427@
 1 FAMS @F92@
 1 FAMS @F1492@
 1 BIRT
@@ -22631,7 +22165,6 @@
 2 SURN Andersdotter
 1 SEX F
 1 FAMC @F14@
-1 FAMC @F789@
 1 FAMS @F92@
 1 BIRT
 2 DATE Abt. 1680
@@ -22649,7 +22182,6 @@
 2 PLAC Hinneryd, Kronoberg, Sweden
 1 DEAT
 2 PLAC Knaplet, Kronoberg, Sweden
-1 FAMS @F1427@
 0 @I262744890618@ INDI
 1 NAME Margareta /Göransdotter/
 2 GIVN Margareta
@@ -22662,7 +22194,6 @@
 1 DEAT
 2 DATE 23 Feb 1705
 2 PLAC Persbo, Grangärde, Dalarna, Sverige
-1 FAMS @F789@
 0 @I262744890660@ INDI
 1 NAME Annica //
 2 GIVN Annica
@@ -22681,7 +22212,6 @@
 1 DEAT
 2 DATE 23 dec 1683
 2 PLAC Ludvika(W)
-1 FAMS @F783@
 0 @I262744891458@ INDI
 1 NAME Elisabet /Nilsdotter/
 2 GIVN Elisabet
@@ -22694,7 +22224,6 @@
 1 DEAT
 2 DATE 8 november 1663
 2 PLAC Persbo, Grangärde, Kopparberg, Sverige
-1 FAMS @F783@
 0 @I262744892029@ INDI
 1 NAME Nils Pehr /Nilsson Posse/
 2 GIVN Nils Pehr
@@ -22708,7 +22237,6 @@
 1 DEAT
 2 DATE 10 Feb 1633
 2 PLAC Grangärde, Dalarna, Sverige
-1 FAMS @F741@
 0 @I262744892052@ INDI
 1 NAME Kerstin /Nilsson Widich/
 2 GIVN Kerstin
@@ -22722,7 +22250,6 @@
 1 DEAT
 2 DATE 22 April 1638
 2 PLAC Grangärde, Dalarnas, Sweden
-1 FAMS @F741@
 0 @I262744892107@ INDI
 1 NAME Anna Margareta /Jönsdotter Svinhufvud af Qvalstad/
 2 GIVN Anna Margareta
@@ -22736,7 +22263,6 @@
 1 DEAT
 2 DATE 24 Jul 1614
 2 PLAC Främby, Stora Kopparberg, Falun, Dalarna/Kopparberg, Suède
-1 FAMS @F765@
 0 @I262744892120@ INDI
 1 NAME Niels /Pederssen Jude/
 2 GIVN Niels
@@ -22749,7 +22275,6 @@
 1 DEAT
 2 DATE 1616
 2 PLAC Århus, Århus, Danemark
-1 FAMS @F765@
 0 @I262744892149@ INDI
 1 NAME Anna Margareta /Jönsdotter Svinhufvud Af Qvalstad/
 2 GIVN Anna Margareta
@@ -22794,7 +22319,6 @@
 1 DEAT
 2 DATE 20 Nov 1764
 2 PLAC Skinnskatteberg, Västmanland, Sverige
-1 FAMS @F746@
 0 @I262744892555@ INDI
 1 NAME Hans /Persson/ \masmästare vid Skilå hytta (master at Skilå cabin)
 2 GIVN Hans
@@ -22811,7 +22335,6 @@
 2 PLAC Skinnskatteberg, Västmanland, Sverige
 1 OBJE @O244@
 2 _PRIM Y
-1 FAMS @F772@
 1 OBJE @O395@
 0 @I262744892560@ INDI
 1 NAME Anna /Mattsdotter Mineur/
@@ -22820,7 +22343,6 @@
 1 SEX F
 1 FAMC @F876@
 1 FAMS @F769@
-1 FAMS @F772@
 1 BIRT
 2 DATE 11 Nov 1666
 2 PLAC Kärrgeten, Skinnskatteberg, Västmanland, Sverige
@@ -22843,7 +22365,6 @@
 1 DEAT
 2 DATE Juli 1698
 2 PLAC Skilån, Skinnskatteberg, Västmanlsnd, Sverige
-1 FAMS @F877@
 0 @I262744892592@ INDI
 1 NAME Brita /Andersdotter/
 2 GIVN Brita
@@ -22857,7 +22378,6 @@
 1 DEAT
 2 DATE 8 maj 1698
 2 PLAC Skilån, Skinnskatteberg, Västmanlsnd, Sverige
-1 FAMS @F877@
 0 @I262744892626@ INDI
 1 NAME Hans /Peersson/
 2 GIVN Hans
@@ -22881,7 +22401,6 @@
 1 DEAT
 2 DATE 1649
 2 PLAC Nederluleå, Norrbotten, Sweden
-1 FAMS @F881@
 0 @I262744892677@ INDI
 1 NAME Maria /Johansdotter/
 2 GIVN Maria
@@ -22894,14 +22413,12 @@
 1 DEAT
 2 DATE 1639
 2 PLAC Skinnskatteberg, Västmanland, Sweden
-1 FAMS @F881@
 0 @I262744892702@ INDI
 1 NAME Jacques Jakob /Mineur Antonsson/
 2 GIVN Jacques Jakob
 2 SURN Mineur Antonsson
 1 SEX M
 1 FAMC @F870@
-1 FAMS @F874@
 1 BIRT
 2 DATE 1 Jan 1611
 2 PLAC Couvin, Namur, Vallonien, Belgien
@@ -22915,7 +22432,6 @@
 2 SURN Henrichsdotter
 2 NSFX 💧🫐
 1 SEX F
-1 FAMS @F874@
 1 BIRT
 2 DATE 1 Jan 1605
 2 PLAC Couvin, Namur, Vallonien, Belgien
@@ -22940,7 +22456,6 @@
 1 DEAT
 2 DATE 1628
 2 PLAC Österbybruk, Uppland, Uppsala, Suède
-1 FAMS @F822@
 0 @I262744892737@ INDI
 1 NAME Anthoine Fouque /(Foque) Le Mineur/
 2 GIVN Anthoine Fouque
@@ -22954,7 +22469,6 @@
 1 DEAT
 2 DATE 1656
 2 PLAC Österbybruk, Uppland, Uppsala, Suède
-1 FAMS @F822@
 0 @I262744892744@ INDI
 1 NAME Jean (Jehan) /Fouque/
 2 GIVN Jean (Jehan)
@@ -22968,7 +22482,6 @@
 1 DEAT
 2 DATE 12 January 1594
 2 PLAC Martigues, Bouches du Rhône, Provence-Alpes-Côte d''Azur, France
-1 FAMS @F807@
 0 @I262744892749@ INDI
 1 NAME Catherine /Pagnon/
 2 GIVN Catherine
@@ -22981,7 +22494,6 @@
 1 DEAT
 2 DATE AFT 1624
 2 PLAC Martigues
-1 FAMS @F807@
 0 @I262744892759@ INDI
 1 NAME Pierre Constant /Fouque/ *
 2 GIVN Pierre Constant
@@ -22996,7 +22508,6 @@
 1 DEAT
 2 DATE 29 September 1583
 2 PLAC Martigues, Bouches du Rhône, Provence-Alpes-Côte d''Azur, France
-1 FAMS @F812@
 0 @I262744892797@ INDI
 1 NAME Barthelemy /Fouque/
 2 GIVN Barthelemy
@@ -23008,7 +22519,6 @@
 2 PLAC Aubagne,Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,FRANCE,
 1 DEAT
 2 DATE BEF 1556
-1 FAMS @F960@
 0 @I262744892808@ INDI
 1 NAME Catherine /PORTAL/
 2 GIVN Catherine
@@ -23020,7 +22530,6 @@
 2 PLAC Frankrike
 1 DEAT
 2 DATE AFT 1568
-1 FAMS @F960@
 0 @I262744892820@ INDI
 1 NAME Madeleine  Magdeleine /Augier/
 2 GIVN Madeleine  Magdeleine
@@ -23033,7 +22542,6 @@
 2 PLAC Saint Julien, Martigues, Bouches du Rhône, Provence-Alpes-Côte d''Azur, France
 1 DEAT
 2 PLAC Martigues, Bouches du Rhône, Provence-Alpes-Côte d''Azur, France
-1 FAMS @F812@
 0 @I262744892832@ INDI
 1 NAME Honoré /Augier/ 🫐🫐
 2 GIVN Honoré
@@ -23048,7 +22556,6 @@
 1 DEAT
 2 DATE 8 Sep 1572
 2 PLAC Salon-de-Provence, Bouches du Rhône, Provence-Alpes-Côte d''Azur, France
-1 FAMS @F956@
 0 @I262744892842@ INDI
 1 NAME Antoinette /Champion/ *
 2 GIVN Antoinette
@@ -23059,7 +22566,6 @@
 1 BIRT
 2 DATE 1498
 2 PLAC Martigues, Bouches du Rhône, Provence-Alpes-Côte d''Azur, France
-1 FAMS @F956@
 0 @I262744892859@ INDI
 1 NAME Martin /Augier/ 🫐🫐
 2 GIVN Martin
@@ -23073,7 +22579,6 @@
 1 DEAT
 2 DATE Bef. 1534
 2 PLAC Grans, Bouches du Rhône, Provence-Alpes-Côte d''Azur, France
-1 FAMS @F953@
 0 @I262744892876@ INDI
 1 NAME Louise /BELLENT/
 2 GIVN Louise
@@ -23086,7 +22591,6 @@
 1 DEAT
 2 DATE BEF 1526
 2 PLAC Grans, 13044, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France
-1 FAMS @F953@
 0 @I262744892887@ INDI
 1 NAME Georges Antoine /Magronet Beneche/
 2 GIVN Georges Antoine
@@ -23099,7 +22603,6 @@
 1 DEAT
 2 DATE 1610
 2 PLAC Couvin, Philippeville, Belgien
-1 FAMS @F945@
 0 @I262744892990@ INDI
 1 NAME Anthoinett /Rousse/
 2 GIVN Anthoinett
@@ -23108,14 +22611,12 @@
 1 FAMS @F825@
 1 BIRT
 2 DATE 1558
-1 FAMS @F945@
 0 @I262744893020@ INDI
 1 NAME Anders /Nilsson Skomakare (Cobbler)/
 2 GIVN Anders
 2 SURN Nilsson Skomakare (Cobbler)
 1 SEX M
 1 FAMC @F1517@
-1 FAMS @F920@
 1 BIRT
 2 DATE 1615
 2 PLAC Ledusjö, Nordmaling, Västerbotten, Sverige
@@ -23136,7 +22637,6 @@
 1 DEAT
 2 DATE 7 Oktober 1666
 2 PLAC Ledusjö församling, Nordmaling, Västerbotten, Sverige
-1 FAMS @F1500@
 0 @I262744893064@ INDI
 1 NAME Henrik // 🫐
 2 GIVN Henrik
@@ -23149,7 +22649,6 @@
 1 DEAT
 2 DATE 1600
 2 PLAC Ledusjö, Västerbotten County, Nordmaling, Västerbotten, Suède
-1 FAMS @F1498@
 0 @I262744893089@ INDI
 1 NAME Brita /Göransdotter/ Twin
 2 GIVN Brita
@@ -23157,7 +22656,6 @@
 2 NSFX Twin
 1 SEX F
 1 FAMC @F542@
-1 FAMS @F920@
 1 BIRT
 2 DATE 1615
 2 PLAC Sunnanfors, Skinnskatteberg, Västmanland, Sweden
@@ -23193,7 +22691,6 @@
 1 DEAT
 2 DATE 1610
 2 PLAC Skinnskatteberg, Vastmanland,
-1 FAMS @F1022@
 0 @I262744893132@ INDI
 1 NAME Nils /Hansson/
 2 GIVN Nils
@@ -23207,7 +22704,6 @@
 1 DEAT
 2 DATE 21 Feb 1592
 2 PLAC Östanbäck 10, 6153, Skellefteå, Västerbotten, Suède
-1 FAMS @F1015@
 0 @I262744893148@ INDI
 1 NAME Märta Mariet /Israelsdotter/
 2 GIVN Märta Mariet
@@ -23249,7 +22745,6 @@
 2 PLAC Östanbäck 10, Skellefteå landsförsamling, Västerbotten, Sweden
 1 OBJE @O401@
 2 _PRIM Y
-1 FAMS @F1015@
 1 OBJE @O26@
 0 @I262744893185@ INDI
 1 NAME Lars Andersson /Burman Viken*/
@@ -23264,7 +22759,6 @@
 1 DEAT
 2 DATE 1584
 2 PLAC Yttervik, landsförsamling, Västerbottens län, Skellefteå, Västerbotten, Suède
-1 FAMS @F1003@
 0 @I262744893197@ INDI
 1 NAME Anders /Larsson/
 2 GIVN Anders
@@ -23277,16 +22771,13 @@
 1 DEAT
 2 DATE 1551
 2 PLAC Yttervik, Bureå församling, Västerbotten
-1 FAMS @F1532@
 0 @I262744893213@ INDI
 1 NAME Anna Mosesdotter /Bure/
 2 GIVN Anna Mosesdotter
 2 SURN Bure
 1 SEX F
 1 FAMC @F1542@
-1 FAMC @F1543@
 1 FAMS @F1033@
-1 FAMS @F1003@
 1 BIRT
 2 DATE 1505
 2 PLAC Skellefteå, Bureå 8, Västerbottens län, Skellefteå, Västerbotten, Suède
@@ -23310,7 +22801,6 @@
 2 PLAC Bureå, Skellefteå, Västerbotten, Suède
 1 OBJE @O407@
 2 _PRIM Y
-1 FAMS @F1543@
 1 OBJE @O397@
 0 @I262744906073@ INDI
 1 NAME Birgitta /Olofsdotter/
@@ -23326,7 +22816,6 @@
 2 PLAC Skinnskatteberg, Vastmanland, Sweden
 1 OBJE @O441@
 2 _PRIM Y
-1 FAMS @F1022@
 0 @I262744906088@ INDI
 1 NAME Elina Anna /Månsdotter Durell/
 2 GIVN Elina Anna
@@ -23388,7 +22877,6 @@
 2 SURN Månsdotter
 1 SEX F
 1 FAMC @F513@
-1 FAMC @F744@
 1 FAMS @F529@
 1 BIRT
 2 DATE 24 Nov 1726
@@ -23408,7 +22896,6 @@
 1 DEAT
 2 DATE Oct 1778
 2 PLAC Sjundhult, Frödonge, Kalmar, Lan, Sweden
-1 FAMS @F744@
 0 @I262744906195@ INDI
 1 NAME Maria /Eriksdotter/
 2 GIVN Maria
@@ -23421,7 +22908,6 @@
 1 DEAT
 2 DATE 02 Jan 1765
 2 PLAC Sjundhult, Frödonge, Kalmar, Lan, Sweden
-1 FAMS @F744@
 0 @I262744906221@ INDI
 1 NAME Annika /Månsdotter/
 2 GIVN Annika
@@ -23441,8 +22927,6 @@
 2 SURN Olufsdotter
 1 SEX F
 1 FAMC @F1407@
-1 FAMC @F1408@
-1 FAMC @F1409@
 1 FAMS @F544@
 1 BIRT
 2 DATE 1677
@@ -23455,32 +22939,26 @@
 2 GIVN Sven
 2 SURN Ivarsson
 1 SEX M
-1 FAMS @F623@
 1 BIRT
 2 PLAC Askerud, Sunne , Värmland, Sverige
 1 DEAT
 2 DATE före 1664
 2 PLAC Askerud, Sunne , Värmland, Sverige
 1 FAMS @F443@
-1 FAMS @F536@
 0 @I262744906375@ INDI
 1 NAME Karin /Persdotter/
 2 GIVN Karin
 2 SURN Persdotter
 1 SEX F
-1 FAMS @F623@
 1 DEAT
 2 PLAC Sunne,Askerud,Värmlands län
 1 FAMS @F443@
-1 FAMS @F536@
 0 @I262744906400@ INDI
 1 NAME Jan /Jansson/
 2 GIVN Jan
 2 SURN Jansson
 1 SEX M
 1 FAMC @F530@
-1 FAMC @F615@
-1 FAMC @F616@
 1 FAMS @F612@
 1 BIRT
 2 DATE 6 Apr 1725
@@ -23490,10 +22968,6 @@
 2 SURN Samuelsson
 1 SEX M
 1 FAMC @F521@
-1 FAMC @F593@
-1 FAMC @F594@
-1 FAMS @F615@
-1 FAMS @F616@
 1 FAMS @F530@
 1 BIRT
 2 DATE ABT 1700
@@ -23507,10 +22981,6 @@
 2 SURN Johansdotter Viinikka
 1 SEX F
 1 FAMC @F493@
-1 FAMC @F574@
-1 FAMC @F575@
-1 FAMS @F593@
-1 FAMS @F594@
 1 FAMS @F521@
 1 BIRT
 2 DATE 1660
@@ -23524,10 +22994,6 @@
 2 SURN Pakkanen
 1 SEX M
 1 FAMC @F1176@
-1 FAMC @F665@
-1 FAMC @F728@
-1 FAMS @F574@
-1 FAMS @F575@
 1 FAMS @F493@
 1 BIRT
 2 DATE ABT 1637
@@ -23541,8 +23007,6 @@
 2 SURN Mattsson
 1 SEX M
 1 FAMC @F1087@
-1 FAMC @F619@
-1 FAMC @F695@
 1 FAMS @F707@
 1 BIRT
 2 DATE 1655
@@ -24377,9 +23841,7 @@
 2 SURN Bure
 1 SEX F
 1 FAMC @F1579@
-1 FAMC @F1580@
 1 FAMS @F689@
-1 FAMS @F1118@
 1 BIRT
 2 DATE 1500
 2 PLAC Röbäck, Umeå landsförsamling, Västerbotten
@@ -25268,8 +24730,6 @@
 2 SURN Petersson
 1 SEX M
 1 FAMC @F408@
-1 FAMC @F409@
-1 FAMC @F661@
 1 FAMS @F668@
 1 BIRT
 2 DATE 7 Sep 1754
@@ -25283,10 +24743,6 @@
 2 SURN Bondesson
 1 SEX M
 1 FAMC @F4@
-1 FAMC @F556@
-1 FAMC @F947@
-1 FAMS @F559@
-1 FAMS @F560@
 1 FAMS @F204@
 1 BIRT
 2 DATE 1651
@@ -25313,7 +24769,6 @@
 2 SURN Danielsson
 1 SEX M
 1 FAMC @F105@
-1 FAMC @F66@
 1 FAMS @F79@
 1 BIRT
 2 DATE 5 november 1682
@@ -25327,7 +24782,6 @@
 2 SURN Jacobsdotter
 1 SEX F
 1 FAMC @F1248@
-1 FAMS @F66@
 1 BIRT
 2 DATE 1654
 2 PLAC of Linneryd, Kronoberg, Sweden
@@ -25363,8 +24817,6 @@
 2 SURN Persdotter
 1 SEX F
 1 FAMC @F204@
-1 FAMC @F559@
-1 FAMC @F560@
 1 FAMS @F18@
 1 BIRT
 2 DATE 1686
@@ -25384,7 +24836,6 @@
 2 PLAC Källebäck, Mortorp, Kalmar, Sverige
 1 DEAT
 2 DATE 1747
-1 FAMS @F980@
 0 @I262744968502@ INDI
 1 NAME Måns /Knutsson/
 2 GIVN Måns
@@ -25398,14 +24849,12 @@
 1 DEAT
 2 DATE 14 Apr 1733
 2 PLAC Hällum, Västra Götaland, Sverige
-1 FAMS @F977@
 0 @I262744968512@ INDI
 1 NAME Gunild /Halvordsdotter/
 2 GIVN Gunild
 2 SURN Halvordsdotter
 1 SEX F
 1 FAMS @F1294@
-1 FAMS @F1525@
 0 @I262744968529@ INDI
 1 NAME Annika /Larsdotter/
 2 GIVN Annika
@@ -25415,7 +24864,6 @@
 1 DEAT
 2 DATE 14 Apr 1733
 2 PLAC Hällum, Västra Götaland, Sweden
-1 FAMS @F977@
 0 @I262744968553@ INDI
 1 NAME Peder /Jacobsson/
 2 GIVN Peder
@@ -25425,7 +24873,6 @@
 1 BIRT
 2 DATE abt 1650
 2 PLAC Norra Näsby, Kalmar, Sweden
-1 FAMS @F964@
 0 @I262744968561@ INDI
 1 NAME Ingeborg /Mansdotter/
 2 GIVN Ingeborg
@@ -25438,15 +24885,12 @@
 1 DEAT
 2 DATE 1710
 2 PLAC Sandby, Kalmar, Sweden
-1 FAMS @F964@
 0 @I262744968672@ INDI
 1 NAME Daniel /Nilsson/
 2 GIVN Daniel
 2 SURN Nilsson
 1 SEX M
 1 FAMC @F109@
-1 FAMC @F810@
-1 FAMS @F66@
 1 FAMS @F105@
 1 BIRT
 2 DATE 1664
@@ -25466,7 +24910,6 @@
 2 PLAC Skogsryd, Linneryd, Tingsryd, Kronoberg, Suède
 1 DEAT
 2 PLAC Linneryd, Kronoberg, Sverige
-1 FAMS @F810@
 0 @I262744968828@ INDI
 1 NAME Åke //
 2 GIVN Åke
@@ -25475,7 +24918,6 @@
 1 BIRT
 2 DATE ABT 1606
 2 PLAC of Skogsryd, Linneryd, Kronoberg, Sweden
-1 FAMS @F1477@
 0 @I262744968874@ INDI
 1 NAME Jacob Jöransson /Pistolekors/ (alias: Jakob Pistolekors)
 2 GIVN Jacob Jöransson
@@ -25483,7 +24925,6 @@
 2 NSFX (alias: Jakob Pistolekors)
 1 SEX M
 1 FAMC @F234@
-1 FAMS @F1306@
 1 BIRT
 2 DATE ABT 1630
 2 PLAC Kuopio pit Kallislahti, Finland
@@ -25507,7 +24948,6 @@
 2 PLAC Kuopio, Kallislahti, Mönkkölä, Finland
 1 OBJE @O394@
 2 _PRIM Y
-1 FAMS @F962@
 1 OBJE @O35@
 0 @I262744968924@ INDI
 1 NAME Hebla Elisabet Hansdotter /Bagge/
@@ -25522,7 +24962,6 @@
 1 DEAT
 2 DATE 1663
 2 PLAC Savonlinna, Ita-Suomen Laani, Finland (Nyslott)
-1 FAMS @F962@
 0 @I262744969912@ INDI
 1 NAME INGEBORG /Persdotter/
 2 GIVN INGEBORG
@@ -25550,7 +24989,6 @@
 1 DEAT
 2 DATE 14 August 1637
 2 PLAC Turku, Varsinais-Suomi / Egentliga Finland
-1 FAMS @F946@
 0 @I262744969954@ INDI
 1 NAME Elisabet Isaksdotter /Finskilä/
 2 GIVN Elisabet Isaksdotter
@@ -25561,7 +24999,6 @@
 2 DATE ABT 1589
 1 DEAT
 2 DATE 1618
-1 FAMS @F946@
 0 @I262744969980@ INDI
 1 NAME Karin /Av Berga/
 2 GIVN Karin
@@ -25574,7 +25011,6 @@
 2 DATE 1559
 1 OBJE @O349@
 2 _PRIM Y
-1 FAMS @F934@
 1 OBJE @O486@
 0 @I262744970004@ INDI
 1 NAME + Måns Svensson /Halstensson Bagge Af Berga/
@@ -25588,14 +25024,12 @@
 1 DEAT
 2 DATE 1559
 2 PLAC Berga, Mariestad, Skaraborg, Sverige
-1 FAMS @F934@
 0 @I262744970024@ INDI
 1 NAME Olli* (Olof) /Jönsinpoika (Jönsson) Leskinen/
 2 GIVN Olli* (Olof)
 2 SURN Jönsinpoika (Jönsson) Leskinen
 1 SEX M
 1 FAMC @F1623@
-1 FAMC @F1624@
 1 FAMS @F1300@
 1 BIRT
 2 DATE 1558
@@ -25619,7 +25053,6 @@
 2 PLAC Finnland
 1 DEAT
 2 PLAC Finnland
-1 FAMS @F1624@
 0 @I262744970042@ INDI
 1 NAME Pehr /Nilsson/
 2 GIVN Pehr
@@ -25667,7 +25100,6 @@
 2 SURN Eliasdotter
 1 SEX F
 1 FAMC @F1612@
-1 FAMS @F701@
 1 FAMS @F1193@
 1 BIRT
 2 DATE 12 Dec 1730
@@ -25681,9 +25113,7 @@
 2 SURN Olsson
 1 SEX M
 1 FAMC @F195@
-1 FAMC @F783@
 1 FAMS @F14@
-1 FAMS @F789@
 1 BIRT
 2 DATE 4 Mar 1645
 2 PLAC Persbo, Grangärde, Kopparberg, Sweden
@@ -25831,7 +25261,6 @@
 2 SURN Jönsson
 1 SEX M
 1 FAMC @F1520@
-1 FAMC @F1521@
 1 FAMS @F965@
 1 BIRT
 2 DATE abt 1668
@@ -26197,7 +25626,6 @@
 1 DEAT
 2 DATE 1615
 2 PLAC Östra Näsberget, Ekshärad, Hagfors, Värmland, Suède
-1 FAMS @F1301@
 0 @I262744972089@ INDI
 1 NAME Sigfrid /Clemetsson/
 2 GIVN Sigfrid
@@ -26353,7 +25781,6 @@
 2 PLAC Torrankankorva, Keksi, Norrbotten, Sverige
 1 OBJE @O22@
 2 _PRIM Y
-1 FAMS @F340@
 1 OBJE @O129@
 0 @I262744972327@ INDI
 1 NAME Magdalene Hansdatter /Pogwich/
@@ -26369,7 +25796,6 @@
 2 PLAC Torrankankorva, Keksi, Norrbotten, Sverige
 1 OBJE @O450@
 2 _PRIM Y
-1 FAMS @F340@
 1 OBJE @O447@
 0 @I262744972337@ INDI
 1 NAME Karin Pedersdotter /Utter/
@@ -26384,7 +25810,6 @@
 1 DEAT
 2 DATE 1601
 2 PLAC Ulricehamn, Västra Götaland, Sweden
-1 FAMS @F365@
 0 @I262744972344@ INDI
 1 NAME Mauno  (Måns) /Pedersson Laitinen/
 2 GIVN Mauno  (Måns)
@@ -26398,7 +25823,6 @@
 1 DEAT
 2 DATE 1591
 2 PLAC Ulricehamn, Västra Götaland, Sweden
-1 FAMS @F365@
 0 @I262744972361@ INDI
 1 NAME Peder Ingevaldsson //
 2 GIVN Peder Ingevaldsson
@@ -26410,7 +25834,6 @@
 1 DEAT
 2 DATE 1560
 2 PLAC Finström, Bastö, Åland, Finland 🇫🇮
-1 FAMS @F1328@
 0 @I262744972371@ INDI
 1 NAME Karin /Pedersdotter/ Kämpe
 2 GIVN Karin
@@ -26425,7 +25848,6 @@
 1 DEAT
 2 DATE 1601
 2 PLAC Lappajärvi, Lansi-Suomi, Finland
-1 FAMS @F355@
 0 @I262744972387@ INDI
 1 NAME Peder  Per /Pedersson Kämpe/ Handlare och Rådman
 2 GIVN Peder  Per
@@ -26442,7 +25864,6 @@
 2 PLAC Ulricehamn, Älvsborgs län, Ulricehamn, Älvsborg, Suède
 1 OBJE @O411@
 2 _PRIM Y
-1 FAMS @F355@
 1 OBJE @O145@
 0 @I262744972397@ INDI
 1 NAME Peder /Månsson Kempe/
@@ -26457,8 +25878,6 @@
 2 DATE 1550
 2 PLAC Glömme, Mjäldrunga, Västra Götaland, Sverige
 1 FAMS @F1243@
-1 FAMS @F1231@
-1 FAMS @F335@
 0 @I262744972422@ INDI
 1 NAME XVII:44146 Karin /Persson Laitinen/
 2 GIVN XVII:44146 Karin
@@ -26471,7 +25890,6 @@
 1 DEAT
 2 DATE 1545
 2 PLAC Glömme, Mjäldrunga, Västra Götaland, Sverige
-1 FAMS @F335@
 0 @I262744972441@ INDI
 1 NAME Peder /Pedersson Kämpe, Handlare, Rådman/
 2 GIVN Peder
@@ -28003,7 +27421,6 @@
 2 SURN Månsson
 1 SEX M
 1 FAMC @F1481@
-1 FAMC @F1482@
 1 FAMS @F636@
 1 BIRT
 2 DATE 6 JAN 1733
@@ -28016,7 +27433,6 @@
 2 GIVN Margareta
 1 SEX F
 1 FAMS @F109@
-1 FAMS @F810@
 1 BIRT
 2 DATE 8 jul 1643
 2 PLAC Skogsryd, Linneryd, Kronoberg, Sverige
@@ -28338,7 +27754,6 @@
 2 SURN Mattisdotter
 1 SEX F
 1 FAMC @F180@
-1 FAMC @F980@
 1 FAMS @F1348@
 1 BIRT
 2 DATE 12 Mar 1700
@@ -28352,9 +27767,7 @@
 2 SURN Petersdotter
 1 SEX F
 1 FAMC @F159@
-1 FAMC @F964@
 1 FAMS @F180@
-1 FAMS @F980@
 1 BIRT
 2 DATE 1675
 2 PLAC Kallebäck, Ljungby, Kalmar, Sverige
@@ -28727,7 +28140,6 @@
 2 SURN Persson Boström
 1 SEX M
 1 FAMC @F745@
-1 FAMC @F746@
 1 FAMS @F529@
 1 BIRT
 2 DATE 23 november 1720
@@ -28744,7 +28156,6 @@
 1 SEX F
 1 FAMC @F742@
 1 FAMS @F745@
-1 FAMS @F746@
 1 BIRT
 2 DATE 13 Sep 1687
 2 PLAC Sandtjärn, Rämsberg, Örebro, Sweden
@@ -28783,7 +28194,6 @@
 2 SURN Jacobsson Mineur
 1 SEX M
 1 FAMC @F478@
-1 FAMC @F874@
 1 FAMS @F876@
 1 BIRT
 2 DATE 1632
@@ -28985,7 +28395,6 @@
 2 NSFX ⛓️
 1 SEX F
 1 FAMC @F899@
-1 FAMC @F920@
 1 FAMS @F876@
 1 BIRT
 2 DATE 29 Apr 1639
@@ -29351,11 +28760,8 @@
 2 SURN Elofsdotter
 1 SEX F
 1 FAMC @F1415@
-1 FAMC @F1416@
-1 FAMC @F1417@
 1 FAMS @F671@
 1 FAMS @F451@
-1 FAMS @F670@
 1 BIRT
 2 DATE 1570
 2 PLAC Näset, Strömsund, Jämtlands län, Sverige
@@ -29417,7 +28823,6 @@
 2 NSFX 1662-1728
 1 SEX F
 1 FAMC @F11@
-1 FAMC @F915@
 1 FAMS @F60@
 1 BIRT
 2 DATE 01 Jan 1662 (Child of Anna Olofsdotter)
@@ -29448,7 +28853,6 @@
 2 NSFX 1670-1748
 1 SEX F
 1 FAMC @F168@
-1 FAMC @F86@
 1 FAMS @F200@
 1 BIRT
 2 DATE 6 oktober 1670 (Child of Marckus Knutsson Thomsson)
@@ -29465,8 +28869,6 @@
 2 SURN Thomsson
 1 SEX M
 1 FAMC @F144@
-1 FAMC @F160@
-1 FAMS @F86@
 1 FAMS @F168@
 1 BIRT
 2 DATE Abt. 1645
@@ -29483,8 +28885,6 @@
 2 SURN Danielsson Hoffman
 1 SEX M
 1 FAMC @F140@
-1 FAMC @F589@
-1 FAMS @F160@
 1 FAMS @F144@
 1 BIRT
 2 DATE 1602
@@ -29512,7 +28912,6 @@
 1 SEX M
 1 FAMC @F1083@
 1 FAMS @F310@
-1 FAMS @F321@
 1 BIRT
 2 DATE Abt. 1530
 2 PLAC Farve, Ostholstein, Schleswig-Holstein, Germany
@@ -29533,7 +28932,6 @@
 1 DEAT
 2 DATE 1627
 2 PLAC Plön, Schleswig-Holstein, Deutschland
-1 FAMS @F321@
 1 OBJE @O321@
 2 _PRIM Y
 0 @I262745149442@ INDI
@@ -30671,7 +30069,6 @@
 2 NSFX 1670-1748
 1 SEX M
 1 FAMC @F15@
-1 FAMC @F5@
 1 FAMS @F16@
 1 FAMS @F1389@
 1 BIRT
@@ -33594,8 +32991,6 @@
 1 SEX M
 1 FAMS @F268@
 1 FAMS @F269@
-1 FAMS @F270@
-1 FAMS @F271@
 1 FAMS @F264@
 1 BIRT
 2 DATE 1480
@@ -34666,10 +34061,6 @@
 1 HUSB @I262744725387@
 1 WIFE @I262744725374@
 1 CHIL @I262744725356@
-0 @F1003@ FAM
-1 HUSB @I262744893185@
-1 WIFE @I262744893213@
-1 CHIL @I262744893167@
 0 @F1004@ FAM
 1 HUSB @I262744713062@
 1 WIFE @I262744713074@
@@ -34718,10 +34109,6 @@
 1 HUSB @I262744864589@
 1 WIFE @I262744864594@
 1 CHIL @I262744864543@
-0 @F1015@ FAM
-1 HUSB @I262744893132@
-1 WIFE @I262744893167@
-1 CHIL @I262744893123@
 0 @F1016@ FAM
 1 HUSB @I262745220942@
 1 WIFE @I262745220951@
@@ -34738,10 +34125,6 @@
 1 HUSB @I262744713025@
 1 WIFE @I262744713052@
 1 CHIL @I262744713002@
-0 @F101@ FAM
-1 HUSB @I262744715212@
-1 WIFE @I262744715253@
-1 CHIL @I262744715179@
 0 @F1020@ FAM
 1 HUSB @I262744725320@
 1 WIFE @I262744725305@
@@ -34750,10 +34133,6 @@
 1 HUSB @I262745143072@
 1 WIFE @I262745143083@
 1 CHIL @I262745142979@
-0 @F1022@ FAM
-1 HUSB @I262744893123@
-1 WIFE @I262744906073@
-1 CHIL @I262744893097@
 0 @F1023@ FAM
 1 HUSB @I262745216810@
 1 WIFE @I262745216827@
@@ -34782,10 +34161,6 @@
 1 HUSB @I262745192205@
 1 WIFE @I262745192246@
 1 CHIL @I262744907050@
-0 @F102@ FAM
-1 HUSB @I262744712911@
-1 WIFE @I262744712896@
-1 CHIL @I262744712815@
 0 @F1030@ FAM
 1 HUSB @I262744864521@
 1 WIFE @I262744864524@
@@ -34802,10 +34177,6 @@
 1 HUSB @I262744893185@
 1 WIFE @I262744893213@
 1 CHIL @I262744893167@
-0 @F1034@ FAM
-1 HUSB @I262744715389@
-1 WIFE @I262744715463@
-1 CHIL @I262744715380@
 0 @F1035@ FAM
 1 HUSB @I262744862740@
 1 WIFE @I262744862744@
@@ -34903,10 +34274,6 @@
 1 HUSB @I262744866954@
 1 WIFE @I262744866957@
 1 CHIL @I262744866948@
-0 @F1056@ FAM
-1 HUSB @I262744713653@
-1 WIFE @I262744713665@
-1 CHIL @I262744712759@
 0 @F1057@ FAM
 1 HUSB @I262744866948@
 1 WIFE @I262744866952@
@@ -34923,10 +34290,6 @@
 1 HUSB @I262744968672@
 1 WIFE @I262744968258@
 1 CHIL @I262744968230@
-0 @F1060@ FAM
-1 HUSB @I262744715212@
-1 WIFE @I262744715253@
-1 CHIL @I262744715179@
 0 @F1061@ FAM
 1 HUSB @I262744866961@
 1 WIFE @I262744866974@
@@ -34970,10 +34333,6 @@
 1 HUSB @I262745149465@
 1 WIFE @I262745149508@
 1 CHIL @I262745149419@
-0 @F106@ FAM
-1 HUSB @I262744718125@
-1 WIFE @I262744718142@
-1 CHIL @I262744718115@
 0 @F1070@ FAM
 1 HUSB @I262744723523@
 1 WIFE @I262744723474@
@@ -35002,10 +34361,6 @@
 1 HUSB @I262744866863@
 1 WIFE @I262744866865@
 1 CHIL @I262744866854@
-0 @F1077@ FAM
-1 HUSB @I262744715051@
-1 WIFE @I262744715071@
-1 CHIL @I262744715017@
 0 @F1078@ FAM
 1 HUSB @I262744694812@
 1 WIFE @I262744694836@
@@ -35038,10 +34393,6 @@
 1 HUSB @I262744866817@
 1 WIFE @I262744866819@
 1 CHIL @I262744866809@
-0 @F1085@ FAM
-1 HUSB @I262744862740@
-1 WIFE @I262744862744@
-1 CHIL @I262744862548@
 0 @F1086@ FAM
 1 HUSB @I262745194984@
 1 WIFE @I262745195015@
@@ -35058,10 +34409,6 @@
 1 HUSB @I262744863231@
 1 WIFE @I262744863238@
 1 CHIL @I262744863227@
-0 @F108@ FAM
-1 HUSB @I262744712926@
-1 WIFE @I262744712935@
-1 CHIL @I262744712896@
 0 @F1090@ FAM
 1 HUSB @I262744887800@
 1 WIFE @I262744887826@
@@ -35082,10 +34429,6 @@
 1 HUSB @I262745194906@
 1 WIFE @I262745194951@
 1 CHIL @I262744887167@
-0 @F1095@ FAM
-1 HUSB @I262744714802@
-1 WIFE @I262744714838@
-1 CHIL @I262744714723@
 0 @F1096@ FAM
 1 HUSB @I262744908192@
 1 WIFE @I262744908200@
@@ -35161,18 +34504,10 @@
 1 HUSB @I262744887558@
 1 WIFE @I262744887873@
 1 CHIL @I262744887542@
-0 @F110@ FAM
-1 HUSB @I262744712952@
-1 WIFE @I262744712963@
-1 CHIL @I262744712926@
 0 @F1110@ FAM
 1 HUSB @I262744908057@
 1 WIFE @I262744908049@
 1 CHIL @I262744693254@
-0 @F1111@ FAM
-1 HUSB @I262744714930@
-1 WIFE @I262744714965@
-1 CHIL @I262744714900@
 0 @F1112@ FAM
 1 HUSB @I262744863462@
 1 WIFE @I262744863656@
@@ -35197,10 +34532,6 @@
 1 HUSB @I262744867554@
 1 WIFE @I262744867542@
 1 CHIL @I262744867537@
-0 @F1118@ FAM
-1 HUSB @I262744865704@
-1 WIFE @I262744908515@
-1 CHIL @I262744865702@
 0 @F1119@ FAM
 1 HUSB @I262744867533@
 1 WIFE @I262744867580@
@@ -35265,18 +34596,10 @@
 1 HUSB @I262744691331@
 1 WIFE @I262744691392@
 1 CHIL @I262744691316@
-0 @F1133@ FAM
-1 HUSB @I262744715051@
-1 WIFE @I262744715071@
-1 CHIL @I262744715017@
 0 @F1134@ FAM
 1 HUSB @I262744863408@
 1 WIFE @I262744863404@
 1 CHIL @I262744863374@
-0 @F1135@ FAM
-1 HUSB @I262744715103@
-1 WIFE @I262744715120@
-1 CHIL @I262744719387@
 0 @F1136@ FAM
 1 HUSB @I262744721457@
 1 WIFE @I262744720534@
@@ -35289,14 +34612,6 @@
 1 HUSB @I262745313978@
 1 WIFE @I262745313983@
 1 CHIL @I262745313930@
-0 @F1139@ FAM
-1 HUSB @I262744865848@
-1 WIFE @I262744865854@
-1 CHIL @I262744865845@
-0 @F113@ FAM
-1 HUSB @I262744718176@
-1 WIFE @I262744718255@
-1 CHIL @I262744718155@
 0 @F1140@ FAM
 1 HUSB @I262744865700@
 1 WIFE @I262744865702@
@@ -35309,10 +34624,6 @@
 1 HUSB @I262744865845@
 1 WIFE @I262744867506@
 1 CHIL @I262744867488@
-0 @F1143@ FAM
-1 HUSB @I262744723864@
-1 WIFE @I262744723842@
-1 CHIL @I262744723815@
 0 @F1144@ FAM
 1 HUSB @I262745313930@
 1 WIFE @I262745313949@
@@ -35337,10 +34648,6 @@
 1 HUSB @I262744887930@
 1 WIFE @I262744887946@
 1 CHIL @I262744887476@
-0 @F114@ FAM
-1 HUSB @I262744715517@
-1 WIFE @I262744715534@
-1 CHIL @I262744715492@
 0 @F1150@ FAM
 1 HUSB @I262744863291@
 1 WIFE @I262744863362@
@@ -35365,10 +34672,6 @@
 1 HUSB @I262744867823@
 1 WIFE @I262744863337@
 1 CHIL @I262744863325@
-0 @F1156@ FAM
-1 HUSB @I262744723815@
-1 WIFE @I262744723794@
-1 CHIL @I262744723785@
 0 @F1157@ FAM
 1 HUSB @I262744867432@
 1 WIFE @I262744867444@
@@ -35381,10 +34684,6 @@
 1 HUSB @I262744715856@
 1 WIFE @I262744715896@
 1 CHIL @I262744715843@
-0 @F115@ FAM
-1 HUSB @I262744715517@
-1 WIFE @I262744715534@
-1 CHIL @I262744715492@
 0 @F1160@ FAM
 1 HUSB @I262744908405@
 1 WIFE @I262744908414@
@@ -35467,14 +34766,6 @@
 1 HUSB @I262744863242@
 1 WIFE @I262744863247@
 1 CHIL @I262744863231@
-0 @F1179@ FAM
-1 HUSB @I262744715017@
-1 WIFE @I262744715031@
-1 CHIL @I262744715005@
-0 @F117@ FAM
-1 HUSB @I262744718092@
-1 WIFE @I262744718115@
-1 CHIL @I262744718059@
 0 @F1180@ FAM
 1 HUSB @I262744715779@
 1 WIFE @I262744715796@
@@ -35560,10 +34851,6 @@
 1 WIFE @I262744716216@
 1 CHIL @I262744718190@
 1 CHIL @I262744716181@
-0 @F119@ FAM
-1 HUSB @I262744715305@
-1 WIFE @I262744715335@
-1 CHIL @I262744715191@
 0 @F11@ FAM
 1 HUSB @I262744716999@
 1 WIFE @I262744717158@
@@ -35624,10 +34911,6 @@
 1 HUSB @I262744867686@
 1 WIFE @I262744867687@
 1 CHIL @I262744866766@
-0 @F1213@ FAM
-1 HUSB @I262744865451@
-1 WIFE @I262744865456@
-1 CHIL @I262744865449@
 0 @F1214@ FAM
 1 HUSB @I262744716107@
 1 WIFE @I262744716128@
@@ -35696,16 +34979,9 @@
 1 HUSB @I262744867614@
 1 WIFE @I262744867615@
 1 CHIL @I262744867611@
-0 @F122@ FAM
-1 HUSB @I262744712815@
-1 WIFE @I262744712851@
-1 CHIL @I262744712782@
 0 @F1230@ FAM
 1 HUSB @I262744714486@
 1 CHIL @I262744714480@
-0 @F1231@ FAM
-1 HUSB @I262744972397@
-1 CHIL @I262744972441@
 0 @F1232@ FAM
 1 HUSB @I262744865904@
 1 CHIL @I262745222339@
@@ -35749,9 +35025,6 @@
 0 @F1244@ FAM
 1 HUSB @I262744722588@
 1 CHIL @I262744722571@
-0 @F1245@ FAM
-1 HUSB @I262744716787@
-1 CHIL @I262744692540@
 0 @F1246@ FAM
 1 HUSB @I262744865904@
 1 CHIL @I262744865902@
@@ -35795,13 +35068,6 @@
 0 @F1258@ FAM
 1 HUSB @I262744722472@
 1 CHIL @I262744722443@
-0 @F1259@ FAM
-1 WIFE @I262744715231@
-1 CHIL @I262744715212@
-0 @F125@ FAM
-1 HUSB @I262744718312@
-1 WIFE @I262744718334@
-1 CHIL @I262744718033@
 0 @F1260@ FAM
 1 HUSB @I262744907239@
 1 CHIL @I262744907235@
@@ -35818,31 +35084,16 @@
 1 CHIL @I262744715051@
 1 CHIL @I262744715051@
 1 CHIL @I262744715051@
-0 @F1264@ FAM
-1 HUSB @I262744713402@
-1 CHIL @I262744712952@
 0 @F1265@ FAM
 1 WIFE @I262744907225@
 1 CHIL @I262744907214@
-0 @F1266@ FAM
-1 WIFE @I262744715439@
-1 CHIL @I262744715393@
-0 @F1267@ FAM
-1 HUSB @I262744713587@
-1 CHIL @I262744712911@
 0 @F1268@ FAM
-1 HUSB @I262744722908@
-1 CHIL @I262744722894@
-0 @F1269@ FAM
 1 HUSB @I262744722908@
 1 CHIL @I262744722894@
 0 @F126@ FAM
 1 HUSB @I262745288104@
 1 WIFE @I262745288108@
 1 CHIL @I262744866952@
-0 @F1270@ FAM
-1 HUSB @I262744715492@
-1 CHIL @I262744715463@
 0 @F1271@ FAM
 1 WIFE @I262744693208@
 1 CHIL @I262745292192@
@@ -35855,9 +35106,6 @@
 0 @F1272@ FAM
 1 HUSB @I262745288123@
 1 CHIL @I262745288120@
-0 @F1273@ FAM
-1 HUSB @I262744718100@
-1 CHIL @I262744718092@
 0 @F1274@ FAM
 1 HUSB @I262744712782@
 1 CHIL @I262744866229@
@@ -35870,9 +35118,6 @@
 0 @F1277@ FAM
 1 HUSB @I262744718807@
 1 CHIL @I262744718764@
-0 @F1278@ FAM
-1 WIFE @I262744715439@
-1 CHIL @I262744715393@
 0 @F1279@ FAM
 1 HUSB @I262744886674@
 1 CHIL @I262744886665@
@@ -35883,9 +35128,6 @@
 0 @F1280@ FAM
 1 HUSB @I262745288073@
 1 CHIL @I262745288066@
-0 @F1281@ FAM
-1 HUSB @I262744721361@
-1 CHIL @I262744721396@
 0 @F1282@ FAM
 1 HUSB @I262745288097@
 1 CHIL @I262745288088@
@@ -35898,22 +35140,9 @@
 0 @F1285@ FAM
 1 HUSB @I262745288054@
 1 CHIL @I262745288047@
-0 @F1286@ FAM
-1 HUSB @I262744715492@
-1 CHIL @I262744715463@
-0 @F1287@ FAM
-1 HUSB @I262744715393@
-1 CHIL @I262744715389@
-0 @F1288@ FAM
-1 HUSB @I262744715393@
-1 CHIL @I262744715389@
 0 @F1289@ FAM
 1 HUSB @I262745288036@
 1 CHIL @I262745288011@
-0 @F128@ FAM
-1 HUSB @I262744715389@
-1 WIFE @I262744715463@
-1 CHIL @I262744715380@
 0 @F1290@ FAM
 1 WIFE @I262745288034@
 1 CHIL @I262745288009@
@@ -35923,9 +35152,6 @@
 0 @F1292@ FAM
 1 HUSB @I262744866128@
 1 CHIL @I262744866107@
-0 @F1293@ FAM
-1 WIFE @I262744715231@
-1 CHIL @I262744715212@
 0 @F1294@ FAM
 1 WIFE @I262744968512@
 1 CHIL @I262744968502@
@@ -35956,12 +35182,6 @@
 1 HUSB @I262744970024@
 1 CHIL @I262744968905@
 1 CHIL @I262744968905@
-0 @F1301@ FAM
-1 WIFE @I262744972068@
-1 CHIL @I262744711205@
-0 @F1302@ FAM
-1 WIFE @I262744711297@
-1 CHIL @I262744711261@
 0 @F1303@ FAM
 1 HUSB @I262744907427@
 1 CHIL @I262744907424@
@@ -35971,9 +35191,6 @@
 0 @F1305@ FAM
 1 HUSB @I262744964768@
 1 CHIL @I262744964748@
-0 @F1306@ FAM
-1 HUSB @I262744968874@
-1 CHIL @I262744968258@
 0 @F1307@ FAM
 1 HUSB @I262744964808@
 1 CHIL @I262744964688@
@@ -36005,12 +35222,6 @@
 0 @F1314@ FAM
 1 HUSB @I262744693554@
 1 CHIL @I262744694736@
-0 @F1315@ FAM
-1 HUSB @I262744693554@
-1 CHIL @I262744694736@
-0 @F1316@ FAM
-1 HUSB @I262744693554@
-1 CHIL @I262744694736@
 0 @F1317@ FAM
 1 HUSB @I262744887400@
 1 CHIL @I262744887236@
@@ -36020,10 +35231,6 @@
 0 @F1319@ FAM
 1 WIFE @I262744867669@
 1 CHIL @I262744866752@
-0 @F131@ FAM
-1 HUSB @I262744718764@
-1 WIFE @I262744718783@
-1 CHIL @I262744718757@
 0 @F1320@ FAM
 1 HUSB @I262744966221@
 1 CHIL @I262744965057@
@@ -36048,9 +35255,6 @@
 0 @F1327@ FAM
 1 HUSB @I262745218990@
 1 CHIL @I262745218973@
-0 @F1328@ FAM
-1 HUSB @I262744972361@
-1 CHIL @I262744972337@
 0 @F1329@ FAM
 1 HUSB @I262744964993@
 1 CHIL @I262744964971@
@@ -36061,31 +35265,16 @@
 0 @F1330@ FAM
 1 HUSB @I262744862592@
 1 CHIL @I262744862580@
-0 @F1331@ FAM
-1 HUSB @I262744713210@
-1 CHIL @I262744713155@
 0 @F1332@ FAM
 1 HUSB @I262744862509@
 1 CHIL @I262744862501@
-0 @F1333@ FAM
-1 WIFE @I262744711806@
-1 CHIL @I262744711297@
-0 @F1334@ FAM
-1 HUSB @I262744713382@
-1 CHIL @I262744712985@
 0 @F1335@ FAM
 1 HUSB @I262744713133@
 1 CHIL @I262744713094@
-0 @F1336@ FAM
-1 WIFE @I262744713094@
-1 CHIL @I262744713025@
 0 @F1337@ FAM
 1 HUSB @I262744907663@
 1 CHIL @I262744701168@
 0 @F1338@ FAM
-1 HUSB @I262744714723@
-1 CHIL @I262744889581@
-0 @F1339@ FAM
 1 HUSB @I262744714723@
 1 CHIL @I262744889581@
 0 @F133@ FAM
@@ -36099,15 +35288,6 @@
 1 MARR
 2 DATE 5 OCT 1783
 2 PLAC Västerhaninge
-0 @F1340@ FAM
-1 HUSB @I262744714723@
-1 CHIL @I262744889581@
-0 @F1341@ FAM
-1 HUSB @I262744714723@
-1 CHIL @I262744889581@
-0 @F1342@ FAM
-1 HUSB @I262744714700@
-1 CHIL @I262744889570@
 0 @F1343@ FAM
 1 HUSB @I262744721361@
 1 CHIL @I262744721637@
@@ -36117,9 +35297,6 @@
 0 @F1345@ FAM
 1 HUSB @I262744971685@
 1 CHIL @I262744717489@
-0 @F1346@ FAM
-1 HUSB @I262744721361@
-1 CHIL @I262744721637@
 0 @F1347@ FAM
 1 WIFE @I262745147597@
 1 CHIL @I262745147568@
@@ -36137,9 +35314,6 @@
 1 HUSB @I262744725649@
 1 CHIL @I262744725640@
 0 @F1351@ FAM
-1 HUSB @I262744697026@
-1 CHIL @I262744696972@
-0 @F1352@ FAM
 1 HUSB @I262744697026@
 1 CHIL @I262744696972@
 0 @F1353@ FAM
@@ -36167,9 +35341,6 @@
 1 HUSB @I262745288120@
 1 WIFE @I262745288125@
 1 CHIL @I262745288109@
-0 @F1360@ FAM
-1 WIFE @I262744697219@
-1 CHIL @I262744697177@
 0 @F1361@ FAM
 1 HUSB @I262745221291@
 1 CHIL @I262745221149@
@@ -36194,13 +35365,6 @@
 0 @F1368@ FAM
 1 HUSB @I262744705539@
 1 CHIL @I262744705475@
-0 @F1369@ FAM
-1 WIFE @I262744691181@
-1 CHIL @I262744691149@
-0 @F136@ FAM
-1 HUSB @I262744718757@
-1 WIFE @I262744718886@
-1 CHIL @I262744714633@
 0 @F1370@ FAM
 1 HUSB @I262744865194@
 1 CHIL @I262744865096@
@@ -36208,9 +35372,6 @@
 1 HUSB @I262744701406@
 1 CHIL @I262744701375@
 0 @F1372@ FAM
-1 HUSB @I262744725970@
-1 CHIL @I262744725948@
-0 @F1373@ FAM
 1 HUSB @I262744725970@
 1 CHIL @I262744725948@
 0 @F1374@ FAM
@@ -36228,9 +35389,6 @@
 0 @F1378@ FAM
 1 HUSB @I262744906100@
 1 CHIL @I262744906088@
-0 @F1379@ FAM
-1 HUSB @I262744705539@
-1 CHIL @I262744705475@
 0 @F137@ FAM
 1 HUSB @I262744866229@
 1 WIFE @I262744712535@
@@ -36269,9 +35427,6 @@
 1 HUSB @I262744907159@
 1 WIFE @I262744907188@
 1 CHIL @I262744907147@
-0 @F1390@ FAM
-1 HUSB @I262744721361@
-1 CHIL @I262744721396@
 0 @F1391@ FAM
 1 WIFE @I262745194050@
 1 CHIL @I262744726270@
@@ -36285,18 +35440,9 @@
 1 HUSB @I262744694736@
 1 CHIL @I262744693452@
 1 CHIL @I262744867905@
-0 @F1395@ FAM
-1 WIFE @I262744691181@
-1 CHIL @I262744691149@
 0 @F1396@ FAM
 1 HUSB @I262744971970@
 1 CHIL @I262744971954@
-0 @F1397@ FAM
-1 HUSB @I262744716321@
-1 CHIL @I262744715768@
-0 @F1398@ FAM
-1 HUSB @I262744715843@
-1 CHIL @I262744715830@
 0 @F1399@ FAM
 1 WIFE @I262745139890@
 1 CHIL @I262745139867@
@@ -36323,47 +35469,26 @@
 0 @F1404@ FAM
 1 WIFE @I262744971706@
 1 CHIL @I262744717929@
-0 @F1405@ FAM
-1 HUSB @I262744705539@
-1 CHIL @I262744705475@
 0 @F1406@ FAM
 1 WIFE @I262744726149@
 1 CHIL @I262744726105@
 0 @F1407@ FAM
 1 WIFE @I262744705519@
 1 CHIL @I262744906328@
-0 @F1408@ FAM
-1 WIFE @I262744705519@
-1 CHIL @I262744906328@
-0 @F1409@ FAM
-1 WIFE @I262744705519@
-1 CHIL @I262744906328@
 0 @F140@ FAM
 1 HUSB @I262744718059@
 1 WIFE @I262744718155@
 1 CHIL @I262745148783@
-0 @F1410@ FAM
-1 WIFE @I262744691422@
-1 CHIL @I262744691392@
 0 @F1411@ FAM
 1 WIFE @I262744717908@
 1 CHIL @I262744717863@
 0 @F1412@ FAM
 1 HUSB @I262744726040@
 1 CHIL @I262744726035@
-0 @F1413@ FAM
-1 HUSB @I262744705450@
-1 CHIL @I262744705392@
 0 @F1414@ FAM
 1 HUSB @I262744865289@
 1 CHIL @I262744865287@
 0 @F1415@ FAM
-1 HUSB @I262744691316@
-1 CHIL @I262745147933@
-0 @F1416@ FAM
-1 HUSB @I262744691316@
-1 CHIL @I262745147933@
-0 @F1417@ FAM
 1 HUSB @I262744691316@
 1 CHIL @I262745147933@
 0 @F1418@ FAM
@@ -36379,31 +35504,16 @@
 0 @F1420@ FAM
 1 HUSB @I262744886260@
 1 CHIL @I262744886242@
-0 @F1421@ FAM
-1 HUSB @I262744715843@
-1 CHIL @I262744715830@
-0 @F1422@ FAM
-1 HUSB @I262744716447@
-1 CHIL @I262744716410@
 0 @F1423@ FAM
 1 WIFE @I262744865750@
 1 CHIL @I262744865731@
-0 @F1424@ FAM
-1 HUSB @I262744714486@
-1 CHIL @I262744714480@
 0 @F1425@ FAM
 1 HUSB @I262744972261@
 1 CHIL @I262744972220@
 0 @F1426@ FAM
 1 HUSB @I262744890378@
 1 CHIL @I262744890299@
-0 @F1427@ FAM
-1 HUSB @I262744890378@
-1 CHIL @I262744890299@
 0 @F1428@ FAM
-1 HUSB @I262744718295@
-1 CHIL @I262744718255@
-0 @F1429@ FAM
 1 HUSB @I262744718295@
 1 CHIL @I262744718255@
 0 @F142@ FAM
@@ -36416,9 +35526,6 @@
 0 @F1431@ FAM
 1 HUSB @I262744715830@
 1 CHIL @I262744715734@
-0 @F1432@ FAM
-1 HUSB @I262744716526@
-1 CHIL @I262744716321@
 0 @F1433@ FAM
 1 HUSB @I262745222039@
 1 CHIL @I262745221991@
@@ -36428,9 +35535,6 @@
 0 @F1435@ FAM
 1 HUSB @I262745287708@
 1 CHIL @I262745193291@
-0 @F1436@ FAM
-1 WIFE @I262744716164@
-1 CHIL @I262744716149@
 0 @F1437@ FAM
 1 HUSB @I262744865612@
 1 CHIL @I262744865607@
@@ -36438,7 +35542,7 @@
 1 WIFE @I262744972182@
 1 CHIL @I262744972119@
 0 @F1439@ FAM
-1 WIFE @I262744865581@
+1 WIFE @I262744864953@
 1 CHIL @I262744865576@
 0 @F143@ FAM
 1 HUSB @I262744907127@
@@ -36547,10 +35651,6 @@
 0 @F1469@ FAM
 1 WIFE @I262745191505@
 1 CHIL @I262745191477@
-0 @F146@ FAM
-1 HUSB @I262744721361@
-1 WIFE @I262744721396@
-1 CHIL @I262744721261@
 0 @F1470@ FAM
 1 HUSB @I262744863811@
 1 CHIL @I262744863794@
@@ -36572,9 +35672,6 @@
 0 @F1476@ FAM
 1 HUSB @I262744725017@
 1 CHIL @I262744724977@
-0 @F1477@ FAM
-1 HUSB @I262744968828@
-1 CHIL @I262744968699@
 0 @F1478@ FAM
 1 HUSB @I262744888849@
 1 CHIL @I262744888828@
@@ -36589,9 +35686,6 @@
 1 HUSB @I262744888749@
 1 CHIL @I262744888742@
 0 @F1481@ FAM
-1 WIFE @I262744697472@
-1 CHIL @I262745142712@
-0 @F1482@ FAM
 1 WIFE @I262744697472@
 1 CHIL @I262745142712@
 0 @F1483@ FAM
@@ -36637,15 +35731,9 @@
 0 @F1495@ FAM
 1 HUSB @I262744888607@
 1 CHIL @I262744888600@
-0 @F1496@ FAM
-1 WIFE @I262744697219@
-1 CHIL @I262744697177@
 0 @F1497@ FAM
 1 HUSB @I262744728623@
 1 CHIL @I262744700174@
-0 @F1498@ FAM
-1 HUSB @I262744893064@
-1 CHIL @I262744893043@
 0 @F1499@ FAM
 1 HUSB @I262744713402@
 1 CHIL @I262744712952@
@@ -36657,9 +35745,6 @@
 1 HUSB @I262744970263@
 1 WIFE @I262744890618@
 1 CHIL @I262744890371@
-0 @F1500@ FAM
-1 HUSB @I262744893043@
-1 CHIL @I262744893020@
 0 @F1501@ FAM
 1 HUSB @I262744717093@
 1 CHIL @I262744717039@
@@ -36682,9 +35767,6 @@
 0 @F1507@ FAM
 1 HUSB @I262744721145@
 1 CHIL @I262744721101@
-0 @F1508@ FAM
-1 HUSB @I262744721145@
-1 CHIL @I262744721101@
 0 @F1509@ FAM
 1 HUSB @I262745143038@
 1 CHIL @I262745142969@
@@ -36695,18 +35777,9 @@
 0 @F1510@ FAM
 1 WIFE @I262744725236@
 1 CHIL @I262744725141@
-0 @F1511@ FAM
-1 WIFE @I262744714851@
-1 CHIL @I262744714802@
 0 @F1512@ FAM
 1 HUSB @I262744700700@
 1 CHIL @I262744700555@
-0 @F1513@ FAM
-1 HUSB @I262744716447@
-1 CHIL @I262744716410@
-0 @F1514@ FAM
-1 HUSB @I262744721361@
-1 CHIL @I262744721396@
 0 @F1515@ FAM
 1 HUSB @I262744893064@
 1 CHIL @I262744893043@
@@ -36729,9 +35802,6 @@
 0 @F1520@ FAM
 1 HUSB @I262744890116@
 1 CHIL @I262744971243@
-0 @F1521@ FAM
-1 HUSB @I262744890116@
-1 CHIL @I262744971243@
 0 @F1522@ FAM
 1 HUSB @I262744721361@
 1 CHIL @I262744721396@
@@ -36741,16 +35811,10 @@
 0 @F1524@ FAM
 1 HUSB @I262744889369@
 1 CHIL @I262744888673@
-0 @F1525@ FAM
-1 WIFE @I262744968512@
-1 CHIL @I262744968502@
 0 @F1526@ FAM
 1 HUSB @I262744713210@
 1 CHIL @I262744713155@
 0 @F1527@ FAM
-1 HUSB @I262744864736@
-1 CHIL @I262744864729@
-0 @F1528@ FAM
 1 HUSB @I262744864736@
 1 CHIL @I262744864729@
 0 @F1529@ FAM
@@ -36766,9 +35830,6 @@
 0 @F1531@ FAM
 1 HUSB @I262744864676@
 1 CHIL @I262744864654@
-0 @F1532@ FAM
-1 HUSB @I262744893197@
-1 CHIL @I262744893185@
 0 @F1533@ FAM
 1 HUSB @I262744725397@
 1 CHIL @I262744725374@
@@ -36803,24 +35864,15 @@
 0 @F1542@ FAM
 1 HUSB @I262744893252@
 1 CHIL @I262744893213@
-0 @F1543@ FAM
-1 HUSB @I262744893252@
-1 CHIL @I262744893213@
 0 @F1544@ FAM
 1 WIFE @I262744864543@
 1 CHIL @I262744864539@
-0 @F1545@ FAM
-1 HUSB @I262744718807@
-1 CHIL @I262744718764@
 0 @F1546@ FAM
 1 HUSB @I262744723694@
 1 CHIL @I262744723673@
 0 @F1547@ FAM
 1 HUSB @I262744715492@
 1 CHIL @I262744715463@
-0 @F1548@ FAM
-1 HUSB @I262744715393@
-1 CHIL @I262744715389@
 0 @F1549@ FAM
 1 WIFE @I262744867010@
 1 CHIL @I262744867005@
@@ -36837,12 +35889,6 @@
 0 @F1552@ FAM
 1 WIFE @I262744715439@
 1 CHIL @I262744715393@
-0 @F1553@ FAM
-1 WIFE @I262744715231@
-1 CHIL @I262744715212@
-0 @F1554@ FAM
-1 WIFE @I262744712418@
-1 CHIL @I262744712613@
 0 @F1555@ FAM
 1 HUSB @I262744715393@
 1 CHIL @I262744715389@
@@ -36899,12 +35945,6 @@
 0 @F1570@ FAM
 1 HUSB @I262744723885@
 1 CHIL @I262744723842@
-0 @F1571@ FAM
-1 WIFE @I262744714851@
-1 CHIL @I262744714802@
-0 @F1572@ FAM
-1 HUSB @I262744714700@
-1 CHIL @I262744714665@
 0 @F1573@ FAM
 1 HUSB @I262744908101@
 1 CHIL @I262744908090@
@@ -36930,9 +35970,6 @@
 1 HUSB @I262745288047@
 1 WIFE @I262745288050@
 1 CHIL @I262745288042@
-0 @F1580@ FAM
-1 HUSB @I262744865711@
-1 CHIL @I262744908515@
 0 @F1581@ FAM
 1 WIFE @I262745314337@
 1 CHIL @I262745314038@
@@ -36948,9 +35985,6 @@
 0 @F1585@ FAM
 1 HUSB @I262744908440@
 1 CHIL @I262744908428@
-0 @F1586@ FAM
-1 HUSB @I262744723885@
-1 CHIL @I262744723842@
 0 @F1587@ FAM
 1 WIFE @I262744867483@
 1 CHIL @I262744867480@
@@ -37008,9 +36042,6 @@
 0 @F1601@ FAM
 1 HUSB @I262744863346@
 1 CHIL @I262744867823@
-0 @F1602@ FAM
-1 HUSB @I262744863346@
-1 CHIL @I262744867823@
 0 @F1603@ FAM
 1 HUSB @I262745146368@
 1 CHIL @I262745158640@
@@ -37020,9 +36051,6 @@
 0 @F1604@ FAM
 1 HUSB @I262745314311@
 1 CHIL @I262745314280@
-0 @F1605@ FAM
-1 HUSB @I262744863356@
-1 CHIL @I262744863354@
 0 @F1606@ FAM
 1 WIFE @I262744702494@
 1 CHIL @I262745224189@
@@ -37033,28 +36061,9 @@
 0 @F1607@ FAM
 1 HUSB @I262745314323@
 1 CHIL @I262745314299@
-0 @F1608@ FAM
-1 HUSB @I262744863354@
-1 CHIL @I262744863350@
-0 @F1609@ FAM
-1 HUSB @I262744694796@
-1 CHIL @I262744694787@
-0 @F160@ FAM
-1 HUSB @I262745148783@
-1 WIFE @I262744718033@
-1 CHIL @I262745148747@
-0 @F1610@ FAM
-1 HUSB @I262744863350@
-1 CHIL @I262744863346@
-0 @F1611@ FAM
-1 HUSB @I262744694787@
-1 CHIL @I262744694771@
 0 @F1612@ FAM
 1 HUSB @I262744890275@
 1 CHIL @I262744970177@
-0 @F1613@ FAM
-1 HUSB @I262744694771@
-1 CHIL @I262744693554@
 0 @F1614@ FAM
 1 HUSB @I262744966081@
 1 CHIL @I262744966073@
@@ -37073,32 +36082,18 @@
 0 @F1619@ FAM
 1 WIFE @I262744716164@
 1 CHIL @I262744716149@
-0 @F161@ FAM
-1 HUSB @I262744715389@
-1 WIFE @I262744715463@
-1 CHIL @I262744715380@
 0 @F1620@ FAM
 1 WIFE @I262744724383@
 1 CHIL @I262744724332@
 0 @F1621@ FAM
 1 HUSB @I262745314237@
 1 CHIL @I262745314128@
-0 @F1622@ FAM
-1 HUSB @I262744721361@
-1 CHIL @I262744721396@
 0 @F1623@ FAM
-1 WIFE @I262744970033@
-1 CHIL @I262744970024@
-0 @F1624@ FAM
 1 WIFE @I262744970033@
 1 CHIL @I262744970024@
 0 @F1625@ FAM
 1 HUSB @I262744964709@
 1 CHIL @I262744908580@
-0 @F162@ FAM
-1 HUSB @I262744715160@
-1 WIFE @I262744715380@
-1 CHIL @I262744715031@
 0 @F163@ FAM
 1 HUSB @I262744907100@
 1 WIFE @I262744907110@
@@ -37131,22 +36126,10 @@
 1 HUSB @I262745194133@
 1 WIFE @I262744866039@
 1 CHIL @I262744866013@
-0 @F170@ FAM
-1 HUSB @I262744715005@
-1 WIFE @I262744720082@
-1 CHIL @I262744719291@
 0 @F171@ FAM
 1 HUSB @I262744886594@
 1 WIFE @I262744886615@
 1 CHIL @I262744886548@
-0 @F172@ FAM
-1 HUSB @I262744715160@
-1 WIFE @I262744715380@
-1 CHIL @I262744715031@
-0 @F173@ FAM
-1 HUSB @I262744715017@
-1 WIFE @I262744715031@
-1 CHIL @I262744715005@
 0 @F174@ FAM
 1 HUSB @I262744968502@
 1 WIFE @I262744968529@
@@ -37167,10 +36150,6 @@
 1 HUSB @I262744866091@
 1 WIFE @I262744866094@
 1 CHIL @I262744866085@
-0 @F179@ FAM
-1 HUSB @I262744715179@
-1 WIFE @I262744715191@
-1 CHIL @I262744715160@
 0 @F17@ FAM
 1 HUSB @I262744886479@
 1 WIFE @I262744886486@
@@ -37222,19 +36201,7 @@
 1 CHIL @I262744697103@
 1 CHIL @I262744697103@
 1 CHIL @I262744697103@
-0 @F190@ FAM
-1 HUSB @I262744715212@
-1 WIFE @I262744715253@
-1 CHIL @I262744715179@
 0 @F191@ FAM
-1 HUSB @I262744718613@
-1 WIFE @I262744718634@
-1 CHIL @I262744714602@
-0 @F192@ FAM
-1 HUSB @I262744718613@
-1 WIFE @I262744718634@
-1 CHIL @I262744714602@
-0 @F193@ FAM
 1 HUSB @I262744718613@
 1 WIFE @I262744718634@
 1 CHIL @I262744714602@
@@ -37267,10 +36234,6 @@
 3 DATA
 4 WWW https://gw.geneanet.org/annicag?n=nilsdotter&oc=1&p=brita
 3 _WPID 1,62476::6164403451
-0 @F198@ FAM
-1 HUSB @I262744704600@
-1 WIFE @I262744704622@
-1 CHIL @I262744704544@
 0 @F199@ FAM
 1 HUSB @I262744866058@
 1 WIFE @I262744866062@
@@ -37336,22 +36299,10 @@
 1 HUSB @I262744698611@
 1 WIFE @I262744864539@
 1 CHIL @I262744698578@
-0 @F211@ FAM
-1 HUSB @I262744713439@
-1 WIFE @I262744713470@
-1 CHIL @I262744713432@
 0 @F212@ FAM
 1 HUSB @I262744907496@
 1 WIFE @I262744907503@
 1 CHIL @I262744907489@
-0 @F213@ FAM
-1 HUSB @I262744711325@
-1 WIFE @I262744711364@
-1 CHIL @I262744711275@
-0 @F214@ FAM
-1 HUSB @I262744711325@
-1 WIFE @I262744711364@
-1 CHIL @I262744711275@
 0 @F215@ FAM
 1 HUSB @I262744719098@
 1 WIFE @I262744703878@
@@ -37377,10 +36328,6 @@
 1 HUSB @I262745222339@
 1 WIFE @I262745222352@
 1 CHIL @I262745222325@
-0 @F220@ FAM
-1 HUSB @I262744715005@
-1 WIFE @I262744720082@
-1 CHIL @I262744719291@
 0 @F221@ FAM
 1 HUSB @I262744862430@
 1 WIFE @I262744862434@
@@ -37457,10 +36404,6 @@
 3 PAGE Genline AB; Johanneshov, Sweden; Swedish Church Records Archive; GID-nummer: 100001.68.42400; Förteckningsnummer: SC-491
 3 _HPID 1,61363::3084804
 3 _WPID 1,61363::903084804
-0 @F233@ FAM
-1 HUSB @I262744714930@
-1 WIFE @I262744714965@
-1 CHIL @I262744714900@
 0 @F234@ FAM
 1 HUSB @I262744968905@
 1 WIFE @I262744968924@
@@ -37469,10 +36412,6 @@
 1 HUSB @I262745218756@
 1 WIFE @I262745218724@
 1 CHIL @I262744867849@
-0 @F236@ FAM
-1 HUSB @I262744711197@
-1 WIFE @I262744711205@
-1 CHIL @I262744711147@
 0 @F237@ FAM
 1 HUSB @I262744908357@
 1 WIFE @I262744964828@
@@ -37492,10 +36431,6 @@
 3 DATA
 4 WWW http://familysearch.org/pal:/MM9.1.1/FK1K-J9F
 3 _WPID 1,60363::1243199
-0 @F239@ FAM
-1 HUSB @I262744711261@
-1 WIFE @I262744711275@
-1 CHIL @I262744711197@
 0 @F23@ FAM
 1 HUSB @I262744689735@
 1 WIFE @I262744689887@
@@ -37524,10 +36459,6 @@
 1 WIFE @I262745141871@
 1 CHIL @I262744687832@
 1 CHIL @I262745141442@
-0 @F243@ FAM
-1 HUSB @I262744713419@
-1 WIFE @I262744713432@
-1 CHIL @I262744713402@
 0 @F244@ FAM
 1 HUSB @I262744886944@
 1 WIFE @I262744886958@
@@ -37556,10 +36487,6 @@
 1 HUSB @I262744866013@
 1 WIFE @I262744866204@
 1 CHIL @I262744866010@
-0 @F250@ FAM
-1 HUSB @I262744866482@
-1 WIFE @I262744713551@
-1 CHIL @I262744713439@
 0 @F251@ FAM
 1 HUSB @I262744862388@
 1 WIFE @I262744862390@
@@ -37598,10 +36525,6 @@
 1 HUSB @I262745218638@
 1 WIFE @I262745218692@
 1 CHIL @I262745218394@
-0 @F25@ FAM
-1 HUSB @I262744716840@
-1 WIFE @I262744716410@
-1 CHIL @I262744716757@
 0 @F260@ FAM
 1 HUSB @I262744731294@
 1 WIFE @I262744703572@
@@ -37614,10 +36537,6 @@
 1 HUSB @I262744712567@
 1 WIFE @I262745149062@
 1 CHIL @I262744711028@
-0 @F263@ FAM
-1 HUSB @I262744711108@
-1 WIFE @I262744711147@
-1 CHIL @I262744711090@
 0 @F264@ FAM
 1 HUSB @I262745288292@
 1 WIFE @I262744864173@
@@ -37626,14 +36545,6 @@
 1 HUSB @I262744711028@
 1 WIFE @I262744711090@
 1 CHIL @I262744692449@
-0 @F266@ FAM
-1 HUSB @I262744866104@
-1 WIFE @I262744866107@
-1 CHIL @I262744866102@
-0 @F267@ FAM
-1 HUSB @I262744712782@
-1 WIFE @I262744712759@
-1 CHIL @I262744712567@
 0 @F268@ FAM
 1 HUSB @I262745288292@
 1 WIFE @I262744864173@
@@ -37646,14 +36557,6 @@
 1 HUSB @I262744865431@
 1 WIFE @I262744865434@
 1 CHIL @I262744865423@
-0 @F270@ FAM
-1 HUSB @I262745288292@
-1 WIFE @I262744864173@
-1 CHIL @I262744864152@
-0 @F271@ FAM
-1 HUSB @I262745288292@
-1 WIFE @I262744864173@
-1 CHIL @I262745288193@
 0 @F272@ FAM
 1 HUSB @I262745194071@
 1 WIFE @I262745194104@
@@ -37686,15 +36589,7 @@
 1 HUSB @I262744720773@
 1 WIFE @I262745288263@
 1 CHIL @I262745288210@
-0 @F27@ FAM
-1 HUSB @I262744715017@
-1 WIFE @I262744715031@
-1 CHIL @I262744715005@
 0 @F280@ FAM
-1 HUSB @I262744718918@
-1 WIFE @I262744718942@
-1 CHIL @I262744718900@
-0 @F281@ FAM
 1 HUSB @I262744718918@
 1 WIFE @I262744718942@
 1 CHIL @I262744718900@
@@ -37744,14 +36639,6 @@
 1 HUSB @I262744908580@
 1 WIFE @I262744964688@
 1 CHIL @I262744908562@
-0 @F288@ FAM
-1 HUSB @I262744715103@
-1 WIFE @I262744715120@
-1 CHIL @I262744719387@
-0 @F289@ FAM
-1 HUSB @I262744866097@
-1 WIFE @I262744866102@
-1 CHIL @I262744866094@
 0 @F28@ FAM
 1 HUSB @I262744722629@
 1 WIFE @I262744722549@
@@ -37760,10 +36647,6 @@
 1 HUSB @I262744964644@
 1 WIFE @I262744964656@
 1 CHIL @I262744964616@
-0 @F291@ FAM
-1 HUSB @I262744714930@
-1 WIFE @I262744714965@
-1 CHIL @I262744714900@
 0 @F292@ FAM
 1 HUSB @I262744907284@
 1 WIFE @I262744907301@
@@ -37788,18 +36671,10 @@
 1 HUSB @I262744731181@
 1 WIFE @I262744731159@
 1 CHIL @I262744688574@
-0 @F297@ FAM
-1 HUSB @I262744731181@
-1 WIFE @I262744731159@
-1 CHIL @I262744688574@
 0 @F298@ FAM
 1 HUSB @I262745312779@
 1 WIFE @I262745312792@
 1 CHIL @I262745312739@
-0 @F299@ FAM
-1 HUSB @I262744718190@
-1 WIFE @I262744718237@
-1 CHIL @I262744718176@
 0 @F29@ FAM
 1 HUSB @I262744866000@
 1 WIFE @I262744866010@
@@ -37820,10 +36695,6 @@
 1 HUSB @I262745288210@
 1 WIFE @I262745288193@
 1 CHIL @I262745288186@
-0 @F303@ FAM
-1 HUSB @I262744714930@
-1 WIFE @I262744714965@
-1 CHIL @I262744714900@
 0 @F304@ FAM
 1 HUSB @I262744702493@
 1 WIFE @I262744702494@
@@ -37901,10 +36772,6 @@
 0 @F317@ FAM
 1 HUSB @I262744690683@
 1 WIFE @I262745115382@
-0 @F318@ FAM
-1 HUSB @I262744715017@
-1 WIFE @I262744715031@
-1 CHIL @I262744715005@
 0 @F319@ FAM
 1 HUSB @I262744723454@
 1 WIFE @I262744723465@
@@ -37917,10 +36784,6 @@
 1 HUSB @I262744690686@
 1 WIFE @I262744690466@
 1 CHIL @I262744690689@
-0 @F321@ FAM
-1 HUSB @I262745149404@
-1 WIFE @I262745149419@
-1 CHIL @I262744972327@
 0 @F322@ FAM
 1 HUSB @I262744686599@
 1 WIFE @I262744686564@
@@ -37979,18 +36842,6 @@
 1 HUSB @I262744965049@
 1 WIFE @I262744965057@
 1 CHIL @I262744965034@
-0 @F335@ FAM
-1 HUSB @I262744972397@
-1 WIFE @I262744972422@
-1 CHIL @I262744972387@
-0 @F336@ FAM
-1 HUSB @I262744715005@
-1 WIFE @I262744720082@
-1 CHIL @I262744719291@
-0 @F337@ FAM
-1 HUSB @I262744693452@
-1 WIFE @I262744693532@
-1 CHIL @I262744693532@
 0 @F338@ FAM
 1 HUSB @I262744723393@
 1 WIFE @I262744723378@
@@ -38003,14 +36854,6 @@
 1 HUSB @I262744865954@
 1 WIFE @I262744865962@
 1 CHIL @I262744865951@
-0 @F340@ FAM
-1 HUSB @I262744972307@
-1 WIFE @I262744972327@
-1 CHIL @I262744972068@
-0 @F341@ FAM
-1 HUSB @I262744711028@
-1 WIFE @I262744711090@
-1 CHIL @I262744692449@
 0 @F342@ FAM
 1 HUSB @I262744866731@
 1 WIFE @I262744866732@
@@ -38023,14 +36866,6 @@
 1 HUSB @I262744887215@
 1 WIFE @I262744887225@
 1 CHIL @I262744887193@
-0 @F345@ FAM
-1 HUSB @I262744715179@
-1 WIFE @I262744715191@
-1 CHIL @I262744715160@
-0 @F346@ FAM
-1 HUSB @I262744715179@
-1 WIFE @I262744715191@
-1 CHIL @I262744715160@
 0 @F347@ FAM
 1 HUSB @I262744866725@
 1 WIFE @I262744866729@
@@ -38067,14 +36902,6 @@
 1 HUSB @I262744866698@
 1 WIFE @I262744866701@
 1 CHIL @I262744866674@
-0 @F355@ FAM
-1 HUSB @I262744972387@
-1 WIFE @I262744972371@
-1 CHIL @I262744972344@
-0 @F356@ FAM
-1 HUSB @I262744719249@
-1 WIFE @I262744719651@
-1 CHIL @I262744861982@
 0 @F357@ FAM
 1 HUSB @I262744887177@
 1 WIFE @I262744887182@
@@ -38095,10 +36922,6 @@
 1 HUSB @I262744715160@
 1 WIFE @I262744715380@
 1 CHIL @I262744715031@
-0 @F361@ FAM
-1 HUSB @I262744715160@
-1 WIFE @I262744715380@
-1 CHIL @I262744715031@
 0 @F362@ FAM
 1 HUSB @I262744907643@
 1 WIFE @I262744907649@
@@ -38111,10 +36934,6 @@
 1 HUSB @I262744702850@
 1 WIFE @I262744708297@
 1 CHIL @I262744700806@
-0 @F365@ FAM
-1 HUSB @I262744972344@
-1 WIFE @I262744972337@
-1 CHIL @I262744972307@
 0 @F366@ FAM
 1 HUSB @I262745472914@
 1 WIFE @I262745472920@
@@ -38140,10 +36959,6 @@
 1 HUSB @I262744887131@
 1 WIFE @I262744887148@
 1 CHIL @I262744702201@
-0 @F371@ FAM
-1 HUSB @I262744715103@
-1 WIFE @I262744715120@
-1 CHIL @I262744719387@
 0 @F372@ FAM
 1 HUSB @I262744964971@
 1 WIFE @I262744964984@
@@ -38201,14 +37016,6 @@
 1 HUSB @I262744862547@
 1 WIFE @I262744862548@
 1 CHIL @I262744862535@
-0 @F385@ FAM
-1 HUSB @I262744713155@
-1 WIFE @I262744713170@
-1 CHIL @I262744713133@
-0 @F386@ FAM
-1 HUSB @I262744723139@
-1 WIFE @I262744723176@
-1 CHIL @I262744866024@
 0 @F387@ FAM
 1 HUSB @I262744862501@
 1 WIFE @I262744862515@
@@ -38217,10 +37024,6 @@
 1 HUSB @I262744964867@
 1 WIFE @I262744964900@
 1 CHIL @I262744908347@
-0 @F389@ FAM
-1 HUSB @I262744711405@
-1 WIFE @I262744711426@
-1 CHIL @I262744711364@
 0 @F38@ FAM
 1 HUSB @I262745287860@
 1 WIFE @I262745287871@
@@ -38296,14 +37099,6 @@
 1 HUSB @I262744886510@
 1 WIFE @I262744886524@
 1 CHIL @I262744886456@
-0 @F400@ FAM
-1 HUSB @I262744711454@
-1 WIFE @I262744711470@
-1 CHIL @I262744711405@
-0 @F401@ FAM
-1 HUSB @I262744712985@
-1 WIFE @I262744713002@
-1 CHIL @I262744712935@
 0 @F402@ FAM
 1 HUSB @I262744964883@
 1 WIFE @I262744964892@
@@ -38316,23 +37111,7 @@
 1 HUSB @I262744865005@
 1 WIFE @I262744865008@
 1 CHIL @I262744864998@
-0 @F405@ FAM
-1 HUSB @I262744714665@
-1 WIFE @I262744889581@
-1 CHIL @I262744714651@
-0 @F406@ FAM
-1 HUSB @I262744889570@
-1 WIFE @I262744889581@
-1 CHIL @I262744714651@
-0 @F407@ FAM
-1 HUSB @I262744889570@
-1 WIFE @I262744889581@
-1 CHIL @I262744714651@
 0 @F408@ FAM
-1 HUSB @I262744697388@
-1 WIFE @I262744697390@
-1 CHIL @I262744966990@
-0 @F409@ FAM
 1 HUSB @I262744697388@
 1 WIFE @I262744697390@
 1 CHIL @I262744966990@
@@ -38382,22 +37161,10 @@
 1 HUSB @I262744704038@
 1 WIFE @I262744697103@
 1 CHIL @I262744704014@
-0 @F41@ FAM
-1 HUSB @I262744865451@
-1 WIFE @I262744865456@
-1 CHIL @I262744865449@
-0 @F420@ FAM
-1 HUSB @I262744704038@
-1 WIFE @I262744697103@
-1 CHIL @I262744704014@
 0 @F421@ FAM
 1 HUSB @I262745147639@
 1 WIFE @I262745147661@
 1 CHIL @I262745147629@
-0 @F422@ FAM
-1 HUSB @I262744717192@
-1 WIFE @I262744717523@
-1 CHIL @I262744717183@
 0 @F423@ FAM
 1 HUSB @I262744864956@
 1 WIFE @I262744864971@
@@ -38426,10 +37193,6 @@
 1 HUSB @I262744725704@
 1 WIFE @I262744725709@
 1 CHIL @I262744725685@
-0 @F42@ FAM
-1 HUSB @I262744715051@
-1 WIFE @I262744715071@
-1 CHIL @I262744715017@
 0 @F430@ FAM
 1 HUSB @I262744717450@
 1 WIFE @I262744717489@
@@ -38482,10 +37245,6 @@
 1 HUSB @I262744886414@
 1 WIFE @I262744886419@
 1 CHIL @I262744886336@
-0 @F440@ FAM
-1 HUSB @I262744725442@
-1 WIFE @I262744725412@
-1 CHIL @I262744725442@
 0 @F441@ FAM
 1 HUSB @I262744696975@
 1 WIFE @I262744696976@
@@ -38572,10 +37331,6 @@
 1 HUSB @I262744864859@
 1 WIFE @I262744864864@
 1 CHIL @I262744864699@
-0 @F458@ FAM
-1 HUSB @I262744697250@
-1 WIFE @I262744697265@
-1 CHIL @I262744697219@
 0 @F459@ FAM
 1 HUSB @I262744713306@
 1 WIFE @I262744713322@
@@ -38702,10 +37457,6 @@
 1 HUSB @I262744864729@
 1 WIFE @I262744864733@
 1 CHIL @I262744864749@
-0 @F486@ FAM
-1 HUSB @I262744888673@
-1 WIFE @I262744888684@
-1 CHIL @I262744888669@
 0 @F487@ FAM
 1 HUSB @I262744721261@
 1 WIFE @I262744721436@
@@ -38858,10 +37609,6 @@
 1 HUSB @I262744865243@
 1 WIFE @I262744722352@
 1 CHIL @I262744865120@
-0 @F519@ FAM
-1 HUSB @I262744725977@
-1 WIFE @I262744726005@
-1 CHIL @I262744725970@
 0 @F51@ FAM
 1 HUSB @I262744886395@
 1 WIFE @I262744886403@
@@ -38887,10 +37634,6 @@
 1 WIFE @I262745139645@
 1 CHIL @I262744865295@
 0 @F525@ FAM
-1 HUSB @I262744865096@
-1 WIFE @I262744865195@
-1 CHIL @I262744865155@
-0 @F526@ FAM
 1 HUSB @I262744865096@
 1 WIFE @I262744865195@
 1 CHIL @I262744865155@
@@ -38935,10 +37678,6 @@
 1 HUSB @I262744885637@
 1 WIFE @I262744885647@
 1 CHIL @I262744885553@
-0 @F536@ FAM
-1 HUSB @I262744906363@
-1 WIFE @I262744906375@
-1 CHIL @I262744705519@
 0 @F537@ FAM
 1 HUSB @I262744865150@
 1 WIFE @I262744865155@
@@ -38984,18 +37723,6 @@
 1 HUSB @I262744865120@
 1 WIFE @I262744725783@
 1 CHIL @I262744725774@
-0 @F547@ FAM
-1 HUSB @I262744705426@
-1 WIFE @I262744705475@
-1 CHIL @I262744705401@
-0 @F548@ FAM
-1 HUSB @I262744705381@
-1 WIFE @I262744705392@
-1 CHIL @I262744705363@
-0 @F549@ FAM
-1 HUSB @I262744697177@
-1 WIFE @I262744697198@
-1 CHIL @I262744697134@
 0 @F54@ FAM
 1 HUSB @I262745287828@
 1 WIFE @I262745287955@
@@ -39024,10 +37751,6 @@
 1 HUSB @I262744885547@
 1 WIFE @I262744885553@
 1 CHIL @I262744885495@
-0 @F556@ FAM
-1 HUSB @I262744704569@
-1 WIFE @I262744704578@
-1 CHIL @I262744967457@
 0 @F557@ FAM
 1 HUSB @I262744715492@
 1 WIFE @I262744971559@
@@ -39036,42 +37759,14 @@
 1 HUSB @I262744717572@
 1 WIFE @I262744717626@
 1 CHIL @I262744717544@
-0 @F559@ FAM
-1 HUSB @I262744967457@
-1 WIFE @I262744704544@
-1 CHIL @I262744968392@
 0 @F55@ FAM
 1 HUSB @I262744886363@
 1 WIFE @I262744886383@
 1 CHIL @I262744886330@
-0 @F560@ FAM
-1 HUSB @I262744967457@
-1 WIFE @I262744704544@
-1 CHIL @I262744968392@
-0 @F561@ FAM
-1 HUSB @I262744715517@
-1 WIFE @I262744715534@
-1 CHIL @I262744715492@
 0 @F562@ FAM
 1 HUSB @I262744717589@
 1 WIFE @I262744717604@
 1 CHIL @I262744717572@
-0 @F563@ FAM
-1 HUSB @I262744697128@
-1 WIFE @I262744697134@
-1 CHIL @I262744704038@
-0 @F564@ FAM
-1 HUSB @I262744697128@
-1 WIFE @I262744697134@
-1 CHIL @I262744704038@
-0 @F565@ FAM
-1 HUSB @I262744697128@
-1 WIFE @I262744697134@
-1 CHIL @I262744704038@
-0 @F566@ FAM
-1 HUSB @I262744697128@
-1 WIFE @I262744697134@
-1 CHIL @I262744704038@
 0 @F567@ FAM
 1 HUSB @I262744701191@
 1 WIFE @I262744701200@
@@ -39099,10 +37794,6 @@
 1 HUSB @I262744692540@
 1 WIFE @I262744716757@
 1 CHIL @I262744692520@
-0 @F570@ FAM
-1 HUSB @I262744704038@
-1 WIFE @I262744697103@
-1 CHIL @I262744704014@
 0 @F571@ FAM
 1 HUSB @I262744726258@
 1 WIFE @I262744726242@
@@ -39115,14 +37806,6 @@
 1 HUSB @I262744865437@
 1 WIFE @I262744865519@
 1 CHIL @I262744865379@
-0 @F574@ FAM
-1 HUSB @I262744906478@
-1 WIFE @I262744691223@
-1 CHIL @I262744906432@
-0 @F575@ FAM
-1 HUSB @I262744906478@
-1 WIFE @I262744691223@
-1 CHIL @I262744906432@
 0 @F576@ FAM
 1 HUSB @I262744972012@
 1 WIFE @I262744972028@
@@ -39143,10 +37826,6 @@
 1 HUSB @I262744865902@
 1 WIFE @I262744865906@
 1 CHIL @I262744865898@
-0 @F580@ FAM
-1 HUSB @I262744715856@
-1 WIFE @I262744715896@
-1 CHIL @I262744715843@
 0 @F581@ FAM
 1 HUSB @I262745217763@
 1 WIFE @I262745217811@
@@ -39179,10 +37858,6 @@
 1 HUSB @I262744867905@
 1 WIFE @I262744693477@
 1 CHIL @I262744867890@
-0 @F589@ FAM
-1 HUSB @I262744718059@
-1 WIFE @I262744718155@
-1 CHIL @I262745148783@
 0 @F58@ FAM
 1 HUSB @I262744865688@
 1 WIFE @I262744865898@
@@ -39199,22 +37874,10 @@
 1 HUSB @I262744885958@
 1 WIFE @I262744885966@
 1 CHIL @I262744885878@
-0 @F593@ FAM
-1 HUSB @I262744691149@
-1 WIFE @I262744906432@
-1 CHIL @I262744906417@
-0 @F594@ FAM
-1 HUSB @I262744691149@
-1 WIFE @I262744906432@
-1 CHIL @I262744906417@
 0 @F595@ FAM
 1 HUSB @I262745139909@
 1 WIFE @I262745139867@
 1 CHIL @I262745139842@
-0 @F596@ FAM
-1 HUSB @I262744716107@
-1 WIFE @I262744716128@
-1 CHIL @I262744716056@
 0 @F597@ FAM
 1 HUSB @I262745217706@
 1 WIFE @I262745217732@
@@ -39232,10 +37895,6 @@
 1 HUSB @I262744972387@
 1 WIFE @I262744972371@
 1 CHIL @I262744972344@
-0 @F5@ FAM
-1 HUSB @I262744866024@
-1 WIFE @I262744866036@
-1 CHIL @I262745194133@
 0 @F600@ FAM
 1 HUSB @I262745221852@
 1 WIFE @I262745222100@
@@ -39256,10 +37915,6 @@
 1 HUSB @I262744693452@
 1 WIFE @I262744693532@
 1 CHIL @I262744693477@
-0 @F605@ FAM
-1 HUSB @I262744715830@
-1 WIFE @I262744716056@
-1 CHIL @I262744715734@
 0 @F606@ FAM
 1 HUSB @I262744865449@
 1 WIFE @I262744865471@
@@ -39300,14 +37955,6 @@
 1 HUSB @I262744697503@
 1 WIFE @I262744697517@
 1 CHIL @I262744697481@
-0 @F615@ FAM
-1 HUSB @I262744906417@
-1 WIFE @I262744691141@
-1 CHIL @I262744906400@
-0 @F616@ FAM
-1 HUSB @I262744906417@
-1 WIFE @I262744691141@
-1 CHIL @I262744906400@
 0 @F617@ FAM
 1 HUSB @I262744865422@
 1 WIFE @I262744865423@
@@ -39316,10 +37963,6 @@
 1 HUSB @I262744697481@
 1 WIFE @I262744697491@
 1 CHIL @I262744697440@
-0 @F619@ FAM
-1 HUSB @I262744715734@
-1 WIFE @I262744715768@
-1 CHIL @I262744906647@
 0 @F61@ FAM
 1 HUSB @I262744722529@
 1 WIFE @I262744722518@
@@ -39339,10 +37982,6 @@
 1 HUSB @I262744885882@
 1 WIFE @I262744885893@
 1 CHIL @I262744885831@
-0 @F623@ FAM
-1 HUSB @I262744906363@
-1 WIFE @I262744906375@
-1 CHIL @I262744705519@
 0 @F624@ FAM
 1 HUSB @I262745139826@
 1 WIFE @I262745139842@
@@ -39363,10 +38002,6 @@
 1 HUSB @I262745221755@
 1 WIFE @I262745221790@
 1 CHIL @I262745220951@
-0 @F629@ FAM
-1 HUSB @I262744865431@
-1 WIFE @I262744865434@
-1 CHIL @I262744865423@
 0 @F62@ FAM
 1 HUSB @I262744714276@
 1 WIFE @I262744714323@
@@ -39399,10 +38034,6 @@
 1 HUSB @I262745142712@
 1 WIFE @I262744697440@
 1 CHIL @I262744697370@
-0 @F637@ FAM
-1 HUSB @I262744704600@
-1 WIFE @I262744704622@
-1 CHIL @I262744704544@
 0 @F638@ FAM
 1 HUSB @I262744726116@
 1 WIFE @I262744726105@
@@ -39423,22 +38054,10 @@
 1 HUSB @I262744726096@
 1 WIFE @I262744726091@
 1 CHIL @I262744726068@
-0 @F642@ FAM
-1 HUSB @I262744715005@
-1 WIFE @I262744720082@
-1 CHIL @I262744719291@
 0 @F643@ FAM
 1 HUSB @I262744885831@
 1 WIFE @I262744885834@
 1 CHIL @I262744885810@
-0 @F644@ FAM
-1 HUSB @I262744705426@
-1 WIFE @I262744705475@
-1 CHIL @I262744705401@
-0 @F645@ FAM
-1 HUSB @I262744691414@
-1 WIFE @I262744691417@
-1 CHIL @I262744691331@
 0 @F646@ FAM
 1 HUSB @I262744865331@
 1 WIFE @I262744865351@
@@ -39483,10 +38102,6 @@
 1 HUSB @I262744726072@
 1 WIFE @I262744726068@
 1 CHIL @I262744726050@
-0 @F655@ FAM
-1 HUSB @I262744691331@
-1 WIFE @I262744691392@
-1 CHIL @I262744691316@
 0 @F656@ FAM
 1 HUSB @I262744885783@
 1 WIFE @I262744885797@
@@ -39499,10 +38114,6 @@
 1 HUSB @I262744726050@
 1 WIFE @I262744726019@
 1 CHIL @I262744725888@
-0 @F659@ FAM
-1 HUSB @I262744863669@
-1 WIFE @I262744863691@
-1 CHIL @I262744863667@
 0 @F65@ FAM
 1 HUSB @I262744865845@
 1 WIFE @I262744865866@
@@ -39511,10 +38122,6 @@
 1 HUSB @I262744885810@
 1 WIFE @I262744885819@
 1 CHIL @I262744885783@
-0 @F661@ FAM
-1 HUSB @I262744697388@
-1 WIFE @I262744697390@
-1 CHIL @I262744966990@
 0 @F662@ FAM
 1 HUSB @I262744726035@
 1 WIFE @I262744726027@
@@ -39527,10 +38134,6 @@
 1 HUSB @I262745221641@
 1 WIFE @I262745221663@
 1 CHIL @I262745220929@
-0 @F665@ FAM
-1 HUSB @I262744691240@
-1 WIFE @I262744691245@
-1 CHIL @I262744906478@
 0 @F666@ FAM
 1 HUSB @I262744865284@
 1 WIFE @I262744865287@
@@ -39556,14 +38159,6 @@
 3 PAGE Genline AB; Johanneshov, Sweden; Swedish Church Records Archive; GID-nummer: 100017.71.41100; Förteckningsnummer: SC-1623
 3 _HPID 1,61363::1587108
 3 _WPID 1,61363::901587108
-0 @F66@ FAM
-1 HUSB @I262744968672@
-1 WIFE @I262744968258@
-1 CHIL @I262744968230@
-0 @F670@ FAM
-1 HUSB @I262744691258@
-1 WIFE @I262745147933@
-1 CHIL @I262744691245@
 0 @F671@ FAM
 1 HUSB @I262744691258@
 1 WIFE @I262745147933@
@@ -39580,14 +38175,6 @@
 1 HUSB @I262744886242@
 1 WIFE @I262744886249@
 1 CHIL @I262744886179@
-0 @F675@ FAM
-1 HUSB @I262744716468@
-1 WIFE @I262744716480@
-1 CHIL @I262744716447@
-0 @F676@ FAM
-1 HUSB @I262744715103@
-1 WIFE @I262744715120@
-1 CHIL @I262744719387@
 0 @F677@ FAM
 1 HUSB @I262745287648@
 1 WIFE @I262745287653@
@@ -39636,10 +38223,6 @@
 1 HUSB @I262744972220@
 1 WIFE @I262744972242@
 1 CHIL @I262744972193@
-0 @F688@ FAM
-1 HUSB @I262744714480@
-1 WIFE @I262744714511@
-1 CHIL @I262744714399@
 0 @F689@ FAM
 1 HUSB @I262744865704@
 1 WIFE @I262744908515@
@@ -39648,10 +38231,6 @@
 1 HUSB @I262745287762@
 1 WIFE @I262745287775@
 1 CHIL @I262745287747@
-0 @F690@ FAM
-1 HUSB @I262744714350@
-1 WIFE @I262744714399@
-1 CHIL @I262744714323@
 0 @F691@ FAM
 1 HUSB @I262744865700@
 1 WIFE @I262744865702@
@@ -39668,10 +38247,6 @@
 1 HUSB @I262744972193@
 1 WIFE @I262744972211@
 1 CHIL @I262744972182@
-0 @F695@ FAM
-1 HUSB @I262744715734@
-1 WIFE @I262744715768@
-1 CHIL @I262744906647@
 0 @F696@ FAM
 1 HUSB @I262744718176@
 1 WIFE @I262744718255@
@@ -39700,18 +38275,10 @@
 1 HUSB @I262744972146@
 1 WIFE @I262744972172@
 1 CHIL @I262744972089@
-0 @F701@ FAM
-1 HUSB @I262744890248@
-1 WIFE @I262744970177@
-1 CHIL @I262744890049@
 0 @F702@ FAM
 1 HUSB @I262745140083@
 1 WIFE @I262745140108@
 1 CHIL @I262745140061@
-0 @F703@ FAM
-1 HUSB @I262744714289@
-1 WIFE @I262744714307@
-1 CHIL @I262744714276@
 0 @F704@ FAM
 1 HUSB @I262744726427@
 1 WIFE @I262745146459@
@@ -39740,10 +38307,6 @@
 1 HUSB @I262745193490@
 1 WIFE @I262745193512@
 1 CHIL @I262745193180@
-0 @F710@ FAM
-1 HUSB @I262744714276@
-1 WIFE @I262744714323@
-1 CHIL @I262744714233@
 0 @F711@ FAM
 1 HUSB @I262744865632@
 1 WIFE @I262744865638@
@@ -39772,10 +38335,6 @@
 1 HUSB @I262745193265@
 1 WIFE @I262745193291@
 1 CHIL @I262745192963@
-0 @F718@ FAM
-1 HUSB @I262744716137@
-1 WIFE @I262744716149@
-1 CHIL @I262744716107@
 0 @F719@ FAM
 1 HUSB @I262745140047@
 1 WIFE @I262745140061@
@@ -39816,10 +38375,6 @@
 1 HUSB @I262744865576@
 1 WIFE @I262744865588@
 1 CHIL @I262744865572@
-0 @F728@ FAM
-1 HUSB @I262744691240@
-1 WIFE @I262744691245@
-1 CHIL @I262744906478@
 0 @F729@ FAM
 1 HUSB @I262744886043@
 1 WIFE @I262744886055@
@@ -39836,10 +38391,6 @@
 1 HUSB @I262744718092@
 1 WIFE @I262744718115@
 1 CHIL @I262744718059@
-0 @F732@ FAM
-1 HUSB @I262744864956@
-1 WIFE @I262744864971@
-1 CHIL @I262744865581@
 0 @F733@ FAM
 1 HUSB @I262744865539@
 1 WIFE @I262744865541@
@@ -39876,10 +38427,6 @@
 1 HUSB @I262744892646@
 1 WIFE @I262744892677@
 1 CHIL @I262744892592@
-0 @F741@ FAM
-1 HUSB @I262744892029@
-1 WIFE @I262744892052@
-1 CHIL @I262744890675@
 0 @F742@ FAM
 1 HUSB @I262745146627@
 1 WIFE @I262745146621@
@@ -39888,15 +38435,7 @@
 1 HUSB @I262745142512@
 1 WIFE @I262745142519@
 1 CHIL @I262745142496@
-0 @F744@ FAM
-1 HUSB @I262744906177@
-1 WIFE @I262744906195@
-1 CHIL @I262744906167@
 0 @F745@ FAM
-1 HUSB @I262744892533@
-1 WIFE @I262745146571@
-1 CHIL @I262745146547@
-0 @F746@ FAM
 1 HUSB @I262744892533@
 1 WIFE @I262745146571@
 1 CHIL @I262745146547@
@@ -39936,10 +38475,6 @@
 1 CHIL @I262744687828@
 1 CHIL @I262744687829@
 1 CHIL @I262744687830@
-0 @F752@ FAM
-1 HUSB @I262744716447@
-1 WIFE @I262744716500@
-1 CHIL @I262744716363@
 0 @F753@ FAM
 1 HUSB @I262744863946@
 1 WIFE @I262744864033@
@@ -39993,10 +38528,6 @@
 1 HUSB @I262744724616@
 1 WIFE @I262744724627@
 1 CHIL @I262744724590@
-0 @F765@ FAM
-1 HUSB @I262744892120@
-1 WIFE @I262744892107@
-1 CHIL @I262744892052@
 0 @F766@ FAM
 1 HUSB @I262744863878@
 1 WIFE @I262744863881@
@@ -40025,14 +38556,6 @@
 1 HUSB @I262744966255@
 1 WIFE @I262744966291@
 1 CHIL @I262744966238@
-0 @F772@ FAM
-1 HUSB @I262744892555@
-1 WIFE @I262744892560@
-1 CHIL @I262744892533@
-0 @F773@ FAM
-1 HUSB @I262744716363@
-1 WIFE @I262744716410@
-1 CHIL @I262744715779@
 0 @F774@ FAM
 1 HUSB @I262744863819@
 1 WIFE @I262744863844@
@@ -40049,10 +38572,6 @@
 1 HUSB @I262744691063@
 1 WIFE @I262745146470@
 1 CHIL @I262744690939@
-0 @F778@ FAM
-1 HUSB @I262744715962@
-1 WIFE @I262744715996@
-1 CHIL @I262744715909@
 0 @F779@ FAM
 1 HUSB @I262744863865@
 1 WIFE @I262744863871@
@@ -40061,10 +38580,6 @@
 1 HUSB @I262744722477@
 1 WIFE @I262744722491@
 1 CHIL @I262744722456@
-0 @F780@ FAM
-1 HUSB @I262744697158@
-1 WIFE @I262744697315@
-1 CHIL @I262744697128@
 0 @F781@ FAM
 1 HUSB @I262744724549@
 1 WIFE @I262744724590@
@@ -40073,10 +38588,6 @@
 1 HUSB @I262744888351@
 1 WIFE @I262744888397@
 1 CHIL @I262744888247@
-0 @F783@ FAM
-1 HUSB @I262744890675@
-1 WIFE @I262744891458@
-1 CHIL @I262744970263@
 0 @F784@ FAM
 1 HUSB @I262745191477@
 1 WIFE @I262745191494@
@@ -40103,10 +38614,6 @@
 1 CHIL @I262745146368@
 1 CHIL @I262745154581@
 1 CHIL @I262745154413@
-0 @F789@ FAM
-1 HUSB @I262744970263@
-1 WIFE @I262744890618@
-1 CHIL @I262744890371@
 0 @F78@ FAM
 1 HUSB @I262744972307@
 1 WIFE @I262744972327@
@@ -40115,22 +38622,10 @@
 1 HUSB @I262744966189@
 1 WIFE @I262744966201@
 1 CHIL @I262744966173@
-0 @F791@ FAM
-1 HUSB @I262744865451@
-1 WIFE @I262744865456@
-1 CHIL @I262744865449@
 0 @F792@ FAM
 1 HUSB @I262744966173@
 1 WIFE @I262744966182@
 1 CHIL @I262744965069@
-0 @F793@ FAM
-1 HUSB @I262744704038@
-1 WIFE @I262744697103@
-1 CHIL @I262744704014@
-0 @F794@ FAM
-1 HUSB @I262744704038@
-1 WIFE @I262744697103@
-1 CHIL @I262744704014@
 0 @F795@ FAM
 1 HUSB @I262744863794@
 1 WIFE @I262744863800@
@@ -40192,10 +38687,6 @@
 1 HUSB @I262744888808@
 1 WIFE @I262744888818@
 1 CHIL @I262744888797@
-0 @F807@ FAM
-1 HUSB @I262744892744@
-1 WIFE @I262744892749@
-1 CHIL @I262744892737@
 0 @F808@ FAM
 1 HUSB @I262744966633@
 1 WIFE @I262744966645@
@@ -40204,22 +38695,10 @@
 1 HUSB @I262745220561@
 1 WIFE @I262745220581@
 1 CHIL @I262744864490@
-0 @F80@ FAM
-1 HUSB @I262744715779@
-1 WIFE @I262744715796@
-1 CHIL @I262744715700@
-0 @F810@ FAM
-1 HUSB @I262744968699@
-1 WIFE @I262745142784@
-1 CHIL @I262744968672@
 0 @F811@ FAM
 1 HUSB @I262744888828@
 1 WIFE @I262744888835@
 1 CHIL @I262744888818@
-0 @F812@ FAM
-1 HUSB @I262744892759@
-1 WIFE @I262744892820@
-1 CHIL @I262744892744@
 0 @F813@ FAM
 1 HUSB @I262744724960@
 1 WIFE @I262744724942@
@@ -40240,10 +38719,6 @@
 1 HUSB @I262744970700@
 1 WIFE @I262744970715@
 1 CHIL @I262744970668@
-0 @F818@ FAM
-1 HUSB @I262744692540@
-1 WIFE @I262744716757@
-1 CHIL @I262744692520@
 0 @F819@ FAM
 1 HUSB @I262744888775@
 1 WIFE @I262744888797@
@@ -40261,10 +38736,6 @@
 1 WIFE @I262744708547@
 1 CHIL @I262744708519@
 1 CHIL @I262744708763@
-0 @F822@ FAM
-1 HUSB @I262744892737@
-1 WIFE @I262744892725@
-1 CHIL @I262744892702@
 0 @F823@ FAM
 1 HUSB @I262744700338@
 1 WIFE @I262744700355@
@@ -40285,10 +38756,6 @@
 1 HUSB @I262744892832@
 1 WIFE @I262744892842@
 1 CHIL @I262744892820@
-0 @F828@ FAM
-1 HUSB @I262744888720@
-1 WIFE @I262744888742@
-1 CHIL @I262744888701@
 0 @F829@ FAM
 1 HUSB @I262744708511@
 1 WIFE @I262744708519@
@@ -40361,10 +38828,6 @@
 1 HUSB @I262744966517@
 1 WIFE @I262744966546@
 1 CHIL @I262744966348@
-0 @F845@ FAM
-1 HUSB @I262744716447@
-1 WIFE @I262744716500@
-1 CHIL @I262744716363@
 0 @F846@ FAM
 1 HUSB @I262744864105@
 1 WIFE @I262744864109@
@@ -40385,18 +38848,10 @@
 1 HUSB @I262744972344@
 1 WIFE @I262744972337@
 1 CHIL @I262744972307@
-0 @F850@ FAM
-1 HUSB @I262744697250@
-1 WIFE @I262744697265@
-1 CHIL @I262744697219@
 0 @F851@ FAM
 1 HUSB @I262744724856@
 1 WIFE @I262744724843@
 1 CHIL @I262744724800@
-0 @F852@ FAM
-1 HUSB @I262744716468@
-1 WIFE @I262744716480@
-1 CHIL @I262744716447@
 0 @F853@ FAM
 1 HUSB @I262745142588@
 1 WIFE @I262745142629@
@@ -40410,10 +38865,6 @@
 1 WIFE @I262744864098@
 1 CHIL @I262744864084@
 0 @F856@ FAM
-1 HUSB @I262744888669@
-1 WIFE @I262744888701@
-1 CHIL @I262744888332@
-0 @F857@ FAM
 1 HUSB @I262744888669@
 1 WIFE @I262744888701@
 1 CHIL @I262744888332@
@@ -40468,10 +38919,6 @@
 1 HUSB @I262744888600@
 1 WIFE @I262744888645@
 1 CHIL @I262744888591@
-0 @F86@ FAM
-1 HUSB @I262745148747@
-1 WIFE @I262744718354@
-1 CHIL @I262745148685@
 0 @F870@ FAM
 1 HUSB @I262744892737@
 1 WIFE @I262744892725@
@@ -40488,10 +38935,6 @@
 1 HUSB @I262745142561@
 1 WIFE @I262745142569@
 1 CHIL @I262745142542@
-0 @F874@ FAM
-1 HUSB @I262744892702@
-1 WIFE @I262744892716@
-1 CHIL @I262745146668@
 0 @F875@ FAM
 1 HUSB @I262744708415@
 1 WIFE @I262744708406@
@@ -40500,14 +38943,6 @@
 1 HUSB @I262745146668@
 1 WIFE @I262745147059@
 1 CHIL @I262744892560@
-0 @F877@ FAM
-1 HUSB @I262744892579@
-1 WIFE @I262744892592@
-1 CHIL @I262744892555@
-0 @F878@ FAM
-1 HUSB @I262744697177@
-1 WIFE @I262744697198@
-1 CHIL @I262744697134@
 0 @F879@ FAM
 1 HUSB @I262744864058@
 1 WIFE @I262744864061@
@@ -40520,10 +38955,6 @@
 1 HUSB @I262744724778@
 1 WIFE @I262744724769@
 1 CHIL @I262744724755@
-0 @F881@ FAM
-1 HUSB @I262744892646@
-1 WIFE @I262744892677@
-1 CHIL @I262744892592@
 0 @F882@ FAM
 1 HUSB @I262745142576@
 1 WIFE @I262745142581@
@@ -40536,10 +38967,6 @@
 1 HUSB @I262744724737@
 1 WIFE @I262744724755@
 1 CHIL @I262744724627@
-0 @F885@ FAM
-1 HUSB @I262744716468@
-1 WIFE @I262744716480@
-1 CHIL @I262744716447@
 0 @F886@ FAM
 1 HUSB @I262745142542@
 1 WIFE @I262745142548@
@@ -40696,10 +39123,6 @@
 1 HUSB @I262744712911@
 1 WIFE @I262744712896@
 1 CHIL @I262744712815@
-0 @F915@ FAM
-1 HUSB @I262744716999@
-1 WIFE @I262744717158@
-1 CHIL @I262745148518@
 0 @F916@ FAM
 1 HUSB @I262744700600@
 1 WIFE @I262744700616@
@@ -40720,18 +39143,10 @@
 1 HUSB @I262745222132@
 1 WIFE @I262745222148@
 1 CHIL @I262745222120@
-0 @F920@ FAM
-1 HUSB @I262744893020@
-1 WIFE @I262744893089@
-1 CHIL @I262745147059@
 0 @F921@ FAM
 1 HUSB @I262745142961@
 1 WIFE @I262745142969@
 1 CHIL @I262745142953@
-0 @F922@ FAM
-1 HUSB @I262744716468@
-1 WIFE @I262744716480@
-1 CHIL @I262744716447@
 0 @F923@ FAM
 1 HUSB @I262744864433@
 1 WIFE @I262744864437@
@@ -40752,10 +39167,6 @@
 1 HUSB @I262744966798@
 1 WIFE @I262744966813@
 1 CHIL @I262744966739@
-0 @F928@ FAM
-1 HUSB @I262744714802@
-1 WIFE @I262744714838@
-1 CHIL @I262744714723@
 0 @F929@ FAM
 1 HUSB @I262745216609@
 1 WIFE @I262745216641@
@@ -40780,10 +39191,6 @@
 1 HUSB @I262744716840@
 1 WIFE @I262744716410@
 1 CHIL @I262744716757@
-0 @F934@ FAM
-1 HUSB @I262744970004@
-1 WIFE @I262744969980@
-1 CHIL @I262744969940@
 0 @F935@ FAM
 1 HUSB @I262745146991@
 1 WIFE @I262745147000@
@@ -40796,10 +39203,6 @@
 1 HUSB @I262744716447@
 1 WIFE @I262744716500@
 1 CHIL @I262744716840@
-0 @F938@ FAM
-1 HUSB @I262744721519@
-1 WIFE @I262744721396@
-1 CHIL @I262744721508@
 0 @F939@ FAM
 1 HUSB @I262745146967@
 1 WIFE @I262745146979@
@@ -40808,14 +39211,6 @@
 1 HUSB @I262745287699@
 1 WIFE @I262745287705@
 1 CHIL @I262745193265@
-0 @F940@ FAM
-1 HUSB @I262744715517@
-1 WIFE @I262744715534@
-1 CHIL @I262744715492@
-0 @F941@ FAM
-1 HUSB @I262744716468@
-1 WIFE @I262744716480@
-1 CHIL @I262744716447@
 0 @F942@ FAM
 1 HUSB @I262744888905@
 1 WIFE @I262744888953@
@@ -40828,22 +39223,6 @@
 1 HUSB @I262744704600@
 1 WIFE @I262744704622@
 1 CHIL @I262744704544@
-0 @F945@ FAM
-1 HUSB @I262744892887@
-1 WIFE @I262744892990@
-1 CHIL @I262744892725@
-0 @F946@ FAM
-1 HUSB @I262744969940@
-1 WIFE @I262744969954@
-1 CHIL @I262744968924@
-0 @F947@ FAM
-1 HUSB @I262744704569@
-1 WIFE @I262744704578@
-1 CHIL @I262744967457@
-0 @F948@ FAM
-1 HUSB @I262744888917@
-1 WIFE @I262744888927@
-1 CHIL @I262744888910@
 0 @F949@ FAM
 1 HUSB @I262744715492@
 1 WIFE @I262744725050@
@@ -40864,10 +39243,6 @@
 1 HUSB @I262744700467@
 1 WIFE @I262744700479@
 1 CHIL @I262744700433@
-0 @F953@ FAM
-1 HUSB @I262744892859@
-1 WIFE @I262744892876@
-1 CHIL @I262744892832@
 0 @F954@ FAM
 1 HUSB @I262744721508@
 1 WIFE @I262744721557@
@@ -40876,10 +39251,6 @@
 1 HUSB @I262744966684@
 1 WIFE @I262744966695@
 1 CHIL @I262744966595@
-0 @F956@ FAM
-1 HUSB @I262744892832@
-1 WIFE @I262744892842@
-1 CHIL @I262744892820@
 0 @F957@ FAM
 1 HUSB @I262744888858@
 1 WIFE @I262744888866@
@@ -40896,26 +39267,14 @@
 1 HUSB @I262744722426@
 1 WIFE @I262744722437@
 1 CHIL @I262744722397@
-0 @F960@ FAM
-1 HUSB @I262744892797@
-1 WIFE @I262744892808@
-1 CHIL @I262744892759@
 0 @F961@ FAM
 1 HUSB @I262744864956@
 1 WIFE @I262744864971@
 1 CHIL @I262744970700@
-0 @F962@ FAM
-1 HUSB @I262744968905@
-1 WIFE @I262744968924@
-1 CHIL @I262744968874@
 0 @F963@ FAM
 1 HUSB @I262744864743@
 1 WIFE @I262744864749@
 1 CHIL @I262744864741@
-0 @F964@ FAM
-1 HUSB @I262744968553@
-1 WIFE @I262744968561@
-1 CHIL @I262745143257@
 0 @F965@ FAM
 1 HUSB @I262744971243@
 1 WIFE @I262744971255@
@@ -40956,10 +39315,6 @@
 1 HUSB @I262744713155@
 1 WIFE @I262744713170@
 1 CHIL @I262744713133@
-0 @F974@ FAM
-1 HUSB @I262744888332@
-1 WIFE @I262744888344@
-1 CHIL @I262744889257@
 0 @F975@ FAM
 1 HUSB @I262744864718@
 1 WIFE @I262744864722@
@@ -40968,10 +39323,6 @@
 1 HUSB @I262745221056@
 1 WIFE @I262745221062@
 1 CHIL @I262744864521@
-0 @F977@ FAM
-1 HUSB @I262744968502@
-1 WIFE @I262744968529@
-1 CHIL @I262744968491@
 0 @F978@ FAM
 1 HUSB @I262744864699@
 1 WIFE @I262744864704@
@@ -40980,14 +39331,6 @@
 1 HUSB @I262744864729@
 1 WIFE @I262744864733@
 1 CHIL @I262744864722@
-0 @F97@ FAM
-1 HUSB @I262744714233@
-1 WIFE @I262744714251@
-1 CHIL @I262744704656@
-0 @F980@ FAM
-1 HUSB @I262744968491@
-1 WIFE @I262745143257@
-1 CHIL @I262745143212@
 0 @F981@ FAM
 1 HUSB @I262744725442@
 1 WIFE @I262744725412@
@@ -41090,10 +39433,6 @@
 1 HUSB @I262744864638@
 1 WIFE @I262744864647@
 1 CHIL @I262744864622@
-0 @F99@ FAM
-1 HUSB @I262744715051@
-1 WIFE @I262744715071@
-1 CHIL @I262744715017@
 0 @F9@ FAM
 1 HUSB @I262744702067@
 1 WIFE @I262744702203@

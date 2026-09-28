@@ -2,9 +2,13 @@
 
 Kartan läser `public/locations.json` när sidan öppnas. Den innehåller exakta platsnamn från standardfilen `public/berring_messing-cleaned.ged` och antingen granskade koordinater eller `null` för olösta platser. Webbläsaren gör inga geokodningsanrop. Kartans bakgrundsrutor hämtas fortfarande via nätverket.
 
+En valfri följeslagare, `public/location-precision.json`, kan markera punkter som bara anger ett ungefärligt läge. Formatet är `[["Exakt platssträng i GEDCOM", "approximate"]]`. Bara namngivna punkter får etiketten **Ungefärlig plats** och en streckad kartnål; om filen saknas gör kartan inget antagande om koordinaternas precision. En lokal koordinaträttning är en egen punkt och ärver inte den delade markeringen. Äldre tvådelade rader i `locations.json` fungerar oförändrat.
+
 Platskatalogen och släktfilen hämtas samtidigt. När släktträdet har öppnats förbereds ortpunkterna och en lokal översiktskarta från [Natural Earth](https://www.naturalearthdata.com/about/) i bakgrunden. Översiktskartan följer med appen och visas direkt, även om nätet är långsamt. Detaljerade bakgrundsrutor från OpenStreetMap hämtas först när **Karta** faktiskt visas, enligt [deras tile-policy](https://operations.osmfoundation.org/policies/tiles/). Kartans zoomläge behålls vid vybyte. Ortskoordinaterna behöver ingen geokodning i webbläsaren.
 
-I nuläget finns **2 724** unika platser i standardfilen. **171** har delade koordinater och **2 553** saknar dem. Sjutton exakta svenska platssträngar har tillförts efter kontroll av namn och län mot [GeoNames landfil för Sverige](https://download.geonames.org/export/dump/readme.txt); [urval och käll-ID](geonames-reviewed-2026-09-27.md) finns sparade. Punkten avser ort eller gård i ortnamnsdata, inte ett bevis för en historisk bostads exakta läge. Två tidigare punkter som träffade Sveriges allmänna landspunkt har tagits bort i väntan på manuell kontroll. Saknade platser visas inte som kartnålar. Skriptet redovisar även möjliga textnormaliseringar och ortsuffix som underlag för manuell granskning; det tilldelar aldrig en ungefärlig koordinat automatiskt.
+Genomgången den 27–28 september 2026 omfattar alla **2 721** unika platssträngar i det rensade standardunderlaget. **2 567** har gemensamma koordinater (94,3 %), varav **1 979** är uttryckligen ungefärliga. **154** är fortfarande olösta efter granskning: ortnamnet är tvetydigt, platskedjan motsäger sig själv eller underlaget saknar en identifierbar plats. De visas inte som kartnålar. Det täcker **4 206 av 4 449** händelser med plats (94,5 %). Punkterna avser en namngiven ort, socken eller bygd, inte bevis för en viss historisk bostads exakta läge. För råa uppgifter som bara nämner en region eller ett land används ibland en tydligt märkt representativ punkt; en okänd gård får aldrig en punkt enbart från ett allmänt läns- eller landsuffix.
+
+Urval, käll-ID, källfilernas SHA-256 och avvisningsorsaker finns i [genomgångens sammanfattning](grunddata-platser-2026-09-28.md) och dess länkade rapporter. Alla koordinater är förberedda filer i appen. Skriptet redovisar textnormaliseringar och ortsuffix som granskningsunderlag och tilldelar aldrig nya ungefärliga punkter automatiskt.
 
 ## Förbered fler koordinater utan geokodning vid kartöppning
 
@@ -27,7 +31,7 @@ npm run locations:build
 
 Öppna **Karta → Granska platser** för att se granskningsförslag och söka på exakt ortnamn. Med `?edit=true` kan du rätta koordinaten, välja en punkt på kartan, markera den som kontrollerad/ungefärlig/felaktig och ångra en lokal rättning. Rättningen sparas bara i din webbläsare. En markör som samlar flera exakta ortnamn kan inte dras som grupp; välj ett namn i dess popup och rätta det separat. `?edit=true` är ett användargränssnitt, inte en inloggning eller publiceringsrättighet. Se [platsgranskningen](location-review.md) för fynd och arbetsgång.
 
-Via **Inställningar → Exportera lokala koordinater** går det att spara äldre lokala förslag och egna rättningar. Koordinater som markerats felaktiga och de två kända landspunktsfelen utelämnas. Även äldre lokalt sparade koordinater kan användas i den egna webbläsaren. De blir inte delade förrän de har granskats och importerats i katalogen.
+Via **Inställningar → Exportera lokala koordinater** går det att spara äldre lokala förslag och egna rättningar. Koordinater som markerats felaktiga och de tio exakta gamla felparen från granskningen utelämnas. Även äldre lokalt sparade koordinater kan användas i den egna webbläsaren. De blir inte delade förrän de har granskats och importerats i katalogen.
 
 För att slå ihop en granskad JSON-fil med koordinater, i formatet `[["Plats", {"lat": 59.3, "lon": 18.1}]]`, kör:
 

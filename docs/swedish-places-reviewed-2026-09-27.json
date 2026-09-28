@@ -1,0 +1,2311 @@
+{
+  "source": {
+    "name": "GeoNames SE country extract",
+    "url": "https://download.geonames.org/export/dump/SE.zip",
+    "license": "CC BY 4.0"
+  },
+  "added": [
+    {
+      "place": "Edebo, Stockholm, Sweden",
+      "sourceId": "geonames:2716937",
+      "sourceName": "Edebo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.01667,
+        "lon": 18.56667
+      },
+      "reason": "exact-name-and-admin-context:1-matches:12-event-uses"
+    },
+    {
+      "place": "Norrbo, Grangärde",
+      "sourceId": "geonames:2688544",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "reason": "exact-name-and-admin-context:1-matches:11-event-uses"
+    },
+    {
+      "place": "Norrbo, Grangärde, Dalarna, Sverige",
+      "sourceId": "geonames:2688544",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "reason": "exact-name-and-admin-context:2-matches:10-event-uses"
+    },
+    {
+      "place": "Offerdal, Jämtland, Sverige",
+      "sourceId": "geonames:2687370",
+      "sourceName": "Offerdal",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 63.45,
+        "lon": 13.98333
+      },
+      "reason": "exact-name-and-admin-context:1-matches:8-event-uses"
+    },
+    {
+      "place": "Grangärde, Kopparberg, Sverige",
+      "sourceId": "geonames:2711266",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "reason": "exact-name-and-admin-context:1-matches:7-event-uses"
+    },
+    {
+      "place": "Skinnskatteberg, Västmanland, Sverige",
+      "sourceId": "geonames:2677593",
+      "sourceName": "Skinnskatteberg",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.83028,
+        "lon": 15.69337
+      },
+      "reason": "exact-name-and-admin-context:1-matches:7-event-uses"
+    },
+    {
+      "place": "Edebo, Stockholm",
+      "sourceId": "geonames:2716937",
+      "sourceName": "Edebo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.01667,
+        "lon": 18.56667
+      },
+      "reason": "exact-name-and-admin-context:1-matches:6-event-uses"
+    },
+    {
+      "place": "Sunnansjö, Dalarna, Sverige",
+      "sourceId": "geonames:2670735",
+      "sourceName": "Sunnansjö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.21667,
+        "lon": 14.95
+      },
+      "reason": "exact-name-and-admin-context:1-matches:6-event-uses"
+    },
+    {
+      "place": "Gåsborn, Värmland, Sweden",
+      "sourceId": "geonames:2712590",
+      "sourceName": "Gåsborn",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.88333,
+        "lon": 14.35
+      },
+      "reason": "exact-name-and-admin-context:1-matches:5-event-uses"
+    },
+    {
+      "place": "Jönköping, Jonkoping, Sweden",
+      "sourceId": "geonames:2702979",
+      "sourceName": "Jönköping",
+      "featureCode": "PPLA",
+      "coordinates": {
+        "lat": 57.78145,
+        "lon": 14.15618
+      },
+      "reason": "exact-name-and-admin-context:1-matches:5-event-uses"
+    },
+    {
+      "place": "Näs, Högsjö, Härnösand, Västernorrland, Suède",
+      "sourceId": "geonames:2690335",
+      "sourceName": "Näs",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.8,
+        "lon": 17.81667
+      },
+      "reason": "exact-name-and-admin-context:3-matches:5-event-uses"
+    },
+    {
+      "place": "Ramsberg, Örebro, Sverige",
+      "sourceId": "geonames:2683407",
+      "sourceName": "Ramsberg",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.77291,
+        "lon": 15.29318
+      },
+      "reason": "exact-name-and-admin-context:1-matches:5-event-uses"
+    },
+    {
+      "place": "Väddö, Stockholm, Sverige",
+      "sourceId": "geonames:2665943",
+      "sourceName": "Väddö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.98333,
+        "lon": 18.81667
+      },
+      "reason": "exact-name-and-admin-context:1-matches:5-event-uses"
+    },
+    {
+      "place": "östra elfhöjden, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2685661",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:5-event-uses"
+    },
+    {
+      "place": "Enånger, Gävleborg, Sweden",
+      "sourceId": "geonames:2716244",
+      "sourceName": "Enånger",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 61.54556,
+        "lon": 17.01056
+      },
+      "reason": "exact-name-and-admin-context:1-matches:4-event-uses"
+    },
+    {
+      "place": "Grythyttan, Örebro, Sweden",
+      "sourceId": "geonames:2710130",
+      "sourceName": "Grythyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.70593,
+        "lon": 14.53453
+      },
+      "reason": "exact-name-and-admin-context:1-matches:4-event-uses"
+    },
+    {
+      "place": "Huddinge, Stockholm, Sweden",
+      "sourceId": "geonames:2704620",
+      "sourceName": "Huddinge",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.23705,
+        "lon": 17.98192
+      },
+      "reason": "exact-name-and-admin-context:1-matches:4-event-uses"
+    },
+    {
+      "place": "Hällefors, Örebro, Sverige",
+      "sourceId": "geonames:2708665",
+      "sourceName": "Hällefors",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.78388,
+        "lon": 14.52197
+      },
+      "reason": "exact-name-and-admin-context:1-matches:4-event-uses"
+    },
+    {
+      "place": "Hällefors, Örebro, Sweden",
+      "sourceId": "geonames:2708665",
+      "sourceName": "Hällefors",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.78388,
+        "lon": 14.52197
+      },
+      "reason": "exact-name-and-admin-context:1-matches:4-event-uses"
+    },
+    {
+      "place": "Kallmora, Norberg, Västmanland, Sverige",
+      "sourceId": "geonames:2702391",
+      "sourceName": "Kallmora",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.11667,
+        "lon": 15.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:4-event-uses"
+    },
+    {
+      "place": "Nora, Örebro, Sverige",
+      "sourceId": "geonames:2689471",
+      "sourceName": "Nora",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.51926,
+        "lon": 15.03979
+      },
+      "reason": "exact-name-and-admin-context:1-matches:4-event-uses"
+    },
+    {
+      "place": "Norrbo, Grangärde, Kopparberg, Sweden",
+      "sourceId": "geonames:2688544",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "reason": "exact-name-and-admin-context:2-matches:4-event-uses"
+    },
+    {
+      "place": "Skellefteå, Skellefteå, Västerbotten, Suède",
+      "sourceId": "geonames:602913",
+      "sourceName": "Skellefteå",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 64.75067,
+        "lon": 20.95279
+      },
+      "reason": "exact-name-and-admin-context:2-matches:4-event-uses"
+    },
+    {
+      "place": "Stennäs, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2674165",
+      "sourceName": "Stennäs",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.88333,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:4-event-uses"
+    },
+    {
+      "place": "Täby, Stockholm, Sverige",
+      "sourceId": "geonames:2669772",
+      "sourceName": "Täby",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.4439,
+        "lon": 18.06872
+      },
+      "reason": "exact-name-and-admin-context:1-matches:4-event-uses"
+    },
+    {
+      "place": "Västerböle, Attmar, Västernorrland, Sverige",
+      "sourceId": "geonames:2664418",
+      "sourceName": "Västerböle",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.22672,
+        "lon": 17.10906
+      },
+      "reason": "exact-name-and-admin-context:2-matches:4-event-uses"
+    },
+    {
+      "place": "Östra Älvhöjden, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2685661",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:4-event-uses"
+    },
+    {
+      "place": "Danmark, Uppsala, Sverige",
+      "sourceId": "geonames:2717984",
+      "sourceName": "Danmark",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.83376,
+        "lon": 17.747
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Edebo, Norrtälje, Stockholm, Suède",
+      "sourceId": "geonames:2716937",
+      "sourceName": "Edebo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.01667,
+        "lon": 18.56667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Ekna, Vaxjo Kommun, Kronobergs Lan, Sweden",
+      "sourceId": "geonames:2716494",
+      "sourceName": "Ekna",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 57,
+        "lon": 14.8
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Finnerödja, Örebro, Sverige",
+      "sourceId": "geonames:2714991",
+      "sourceName": "Finnerödja",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 58.93333,
+        "lon": 14.43333
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Getbo, Dalarna, Sverige",
+      "sourceId": "geonames:2712268",
+      "sourceName": "Getbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.16667,
+        "lon": 15.45
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Grangärde, Dalarnas län, Sverige",
+      "sourceId": "geonames:2711266",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Grythyttan, Örebro län",
+      "sourceId": "geonames:2710130",
+      "sourceName": "Grythyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.70593,
+        "lon": 14.53453
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Hammar, Eda, Värmland, Sverige",
+      "sourceId": "geonames:2708233",
+      "sourceName": "Hammar",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.83333,
+        "lon": 12.33333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Hjulsjö, Örebro, Sweden",
+      "sourceId": "geonames:2706110",
+      "sourceName": "Hjulsjö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.78333,
+        "lon": 14.76667
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Håvberget, Dalarna, Sverige",
+      "sourceId": "geonames:2707150",
+      "sourceName": "Håvberget",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.28333,
+        "lon": 14.61667
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Järvsö, Gävleborg, Sweden",
+      "sourceId": "geonames:2703145",
+      "sourceName": "Järvsö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 61.71667,
+        "lon": 16.16667
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Jönköping, Jönköping, Sverige",
+      "sourceId": "geonames:2702979",
+      "sourceName": "Jönköping",
+      "featureCode": "PPLA",
+      "coordinates": {
+        "lat": 57.78145,
+        "lon": 14.15618
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Kopparberg, Örebro, Sweden",
+      "sourceId": "geonames:2699768",
+      "sourceName": "Kopparberg",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.87597,
+        "lon": 14.99436
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Kopparberg, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2699768",
+      "sourceName": "Kopparberg",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.87597,
+        "lon": 14.99436
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Linneryd, Tingsryd, Kronoberg, Sweden",
+      "sourceId": "geonames:2694721",
+      "sourceName": "Linneryd",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.66667,
+        "lon": 15.11667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Norr Lindberg, Leksand, Dalarnas län, Sverige",
+      "sourceId": "geonames:2688881",
+      "sourceName": "Norra Lindberg",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.81667,
+        "lon": 15.11667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Rosendal, Norberg, Västmanland, Suède",
+      "sourceId": "geonames:2681604",
+      "sourceName": "Rosendal",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.05,
+        "lon": 15.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Rämmen, Värmlands län, Filipstad, Värmland, Suède",
+      "sourceId": "geonames:2683455",
+      "sourceName": "Rämmen",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 14.13333
+      },
+      "reason": "exact-name-and-admin-context:3-matches:3-event-uses"
+    },
+    {
+      "place": "Saxhyttan, Örebro, Sverige",
+      "sourceId": "geonames:2679617",
+      "sourceName": "Saxhyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.73333,
+        "lon": 14.46667
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Silken, Hällefors, Örebro, Sverige",
+      "sourceId": "geonames:2679218",
+      "sourceName": "Silken",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.98333,
+        "lon": 14.7
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Skäret, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2678146",
+      "sourceName": "Skäret",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.9,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Smaltjärn, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2676625",
+      "sourceName": "Smaltjärn",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 14.8
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Sörby, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2675215",
+      "sourceName": "Sörby",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.81667,
+        "lon": 15
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Tångeråsa, Örebro, Sverige",
+      "sourceId": "geonames:2669486",
+      "sourceName": "Tångeråsa",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.1,
+        "lon": 14.8
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Vad, Söderbärke, Dalarna, Sverige",
+      "sourceId": "geonames:2665956",
+      "sourceName": "Vad",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.02756,
+        "lon": 15.65457
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Väckelsång, Kronoberg, Sweden",
+      "sourceId": "geonames:2665975",
+      "sourceName": "Väckelsång",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.63333,
+        "lon": 14.91667
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Älvsborg, Norrbotten, Sweden",
+      "sourceId": "geonames:606836",
+      "sourceName": "Älvsborg",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 65.94774,
+        "lon": 20.05189
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Östanskär, Indal, Västernorrland, Sverige",
+      "sourceId": "geonames:2686046",
+      "sourceName": "Östanskär",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.55037,
+        "lon": 17.16391
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Östanskär, Indal, Västernorrland, Sweden",
+      "sourceId": "geonames:2686046",
+      "sourceName": "Östanskär",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.55037,
+        "lon": 17.16391
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Österhaninge, Stockholm, Sverige",
+      "sourceId": "geonames:2685859",
+      "sourceName": "Österhaninge",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.12306,
+        "lon": 18.17444
+      },
+      "reason": "exact-name-and-admin-context:1-matches:3-event-uses"
+    },
+    {
+      "place": "Östra Älvhöjden, Ljusnarsberg, Örebro",
+      "sourceId": "geonames:2685661",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:3-event-uses"
+    },
+    {
+      "place": "Askerud, Sunne , Värmland, Sverige",
+      "sourceId": "geonames:2724774",
+      "sourceName": "Askerud",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.88333,
+        "lon": 13.16667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Eda glasbruk, Eda, Värmland, Sverige",
+      "sourceId": "geonames:2716959",
+      "sourceName": "Eda Glasbruk",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.91667,
+        "lon": 12.26667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Edebo, Stockholm, Stockholm, Suède",
+      "sourceId": "geonames:2716937",
+      "sourceName": "Edebo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.01667,
+        "lon": 18.56667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Enånger, Hudiksvall, Gävleborg, Suède",
+      "sourceId": "geonames:2716244",
+      "sourceName": "Enånger",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 61.54556,
+        "lon": 17.01056
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Grythyttan, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2710130",
+      "sourceName": "Grythyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.70593,
+        "lon": 14.53453
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Halvarsbenning, Norberg, Västmanland, Sverige",
+      "sourceId": "geonames:2708271",
+      "sourceName": "Halvarsbenning",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.1,
+        "lon": 15.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Helgum, Säbrå, Västernorrland, Sverige",
+      "sourceId": "geonames:2706786",
+      "sourceName": "Helgum",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.63333,
+        "lon": 17.83333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Hällefors, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2708665",
+      "sourceName": "Hällefors",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.78388,
+        "lon": 14.52197
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Järvsö, Ljusdal, Gävleborg, Suède",
+      "sourceId": "geonames:2703145",
+      "sourceName": "Järvsö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 61.71667,
+        "lon": 16.16667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Kristianstad, Skåne, Kristianstad, Kristianstad, Suède",
+      "sourceId": "geonames:2699310",
+      "sourceName": "Kristianstad",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 56.03129,
+        "lon": 14.15242
+      },
+      "reason": "exact-name-and-admin-context:3-matches:2-event-uses"
+    },
+    {
+      "place": "Ledusjö, Nordmaling, Västerbotten, Sverige",
+      "sourceId": "geonames:2696702",
+      "sourceName": "Ledusjö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 63.61667,
+        "lon": 19.41667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Nora,Nora, Örebro län",
+      "sourceId": "geonames:2689471",
+      "sourceName": "Nora",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.51926,
+        "lon": 15.03979
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Norrbo, Grangärde, Dalarna, Sweden",
+      "sourceId": "geonames:2688544",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Offerdal, Krokom, Jämtland, Sverige",
+      "sourceId": "geonames:2687370",
+      "sourceName": "Offerdal",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 63.45,
+        "lon": 13.98333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Persbo, Ludvika, Dalarnas län, Sverige",
+      "sourceId": "geonames:2684248",
+      "sourceName": "Persbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.2032,
+        "lon": 15.22076
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Ramsberg, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2683407",
+      "sourceName": "Ramsberg",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.77291,
+        "lon": 15.29318
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Reboda, Lindesberg, Örebro län",
+      "sourceId": "geonames:2682847",
+      "sourceName": "Reboda",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.7,
+        "lon": 15.05
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Sanna, Markaryd, Kronoberg, Sweden",
+      "sourceId": "geonames:2680012",
+      "sourceName": "Sånna",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.5,
+        "lon": 13.63333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Smaltjärn, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2676625",
+      "sourceName": "Smaltjärn",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 14.8
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Stennäs, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2674165",
+      "sourceName": "Stennäs",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.88333,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Stora Smedberget, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2672478",
+      "sourceName": "Stora Smedberget",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.96667,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Undersåker, Åre, Jämtland, Suède",
+      "sourceId": "geonames:2666326",
+      "sourceName": "Undersåker",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 63.31722,
+        "lon": 13.24847
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Vad, Söderbärke, Dalarna, Sweden",
+      "sourceId": "geonames:2665956",
+      "sourceName": "Vad",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.02756,
+        "lon": 15.65457
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Östmark, Torsby, Värmland, Sweden",
+      "sourceId": "geonames:2685686",
+      "sourceName": "Östmark",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.28333,
+        "lon": 12.75
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Östra Elfhöjden, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2685661",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:2-event-uses"
+    },
+    {
+      "place": "Alvhyttan, Nora, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2726297",
+      "sourceName": "Älvhyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.45,
+        "lon": 14.81667
+      },
+      "reason": "exact-name-and-admin-context:3-matches:1-event-uses"
+    },
+    {
+      "place": "Bensbyn, Luleå, Norrbotten, Suède",
+      "sourceId": "geonames:606655",
+      "sourceName": "Bensbyn",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 65.64179,
+        "lon": 22.24227
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Bergsjö, Nordanstig, Gävleborg, Sverige",
+      "sourceId": "geonames:2722734",
+      "sourceName": "Bergsjö",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 61.98253,
+        "lon": 17.06368
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Björkbacken, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2722233",
+      "sourceName": "Björkbacken",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.85,
+        "lon": 15
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Björkbacken, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2722233",
+      "sourceName": "Björkbacken",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.85,
+        "lon": 15
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Björnebo, Skinnskatteberg, Västmanland",
+      "sourceId": "geonames:2721833",
+      "sourceName": "Björnebo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.85,
+        "lon": 15.66667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Blädinge, Alvesta, Kronoberg County, Sweden",
+      "sourceId": "geonames:2721491",
+      "sourceName": "Blädinge",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.85,
+        "lon": 14.5
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Boviken, Skellefteå, Västerbotten, Sverige",
+      "sourceId": "geonames:606475",
+      "sourceName": "Boviken",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 64.8,
+        "lon": 21.05
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Brattberg, Ljusnarsberg, Örebro, Suède",
+      "sourceId": "geonames:2719596",
+      "sourceName": "Brattberg",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.9
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Brattberg, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2719596",
+      "sourceName": "Brattberg",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.9
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Brån, Vännäs, Västerbotten, Suède",
+      "sourceId": "geonames:2719948",
+      "sourceName": "Brån",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 63.9,
+        "lon": 19.85
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Bråten, Skinnskatteberg, Västmanland",
+      "sourceId": "geonames:2719633",
+      "sourceName": "Bråten",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.7,
+        "lon": 15.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Bureå, Skellefteå, Västerbotten, Suède",
+      "sourceId": "geonames:606370",
+      "sourceName": "Bureå",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 64.61667,
+        "lon": 21.2
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Dalåsen, Berg, Jämtland, Sverige",
+      "sourceId": "geonames:2718266",
+      "sourceName": "Dalåsen",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.86667,
+        "lon": 14.28333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Eda glasbruk, Eda, Värmland, Sweden",
+      "sourceId": "geonames:2716959",
+      "sourceName": "Eda Glasbruk",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.91667,
+        "lon": 12.26667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Finnhyttan, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2714956",
+      "sourceName": "Finnhyttan",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.88333,
+        "lon": 14.96667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Fragg, Norberg, Västmanland, Suède",
+      "sourceId": "geonames:2713867",
+      "sourceName": "Fragg",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.11667,
+        "lon": 15.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Framby, Falun, Dalarna, Sverige",
+      "sourceId": "geonames:2713848",
+      "sourceName": "Främby",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.58333,
+        "lon": 15.63333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Grangärde, Ludvika, Dalarna, Sverige",
+      "sourceId": "geonames:2711266",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Grangärde, Ludvika, Kopparberg, Sweden",
+      "sourceId": "geonames:2711266",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Gruvriset, Ljusnarsberg, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2710224",
+      "sourceName": "Gruvriset",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.88333,
+        "lon": 14.98333
+      },
+      "reason": "exact-name-and-admin-context:3-matches:1-event-uses"
+    },
+    {
+      "place": "Gunnarskog, Arvika, Värmland, Suède",
+      "sourceId": "geonames:2709791",
+      "sourceName": "Gunnarskog",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.8151,
+        "lon": 12.5698
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Gästa, Njurunda, Sundsvall, Västernorrland, Sweden",
+      "sourceId": "geonames:2712504",
+      "sourceName": "Gästa",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.22587,
+        "lon": 17.34668
+      },
+      "reason": "exact-name-and-admin-context:3-matches:1-event-uses"
+    },
+    {
+      "place": "Gästa, Njurunda, Västernorrland, Sweden",
+      "sourceId": "geonames:2712504",
+      "sourceName": "Gästa",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.22587,
+        "lon": 17.34668
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Halvarsbenning, Norberg, Västmanland",
+      "sourceId": "geonames:2708271",
+      "sourceName": "Halvarsbenning",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.1,
+        "lon": 15.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Halvarsbenning, Norberg, Västmanland, Suède",
+      "sourceId": "geonames:2708271",
+      "sourceName": "Halvarsbenning",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.1,
+        "lon": 15.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Halvarsbenning, Norberg, Västmanland, Sweden",
+      "sourceId": "geonames:2708271",
+      "sourceName": "Halvarsbenning",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.1,
+        "lon": 15.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Hammar, Askersund, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2708236",
+      "sourceName": "Hammar",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 58.81398,
+        "lon": 14.96053
+      },
+      "reason": "exact-name-and-admin-context:3-matches:1-event-uses"
+    },
+    {
+      "place": "Hamsarp, Osby, Skåne, Sverige",
+      "sourceId": "geonames:2708047",
+      "sourceName": "Hamsarp",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.45,
+        "lon": 14.13333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Helgum, Säbrå, Västernorrland, Sweden",
+      "sourceId": "geonames:2706786",
+      "sourceName": "Helgum",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.63333,
+        "lon": 17.83333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Hjulsjo, Hällefors, Örebro, Suède",
+      "sourceId": "geonames:2706110",
+      "sourceName": "Hjulsjö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.78333,
+        "lon": 14.76667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Hjulsjö, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2706110",
+      "sourceName": "Hjulsjö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.78333,
+        "lon": 14.76667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Hällefors, Hällefors, Örebro, Suède",
+      "sourceId": "geonames:2708665",
+      "sourceName": "Hällefors",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.78388,
+        "lon": 14.52197
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Häverö, Norrtälje, Stockholm, Suède",
+      "sourceId": "geonames:2707134",
+      "sourceName": "Häverö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 18.68333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Hörken, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2705023",
+      "sourceName": "Hörken",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Jonkoping, Jönköping, Jönköping, Suède",
+      "sourceId": "geonames:2702979",
+      "sourceName": "Jönköping",
+      "featureCode": "PPLA",
+      "coordinates": {
+        "lat": 57.78145,
+        "lon": 14.15618
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Jämteböle, Vännäs, Västerbotten, Sverige",
+      "sourceId": "geonames:2703334",
+      "sourceName": "Jämteböle",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 64,
+        "lon": 19.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Kallmora, Norberg, Vastmanland, Sweden",
+      "sourceId": "geonames:2702391",
+      "sourceName": "Kallmora",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.11667,
+        "lon": 15.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Kallmora, Norberg, Västmanland, Sweden",
+      "sourceId": "geonames:2702391",
+      "sourceName": "Kallmora",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.11667,
+        "lon": 15.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Karlstad, Karlstad, Värmland, Suède",
+      "sourceId": "geonames:2701680",
+      "sourceName": "Karlstad",
+      "featureCode": "PPLA",
+      "coordinates": {
+        "lat": 59.3793,
+        "lon": 13.50357
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Laggarbo, Skinnskatteberg, Västmanland, Sweden",
+      "sourceId": "geonames:2697914",
+      "sourceName": "Laggarbo",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.78333,
+        "lon": 15.65
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Laknäs, Leksand, Dalarna, Sverige",
+      "sourceId": "geonames:2697807",
+      "sourceName": "Laknäs",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.83333,
+        "lon": 14.98333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Ledusjö, Västerbotten County, Nordmaling, Västerbotten, Suède",
+      "sourceId": "geonames:2696702",
+      "sourceName": "Ledusjö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 63.61667,
+        "lon": 19.41667
+      },
+      "reason": "exact-name-and-admin-context:3-matches:1-event-uses"
+    },
+    {
+      "place": "Lilla Kumlan, Ljusnarsberg, Örebro",
+      "sourceId": "geonames:2695773",
+      "sourceName": "Lilla Kumlan",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.95,
+        "lon": 14.9
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Lilla Sirsjön, Hällefors, Örebro, Sverige",
+      "sourceId": "geonames:2695488",
+      "sourceName": "Lilla Sirsjön",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.83333,
+        "lon": 14.61667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Linneryd, Tingsryd, Kronoberg, Sverige",
+      "sourceId": "geonames:2694721",
+      "sourceName": "Linneryd",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.66667,
+        "lon": 15.11667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Lysvik, Sunne, Värmland, Suède",
+      "sourceId": "geonames:2693287",
+      "sourceName": "Lysvik",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.01667,
+        "lon": 13.13333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Långasjö, Emmaboda, Kalmar, Sverige",
+      "sourceId": "geonames:2697627",
+      "sourceName": "Långasjö",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.5825,
+        "lon": 15.44713
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Löfnäs, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2693909",
+      "sourceName": "Lövnäs",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.88333,
+        "lon": 14.96667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Narvgården, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2690405",
+      "sourceName": "Narvgården",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.86667,
+        "lon": 15.03333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Nedre Uggelfors, Skinnskatteberg, Västmanland",
+      "sourceId": "geonames:2689787",
+      "sourceName": "Nedre Uggelfors",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.78333,
+        "lon": 15.6
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Nora, Örebro, Örebro, Sverige",
+      "sourceId": "geonames:2689471",
+      "sourceName": "Nora",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.51926,
+        "lon": 15.03979
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Norberg, Norberg, Västmanland, Suède",
+      "sourceId": "geonames:2689452",
+      "sourceName": "Norberg",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 60.06505,
+        "lon": 15.92366
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Norra Ekeberg, Hällefors, Örebro, Sverige",
+      "sourceId": "geonames:2689103",
+      "sourceName": "Norra Ekeberg",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.8,
+        "lon": 14.63333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Norrbo, Grangärde, Kopparberg, Sverige",
+      "sourceId": "geonames:2688544",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Norrbo, Grangärde, Kopparbergs län, Sverige",
+      "sourceId": "geonames:2688544",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Nubbtorp, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2688079",
+      "sourceName": "Nubbtorp",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.96667,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Nysätra, Robertsfors, Västerbotten, Sverige",
+      "sourceId": "geonames:603928",
+      "sourceName": "Nysätra",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 64.28333,
+        "lon": 21.03333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Näs, Högsjö, Västernorrland, Sverige",
+      "sourceId": "geonames:2690335",
+      "sourceName": "Näs",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.8,
+        "lon": 17.81667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Offerdal, Krokom, Jämtland, Suède",
+      "sourceId": "geonames:2687370",
+      "sourceName": "Offerdal",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 63.45,
+        "lon": 13.98333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Oppeby, Kinda, Östergötland, Sverige",
+      "sourceId": "geonames:2686793",
+      "sourceName": "Oppeby",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 58.03333,
+        "lon": 15.8
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Ovanåker, Ovanåker, Gävleborg, Suède",
+      "sourceId": "geonames:2685093",
+      "sourceName": "Ovanåker",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 61.3625,
+        "lon": 15.89271
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Penningby, Norrtälje, Stockholm, Sverige",
+      "sourceId": "geonames:2684289",
+      "sourceName": "Penningby",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.68222,
+        "lon": 18.67861
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Ranea, Luleå, Norrbotten, Sweden",
+      "sourceId": "geonames:603035",
+      "sourceName": "Råneå",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 65.85482,
+        "lon": 22.29126
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Riddarhyttan, Skinnskatteberg, Västmanland, Sweden",
+      "sourceId": "geonames:2682600",
+      "sourceName": "Riddarhyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.80844,
+        "lon": 15.54414
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Rosendal, Norberg, Västmanland, Sverige",
+      "sourceId": "geonames:2681604",
+      "sourceName": "Rosendal",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.05,
+        "lon": 15.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Rällen, Ljusnarsberg, Örebro, Suède",
+      "sourceId": "geonames:2683522",
+      "sourceName": "Rällen",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.8,
+        "lon": 15.05
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Rämmen, Filipstad, Värmland, Suède",
+      "sourceId": "geonames:2683455",
+      "sourceName": "Rämmen",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 14.13333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Rödön, Krokom, Jämtland, Sverige",
+      "sourceId": "geonames:2682087",
+      "sourceName": "Rödön",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 63.23333,
+        "lon": 14.4
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Saxhyttan, Örebro, Örebro, Suède",
+      "sourceId": "geonames:2679617",
+      "sourceName": "Saxhyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.73333,
+        "lon": 14.46667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Siksjön, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2679266",
+      "sourceName": "Siksjön",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60.01667,
+        "lon": 15.01667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Silken, Hällefors, Örebro, Sweden",
+      "sourceId": "geonames:2679218",
+      "sourceName": "Silken",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.98333,
+        "lon": 14.7
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Silvergruvan,Hällefors, Örebro, Sverige",
+      "sourceId": "geonames:2679161",
+      "sourceName": "Silvergruvan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.85,
+        "lon": 14.5
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Själevad, Örnsköldsvik, Västernorrland, Suède",
+      "sourceId": "geonames:2679010",
+      "sourceName": "Själevad",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 63.3,
+        "lon": 18.6
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Skäret, Ljusnarsberg, Örebro County, Sweden",
+      "sourceId": "geonames:2678146",
+      "sourceName": "Skäret",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.9,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Skäret, Ljusnarsberg, Örebro län, Sverige",
+      "sourceId": "geonames:2678146",
+      "sourceName": "Skäret",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.9,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Stora Smedberget, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2672478",
+      "sourceName": "Stora Smedberget",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.96667,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Stora Tomsjon, Hällefors, Örebro, Sverige",
+      "sourceId": "geonames:2672363",
+      "sourceName": "Stora Tomsjön",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.48333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Stora Tomsjön, Hällefors, Örebro",
+      "sourceId": "geonames:2672363",
+      "sourceName": "Stora Tomsjön",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.48333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Stormörtsjön, Torp, Västernorrland, Sverige",
+      "sourceId": "geonames:2671885",
+      "sourceName": "Stormörtsjön",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.29725,
+        "lon": 16.14407
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Ställberg, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2674587",
+      "sourceName": "Ställberg",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.98333,
+        "lon": 14.91667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Ställberg, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2674587",
+      "sourceName": "Ställberg",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.98333,
+        "lon": 14.91667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Sundet, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2670865",
+      "sourceName": "Sundet",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.91667,
+        "lon": 14.95
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Sunnanfors, Skinnskatteberg, Västmanland, Sweden",
+      "sourceId": "geonames:2670745",
+      "sourceName": "Sunnanfors",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.88333,
+        "lon": 15.6
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Säfsnäs, Ludvika, Kopparberg, Sverige",
+      "sourceId": "geonames:2680758",
+      "sourceName": "Säfsnäs",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.1398,
+        "lon": 14.41956
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Söderbärke, Smedjebacken, Dalarna, Sverige",
+      "sourceId": "geonames:2676278",
+      "sourceName": "Söderbärke",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.07011,
+        "lon": 15.56025
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Södra Emterud, Eda, Värmland, Sweden",
+      "sourceId": "geonames:2676028",
+      "sourceName": "Södra Emterud",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.91667,
+        "lon": 12.28333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Sörvik, Ludvika, Dalarna, Sverige",
+      "sourceId": "geonames:2675003",
+      "sourceName": "Sörvik",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.18393,
+        "lon": 15.15633
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Tackbyn, Skinnskatteberg, Västmanland, Sverige",
+      "sourceId": "geonames:2669765",
+      "sourceName": "Tackbyn",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 59.9,
+        "lon": 15.48333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Tjureda, Kronoberg County, Växjö, Kronoberg, Sverige",
+      "sourceId": "geonames:2668634",
+      "sourceName": "Tjureda",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 57.03333,
+        "lon": 14.81667
+      },
+      "reason": "exact-name-and-admin-context:3-matches:1-event-uses"
+    },
+    {
+      "place": "Urshult, Tingsryd, Kronoberg, Suède",
+      "sourceId": "geonames:2666177",
+      "sourceName": "Urshult",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.53333,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Varberg, Varberg, Halland, Suède",
+      "sourceId": "geonames:2664996",
+      "sourceName": "Varberg",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 57.10557,
+        "lon": 12.25078
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Vedevåg, Lindesberg, Örebro",
+      "sourceId": "geonames:2663468",
+      "sourceName": "Vedevåg",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.5269,
+        "lon": 15.29254
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Viken, Ljusnarsberg, Örebro, Suède",
+      "sourceId": "geonames:2663028",
+      "sourceName": "Viken",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.9,
+        "lon": 14.95
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Vimmerby, Vimmerby, Kalmar, Suède",
+      "sourceId": "geonames:2662881",
+      "sourceName": "Vimmerby",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 57.66588,
+        "lon": 15.85515
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Vintermossen, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2662770",
+      "sourceName": "Vintermossen",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.78333,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Väckelsång, Tingsryd, Kronoberg, Suède",
+      "sourceId": "geonames:2665975",
+      "sourceName": "Väckelsång",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 56.63333,
+        "lon": 14.91667
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Västra Skedvi,Köpings Kommun,Västmanland,Sverige",
+      "sourceId": "geonames:2677778",
+      "sourceName": "Västra Skedvi",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.56667,
+        "lon": 15.68333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Västra Älvhöjden, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2664152",
+      "sourceName": "Västra Älvhöjden",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 14.75
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "hörken, Ljusnarsberg, Örebro, Sverige",
+      "sourceId": "geonames:2705023",
+      "sourceName": "Hörken",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.03333,
+        "lon": 14.93333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Åbrolla, Osby, Skåne, Sverige",
+      "sourceId": "geonames:2727621",
+      "sourceName": "Åbrolla",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 56.43333,
+        "lon": 14.13333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Österflygge, Liden, Västernorrland, Sverige",
+      "sourceId": "geonames:2685883",
+      "sourceName": "Österflygge",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 62.6725,
+        "lon": 16.85011
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Östmark, Torsby, Värmland, Sverige",
+      "sourceId": "geonames:2685686",
+      "sourceName": "Östmark",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.28333,
+        "lon": 12.75
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Östra Älvhöjden, Ljusnarsberg, Örebro, Suède",
+      "sourceId": "geonames:2685661",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Östra Älvhöjden, Ljusnarsberg, Örebro, Sweden",
+      "sourceId": "geonames:2685661",
+      "sourceName": "Östra Älvhöjden",
+      "featureCode": "FRM",
+      "coordinates": {
+        "lat": 60,
+        "lon": 14.78333
+      },
+      "reason": "exact-name-and-admin-context:2-matches:1-event-uses"
+    },
+    {
+      "place": "Grangärde(W)",
+      "sourceId": "geonames:2711266",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "reason": "Grangärde, historical county letter W = Kopparbergs/Dalarnas län"
+    },
+    {
+      "place": "Grangärde, Ludvika, Dalarna/Kopparberg, Suède",
+      "sourceId": "geonames:2711266",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "reason": "Grangärde in Ludvika; Kopparbergs län renamed Dalarnas län"
+    },
+    {
+      "place": "Grangärde, Dalarnas, Ludvika, Dalarna/Kopparberg, Suède",
+      "sourceId": "geonames:2711266",
+      "sourceName": "Grangärde",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.26309,
+        "lon": 14.97891
+      },
+      "reason": "Grangärde in Ludvika; same modern/historical county"
+    },
+    {
+      "place": "Norrbo, Grangärde(W)",
+      "sourceId": "geonames:2688544",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "reason": "Norrbo in Grangärde parish, historical W county"
+    },
+    {
+      "place": "Norrbo Grangärde, Dalarna, Sverige",
+      "sourceId": "geonames:2688544",
+      "sourceName": "Norrbo",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.27562,
+        "lon": 14.95286
+      },
+      "reason": "Norrbo in Grangärde parish, with missing comma"
+    },
+    {
+      "place": "Kullen, Grangärde, Dalarna, Sweden",
+      "sourceId": "geonames:2698827",
+      "sourceName": "Kullen",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.31667,
+        "lon": 14.86667
+      },
+      "reason": "unique GeoNames Kullen in Ludvika/Dalarna, close to Grangärde"
+    },
+    {
+      "place": "Kullen, Grangärde, Kopparbergs län",
+      "sourceId": "geonames:2698827",
+      "sourceName": "Kullen",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.31667,
+        "lon": 14.86667
+      },
+      "reason": "unique GeoNames Kullen in Ludvika/Dalarna, historical county name"
+    },
+    {
+      "place": "Kullen, Grangärde, Dalarna, Sverige",
+      "sourceId": "geonames:2698827",
+      "sourceName": "Kullen",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.31667,
+        "lon": 14.86667
+      },
+      "reason": "unique GeoNames Kullen in Ludvika/Dalarna, close to Grangärde"
+    },
+    {
+      "place": "Saxhyttan, Grangärde(W)",
+      "sourceId": "geonames:2679616",
+      "sourceName": "Saxhyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.3,
+        "lon": 15
+      },
+      "reason": "GeoNames Saxhyttan in Ludvika/Dalarna; county letter W"
+    },
+    {
+      "place": "Grythyttan, Orebro, Sweden",
+      "sourceId": "geonames:2710130",
+      "sourceName": "Grythyttan",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 59.70593,
+        "lon": 14.53453
+      },
+      "reason": "GeoNames Grythyttan in Örebro; ASCII county spelling"
+    },
+    {
+      "place": "Hällefors, Orebro, Sweden",
+      "sourceId": "geonames:2708665",
+      "sourceName": "Hällefors",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.78388,
+        "lon": 14.52197
+      },
+      "reason": "GeoNames Hällefors in Örebro; ASCII county spelling"
+    },
+    {
+      "place": "Kopparberg, Orebro, Sweden",
+      "sourceId": "geonames:2699768",
+      "sourceName": "Kopparberg",
+      "featureCode": "PPLA2",
+      "coordinates": {
+        "lat": 59.87597,
+        "lon": 14.99436
+      },
+      "reason": "GeoNames Kopparberg town in Örebro; ASCII county spelling"
+    },
+    {
+      "place": "Säfsnäs, Ludvika, Dalarna/Kopparberg, Suède",
+      "sourceId": "geonames:2680758",
+      "sourceName": "Säfsnäs",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.1398,
+        "lon": 14.41956
+      },
+      "reason": "GeoNames Säfsnäs in Ludvika; historic/modern county"
+    },
+    {
+      "place": "Säfsnäs, Dalarnas, Sweden",
+      "sourceId": "geonames:2680758",
+      "sourceName": "Säfsnäs",
+      "featureCode": "PPL",
+      "coordinates": {
+        "lat": 60.1398,
+        "lon": 14.41956
+      },
+      "reason": "GeoNames Säfsnäs in Dalarna; county genitive spelling"
+    },
+    {
+      "place": "Västervåla, Västmanland, Sverige",
+      "sourceId": "geonames:8127306",
+      "sourceName": "Västervåla socken",
+      "featureCode": "ADM4",
+      "coordinates": {
+        "lat": 59.92656,
+        "lon": 15.98119
+      },
+      "reason": "GeoNames administrative socken point, confirmed by Lantmäteriet socken list"
+    },
+    {
+      "place": "Linneryd Parrish, Kronoberg Län, Sweden",
+      "sourceId": "geonames:8126545",
+      "sourceName": "Linneryd socken",
+      "featureCode": "ADM4",
+      "coordinates": {
+        "lat": 56.62671,
+        "lon": 15.16913
+      },
+      "reason": "GeoNames administrative socken point; explicit parish label"
+    }
+  ],
+  "removed": [
+    {
+      "place": "Säfsnäs, Gällinge",
+      "previous": {
+        "lat": 57.3955398,
+        "lon": 12.2488171
+      }
+    },
+    {
+      "place": "Linneryd, Östergård, Kronobergs län, Sverige",
+      "previous": {
+        "lat": 56.9472915,
+        "lon": 13.7481987
+      }
+    },
+    {
+      "place": "Kristinehamn, Örebro, Sverige",
+      "previous": {
+        "lat": 59.2747287,
+        "lon": 15.2151181
+      }
+    },
+    {
+      "place": "Linneryds by, Kronobergs län, Sverige",
+      "previous": {
+        "lat": 56.8007878,
+        "lon": 14.410897
+      }
+    },
+    {
+      "place": "Skogsryd backagård Linneryd, Kronoberg, Sverige",
+      "previous": {
+        "lat": 56.8007878,
+        "lon": 14.410897
+      }
+    },
+    {
+      "place": "Jönköpings Sofia (F)",
+      "previous": {
+        "lat": 57.2986503,
+        "lon": 13.5391543
+      }
+    },
+    {
+      "place": "Nora stadsförsamling, Örebro, Sverige",
+      "previous": {
+        "lat": 59.2747287,
+        "lon": 15.2151181
+      }
+    },
+    {
+      "place": "Säfnäs, Kopparberg, Sweden",
+      "previous": {
+        "lat": 59.8745061,
+        "lon": 14.9903848
+      }
+    }
+  ]
+}

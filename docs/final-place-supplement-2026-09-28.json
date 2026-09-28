@@ -1,0 +1,128 @@
+{
+  "kind": "reviewed-final-place-supplement",
+  "date": "2026-09-28",
+  "source": {
+    "name": "GeoNames SE country extract",
+    "url": "https://download.geonames.org/export/dump/SE.zip",
+    "license": "CC BY 4.0",
+    "sha256": "0fa7a47700d36818fa4e2f22c83069b5016507e62418ab3d166ce6f85fdd0107"
+  },
+  "selected": [
+    {
+      "place": "Helgum, Vasternorrland, Sweden",
+      "sourceId": "geonames:8128088",
+      "sourceUrl": "https://www.geonames.org/8128088/",
+      "sourceName": "Helgum socken",
+      "coordinates": {
+        "lat": 63.2301,
+        "lon": 16.75707
+      },
+      "featureCode": "ADM4",
+      "countyCode": "24",
+      "municipalityCode": "2283",
+      "precision": "approximate",
+      "reason": "Explicit uniquely named Helgum parish in Västernorrland; an approximate parish representative point.",
+      "contextSources": []
+    },
+    {
+      "place": "Helgum, Västernorrland, Sweden",
+      "sourceId": "geonames:8128088",
+      "sourceUrl": "https://www.geonames.org/8128088/",
+      "sourceName": "Helgum socken",
+      "coordinates": {
+        "lat": 63.2301,
+        "lon": 16.75707
+      },
+      "featureCode": "ADM4",
+      "countyCode": "24",
+      "municipalityCode": "2283",
+      "precision": "approximate",
+      "reason": "Explicit uniquely named Helgum parish in Västernorrland; an approximate parish representative point.",
+      "contextSources": []
+    },
+    {
+      "place": "Helgum, Västernorrlands län, Sverige",
+      "sourceId": "geonames:8128088",
+      "sourceUrl": "https://www.geonames.org/8128088/",
+      "sourceName": "Helgum socken",
+      "coordinates": {
+        "lat": 63.2301,
+        "lon": 16.75707
+      },
+      "featureCode": "ADM4",
+      "countyCode": "24",
+      "municipalityCode": "2283",
+      "precision": "approximate",
+      "reason": "Explicit uniquely named Helgum parish in Västernorrland; an approximate parish representative point.",
+      "contextSources": []
+    },
+    {
+      "place": "Långträsk 1, Norsjö, Skellefteå lfs, Skellefteå sn, Västerbotten, Sweden",
+      "sourceId": "geonames:2688172",
+      "sourceUrl": "https://www.geonames.org/2688172/",
+      "sourceName": "Norsjö",
+      "coordinates": {
+        "lat": 64.91206,
+        "lon": 19.48153
+      },
+      "featureCode": "PPLA2",
+      "countyCode": "23",
+      "municipalityCode": "2417",
+      "precision": "approximate",
+      "reason": "Riksarkivet documents the historic Norsjö/Skellefteå relationship. The explicitly named Norsjö bygd is represented approximately; Långträsk farm is not assigned an exact position.",
+      "contextSources": [
+        "https://sok.riksarkivet.se/?postid=ArkisRef+SE%2FSVAR%2FHLA-133240023"
+      ]
+    },
+    {
+      "place": "Göteborg och Bohus, Sverige",
+      "sourceId": "geonames:2711537",
+      "sourceUrl": "https://www.geonames.org/2711537/",
+      "sourceName": "Gothenburg",
+      "coordinates": {
+        "lat": 57.70716,
+        "lon": 11.96679
+      },
+      "featureCode": "PPLA",
+      "countyCode": "28",
+      "municipalityCode": "1480",
+      "precision": "approximate",
+      "reason": "The raw string names only the historic county. Göteborg is a deliberately approximate representative point within that county; no local dwelling is inferred. This replaces the rejected generic Sweden point.",
+      "contextSources": [
+        "https://sok.riksarkivet.se/folkrakningar/kartor-1890/goteborgs-och-bohus-lan"
+      ]
+    },
+    {
+      "place": "Sverige (Sweden)",
+      "sourceId": "geonames:2661886",
+      "sourceUrl": "https://www.geonames.org/2661886/",
+      "sourceName": "Kingdom of Sweden",
+      "coordinates": {
+        "lat": 62,
+        "lon": 15
+      },
+      "featureCode": "PCLI",
+      "countyCode": "00",
+      "municipalityCode": "",
+      "precision": "approximate",
+      "reason": "The raw string only names the country. An explicitly approximate national point is used; it is not a locality or a fallback for an unidentified farm.",
+      "contextSources": []
+    },
+    {
+      "place": "sweeden",
+      "sourceId": "geonames:2661886",
+      "sourceUrl": "https://www.geonames.org/2661886/",
+      "sourceName": "Kingdom of Sweden",
+      "coordinates": {
+        "lat": 62,
+        "lon": 15
+      },
+      "featureCode": "PCLI",
+      "countyCode": "00",
+      "municipalityCode": "",
+      "precision": "approximate",
+      "reason": "The raw string is a spelling variant of Sweden and only names the country. An explicitly approximate national point is used; it is not a locality or a fallback for an unidentified farm.",
+      "contextSources": []
+    }
+  ]
+}

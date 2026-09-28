@@ -1,13 +1,13 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { parseGedcomData } from './utils/gedcomParser';
-import { resolvePlaces, updateLocationCache, hydrateGeocoderCache, getLocalLocationCandidates, setLocationReviewStatus, undoLocationReview, type Coordinates, type LocationReviewStatus, type LocationSource } from './utils/geocoder';
+import { resolvePlaces, updateLocationCache, hydrateGeocoderCache, hydrateLocationPrecision, getLocalLocationCandidates, setLocationReviewStatus, undoLocationReview, type Coordinates, type LocationReviewStatus, type LocationSource, type LocationPrecision } from './utils/geocoder';
 import { tagIndividualsBySide, calculateGenerations, type FamilySide } from './utils/relationship';
 import { collectBranchPersonIds, type BranchMode } from './utils/familyScope';
 import { datasetFingerprint } from './utils/datasetFingerprint';
 import { collectPlaceUses, buildLocationReviewRows } from './utils/locationReview';
 import { sharedLocationReviewFlags } from './data/locationReviewFlags';
 import { extractSourceEvidence, type SourceEvidenceByPerson } from './utils/sourceEvidence';
-import type { RingViewSnapshot, SavedViewSnapshot, SavedViewState } from './utils/savedViews';
+import { migrateDefaultSavedViews, type RingViewSnapshot, type SavedViewSnapshot, type SavedViewState } from './utils/savedViews';
 
 import { FamilyTreeViewer } from './components/FamilyTreeViewer';
 import { FamilyMap } from './components/FamilyMap';
@@ -23,6 +23,7 @@ import './index.css';
 
 const EMPTY_LOCATIONS = new Map<string, Coordinates | null>();
 const EMPTY_LOCATION_SOURCES = new Map<string, LocationSource>();
+const EMPTY_LOCATION_PRECISION = new Map<string, LocationPrecision>();
 const EMPTY_LOCATION_COVERAGE = { resolved: 0, total: 0, sharedResolved: 0, localResolved: 0 };
 const DEFAULT_RING_VIEW: RingViewSnapshot = {
   generations: 12,
@@ -180,6 +181,7 @@ function App() {
   }, [uniquePlaces, catalogState, locationRevision]);
   const locationsCache = locationResolution?.cache ?? EMPTY_LOCATIONS;
   const locationSources = locationResolution?.sources ?? EMPTY_LOCATION_SOURCES;
+  const locationPrecision = locationResolution?.precision ?? EMPTY_LOCATION_PRECISION;
   const locationCoverage = locationResolution ?? EMPTY_LOCATION_COVERAGE;
   const placeReviewRows = useMemo(() => viewMode === 'review'
     ? buildLocationReviewRows(collectPlaceUses(individuals, families), locationsCache, locationSources, sharedLocationReviewFlags)
@@ -194,11 +196,15 @@ function App() {
     let cancelled = false;
     const loadDefaultGedcom = async () => {
       try {
-        // Both files are static. Fetch them together, then resolve all known
+        // The default data and its location catalogs are static. Fetch them together, then resolve all known
         // places synchronously before showing either the tree or the map.
-        const [catalogResult, gedcomResult] = await Promise.allSettled([
+        const [catalogResult, precisionResult, gedcomResult] = await Promise.allSettled([
           fetch('locations.json', { signal: controller.signal }).then(async response => {
             if (!response.ok) throw new Error('Location catalog unavailable');
+            return response.json() as Promise<unknown>;
+          }),
+          fetch('location-precision.json', { signal: controller.signal }).then(async response => {
+            if (!response.ok) throw new Error('Optional location precision unavailable');
             return response.json() as Promise<unknown>;
           }),
           fetch('berring_messing-cleaned.ged', { signal: controller.signal }).then(async response => {
@@ -207,6 +213,10 @@ function App() {
           }),
         ]);
         if (cancelled) return;
+
+        // Older deployments may have no companion file. In that case the app
+        // simply makes no claim about the precision of shared points.
+        hydrateLocationPrecision(precisionResult.status === 'fulfilled' ? precisionResult.value : []);
 
         if (catalogResult.status === 'fulfilled') {
           hydrateGeocoderCache(catalogResult.value);
@@ -221,7 +231,9 @@ function App() {
           setIndividuals(inds);
           setFamilies(fams);
           setSourceEvidence(extractSourceEvidence(gedcomResult.value));
-          setDatasetKey(datasetFingerprint(gedcomResult.value));
+          const defaultDatasetKey = datasetFingerprint(gedcomResult.value);
+          migrateDefaultSavedViews(defaultDatasetKey);
+          setDatasetKey(defaultDatasetKey);
         } else {
           console.error('Could not load default GEDCOM:', gedcomResult.reason);
         }
@@ -486,6 +498,7 @@ function App() {
                 generationMap={generationMap}
                 locationsCache={locationsCache}
                 locationSources={locationSources}
+                locationPrecision={locationPrecision}
                 coverage={locationCoverage}
                 catalogAvailable={catalogState === 'ready'}
                 onLocationUpdate={handleLocationUpdate}

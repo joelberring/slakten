@@ -24,4 +24,4 @@ Urvalet behåller orter med begriplig svensk platskontext och en vald PPL- eller
 | Svartabäck, Linneryd, Kronoberg, Sweden | [2670387](https://www.geonames.org/2670387/) | PPL | Kronoberg | 56.6, 15.2 |
 | Vejmon, Rödön, Jämtland, Sverige | [2663431](https://www.geonames.org/2663431/) | PPL | Jämtland | 63.28333, 14.3 |
 
-Urval: 17 platssträngar, 15 unika GeoNames-poster och 112 GEDCOM-händelser. Efter import är 171 av 2 724 standardplatser kartlagda. Resterande poster lämnas olösta tills de granskats.
+Urval vid denna första import: 17 platssträngar, 15 unika GeoNames-poster och 112 GEDCOM-händelser. Då var 171 av 2 724 standardplatser kartlagda. Den fortsatta genomgången och rensningen av grunddata den 27–28 september redovisas i [platskatalogens aktuella översikt](location-cache.md). Tabellen här bevarar den första importens urval.

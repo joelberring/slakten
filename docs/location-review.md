@@ -1,14 +1,14 @@
 # Granskning av kartans ortpunkter
 
-Datum: 2026-09-27. Den gemensamma platskatalogen och ortnamnen i standardfilen har jämförts utan ny automatisk geokodning. En avvikelse nedan är en **granskningssignal**, inte ett bevis på vilken punkt som är historiskt korrekt. Ett sockennamn, en gård och ett gammalt län kan ha olika lämpliga representativa punkter.
+Datum: 2026-09-28. Alla platssträngar i appens grundunderlag har granskats mot ortnamn och lokal eller historisk kontext. Granskade punkter finns i den gemensamma katalogen för alla besökare; ingen ny geokodning behövs i webbläsaren. Representativa punkter för socknar, bygder, öar och breda regioner märks **Ungefärlig plats** och med streckad kartnål.
 
-## Vad genomgången hittade
+## Vad genomgången ändrade
 
-Katalogen hade 157 koordinater. Två namn, `Linneryd (Smalland), Sweden` och `Göteborg och Bohus, Sverige`, var satta till exakt samma generella Sverige-punkt som landnamnen `Sverige` och `Sweden`. De två uppenbart missvisande lokalpunkterna har satts till `null` i den gemensamma katalogen, så de inte visas som kartnålar innan någon valt källkontrollerade punkter. Samma gamla felpar ignoreras om det finns kvar i en webbläsares äldre geokodningscache.
+Den första kontrollen fann två allmänna Sverige-punkter för Linneryd och Göteborg/Bohus, och därefter åtta felaktiga automatiska lokalpunkter. Av dessa tio kända felpar har **9** fått granskade ersättningspunkter och **1** saknar fortfarande en försvarbar punkt: `Kristinehamn, Örebro, Sverige`. Samtliga tio exakta gamla namn/koordinat-par ignoreras även i äldre geokodningscache, så avvisade kartnålar inte återkommer när en gammal besökare öppnar appen. En medveten lokal rättning kan fortfarande användas.
 
-Ytterligare åtta exakta namn har fått granskningsnoteringar i kartan. Exempel är `Kristinehamn, Örebro, Sverige` (cirka 63 km från en annan Kristinehamn-post), `Jönköpings Sofia (F)` (cirka 64 km från en annan Sofia/Jönköping-post) och `Säfsnäs, Gällinge` (cirka 331 km från Säfsnäs i Dalarna). Den sista avvikelsen kan beskriva **två skilda platser med samma namn**; den ska inte flyttas till Dalarna utan källkontroll.
+Linneryd och gårdar med uttryckligt Linneryds-sammanhang representeras av en granskad sockenpunkt när gårdens läge inte är verifierat. Jönköpings Sofia, Nora stadsförsamling och Säfsnäs har också fått kontrollerade representativa punkter. Råa ortnamn och historiska länsangivelser är oförändrade i släktfilen. En avvikande modern länskod är inte i sig bevis för ett gammalt fel: historiska församlingar och län jämfördes där det behövdes med Riksarkivets register.
 
-Samma koordinat förekommer också för flera olika förstaled i ortnamn. Det kan vara en avsiktlig sockenpunkt snarare än en exakt gårdspunkt. Kartan föreslår dessa för granskning och låter användaren markera dem som ungefärliga.
+Katalogen täcker nu **2 567 av 2 721** platssträngar. Se [genomgångens sammanfattning](grunddata-platser-2026-09-28.md) för källor och [de kvarvarande olösta namnen](unresolved-places-reviewed-2026-09-28.json) för den exakta avvisningsorsaken och rapportreferensen. En gemensam kartpunkt kan samla flera stavningar och gårdar; de ungefärliga namnen markeras även var för sig i popupen.
 
 Tidigare geokodade punkter som bara finns i en besökares webbläsare granskas lokalt. De kopieras inte till `public/locations.json` eller till detta dokument. Granskningsvyn skiljer mellan gemensam punkt, äldre lokal geokodning, lokal rättning, saknad punkt och lokalt bortvald punkt. Den lyfter även fram enstaka landnamn vars punkt hamnat långt utanför landet och platssträngar som uttryckligen nämner två olika länder.
 

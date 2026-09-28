@@ -1,0 +1,1215 @@
+{
+  "kind": "extra-foreign-import-validation",
+  "counts": {
+    "input": 231,
+    "originalInput": 209,
+    "supplementalInput": 22,
+    "accepted": 206,
+    "approximate": 112,
+    "rejected": 25,
+    "pending": 0
+  },
+  "checks": {
+    "completePartition": true,
+    "finiteCoordinateRanges": true,
+    "exportMatchesProvenance": true,
+    "precisionRowsExactlyTwoElements": true,
+    "precisionMatchesApprovedApproximatePlaces": true,
+    "sourceCountryNamesCoordinatesAndAdminCodesMatch": true,
+    "datasetHashesMatch": true,
+    "semanticSelection": "Source-name/feature/admin mapping separately read and reviewed; no ID-series inference."
+  },
+  "geonamesRecords": [
+    {
+      "sourceId": "geonames:3131828",
+      "countryFile": "NO",
+      "name": "Vigra",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3132899",
+      "countryFile": "NO",
+      "name": "Valen",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3133350",
+      "countryFile": "NO",
+      "name": "Ulstein",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3133817",
+      "countryFile": "NO",
+      "name": "Trysil",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3134706",
+      "countryFile": "NO",
+      "name": "Tengs",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3134955",
+      "countryFile": "NO",
+      "name": "Synes",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3137441",
+      "countryFile": "NO",
+      "name": "Sør-Odal",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3142850",
+      "countryFile": "NO",
+      "name": "Øyeren",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3143158",
+      "countryFile": "NO",
+      "name": "Østre Toten",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3143244",
+      "countryFile": "NO",
+      "name": "Oslo",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3143458",
+      "countryFile": "NO",
+      "name": "Oppstryn",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3144093",
+      "countryFile": "NO",
+      "name": "Nos",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3144096",
+      "countryFile": "NO",
+      "name": "Kingdom of Norway",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3146790",
+      "countryFile": "NO",
+      "name": "Lunder",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3148042",
+      "countryFile": "NO",
+      "name": "Lauvhaugen",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3151166",
+      "countryFile": "NO",
+      "name": "Imsland",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3151630",
+      "countryFile": "NO",
+      "name": "Hovet",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3154177",
+      "countryFile": "NO",
+      "name": "Hallingdal",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3155644",
+      "countryFile": "NO",
+      "name": "Gjesdal",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3159665",
+      "countryFile": "NO",
+      "name": "Buskerud fylke",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3160692",
+      "countryFile": "NO",
+      "name": "Bore",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:7626337",
+      "countryFile": "NO",
+      "name": "Vang",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:7626340",
+      "countryFile": "NO",
+      "name": "Hol",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:8532725",
+      "countryFile": "NO",
+      "name": "Flekkefjord",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:8532769",
+      "countryFile": "NO",
+      "name": "Nøtterøy kirke",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:9415454",
+      "countryFile": "NO",
+      "name": "Gunhildgard",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:9415489",
+      "countryFile": "NO",
+      "name": "Rime",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:9485828",
+      "countryFile": "NO",
+      "name": "Litlehammar",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:632045",
+      "countryFile": "FI",
+      "name": "Vehmasmäki",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:632978",
+      "countryFile": "FI",
+      "name": "Vaasa",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:633679",
+      "countryFile": "FI",
+      "name": "Turku",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:634093",
+      "countryFile": "FI",
+      "name": "Tornio",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:636989",
+      "countryFile": "FI",
+      "name": "Siikala",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:637292",
+      "countryFile": "FI",
+      "name": "Savonlinna",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:637306",
+      "countryFile": "FI",
+      "name": "Savo",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:637516",
+      "countryFile": "FI",
+      "name": "Sarvlax",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:638582",
+      "countryFile": "FI",
+      "name": "Rymättylä",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:640803",
+      "countryFile": "FI",
+      "name": "Pudasjärvi",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:642093",
+      "countryFile": "FI",
+      "name": "Pertteli",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:642118",
+      "countryFile": "FI",
+      "name": "Pernå",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:642455",
+      "countryFile": "FI",
+      "name": "Pedersöre",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:646005",
+      "countryFile": "FI",
+      "name": "Mikkeli",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:646486",
+      "countryFile": "FI",
+      "name": "Masku",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:648855",
+      "countryFile": "FI",
+      "name": "Lapua",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:648919",
+      "countryFile": "FI",
+      "name": "Lappajärvi",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:650224",
+      "countryFile": "FI",
+      "name": "Kuopio",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:650754",
+      "countryFile": "FI",
+      "name": "Kronoby",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:653252",
+      "countryFile": "FI",
+      "name": "Kempele",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:654827",
+      "countryFile": "FI",
+      "name": "Kalanti",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:655563",
+      "countryFile": "FI",
+      "name": "Joutseno",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:656130",
+      "countryFile": "FI",
+      "name": "Jakobstad",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:656456",
+      "countryFile": "FI",
+      "name": "Isokyrö",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:656578",
+      "countryFile": "FI",
+      "name": "Isnäs",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:658225",
+      "countryFile": "FI",
+      "name": "Helsinki",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:658731",
+      "countryFile": "FI",
+      "name": "Hästbacka",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:658768",
+      "countryFile": "FI",
+      "name": "Härsilä",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:658809",
+      "countryFile": "FI",
+      "name": "Härmä",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:659350",
+      "countryFile": "FI",
+      "name": "Halikko",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:660013",
+      "countryFile": "FI",
+      "name": "Republic of Finland",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:660940",
+      "countryFile": "FI",
+      "name": "Askainen",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:661013",
+      "countryFile": "FI",
+      "name": "Armassaari",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:661298",
+      "countryFile": "FI",
+      "name": "Alkkula",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:661465",
+      "countryFile": "FI",
+      "name": "Ala-Nurmo",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:828988",
+      "countryFile": "FI",
+      "name": "Eastern Finland Province",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:828989",
+      "countryFile": "FI",
+      "name": "Länsi-Suomen Lääni",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:830690",
+      "countryFile": "FI",
+      "name": "Pohjois-Savo",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:831041",
+      "countryFile": "FI",
+      "name": "Satakunta",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:12927641",
+      "countryFile": "FI",
+      "name": "Sulkavan Kirkko",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:12942533",
+      "countryFile": "FI",
+      "name": "Naarasluoma",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:12942569",
+      "countryFile": "FI",
+      "name": "Kauppi",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2967258",
+      "countryFile": "FR",
+      "name": "Y",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2976341",
+      "countryFile": "FR",
+      "name": "Salon-de-Provence",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2978363",
+      "countryFile": "FR",
+      "name": "Saint-Martin-d'Entraunes",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3016070",
+      "countryFile": "FR",
+      "name": "Gignac-la-Nerthe",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3017382",
+      "countryFile": "FR",
+      "name": "Republic of France",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3026227",
+      "countryFile": "FR",
+      "name": "Châteauneuf-les-Martigues",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3036433",
+      "countryFile": "FR",
+      "name": "Aubagne",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:12314495",
+      "countryFile": "FR",
+      "name": "L'Île",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:12314509",
+      "countryFile": "FR",
+      "name": "Saint-Julien Les Martigues",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2662680",
+      "countryFile": "SE",
+      "name": "Visingsö",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2666085",
+      "countryFile": "SE",
+      "name": "Utö",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2666086",
+      "countryFile": "SE",
+      "name": "Utö",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2669322",
+      "countryFile": "SE",
+      "name": "Tarvastehult",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2676651",
+      "countryFile": "SE",
+      "name": "Småland",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2679374",
+      "countryFile": "SE",
+      "name": "Sidensjö",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2680581",
+      "countryFile": "SE",
+      "name": "Säljeryd",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2686209",
+      "countryFile": "SE",
+      "name": "Osby",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2689762",
+      "countryFile": "SE",
+      "name": "Nänsjö",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2694596",
+      "countryFile": "SE",
+      "name": "Ljuder",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2694721",
+      "countryFile": "SE",
+      "name": "Linneryd",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2702979",
+      "countryFile": "SE",
+      "name": "Jönköping",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2703910",
+      "countryFile": "SE",
+      "name": "Idemåla",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2706372",
+      "countryFile": "SE",
+      "name": "Hinneryd",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2706786",
+      "countryFile": "SE",
+      "name": "Helgum",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2725869",
+      "countryFile": "SE",
+      "name": "Ångermanland",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2727122",
+      "countryFile": "SE",
+      "name": "Åland",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2727595",
+      "countryFile": "SE",
+      "name": "Åby",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:8132196",
+      "countryFile": "SE",
+      "name": "Loshult",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:8132759",
+      "countryFile": "SE",
+      "name": "Södra Sandsjö",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:8132773",
+      "countryFile": "SE",
+      "name": "Nöbbele",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:636158",
+      "countryFile": "AX",
+      "name": "Sottunga",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:661883",
+      "countryFile": "AX",
+      "name": "Aland Islands",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3041833",
+      "countryFile": "AX",
+      "name": "Bastö",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2800751",
+      "countryFile": "BE",
+      "name": "Burg",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2802361",
+      "countryFile": "BE",
+      "name": "Kingdom of Belgium",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3099434",
+      "countryFile": "PL",
+      "name": "Gdańsk",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2617147",
+      "countryFile": "DK",
+      "name": "Magleby",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2620624",
+      "countryFile": "DK",
+      "name": "Havnsø",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2621197",
+      "countryFile": "DK",
+      "name": "Grinderslev",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2621967",
+      "countryFile": "DK",
+      "name": "Framlev",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2622342",
+      "countryFile": "DK",
+      "name": "Fannerup",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2623032",
+      "countryFile": "DK",
+      "name": "Kingdom of Denmark",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2623035",
+      "countryFile": "DK",
+      "name": "Demstrup",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2623632",
+      "countryFile": "DK",
+      "name": "Borum",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2624652",
+      "countryFile": "DK",
+      "name": "Århus",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:709959",
+      "countryFile": "UA",
+      "name": "Dniprelstan",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2811893",
+      "countryFile": "DE",
+      "name": "Weißenhaus",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2853162",
+      "countryFile": "DE",
+      "name": "Plön",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2857033",
+      "countryFile": "DE",
+      "name": "Ort",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2863762",
+      "countryFile": "DE",
+      "name": "Neversdorf",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2865178",
+      "countryFile": "DE",
+      "name": "Neuhaus",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2874662",
+      "countryFile": "DE",
+      "name": "Maasleben",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2895569",
+      "countryFile": "DE",
+      "name": "Itzehoe",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2927778",
+      "countryFile": "DE",
+      "name": "Farve",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2936613",
+      "countryFile": "DE",
+      "name": "Dobersdorf",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2953341",
+      "countryFile": "DE",
+      "name": "Bad Segeberg",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2753919",
+      "countryFile": "NL",
+      "name": "Holland",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:588409",
+      "countryFile": "EE",
+      "name": "Tallinn",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:588423",
+      "countryFile": "EE",
+      "name": "Tahkuna",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:589067",
+      "countryFile": "EE",
+      "name": "Reigi",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:590132",
+      "countryFile": "EE",
+      "name": "Mudaste",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:591287",
+      "countryFile": "EE",
+      "name": "Kodeste",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:5011005",
+      "countryFile": "US",
+      "name": "Stambaugh, Iron River",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:5128638",
+      "countryFile": "US",
+      "name": "New York",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:5130526",
+      "countryFile": "US",
+      "name": "Parish",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2017370",
+      "countryFile": "RU",
+      "name": "Russian Federation",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3045420",
+      "countryFile": "HU",
+      "name": "Sé",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:3165111",
+      "countryFile": "IT",
+      "name": "Tuna",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    },
+    {
+      "sourceId": "geonames:2077347",
+      "countryFile": "AU",
+      "name": "Balaklava",
+      "countryMatches": true,
+      "coordinatesMatch": true,
+      "adminCodesMatch": true
+    }
+  ],
+  "retainedCatalogAliases": [
+    {
+      "place": "Al, Buskerud, Norway",
+      "sourceAlias": "Ål, Buskerud, Norway",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Dago, Estland",
+      "sourceAlias": "Dagö Estland",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Dagö, Estland",
+      "sourceAlias": "Dagö Estland",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Fr Mühlhausendorf, Kherson, Kherson, Russia",
+      "sourceAlias": "Gammalsvenskby",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Gammalsvenskby, Alt Schwedendorf, Kherson, Hersoni, Khersonska, Ukraine",
+      "sourceAlias": "Gammalsvenskby",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Gammelsvenskby, Cherson, Khersons'ka, Ukraine",
+      "sourceAlias": "Gammalsvenskby",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Hönjarum, Osby, Göinge, Skåne, Skåneland, Danmark",
+      "sourceAlias": "Honjarum, Osby, Sweden",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Kötsta, Hiiumaa (Dagö), Estonia",
+      "sourceAlias": "Dagö Estland",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Martiqgues, Frankrike",
+      "sourceAlias": "Martigues",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Raisala, Rautalampi, Savolax, Finland",
+      "sourceAlias": "Rautalampi, Finland",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Åkernäs, Dago, Estonia",
+      "sourceAlias": "Dagö Estland",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Alt Schwedendorf",
+      "sourceAlias": "Gammalsvenskby",
+      "coordinatesUnchanged": true
+    },
+    {
+      "place": "Koidma kula",
+      "sourceAlias": "Koidma kula, Estonia",
+      "coordinatesUnchanged": true
+    }
+  ],
+  "otherSourcedRegionPoints": [
+    {
+      "place": "Holstein",
+      "sourceId": "wikidata:Q111224",
+      "sourceDmsMatches": true
+    }
+  ],
+  "artifactSha256": {
+    "slakten-extra-foreign-import.json": "7a38b3933e836f01307acea4a5086a0345ae330a37d73ee1c613ff3768579c6a",
+    "slakten-extra-foreign-precision.json": "a5c2d481013bb7482b609c230e3bc94a61e7d03d4a99d5863ccbc2e47a217f78",
+    "slakten-extra-foreign-provenance.json": "0ef43389fcbde2c8fdd5c18c431d2245a13883e70f45a978eebc446d833308c7"
+  }
+}

@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, GeoJSON, Pane, Marker, Popup, Polyline, Toolti
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import type { FeatureCollection } from 'geojson';
-import { type Coordinates, type LocationSource, type LocationReviewStatus } from '../utils/geocoder';
+import { type Coordinates, type LocationSource, type LocationPrecision, type LocationReviewStatus } from '../utils/geocoder';
 import { extractYear } from '../utils/dateUtils';
 import { type FamilySide } from '../utils/relationship';
 import { buildLocationReviewRows, collectPlaceUses } from '../utils/locationReview';
@@ -17,6 +17,7 @@ interface Props {
     generationMap: Map<string, number>;
     locationsCache: Map<string, Coordinates | null>;
     locationSources: Map<string, LocationSource>;
+    locationPrecision: ReadonlyMap<string, LocationPrecision>;
     coverage: { resolved: number, total: number, sharedResolved: number, localResolved: number };
     catalogAvailable: boolean;
     onLocationUpdate?: (place: string, coords: Coordinates) => void;
@@ -42,6 +43,7 @@ interface PersonTrailEvent {
     place: string;
     year: number | null;
     coords: Coordinates | null;
+    precision?: LocationPrecision;
 }
 
 interface IndividualPlaces {
@@ -209,7 +211,7 @@ function MapReviewControls({
 /**
  * Returns a custom Leaflet DivIcon with a color based on density and family side.
  */
-function getMarkerIcon(count: number, side: FamilySide): L.DivIcon {
+function getMarkerIcon(count: number, side: FamilySide, approximate: boolean): L.DivIcon {
     const color = SIDE_COLORS[side];
     // Increased base size and scaling factor
     const size = Math.min(50, 32 + Math.floor(Math.sqrt(count) * 4));
@@ -219,7 +221,7 @@ function getMarkerIcon(count: number, side: FamilySide): L.DivIcon {
         html: `
             <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 22C16.5 18 20 14.5 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 14.5 7.5 18 12 22Z" 
-                    fill="${color}" stroke="#fffdf8" stroke-width="1.5"/>
+                    fill="${color}" stroke="${approximate ? '#5d392c' : '#fffdf8'}" stroke-width="${approximate ? 2 : 1.5}" ${approximate ? 'stroke-dasharray="2 1.2"' : ''}/>
                 <circle cx="12" cy="10" r="4.5" fill="#fffdf8" fill-opacity="0.95"/>
                 ${count > 1 ? `<text x="12" y="11.5" font-size="10" font-family="Inter, Arial" fill="#233a36" text-anchor="middle" font-weight="800">${count}</text>` : ''}
             </svg>
@@ -246,6 +248,7 @@ export function FamilyMap({
     generationMap,
     locationsCache,
     locationSources,
+    locationPrecision,
     coverage,
     catalogAvailable,
     onLocationUpdate,
@@ -365,10 +368,11 @@ export function FamilyMap({
                 place: event.place,
                 year: mapYear(event.date),
                 coords: locationsCache.get(event.place) ?? null,
+                precision: locationsCache.get(event.place) ? locationPrecision.get(event.place) : undefined,
             });
         });
         return events.sort((a, b) => (a.year ?? Number.POSITIVE_INFINITY) - (b.year ?? Number.POSITIVE_INFINITY));
-    }, [selectedPersonId, selectedPerson, families, locationsCache, eventVisible]);
+    }, [selectedPersonId, selectedPerson, families, locationsCache, locationPrecision, eventVisible]);
     const selectedTrailPositions = useMemo(() => selectedTrail
         .filter(event => event.coords && event.year !== null)
         .map(event => [event.coords!.lat, event.coords!.lon] as [number, number])
@@ -571,13 +575,14 @@ export function FamilyMap({
                 const places = Array.from(g.allPlaces);
                 return {
                     ...g,
-                    placeName: places.length > 2 ? `${places[0]} (+${places.length - 1} more)` : places.join(' / ')
+                    approximatePlaces: places.filter(place => locationPrecision.get(place) === 'approximate'),
+                    placeName: places.length > 2 ? `${places[0]} (+${places.length - 1} fler)` : places.join(' / ')
                 };
             });
 
         return finalMarkers;
 
-    }, [individuals, individualsById, families, locationsCache, selectedGenerations, sideMap, visibleSides, generationMap, visiblePersonIds, eventVisible]);
+    }, [individuals, individualsById, families, locationsCache, locationPrecision, selectedGenerations, sideMap, visibleSides, generationMap, visiblePersonIds, eventVisible]);
     const visibleEventCount = markers.reduce((count, marker) => count + marker.people.length, 0);
     const visibleUndatedCount = markers.reduce((count, marker) => count + marker.people.filter(person => person.year === null).length, 0);
 
@@ -721,6 +726,7 @@ export function FamilyMap({
                             {selectedTrail.map((event, index) => <li key={`${event.type}-${event.date}-${event.place}-${index}`}>
                                 <strong>{event.year ?? 'Okänt år'} · {eventLabel(event.type)}</strong><br />
                                 {event.place}
+                                {event.precision === 'approximate' && <span style={{ display: 'block', color: '#754b37', fontWeight: 700 }}>Ungefärlig plats</span>}
                                 {!event.coords && <span style={{ display: 'block', color: '#95573e' }}>Saknar kartpunkt</span>}
                             </li>)}
                         </ol> : <p style={{ margin: '10px 0 0', color: '#65736b', fontSize: '0.72rem' }}>Inga platshändelser under perioden.</p>}
@@ -776,6 +782,10 @@ export function FamilyMap({
                                     </button>;
                                 })}
                             </div>
+                            {markers.some(marker => marker.approximatePlaces.length > 0) && <p style={{ display: 'flex', alignItems: 'center', gap: 7, margin: '11px 0 0', color: '#5d392c', fontSize: '0.68rem', lineHeight: 1.4 }}>
+                                <span aria-hidden="true" style={{ width: 16, height: 16, flex: 'none', border: '2px dashed #5d392c', borderRadius: '50%' }} />
+                                Streckad kartnål: ungefärlig plats.
+                            </p>}
                         </section>
 
                         <section style={{ padding: '12px 0', borderTop: '1px solid #e4d8c4' }}>
@@ -903,11 +913,12 @@ export function FamilyMap({
                         }}
                     />
 
-                {markers.map((marker, idx) => (
+                {markers.map((marker) => (
                     <Marker
-                        key={idx}
+                        key={`${marker.coords.lat}:${marker.coords.lon}:${marker.placeName}:${marker.approximatePlaces.length > 0}`}
                         position={[marker.coords.lat, marker.coords.lon]}
-                        icon={getMarkerIcon(marker.people.length, marker.side)}
+                        title={`${marker.placeName}${marker.approximatePlaces.length > 0 ? ' – ungefärlig plats' : ''}`}
+                        icon={getMarkerIcon(marker.people.length, marker.side, marker.approximatePlaces.length > 0)}
                         draggable={!readOnly && marker.allPlaces.size === 1}
                         eventHandlers={{
                             dragend: (e) => {
@@ -922,16 +933,20 @@ export function FamilyMap({
                             <div style={{ maxHeight: 450, overflowY: 'auto', minWidth: 240, paddingRight: 10, color: '#233a36', fontFamily: 'Inter, sans-serif' }}>
                                 <span style={{ display: 'block', color: '#95573e', fontSize: '0.61rem', fontWeight: 800, letterSpacing: '0.11em', textTransform: 'uppercase' }}>Plats i släkten</span>
                                 <h3 style={{ margin: '3px 0 11px', paddingBottom: 9, borderBottom: '1px solid #e4d8c4', color: '#233a36', fontFamily: '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif', fontSize: '1.2rem', fontWeight: 600, overflowWrap: 'anywhere' }}>{marker.placeName}</h3>
+                                {marker.approximatePlaces.length > 0 && <p style={{ margin: '0 0 11px', padding: '7px 9px', border: '1px dashed #9d634b', borderRadius: 7, background: '#f8f0e5', color: '#5d392c', fontSize: '0.73rem', lineHeight: 1.4 }}>
+                                    <strong>Ungefärlig plats.</strong> Kartpunkten visar ett ungefärligt läge{marker.approximatePlaces.length < marker.allPlaces.size ? ' för vissa av ortnamnen nedan' : ''}.
+                                </p>}
                                 {marker.allPlaces.size > 1 && (
                                     <details style={{ marginBottom: 11, fontSize: '0.75rem', color: '#40534d' }}>
-                                        <summary>{marker.allPlaces.size} exakta ortnamn på denna punkt</summary>
+                                        <summary>{marker.allPlaces.size} ortnamn på denna kartpunkt</summary>
                                         <div style={{ maxHeight: 140, overflowY: 'auto', marginTop: 6 }}>
                                             {[...marker.allPlaces].sort().map(place => (
                                                 <div key={place} style={{ marginBottom: 5 }}>
-                                                    <button type="button" style={{ ...mapButtonStyle, minHeight: 27, padding: '3px 7px', fontSize: '0.68rem' }}
+                                                        <button type="button" style={{ ...mapButtonStyle, minHeight: 27, padding: '3px 7px', fontSize: '0.68rem' }}
                                                             onClick={() => { setSelectedReviewPlace(place); setReviewPanelOpen(true); }}>
                                                             Granska {place}
                                                         </button>
+                                                        {locationPrecision.get(place) === 'approximate' && <span style={{ display: 'block', marginTop: 2, color: '#754b37', fontSize: '0.67rem', fontWeight: 700 }}>Ungefärlig plats</span>}
                                                 </div>
                                             ))}
                                         </div>
@@ -964,7 +979,7 @@ export function FamilyMap({
                                                 </div>
                                                 {marker.allPlaces.size > 1 && p.place && (
                                                     <div style={{ fontSize: '0.72rem', opacity: 0.8, marginTop: 2, overflowWrap: 'anywhere' }}>
-                                                        Plats i källan: {p.place}
+                                                        Plats i källan: {p.place}{locationPrecision.get(p.place) === 'approximate' ? ' · Ungefärlig plats' : ''}
                                                     </div>
                                                 )}
                                                 {selectableIds.map(personId => <div key={personId} style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 7 }}>
